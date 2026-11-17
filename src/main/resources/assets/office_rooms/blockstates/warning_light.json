@@ -1,0 +1,10 @@
+{
+ "variants": {
+  "lit=false": {
+   "model": "office_rooms:block/warning_light"
+  },
+  "lit=true": {
+   "model": "office_rooms:block/warning_light_on"
+  }
+ }
+}

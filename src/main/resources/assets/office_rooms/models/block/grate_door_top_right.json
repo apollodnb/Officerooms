@@ -1,0 +1,8 @@
+{
+ "parent": "minecraft:block/door_top_right",
+ "render_type": "minecraft:cutout",
+ "textures": {
+  "bottom": "office_rooms:block/grate_door_bottom",
+  "top": "office_rooms:block/grate_door_top"
+ }
+}

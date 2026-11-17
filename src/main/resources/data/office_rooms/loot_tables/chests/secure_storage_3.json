@@ -1,0 +1,179 @@
+{
+ "type": "minecraft:chest",
+ "pools": [
+  {
+   "rolls": 3,
+   "entries": [
+    {
+     "type": "minecraft:loot_table",
+     "name": "office_rooms:tiers/rare"
+    }
+   ]
+  },
+  {
+   "rolls": 2,
+   "entries": [
+    {
+     "type": "minecraft:loot_table",
+     "name": "office_rooms:tiers/special"
+    }
+   ]
+  },
+  {
+   "rolls": 1,
+   "entries": [
+    {
+     "type": "minecraft:loot_table",
+     "name": "office_rooms:tiers/multidimensional"
+    }
+   ]
+  },
+  {
+   "rolls": 1,
+   "entries": [
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:netherite_ingot",
+     "weight": 2,
+     "functions": [
+      {
+       "function": "minecraft:set_count",
+       "count": {
+        "type": "minecraft:uniform",
+        "min": 1,
+        "max": 2
+       }
+      }
+     ]
+    },
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:diamond",
+     "weight": 3,
+     "functions": [
+      {
+       "function": "minecraft:set_count",
+       "count": {
+        "type": "minecraft:uniform",
+        "min": 2,
+        "max": 5
+       }
+      }
+     ]
+    },
+    {
+     "type": "minecraft:item",
+     "name": "office_rooms:glitched_ingot",
+     "weight": 2
+    },
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:enchanted_golden_apple",
+     "weight": 1
+    }
+   ]
+  },
+  {
+   "rolls": 1,
+   "conditions": [
+    {
+     "condition": "minecraft:random_chance",
+     "chance": 0.25
+    }
+   ],
+   "entries": [
+    {
+     "type": "minecraft:item",
+     "name": "office_rooms:temporal_watch",
+     "weight": 1
+    }
+   ]
+  },
+  {
+   "rolls": 1,
+   "conditions": [
+    {
+     "condition": "minecraft:random_chance",
+     "chance": 0.1
+    }
+   ],
+   "entries": [
+    {
+     "type": "minecraft:item",
+     "name": "office_rooms:totem_of_mercy",
+     "weight": 1
+    }
+   ]
+  },
+  {
+   "rolls": 1,
+   "conditions": [
+    {
+     "condition": "minecraft:random_chance",
+     "chance": 0.06
+    }
+   ],
+   "entries": [
+    {
+     "type": "minecraft:item",
+     "name": "office_rooms:master_key"
+    }
+   ]
+  },
+  {
+   "rolls": 1,
+   "conditions": [
+    {
+     "condition": "minecraft:random_chance",
+     "chance": 0.35
+    }
+   ],
+   "entries": [
+    {
+     "type": "minecraft:item",
+     "name": "office_rooms:research_file",
+     "functions": [
+      {
+       "function": "minecraft:set_count",
+       "count": {
+        "type": "minecraft:uniform",
+        "min": 1,
+        "max": 2
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "rolls": 1,
+   "conditions": [
+    {
+     "condition": "minecraft:random_chance",
+     "chance": 0.12
+    }
+   ],
+   "entries": [
+    {
+     "type": "minecraft:item",
+     "name": "office_rooms:gas_mask"
+    }
+   ]
+  },
+  {
+   "rolls": 1,
+   "conditions": [
+    {
+     "condition": "minecraft:random_chance",
+     "chance": 0.12
+    }
+   ],
+   "entries": [
+    {
+     "type": "minecraft:item",
+     "name": "office_rooms:special_event_detector"
+    }
+   ]
+  }
+ ]
+}

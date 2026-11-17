@@ -1,0 +1,19 @@
+{
+ "variants": {
+  "facing=north": {
+   "model": "office_rooms:block/specimen_jar"
+  },
+  "facing=east": {
+   "model": "office_rooms:block/specimen_jar",
+   "y": 90
+  },
+  "facing=south": {
+   "model": "office_rooms:block/specimen_jar",
+   "y": 180
+  },
+  "facing=west": {
+   "model": "office_rooms:block/specimen_jar",
+   "y": 270
+  }
+ }
+}

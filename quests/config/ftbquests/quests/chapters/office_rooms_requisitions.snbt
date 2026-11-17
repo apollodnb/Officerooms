@@ -1,0 +1,277 @@
+{
+	images: [
+		{
+			x: 1.0d
+			y: 0.0d
+			width: 21.33d
+			height: 12.0d
+			rotation: 0.0d
+			image: "office_rooms:textures/gui/quests/atrium_2.png"
+			color: 16777215
+			alpha: 150
+			order: -1
+			hover: [ ]
+			click: ""
+			dev: false
+			corner: false
+		}
+	]
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "office_rooms_requisitions"
+	group: "2B674EAFE9EE221B"
+	icon: "office_rooms:electronic_component"
+	id: "6D12FD2157786EE4"
+	order_index: 10
+	quest_links: [ ]
+	quests: [
+		{
+			id: "632178EA60B6F614"
+			title: "Requisition Desk"
+			subtitle: "It is always open"
+			description: [
+				"Facilities trades. Hand in what you have too much of."
+				""
+				"&6How: &rJust tick the checkmark."
+			]
+			dependencies: [
+				"76BBE88AC96F5FE9"
+			]
+			shape: "hexagon"
+			icon: "minecraft:writable_book"
+			tasks: [
+				{
+					id: "51769F8000CE1CBA"
+					type: "checkmark"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			id: "51A763710E2AC44E"
+			title: "Batteries"
+			subtitle: "Repeatable trade"
+			description: [
+				"Hand in the items (they are taken) and receive supplies."
+				""
+				"&6How: &rHand in the items (they are taken). Repeatable."
+			]
+			dependencies: [
+				"632178EA60B6F614"
+			]
+			can_repeat: true
+			tasks: [
+				{
+					id: "5695BD16101B6805"
+					type: "item"
+					item: "office_rooms:electronic_component"
+					count: 4L
+					consume_items: true
+				}
+			]
+			rewards: [
+				{
+					id: "163442B03CE8849B"
+					type: "item"
+					item: "office_rooms:portable_battery"
+				}
+				{
+					id: "613A4B95CD8290E8"
+					type: "xp"
+					xp: 20
+				}
+			]
+			x: 2.0d
+			y: -3.0d
+		}
+		{
+			id: "7F575D455CBD00AA"
+			title: "Filters"
+			subtitle: "Repeatable trade"
+			description: [
+				"Hand in the items (they are taken) and receive supplies."
+				""
+				"&6How: &rHand in the items (they are taken). Repeatable."
+			]
+			dependencies: [
+				"632178EA60B6F614"
+			]
+			can_repeat: true
+			tasks: [
+				{
+					id: "69CAF347C2624C1E"
+					type: "item"
+					item: "minecraft:charcoal"
+					count: 8L
+					consume_items: true
+				}
+				{
+					id: "4CD4E4CC973CCD0B"
+					type: "item"
+					item: "minecraft:paper"
+					count: 8L
+					consume_items: true
+				}
+			]
+			rewards: [
+				{
+					id: "2CBC48728BF4AE77"
+					type: "item"
+					item: "office_rooms:gas_filter"
+					count: 2
+				}
+				{
+					id: "76651568E6D97351"
+					type: "xp"
+					xp: 20
+				}
+			]
+			x: 2.0d
+			y: -1.5d
+		}
+		{
+			id: "0BF983E4440D1439"
+			title: "Almond Water"
+			subtitle: "Repeatable trade"
+			description: [
+				"Hand in the items (they are taken) and receive supplies."
+				""
+				"&6How: &rHand in the items (they are taken). Repeatable."
+			]
+			dependencies: [
+				"632178EA60B6F614"
+			]
+			can_repeat: true
+			tasks: [
+				{
+					id: "7C70C5D563F4F394"
+					type: "item"
+					item: "minecraft:glass_bottle"
+					count: 4L
+					consume_items: true
+				}
+				{
+					id: "7615DC2F4AA1BA1D"
+					type: "item"
+					item: "minecraft:sugar"
+					count: 4L
+					consume_items: true
+				}
+			]
+			rewards: [
+				{
+					id: "0727BEC101AC34CC"
+					type: "item"
+					item: "office_rooms:almond_water"
+					count: 2
+				}
+				{
+					id: "278FB6E7D72C2851"
+					type: "xp"
+					xp: 20
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			id: "259B714C4EB734FF"
+			title: "Light Sources"
+			subtitle: "Repeatable trade"
+			description: [
+				"Hand in the items (they are taken) and receive supplies."
+				""
+				"&6How: &rHand in the items (they are taken). Repeatable."
+			]
+			dependencies: [
+				"632178EA60B6F614"
+			]
+			can_repeat: true
+			tasks: [
+				{
+					id: "583F09AFE8918F37"
+					type: "item"
+					item: "minecraft:glowstone_dust"
+					count: 8L
+					consume_items: true
+				}
+			]
+			rewards: [
+				{
+					id: "337E02921F862148"
+					type: "item"
+					item: "office_rooms:glowstick"
+					count: 4
+				}
+				{
+					id: "2CFA603A2C5B94E2"
+					type: "item"
+					item: "office_rooms:emergency_flare"
+				}
+				{
+					id: "1B0B2E28FF791F34"
+					type: "xp"
+					xp: 20
+				}
+			]
+			x: 2.0d
+			y: 1.5d
+		}
+		{
+			id: "36197857E871A525"
+			title: "Bureaucracy"
+			subtitle: "Repeatable trade"
+			description: [
+				"Hand in the items (they are taken) and receive supplies."
+				""
+				"&6How: &rHand in the items (they are taken). Repeatable."
+			]
+			dependencies: [
+				"632178EA60B6F614"
+			]
+			can_repeat: true
+			tasks: [
+				{
+					id: "21C23D6E9A9315B3"
+					type: "item"
+					item: "minecraft:paper"
+					count: 64L
+					consume_items: true
+				}
+				{
+					id: "21F1AE1E1E303D7A"
+					type: "item"
+					item: "minecraft:book"
+					count: 8L
+					consume_items: true
+				}
+				{
+					id: "6FE0F104924811F6"
+					type: "item"
+					item: "office_rooms:electronic_component"
+					count: 8L
+					consume_items: true
+				}
+			]
+			rewards: [
+				{
+					id: "691802378E1E9C35"
+					type: "item"
+					item: "office_rooms:research_file"
+				}
+				{
+					id: "423787FD3D3936AC"
+					type: "xp"
+					xp: 20
+				}
+			]
+			x: 2.0d
+			y: 3.0d
+		}
+	]
+	subtitle: [
+		"Facilities takes trades (repeatable)"
+	]
+	title: "XI. Requisitions"
+}

@@ -1,0 +1,580 @@
+{
+ "variants": {
+  "facing=north,glyph=0": {
+   "model": "office_rooms:block/cinema_letter_0",
+   "y": 0
+  },
+  "facing=east,glyph=0": {
+   "model": "office_rooms:block/cinema_letter_0",
+   "y": 90
+  },
+  "facing=south,glyph=0": {
+   "model": "office_rooms:block/cinema_letter_0",
+   "y": 180
+  },
+  "facing=west,glyph=0": {
+   "model": "office_rooms:block/cinema_letter_0",
+   "y": 270
+  },
+  "facing=north,glyph=1": {
+   "model": "office_rooms:block/cinema_letter_1",
+   "y": 0
+  },
+  "facing=east,glyph=1": {
+   "model": "office_rooms:block/cinema_letter_1",
+   "y": 90
+  },
+  "facing=south,glyph=1": {
+   "model": "office_rooms:block/cinema_letter_1",
+   "y": 180
+  },
+  "facing=west,glyph=1": {
+   "model": "office_rooms:block/cinema_letter_1",
+   "y": 270
+  },
+  "facing=north,glyph=2": {
+   "model": "office_rooms:block/cinema_letter_2",
+   "y": 0
+  },
+  "facing=east,glyph=2": {
+   "model": "office_rooms:block/cinema_letter_2",
+   "y": 90
+  },
+  "facing=south,glyph=2": {
+   "model": "office_rooms:block/cinema_letter_2",
+   "y": 180
+  },
+  "facing=west,glyph=2": {
+   "model": "office_rooms:block/cinema_letter_2",
+   "y": 270
+  },
+  "facing=north,glyph=3": {
+   "model": "office_rooms:block/cinema_letter_3",
+   "y": 0
+  },
+  "facing=east,glyph=3": {
+   "model": "office_rooms:block/cinema_letter_3",
+   "y": 90
+  },
+  "facing=south,glyph=3": {
+   "model": "office_rooms:block/cinema_letter_3",
+   "y": 180
+  },
+  "facing=west,glyph=3": {
+   "model": "office_rooms:block/cinema_letter_3",
+   "y": 270
+  },
+  "facing=north,glyph=4": {
+   "model": "office_rooms:block/cinema_letter_4",
+   "y": 0
+  },
+  "facing=east,glyph=4": {
+   "model": "office_rooms:block/cinema_letter_4",
+   "y": 90
+  },
+  "facing=south,glyph=4": {
+   "model": "office_rooms:block/cinema_letter_4",
+   "y": 180
+  },
+  "facing=west,glyph=4": {
+   "model": "office_rooms:block/cinema_letter_4",
+   "y": 270
+  },
+  "facing=north,glyph=5": {
+   "model": "office_rooms:block/cinema_letter_5",
+   "y": 0
+  },
+  "facing=east,glyph=5": {
+   "model": "office_rooms:block/cinema_letter_5",
+   "y": 90
+  },
+  "facing=south,glyph=5": {
+   "model": "office_rooms:block/cinema_letter_5",
+   "y": 180
+  },
+  "facing=west,glyph=5": {
+   "model": "office_rooms:block/cinema_letter_5",
+   "y": 270
+  },
+  "facing=north,glyph=6": {
+   "model": "office_rooms:block/cinema_letter_6",
+   "y": 0
+  },
+  "facing=east,glyph=6": {
+   "model": "office_rooms:block/cinema_letter_6",
+   "y": 90
+  },
+  "facing=south,glyph=6": {
+   "model": "office_rooms:block/cinema_letter_6",
+   "y": 180
+  },
+  "facing=west,glyph=6": {
+   "model": "office_rooms:block/cinema_letter_6",
+   "y": 270
+  },
+  "facing=north,glyph=7": {
+   "model": "office_rooms:block/cinema_letter_7",
+   "y": 0
+  },
+  "facing=east,glyph=7": {
+   "model": "office_rooms:block/cinema_letter_7",
+   "y": 90
+  },
+  "facing=south,glyph=7": {
+   "model": "office_rooms:block/cinema_letter_7",
+   "y": 180
+  },
+  "facing=west,glyph=7": {
+   "model": "office_rooms:block/cinema_letter_7",
+   "y": 270
+  },
+  "facing=north,glyph=8": {
+   "model": "office_rooms:block/cinema_letter_8",
+   "y": 0
+  },
+  "facing=east,glyph=8": {
+   "model": "office_rooms:block/cinema_letter_8",
+   "y": 90
+  },
+  "facing=south,glyph=8": {
+   "model": "office_rooms:block/cinema_letter_8",
+   "y": 180
+  },
+  "facing=west,glyph=8": {
+   "model": "office_rooms:block/cinema_letter_8",
+   "y": 270
+  },
+  "facing=north,glyph=9": {
+   "model": "office_rooms:block/cinema_letter_9",
+   "y": 0
+  },
+  "facing=east,glyph=9": {
+   "model": "office_rooms:block/cinema_letter_9",
+   "y": 90
+  },
+  "facing=south,glyph=9": {
+   "model": "office_rooms:block/cinema_letter_9",
+   "y": 180
+  },
+  "facing=west,glyph=9": {
+   "model": "office_rooms:block/cinema_letter_9",
+   "y": 270
+  },
+  "facing=north,glyph=10": {
+   "model": "office_rooms:block/cinema_letter_10",
+   "y": 0
+  },
+  "facing=east,glyph=10": {
+   "model": "office_rooms:block/cinema_letter_10",
+   "y": 90
+  },
+  "facing=south,glyph=10": {
+   "model": "office_rooms:block/cinema_letter_10",
+   "y": 180
+  },
+  "facing=west,glyph=10": {
+   "model": "office_rooms:block/cinema_letter_10",
+   "y": 270
+  },
+  "facing=north,glyph=11": {
+   "model": "office_rooms:block/cinema_letter_11",
+   "y": 0
+  },
+  "facing=east,glyph=11": {
+   "model": "office_rooms:block/cinema_letter_11",
+   "y": 90
+  },
+  "facing=south,glyph=11": {
+   "model": "office_rooms:block/cinema_letter_11",
+   "y": 180
+  },
+  "facing=west,glyph=11": {
+   "model": "office_rooms:block/cinema_letter_11",
+   "y": 270
+  },
+  "facing=north,glyph=12": {
+   "model": "office_rooms:block/cinema_letter_12",
+   "y": 0
+  },
+  "facing=east,glyph=12": {
+   "model": "office_rooms:block/cinema_letter_12",
+   "y": 90
+  },
+  "facing=south,glyph=12": {
+   "model": "office_rooms:block/cinema_letter_12",
+   "y": 180
+  },
+  "facing=west,glyph=12": {
+   "model": "office_rooms:block/cinema_letter_12",
+   "y": 270
+  },
+  "facing=north,glyph=13": {
+   "model": "office_rooms:block/cinema_letter_13",
+   "y": 0
+  },
+  "facing=east,glyph=13": {
+   "model": "office_rooms:block/cinema_letter_13",
+   "y": 90
+  },
+  "facing=south,glyph=13": {
+   "model": "office_rooms:block/cinema_letter_13",
+   "y": 180
+  },
+  "facing=west,glyph=13": {
+   "model": "office_rooms:block/cinema_letter_13",
+   "y": 270
+  },
+  "facing=north,glyph=14": {
+   "model": "office_rooms:block/cinema_letter_14",
+   "y": 0
+  },
+  "facing=east,glyph=14": {
+   "model": "office_rooms:block/cinema_letter_14",
+   "y": 90
+  },
+  "facing=south,glyph=14": {
+   "model": "office_rooms:block/cinema_letter_14",
+   "y": 180
+  },
+  "facing=west,glyph=14": {
+   "model": "office_rooms:block/cinema_letter_14",
+   "y": 270
+  },
+  "facing=north,glyph=15": {
+   "model": "office_rooms:block/cinema_letter_15",
+   "y": 0
+  },
+  "facing=east,glyph=15": {
+   "model": "office_rooms:block/cinema_letter_15",
+   "y": 90
+  },
+  "facing=south,glyph=15": {
+   "model": "office_rooms:block/cinema_letter_15",
+   "y": 180
+  },
+  "facing=west,glyph=15": {
+   "model": "office_rooms:block/cinema_letter_15",
+   "y": 270
+  },
+  "facing=north,glyph=16": {
+   "model": "office_rooms:block/cinema_letter_16",
+   "y": 0
+  },
+  "facing=east,glyph=16": {
+   "model": "office_rooms:block/cinema_letter_16",
+   "y": 90
+  },
+  "facing=south,glyph=16": {
+   "model": "office_rooms:block/cinema_letter_16",
+   "y": 180
+  },
+  "facing=west,glyph=16": {
+   "model": "office_rooms:block/cinema_letter_16",
+   "y": 270
+  },
+  "facing=north,glyph=17": {
+   "model": "office_rooms:block/cinema_letter_17",
+   "y": 0
+  },
+  "facing=east,glyph=17": {
+   "model": "office_rooms:block/cinema_letter_17",
+   "y": 90
+  },
+  "facing=south,glyph=17": {
+   "model": "office_rooms:block/cinema_letter_17",
+   "y": 180
+  },
+  "facing=west,glyph=17": {
+   "model": "office_rooms:block/cinema_letter_17",
+   "y": 270
+  },
+  "facing=north,glyph=18": {
+   "model": "office_rooms:block/cinema_letter_18",
+   "y": 0
+  },
+  "facing=east,glyph=18": {
+   "model": "office_rooms:block/cinema_letter_18",
+   "y": 90
+  },
+  "facing=south,glyph=18": {
+   "model": "office_rooms:block/cinema_letter_18",
+   "y": 180
+  },
+  "facing=west,glyph=18": {
+   "model": "office_rooms:block/cinema_letter_18",
+   "y": 270
+  },
+  "facing=north,glyph=19": {
+   "model": "office_rooms:block/cinema_letter_19",
+   "y": 0
+  },
+  "facing=east,glyph=19": {
+   "model": "office_rooms:block/cinema_letter_19",
+   "y": 90
+  },
+  "facing=south,glyph=19": {
+   "model": "office_rooms:block/cinema_letter_19",
+   "y": 180
+  },
+  "facing=west,glyph=19": {
+   "model": "office_rooms:block/cinema_letter_19",
+   "y": 270
+  },
+  "facing=north,glyph=20": {
+   "model": "office_rooms:block/cinema_letter_20",
+   "y": 0
+  },
+  "facing=east,glyph=20": {
+   "model": "office_rooms:block/cinema_letter_20",
+   "y": 90
+  },
+  "facing=south,glyph=20": {
+   "model": "office_rooms:block/cinema_letter_20",
+   "y": 180
+  },
+  "facing=west,glyph=20": {
+   "model": "office_rooms:block/cinema_letter_20",
+   "y": 270
+  },
+  "facing=north,glyph=21": {
+   "model": "office_rooms:block/cinema_letter_21",
+   "y": 0
+  },
+  "facing=east,glyph=21": {
+   "model": "office_rooms:block/cinema_letter_21",
+   "y": 90
+  },
+  "facing=south,glyph=21": {
+   "model": "office_rooms:block/cinema_letter_21",
+   "y": 180
+  },
+  "facing=west,glyph=21": {
+   "model": "office_rooms:block/cinema_letter_21",
+   "y": 270
+  },
+  "facing=north,glyph=22": {
+   "model": "office_rooms:block/cinema_letter_22",
+   "y": 0
+  },
+  "facing=east,glyph=22": {
+   "model": "office_rooms:block/cinema_letter_22",
+   "y": 90
+  },
+  "facing=south,glyph=22": {
+   "model": "office_rooms:block/cinema_letter_22",
+   "y": 180
+  },
+  "facing=west,glyph=22": {
+   "model": "office_rooms:block/cinema_letter_22",
+   "y": 270
+  },
+  "facing=north,glyph=23": {
+   "model": "office_rooms:block/cinema_letter_23",
+   "y": 0
+  },
+  "facing=east,glyph=23": {
+   "model": "office_rooms:block/cinema_letter_23",
+   "y": 90
+  },
+  "facing=south,glyph=23": {
+   "model": "office_rooms:block/cinema_letter_23",
+   "y": 180
+  },
+  "facing=west,glyph=23": {
+   "model": "office_rooms:block/cinema_letter_23",
+   "y": 270
+  },
+  "facing=north,glyph=24": {
+   "model": "office_rooms:block/cinema_letter_24",
+   "y": 0
+  },
+  "facing=east,glyph=24": {
+   "model": "office_rooms:block/cinema_letter_24",
+   "y": 90
+  },
+  "facing=south,glyph=24": {
+   "model": "office_rooms:block/cinema_letter_24",
+   "y": 180
+  },
+  "facing=west,glyph=24": {
+   "model": "office_rooms:block/cinema_letter_24",
+   "y": 270
+  },
+  "facing=north,glyph=25": {
+   "model": "office_rooms:block/cinema_letter_25",
+   "y": 0
+  },
+  "facing=east,glyph=25": {
+   "model": "office_rooms:block/cinema_letter_25",
+   "y": 90
+  },
+  "facing=south,glyph=25": {
+   "model": "office_rooms:block/cinema_letter_25",
+   "y": 180
+  },
+  "facing=west,glyph=25": {
+   "model": "office_rooms:block/cinema_letter_25",
+   "y": 270
+  },
+  "facing=north,glyph=26": {
+   "model": "office_rooms:block/cinema_letter_26",
+   "y": 0
+  },
+  "facing=east,glyph=26": {
+   "model": "office_rooms:block/cinema_letter_26",
+   "y": 90
+  },
+  "facing=south,glyph=26": {
+   "model": "office_rooms:block/cinema_letter_26",
+   "y": 180
+  },
+  "facing=west,glyph=26": {
+   "model": "office_rooms:block/cinema_letter_26",
+   "y": 270
+  },
+  "facing=north,glyph=27": {
+   "model": "office_rooms:block/cinema_letter_27",
+   "y": 0
+  },
+  "facing=east,glyph=27": {
+   "model": "office_rooms:block/cinema_letter_27",
+   "y": 90
+  },
+  "facing=south,glyph=27": {
+   "model": "office_rooms:block/cinema_letter_27",
+   "y": 180
+  },
+  "facing=west,glyph=27": {
+   "model": "office_rooms:block/cinema_letter_27",
+   "y": 270
+  },
+  "facing=north,glyph=28": {
+   "model": "office_rooms:block/cinema_letter_28",
+   "y": 0
+  },
+  "facing=east,glyph=28": {
+   "model": "office_rooms:block/cinema_letter_28",
+   "y": 90
+  },
+  "facing=south,glyph=28": {
+   "model": "office_rooms:block/cinema_letter_28",
+   "y": 180
+  },
+  "facing=west,glyph=28": {
+   "model": "office_rooms:block/cinema_letter_28",
+   "y": 270
+  },
+  "facing=north,glyph=29": {
+   "model": "office_rooms:block/cinema_letter_29",
+   "y": 0
+  },
+  "facing=east,glyph=29": {
+   "model": "office_rooms:block/cinema_letter_29",
+   "y": 90
+  },
+  "facing=south,glyph=29": {
+   "model": "office_rooms:block/cinema_letter_29",
+   "y": 180
+  },
+  "facing=west,glyph=29": {
+   "model": "office_rooms:block/cinema_letter_29",
+   "y": 270
+  },
+  "facing=north,glyph=30": {
+   "model": "office_rooms:block/cinema_letter_30",
+   "y": 0
+  },
+  "facing=east,glyph=30": {
+   "model": "office_rooms:block/cinema_letter_30",
+   "y": 90
+  },
+  "facing=south,glyph=30": {
+   "model": "office_rooms:block/cinema_letter_30",
+   "y": 180
+  },
+  "facing=west,glyph=30": {
+   "model": "office_rooms:block/cinema_letter_30",
+   "y": 270
+  },
+  "facing=north,glyph=31": {
+   "model": "office_rooms:block/cinema_letter_31",
+   "y": 0
+  },
+  "facing=east,glyph=31": {
+   "model": "office_rooms:block/cinema_letter_31",
+   "y": 90
+  },
+  "facing=south,glyph=31": {
+   "model": "office_rooms:block/cinema_letter_31",
+   "y": 180
+  },
+  "facing=west,glyph=31": {
+   "model": "office_rooms:block/cinema_letter_31",
+   "y": 270
+  },
+  "facing=north,glyph=32": {
+   "model": "office_rooms:block/cinema_letter_32",
+   "y": 0
+  },
+  "facing=east,glyph=32": {
+   "model": "office_rooms:block/cinema_letter_32",
+   "y": 90
+  },
+  "facing=south,glyph=32": {
+   "model": "office_rooms:block/cinema_letter_32",
+   "y": 180
+  },
+  "facing=west,glyph=32": {
+   "model": "office_rooms:block/cinema_letter_32",
+   "y": 270
+  },
+  "facing=north,glyph=33": {
+   "model": "office_rooms:block/cinema_letter_33",
+   "y": 0
+  },
+  "facing=east,glyph=33": {
+   "model": "office_rooms:block/cinema_letter_33",
+   "y": 90
+  },
+  "facing=south,glyph=33": {
+   "model": "office_rooms:block/cinema_letter_33",
+   "y": 180
+  },
+  "facing=west,glyph=33": {
+   "model": "office_rooms:block/cinema_letter_33",
+   "y": 270
+  },
+  "facing=north,glyph=34": {
+   "model": "office_rooms:block/cinema_letter_34",
+   "y": 0
+  },
+  "facing=east,glyph=34": {
+   "model": "office_rooms:block/cinema_letter_34",
+   "y": 90
+  },
+  "facing=south,glyph=34": {
+   "model": "office_rooms:block/cinema_letter_34",
+   "y": 180
+  },
+  "facing=west,glyph=34": {
+   "model": "office_rooms:block/cinema_letter_34",
+   "y": 270
+  },
+  "facing=north,glyph=35": {
+   "model": "office_rooms:block/cinema_letter_35",
+   "y": 0
+  },
+  "facing=east,glyph=35": {
+   "model": "office_rooms:block/cinema_letter_35",
+   "y": 90
+  },
+  "facing=south,glyph=35": {
+   "model": "office_rooms:block/cinema_letter_35",
+   "y": 180
+  },
+  "facing=west,glyph=35": {
+   "model": "office_rooms:block/cinema_letter_35",
+   "y": 270
+  }
+ }
+}

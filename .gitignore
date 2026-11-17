@@ -1,0 +1,19 @@
+# Build output and IDE
+build/
+.gradle/
+run/
+logs/
+out/
+*.iml
+.idea/
+.vscode/
+.classpath
+.project
+.settings/
+
+# Other mods' JARs are never redistributed. Download them yourself into libs/ (see README).
+libs/*.jar
+
+# OS
+.DS_Store
+Thumbs.db

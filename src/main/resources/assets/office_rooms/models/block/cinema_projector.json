@@ -1,0 +1,45 @@
+{
+ "parent": "minecraft:block/block",
+ "textures": {
+  "p": "office_rooms:block/cinema_projector",
+  "particle": "office_rooms:block/cinema_projector"
+ },
+ "elements": [
+  {
+   "from": [
+    3,
+    3,
+    14
+   ],
+   "to": [
+    13,
+    13,
+    16
+   ],
+   "faces": {
+    "north": {
+     "texture": "#p"
+    },
+    "south": {
+     "texture": "#p"
+    },
+    "east": {
+     "texture": "#p"
+    },
+    "west": {
+     "texture": "#p"
+    },
+    "up": {
+     "texture": "#p"
+    },
+    "down": {
+     "texture": "#p"
+    }
+   },
+   "forge_data": {
+    "block_light": 15,
+    "sky_light": 15
+   }
+  }
+ ]
+}

@@ -1,0 +1,41 @@
+{
+ "parent": "minecraft:block/block",
+ "textures": {
+  "t": "office_rooms:block/level0_outlet",
+  "particle": "office_rooms:block/level0_outlet"
+ },
+ "elements": [
+  {
+   "from": [
+    5,
+    2,
+    15
+   ],
+   "to": [
+    11,
+    8,
+    16
+   ],
+   "faces": {
+    "north": {
+     "texture": "#t"
+    },
+    "south": {
+     "texture": "#t"
+    },
+    "east": {
+     "texture": "#t"
+    },
+    "west": {
+     "texture": "#t"
+    },
+    "up": {
+     "texture": "#t"
+    },
+    "down": {
+     "texture": "#t"
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,26 @@
+{
+ "type": "minecraft:crafting_shaped",
+ "category": "misc",
+ "pattern": [
+  "PBP",
+  "ICI"
+ ],
+ "key": {
+  "P": {
+   "item": "minecraft:paper"
+  },
+  "B": {
+   "item": "minecraft:book"
+  },
+  "I": {
+   "item": "minecraft:iron_ingot"
+  },
+  "C": {
+   "item": "minecraft:crafting_table"
+  }
+ },
+ "result": {
+  "item": "office_rooms:research_table",
+  "count": 1
+ }
+}

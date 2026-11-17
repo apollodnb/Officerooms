@@ -1,0 +1,90 @@
+{
+ "type": "minecraft:chest",
+ "pools": [
+  {
+   "rolls": 1,
+   "entries": [
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:diamond",
+     "weight": 10,
+     "functions": [
+      {
+       "function": "minecraft:set_count",
+       "count": {
+        "type": "minecraft:uniform",
+        "min": 1,
+        "max": 2
+       }
+      }
+     ]
+    },
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:netherite_scrap",
+     "weight": 5
+    },
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:netherite_upgrade_smithing_template",
+     "weight": 3
+    },
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:smithing_table",
+     "weight": 6
+    },
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:anvil",
+     "weight": 4
+    },
+    {
+     "type": "minecraft:item",
+     "name": "office_rooms:liquid_pain",
+     "weight": 4
+    },
+    {
+     "type": "minecraft:item",
+     "name": "office_rooms:anomaly_detector",
+     "weight": 3
+    },
+    {
+     "type": "minecraft:loot_table",
+     "name": "office_rooms:tiers/tools",
+     "weight": 9
+    },
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:book",
+     "weight": 6,
+     "functions": [
+      {
+       "function": "minecraft:set_count",
+       "count": {
+        "type": "minecraft:uniform",
+        "min": 1,
+        "max": 2
+       }
+      }
+     ]
+    },
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:paper",
+     "weight": 6,
+     "functions": [
+      {
+       "function": "minecraft:set_count",
+       "count": {
+        "type": "minecraft:uniform",
+        "min": 2,
+        "max": 6
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

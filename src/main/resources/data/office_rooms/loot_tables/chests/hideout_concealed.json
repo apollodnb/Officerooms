@@ -1,0 +1,106 @@
+{
+ "type": "minecraft:chest",
+ "pools": [
+  {
+   "rolls": {
+    "type": "minecraft:uniform",
+    "min": 1,
+    "max": 2
+   },
+   "entries": [
+    {
+     "type": "minecraft:loot_table",
+     "name": "office_rooms:tiers/rare"
+    }
+   ]
+  },
+  {
+   "rolls": {
+    "type": "minecraft:uniform",
+    "min": 1,
+    "max": 2
+   },
+   "entries": [
+    {
+     "type": "minecraft:loot_table",
+     "name": "office_rooms:tiers/uncommon"
+    }
+   ]
+  },
+  {
+   "rolls": 1,
+   "conditions": [
+    {
+     "condition": "minecraft:random_chance",
+     "chance": 0.08
+    }
+   ],
+   "entries": [
+    {
+     "type": "minecraft:item",
+     "name": "office_rooms:totem_of_mercy"
+    }
+   ]
+  },
+  {
+   "rolls": 1,
+   "conditions": [
+    {
+     "condition": "minecraft:random_chance",
+     "chance": 0.12
+    }
+   ],
+   "entries": [
+    {
+     "type": "minecraft:item",
+     "name": "office_rooms:master_key"
+    }
+   ]
+  },
+  {
+   "rolls": 1,
+   "conditions": [
+    {
+     "condition": "minecraft:random_chance",
+     "chance": 0.06
+    }
+   ],
+   "entries": [
+    {
+     "type": "minecraft:item",
+     "name": "office_rooms:temporal_watch"
+    }
+   ]
+  },
+  {
+   "rolls": 1,
+   "conditions": [
+    {
+     "condition": "minecraft:random_chance",
+     "chance": 0.04
+    }
+   ],
+   "entries": [
+    {
+     "type": "minecraft:item",
+     "name": "office_rooms:level_3_access_card"
+    }
+   ]
+  },
+  {
+   "rolls": 1,
+   "conditions": [
+    {
+     "condition": "minecraft:random_chance",
+     "chance": 0.3
+    }
+   ],
+   "entries": [
+    {
+     "type": "minecraft:item",
+     "name": "office_rooms:research_file"
+    }
+   ]
+  }
+ ]
+}

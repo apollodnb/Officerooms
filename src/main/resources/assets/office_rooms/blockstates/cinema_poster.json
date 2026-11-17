@@ -1,0 +1,196 @@
+{
+ "variants": {
+  "facing=north,upper=true,variant=0": {
+   "model": "office_rooms:block/cinema_poster_0_upper",
+   "y": 0
+  },
+  "facing=east,upper=true,variant=0": {
+   "model": "office_rooms:block/cinema_poster_0_upper",
+   "y": 90
+  },
+  "facing=south,upper=true,variant=0": {
+   "model": "office_rooms:block/cinema_poster_0_upper",
+   "y": 180
+  },
+  "facing=west,upper=true,variant=0": {
+   "model": "office_rooms:block/cinema_poster_0_upper",
+   "y": 270
+  },
+  "facing=north,upper=false,variant=0": {
+   "model": "office_rooms:block/cinema_poster_0_lower",
+   "y": 0
+  },
+  "facing=east,upper=false,variant=0": {
+   "model": "office_rooms:block/cinema_poster_0_lower",
+   "y": 90
+  },
+  "facing=south,upper=false,variant=0": {
+   "model": "office_rooms:block/cinema_poster_0_lower",
+   "y": 180
+  },
+  "facing=west,upper=false,variant=0": {
+   "model": "office_rooms:block/cinema_poster_0_lower",
+   "y": 270
+  },
+  "facing=north,upper=true,variant=1": {
+   "model": "office_rooms:block/cinema_poster_1_upper",
+   "y": 0
+  },
+  "facing=east,upper=true,variant=1": {
+   "model": "office_rooms:block/cinema_poster_1_upper",
+   "y": 90
+  },
+  "facing=south,upper=true,variant=1": {
+   "model": "office_rooms:block/cinema_poster_1_upper",
+   "y": 180
+  },
+  "facing=west,upper=true,variant=1": {
+   "model": "office_rooms:block/cinema_poster_1_upper",
+   "y": 270
+  },
+  "facing=north,upper=false,variant=1": {
+   "model": "office_rooms:block/cinema_poster_1_lower",
+   "y": 0
+  },
+  "facing=east,upper=false,variant=1": {
+   "model": "office_rooms:block/cinema_poster_1_lower",
+   "y": 90
+  },
+  "facing=south,upper=false,variant=1": {
+   "model": "office_rooms:block/cinema_poster_1_lower",
+   "y": 180
+  },
+  "facing=west,upper=false,variant=1": {
+   "model": "office_rooms:block/cinema_poster_1_lower",
+   "y": 270
+  },
+  "facing=north,upper=true,variant=2": {
+   "model": "office_rooms:block/cinema_poster_2_upper",
+   "y": 0
+  },
+  "facing=east,upper=true,variant=2": {
+   "model": "office_rooms:block/cinema_poster_2_upper",
+   "y": 90
+  },
+  "facing=south,upper=true,variant=2": {
+   "model": "office_rooms:block/cinema_poster_2_upper",
+   "y": 180
+  },
+  "facing=west,upper=true,variant=2": {
+   "model": "office_rooms:block/cinema_poster_2_upper",
+   "y": 270
+  },
+  "facing=north,upper=false,variant=2": {
+   "model": "office_rooms:block/cinema_poster_2_lower",
+   "y": 0
+  },
+  "facing=east,upper=false,variant=2": {
+   "model": "office_rooms:block/cinema_poster_2_lower",
+   "y": 90
+  },
+  "facing=south,upper=false,variant=2": {
+   "model": "office_rooms:block/cinema_poster_2_lower",
+   "y": 180
+  },
+  "facing=west,upper=false,variant=2": {
+   "model": "office_rooms:block/cinema_poster_2_lower",
+   "y": 270
+  },
+  "facing=north,upper=true,variant=3": {
+   "model": "office_rooms:block/cinema_poster_3_upper",
+   "y": 0
+  },
+  "facing=east,upper=true,variant=3": {
+   "model": "office_rooms:block/cinema_poster_3_upper",
+   "y": 90
+  },
+  "facing=south,upper=true,variant=3": {
+   "model": "office_rooms:block/cinema_poster_3_upper",
+   "y": 180
+  },
+  "facing=west,upper=true,variant=3": {
+   "model": "office_rooms:block/cinema_poster_3_upper",
+   "y": 270
+  },
+  "facing=north,upper=false,variant=3": {
+   "model": "office_rooms:block/cinema_poster_3_lower",
+   "y": 0
+  },
+  "facing=east,upper=false,variant=3": {
+   "model": "office_rooms:block/cinema_poster_3_lower",
+   "y": 90
+  },
+  "facing=south,upper=false,variant=3": {
+   "model": "office_rooms:block/cinema_poster_3_lower",
+   "y": 180
+  },
+  "facing=west,upper=false,variant=3": {
+   "model": "office_rooms:block/cinema_poster_3_lower",
+   "y": 270
+  },
+  "facing=north,upper=true,variant=4": {
+   "model": "office_rooms:block/cinema_poster_4_upper",
+   "y": 0
+  },
+  "facing=east,upper=true,variant=4": {
+   "model": "office_rooms:block/cinema_poster_4_upper",
+   "y": 90
+  },
+  "facing=south,upper=true,variant=4": {
+   "model": "office_rooms:block/cinema_poster_4_upper",
+   "y": 180
+  },
+  "facing=west,upper=true,variant=4": {
+   "model": "office_rooms:block/cinema_poster_4_upper",
+   "y": 270
+  },
+  "facing=north,upper=false,variant=4": {
+   "model": "office_rooms:block/cinema_poster_4_lower",
+   "y": 0
+  },
+  "facing=east,upper=false,variant=4": {
+   "model": "office_rooms:block/cinema_poster_4_lower",
+   "y": 90
+  },
+  "facing=south,upper=false,variant=4": {
+   "model": "office_rooms:block/cinema_poster_4_lower",
+   "y": 180
+  },
+  "facing=west,upper=false,variant=4": {
+   "model": "office_rooms:block/cinema_poster_4_lower",
+   "y": 270
+  },
+  "facing=north,upper=true,variant=5": {
+   "model": "office_rooms:block/cinema_poster_5_upper",
+   "y": 0
+  },
+  "facing=east,upper=true,variant=5": {
+   "model": "office_rooms:block/cinema_poster_5_upper",
+   "y": 90
+  },
+  "facing=south,upper=true,variant=5": {
+   "model": "office_rooms:block/cinema_poster_5_upper",
+   "y": 180
+  },
+  "facing=west,upper=true,variant=5": {
+   "model": "office_rooms:block/cinema_poster_5_upper",
+   "y": 270
+  },
+  "facing=north,upper=false,variant=5": {
+   "model": "office_rooms:block/cinema_poster_5_lower",
+   "y": 0
+  },
+  "facing=east,upper=false,variant=5": {
+   "model": "office_rooms:block/cinema_poster_5_lower",
+   "y": 90
+  },
+  "facing=south,upper=false,variant=5": {
+   "model": "office_rooms:block/cinema_poster_5_lower",
+   "y": 180
+  },
+  "facing=west,upper=false,variant=5": {
+   "model": "office_rooms:block/cinema_poster_5_lower",
+   "y": 270
+  }
+ }
+}

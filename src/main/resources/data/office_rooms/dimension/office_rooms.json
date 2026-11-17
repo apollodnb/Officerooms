@@ -1,0 +1,340 @@
+{
+  "type": "office_rooms:office_rooms",
+  "generator": {
+    "type": "office_rooms:office_rooms",
+    "biome_source": {
+      "type": "minecraft:fixed",
+      "biome": "office_rooms:office_void"
+    },
+    "settings": {
+      "grid": {
+        "unit_size": 4,
+        "region_units": 40,
+        "base_height": 4,
+        "storeys": 0
+      },
+      "room_heights": [
+        {
+          "min": 4,
+          "max": 4,
+          "weight": 90
+        },
+        {
+          "min": 5,
+          "max": 8,
+          "weight": 7
+        },
+        {
+          "min": 9,
+          "max": 16,
+          "weight": 2
+        },
+        {
+          "min": 17,
+          "max": 28,
+          "weight": 1
+        }
+      ],
+      "room_sizes": [
+        {
+          "name": "small_square",
+          "weight": 20,
+          "min_w": 2,
+          "max_w": 3,
+          "min_d": 2,
+          "max_d": 3
+        },
+        {
+          "name": "small_rect",
+          "weight": 18,
+          "min_w": 2,
+          "max_w": 3,
+          "min_d": 3,
+          "max_d": 5
+        },
+        {
+          "name": "office",
+          "weight": 20,
+          "min_w": 4,
+          "max_w": 4,
+          "min_d": 4,
+          "max_d": 4
+        },
+        {
+          "name": "office_varied",
+          "weight": 14,
+          "min_w": 3,
+          "max_w": 5,
+          "min_d": 3,
+          "max_d": 6
+        },
+        {
+          "name": "rect_office",
+          "weight": 10,
+          "min_w": 8,
+          "max_w": 8,
+          "min_d": 4,
+          "max_d": 4
+        },
+        {
+          "name": "open_plan",
+          "weight": 8,
+          "min_w": 8,
+          "max_w": 8,
+          "min_d": 8,
+          "max_d": 8
+        },
+        {
+          "name": "large_open",
+          "weight": 6,
+          "min_w": 12,
+          "max_w": 12,
+          "min_d": 8,
+          "max_d": 8
+        },
+        {
+          "name": "huge_open",
+          "weight": 3,
+          "min_w": 16,
+          "max_w": 16,
+          "min_d": 12,
+          "max_d": 12
+        },
+        {
+          "name": "vast_open",
+          "weight": 1,
+          "min_w": 16,
+          "max_w": 20,
+          "min_d": 12,
+          "max_d": 16
+        }
+      ],
+      "composite_chance": 0.15,
+      "corridors": {
+        "seeds_min": 1,
+        "seeds_max": 3,
+        "max_share": 0.3,
+        "wide_chance": 0.2,
+        "segment_min": 3,
+        "segment_max": 10,
+        "long_chance": 0.12,
+        "long_max": 24,
+        "turn_chance": 0.45,
+        "branch_chance": 0.25,
+        "side_branch_chance": 0.05
+      },
+      "stairs_per_storey": 3,
+      "atria": {
+        "density": 0.1,
+        "gallery_chance": 0.6,
+        "bridge_chance": 0.45,
+        "classes": [
+          {
+            "name": "small",
+            "weight": 30,
+            "min_w": 3,
+            "max_w": 5,
+            "min_d": 3,
+            "max_d": 5,
+            "min_h": 12,
+            "max_h": 20
+          },
+          {
+            "name": "medium",
+            "weight": 25,
+            "min_w": 7,
+            "max_w": 9,
+            "min_d": 7,
+            "max_d": 9,
+            "min_h": 20,
+            "max_h": 40
+          },
+          {
+            "name": "large",
+            "weight": 15,
+            "min_w": 11,
+            "max_w": 13,
+            "min_d": 11,
+            "max_d": 13,
+            "min_h": 40,
+            "max_h": 80
+          },
+          {
+            "name": "shaft",
+            "weight": 12,
+            "min_w": 2,
+            "max_w": 3,
+            "min_d": 3,
+            "max_d": 6,
+            "min_h": 40,
+            "max_h": 120
+          },
+          {
+            "name": "hall",
+            "weight": 8,
+            "min_w": 12,
+            "max_w": 20,
+            "min_d": 8,
+            "max_d": 12,
+            "min_h": 20,
+            "max_h": 40
+          },
+          {
+            "name": "huge",
+            "weight": 7,
+            "min_w": 15,
+            "max_w": 17,
+            "min_d": 15,
+            "max_d": 17,
+            "min_h": 80,
+            "max_h": 160
+          },
+          {
+            "name": "mega",
+            "weight": 3,
+            "min_w": 24,
+            "max_w": 30,
+            "min_d": 24,
+            "max_d": 30,
+            "min_h": 160,
+            "max_h": 300
+          }
+        ]
+      },
+      "doors": {
+        "normal": 45,
+        "double": 25,
+        "wide": 15,
+        "open": 15,
+        "extra_chance": 0.25,
+        "second_opening_chance": 0.15,
+        "boundary_chance": 0.12,
+        "boundary_min_per_storey": 2
+      },
+      "windows": {
+        "room_chance": 0.6,
+        "max_per_room": 2,
+        "office_pair_chance": 0.02
+      },
+      "furnishing": {
+        "small_rooms": [
+          {
+            "type": "empty",
+            "weight": 35
+          },
+          {
+            "type": "standard_office",
+            "weight": 38
+          },
+          {
+            "type": "archive",
+            "weight": 10
+          },
+          {
+            "type": "break_room",
+            "weight": 9
+          },
+          {
+            "type": "server_room",
+            "weight": 8
+          }
+        ],
+        "medium_rooms": [
+          {
+            "type": "empty",
+            "weight": 22
+          },
+          {
+            "type": "standard_office",
+            "weight": 30
+          },
+          {
+            "type": "meeting_room",
+            "weight": 18
+          },
+          {
+            "type": "break_room",
+            "weight": 12
+          },
+          {
+            "type": "archive",
+            "weight": 10
+          },
+          {
+            "type": "server_room",
+            "weight": 8
+          }
+        ],
+        "large_rooms": [
+          {
+            "type": "empty",
+            "weight": 15
+          },
+          {
+            "type": "open_office",
+            "weight": 60
+          },
+          {
+            "type": "meeting_room",
+            "weight": 10
+          },
+          {
+            "type": "break_room",
+            "weight": 8
+          },
+          {
+            "type": "archive",
+            "weight": 7
+          }
+        ],
+        "room_lighting": [
+          {
+            "type": "normal",
+            "weight": 45
+          },
+          {
+            "type": "dim",
+            "weight": 25
+          },
+          {
+            "type": "partial",
+            "weight": 20
+          },
+          {
+            "type": "dark",
+            "weight": 10
+          }
+        ],
+        "corridor_lighting": [
+          {
+            "type": "bright",
+            "weight": 40
+          },
+          {
+            "type": "dark",
+            "weight": 60
+          }
+        ],
+        "atrium_lit_chance": 0.55,
+        "water_cooler_chance": 0.12,
+        "light_spacing": 7,
+        "dim_light_spacing": 11
+      },
+      "content_version": 1,
+      "special_rooms": {
+        "outpost_chance": 0.012,
+        "hideout_attempts": 12,
+        "outpost_min_cells": 24,
+        "lush_chance": 0.15,
+        "lush_min_cells": 12,
+        "lush_min_clear": 9,
+        "water_chance": 0.004,
+        "water_min_cells": 6,
+        "water_max_cells": 40,
+        "sculk_chance": 0.0008,
+        "sculk_min_cells": 9,
+        "dark_bottom_storeys": 5
+      }
+    }
+  }
+}

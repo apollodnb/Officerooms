@@ -1,0 +1,10 @@
+{
+ "variants": {
+  "active=false": {
+   "model": "office_rooms:block/gateway_frame"
+  },
+  "active=true": {
+   "model": "office_rooms:block/gateway_frame_on"
+  }
+ }
+}

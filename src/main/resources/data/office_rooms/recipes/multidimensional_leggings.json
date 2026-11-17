@@ -1,0 +1,21 @@
+{
+ "type": "minecraft:crafting_shaped",
+ "category": "equipment",
+ "pattern": [
+  "IRI",
+  "I I",
+  "I I"
+ ],
+ "key": {
+  "I": {
+   "item": "office_rooms:glitched_ingot"
+  },
+  "R": {
+   "item": "office_rooms:multidimensional_rod"
+  }
+ },
+ "result": {
+  "item": "office_rooms:multidimensional_leggings",
+  "count": 1
+ }
+}

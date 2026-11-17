@@ -1,0 +1,27 @@
+{
+ "parent": "minecraft:block/block",
+ "render_type": "minecraft:cutout",
+ "textures": {
+  "g": "office_rooms:block/smile_graffiti",
+  "particle": "office_rooms:block/smile_graffiti"
+ },
+ "elements": [
+  {
+   "from": [
+    0,
+    0,
+    15.9
+   ],
+   "to": [
+    16,
+    16,
+    16
+   ],
+   "faces": {
+    "north": {
+     "texture": "#g"
+    }
+   }
+  }
+ ]
+}

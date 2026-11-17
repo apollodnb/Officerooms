@@ -1,0 +1,409 @@
+{
+	images: [
+		{
+			x: 3.0d
+			y: 0.75d
+			width: 18.67d
+			height: 10.5d
+			rotation: 0.0d
+			image: "office_rooms:textures/gui/quests/atrium_2.png"
+			color: 16777215
+			alpha: 150
+			order: -1
+			hover: [ ]
+			click: ""
+			dev: false
+			corner: false
+		}
+	]
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "office_rooms_first_day"
+	group: "2B674EAFE9EE221B"
+	icon: "office_rooms:almond_water"
+	id: "0BB15CBCF8EF4067"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			id: "39BBC33C8B3745CC"
+			title: "Almond Water"
+			subtitle: "Drink it. Trust it."
+			description: [
+				"You will find bottles of Almond Water in desks, cabinets and break rooms."
+				"Nobody knows who leaves them there. Drink it when you feel wrong."
+				""
+				"&6How: &rDesks, cabinets and break rooms in the offices, hidden rooms, hotel rooms and Level Fun presents."
+			]
+			dependencies: [
+				"485E307510A6DABF"
+			]
+			shape: "hexagon"
+			size: 1.25d
+			tasks: [
+				{
+					id: "6E16A6D1E1ADC7CE"
+					type: "item"
+					item: "office_rooms:almond_water"
+				}
+			]
+			rewards: [
+				{
+					id: "2384813027459ACC"
+					type: "item"
+					item: "office_rooms:almond_water"
+					count: 2
+				}
+				{
+					id: "056C97A093C5EDAD"
+					type: "xp"
+					xp: 20
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			id: "63D1CD4154C28FC3"
+			title: "Mark the Walls"
+			subtitle: "Left, right, cross"
+			description: [
+				"Rooms repeat. You will walk in circles. Chalk on the walls is the oldest trick that still works."
+				""
+				"&6How: &rOffice loot (tool drawers, cabinets)."
+			]
+			dependencies: [
+				"39BBC33C8B3745CC"
+			]
+			tasks: [
+				{
+					id: "4E3457745F6E0980"
+					type: "item"
+					item: "office_rooms:chalk"
+				}
+			]
+			rewards: [
+				{
+					id: "4E9FF6CE9BC453A5"
+					type: "item"
+					item: "office_rooms:chalk"
+				}
+				{
+					id: "42181C8896C9342D"
+					type: "xp"
+					xp: 15
+				}
+			]
+			x: 2.0d
+			y: -1.5d
+		}
+		{
+			id: "2D836566F8E4864B"
+			title: "First Aid"
+			subtitle: "Paper, paper, wool"
+			description: [
+				"Craft a bandage. Applying it takes two seconds and you cannot run while you do."
+				"Plan your two seconds."
+				""
+				"&6How: &rCraft: 2 paper + 1 white wool (shapeless). Also in supply closets."
+			]
+			dependencies: [
+				"39BBC33C8B3745CC"
+			]
+			tasks: [
+				{
+					id: "2BC386D5511E4D59"
+					type: "item"
+					item: "office_rooms:bandage"
+				}
+			]
+			rewards: [
+				{
+					id: "59A3870D29C9121C"
+					type: "item"
+					item: "office_rooms:bandage"
+					count: 2
+				}
+				{
+					id: "0DF40D4317445542"
+					type: "xp"
+					xp: 15
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			id: "6DC7F3205057145E"
+			title: "A Little Green Light"
+			description: [
+				"Throw a glowstick down a dark corridor before you walk it."
+				""
+				"&6How: &rOffice loot, supply closets, hotel rooms, Level Fun presents."
+			]
+			dependencies: [
+				"39BBC33C8B3745CC"
+			]
+			tasks: [
+				{
+					id: "2AFF84F7F371B9EE"
+					type: "item"
+					item: "office_rooms:glowstick"
+				}
+			]
+			rewards: [
+				{
+					id: "49AC54FAA69E355B"
+					type: "item"
+					item: "office_rooms:glowstick"
+					count: 3
+				}
+				{
+					id: "64DFC3FE14E59C63"
+					type: "xp"
+					xp: 15
+				}
+			]
+			x: 2.0d
+			y: 1.5d
+		}
+		{
+			id: "15C32766896987BF"
+			title: "Industrial Flashlight"
+			subtitle: "A strong beam, a short life"
+			description: [
+				"Right-click to switch it on. The charge runs out faster than you think."
+				""
+				"&6How: &rSecurity offices, maintenance rooms, industrial control rooms and office tool loot."
+			]
+			dependencies: [
+				"6DC7F3205057145E"
+			]
+			tasks: [
+				{
+					id: "66D2DA565EE549E7"
+					type: "item"
+					item: "office_rooms:industrial_flashlight"
+				}
+			]
+			rewards: [
+				{
+					id: "21E5A8571292C9DC"
+					type: "xp"
+					xp: 40
+				}
+			]
+			x: 4.0d
+			y: 1.5d
+		}
+		{
+			id: "6DFACB5F0C6E95D1"
+			title: "Portable Battery"
+			subtitle: "Steal light from the ceiling"
+			description: [
+				"Hold the battery in your other hand to charge the flashlight."
+				"Empty? Drain a lit ceiling light. The room will not thank you."
+				""
+				"&6How: &rMaintenance rooms, industrial control rooms and generator halls, research outposts, repaired fuse boxes."
+			]
+			dependencies: [
+				"15C32766896987BF"
+			]
+			tasks: [
+				{
+					id: "55F0D90FD883EF6D"
+					type: "item"
+					item: "office_rooms:portable_battery"
+				}
+			]
+			rewards: [
+				{
+					id: "29AF6AAAAF3E1377"
+					type: "item"
+					item: "office_rooms:portable_battery"
+				}
+				{
+					id: "0388B310C8F6848B"
+					type: "xp"
+					xp: 40
+				}
+			]
+			x: 6.0d
+			y: 1.5d
+		}
+		{
+			id: "01BD7A411108BCA1"
+			title: "Emergency Flare"
+			subtitle: "Red means back off"
+			description: [
+				"Most creatures back away from a burning flare. Most."
+				""
+				"&6How: &rSecurity offices, industrial storage, office tool loot."
+			]
+			dependencies: [
+				"6DC7F3205057145E"
+			]
+			tasks: [
+				{
+					id: "6E50E71234D09948"
+					type: "item"
+					item: "office_rooms:emergency_flare"
+				}
+			]
+			rewards: [
+				{
+					id: "52D8CBFDD5401C6C"
+					type: "item"
+					item: "office_rooms:emergency_flare"
+				}
+				{
+					id: "2541B4D1E2831E31"
+					type: "xp"
+					xp: 30
+				}
+			]
+			x: 4.0d
+			y: 3.0d
+		}
+		{
+			id: "114E32A9CEF21A92"
+			title: "Noise Maker"
+			subtitle: "Somewhere else, please"
+			description: [
+				"Throw it and run the other way. Whatever hears it will go and look."
+				""
+				"&6How: &rSecurity offices, Level Fun presents, office tool loot."
+			]
+			dependencies: [
+				"01BD7A411108BCA1"
+			]
+			tasks: [
+				{
+					id: "0A76E6769811D023"
+					type: "item"
+					item: "office_rooms:noise_maker"
+				}
+			]
+			rewards: [
+				{
+					id: "4426ED14DD912F1E"
+					type: "xp"
+					xp: 30
+				}
+			]
+			x: 6.0d
+			y: 3.0d
+		}
+		{
+			id: "43AD583BED105F67"
+			title: "Level 1 Access Card"
+			subtitle: "Security doors"
+			description: [
+				"Some doors in the Office Rooms are locked. Cards are found in special rooms and in the houses of the Neighbourhood."
+				""
+				"&6How: &rRare office loot, security offices, hotel reception, Neighbourhood houses, industrial control rooms."
+			]
+			dependencies: [
+				"63D1CD4154C28FC3"
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					id: "74BF39073D051A86"
+					type: "item"
+					item: "office_rooms:level_1_access_card"
+				}
+			]
+			rewards: [
+				{
+					id: "3C532D12481BF528"
+					type: "xp"
+					xp: 60
+				}
+				{
+					id: "05F076B2E7F2826D"
+					type: "random"
+					table_id: 4103091957774285532L
+				}
+			]
+			x: 4.0d
+			y: -1.5d
+		}
+		{
+			id: "2BFF3532D5001514"
+			title: "Totem of Mercy"
+			subtitle: "One way out"
+			description: [
+				"If you would die in the Office Rooms, it carries you back to the Overworld instead."
+				"Keep one. Always."
+				""
+				"&6How: &rVery rare: vaults (Maze, Hotel, Poolrooms), secure storage level 3, concealed hidden rooms."
+			]
+			dependencies: [
+				"2D836566F8E4864B"
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					id: "235E6672FB73C3AC"
+					type: "item"
+					item: "office_rooms:totem_of_mercy"
+				}
+			]
+			rewards: [
+				{
+					id: "7B207082DD138E61"
+					type: "xp"
+					xp: 80
+				}
+			]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			id: "76BBE88AC96F5FE9"
+			title: "End of the First Day"
+			subtitle: "You are still here"
+			description: [
+				"You have the basics. From here the building opens up in every direction."
+				""
+				"&eNext: Facilities (power and air), Research and the Megastructures."
+				""
+				"&6How: &rCarry 4 Almond Water (nothing is taken)."
+			]
+			dependencies: [
+				"63D1CD4154C28FC3"
+				"2D836566F8E4864B"
+				"6DC7F3205057145E"
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{
+					id: "404B6AA4AB7ABF1E"
+					type: "item"
+					item: "office_rooms:almond_water"
+					count: 4L
+				}
+			]
+			rewards: [
+				{
+					id: "5C4BB0E2FDA50594"
+					type: "random"
+					table_id: 4103091957774285532L
+				}
+				{
+					id: "568809E34E2EEB07"
+					type: "xp"
+					xp: 100
+				}
+			]
+			x: 6.0d
+			y: -0.5d
+		}
+	]
+	subtitle: [
+		"Supplies, habits and the first rules"
+	]
+	title: "II. First Day at the Office"
+}

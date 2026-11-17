@@ -1,0 +1,150 @@
+plugins {
+    id 'eclipse'
+    id 'idea'
+    id 'net.minecraftforge.gradle' version '[6.0.24,6.2)'
+}
+
+version = mod_version
+group = mod_group_id
+
+base {
+    // Ergebnis: build/libs/OfficeRooms-<version>.jar
+    archivesName = mod_jar_name
+}
+
+// Minecraft 1.20.1 / Forge 47 laufen auf Java 17.
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+
+println "Java: ${System.getProperty 'java.version'}, JVM: ${System.getProperty 'java.vm.version'} (${System.getProperty 'java.vendor'}), Arch: ${System.getProperty 'os.arch'}"
+
+minecraft {
+    // Offizielle Mojang-Mappings fuer 1.20.1
+    mappings channel: mapping_channel, version: mapping_version
+
+    // Ressourcen (Datapack-JSONs) auch beim Start aus der IDE verwenden
+    copyIdeResources = true
+
+    runs {
+        configureEach {
+            workingDirectory project.file('run')
+            property 'forge.logging.markers', 'REGISTRIES'
+            property 'forge.logging.console.level', 'debug'
+
+            mods {
+                "${mod_id}" {
+                    source sourceSets.main
+                }
+            }
+        }
+
+        client {
+            jvmArgs '-Xmx1400m', '-XX:+UseSerialGC'
+            property 'forge.enabledGameTestNamespaces', mod_id
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+            // Optional: direkt einem Server beitreten, z. B. ./gradlew runClient -PquickPlay=localhost
+            if (project.hasProperty('quickPlay')) {
+                args '--quickPlayMultiplayer', project.property('quickPlay')
+            }
+        }
+
+        server {
+            jvmArgs '-Xmx1500m', '-XX:+UseSerialGC'
+            property 'forge.enabledGameTestNamespaces', mod_id
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+            args '--nogui'
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+    // Optionale Moebel-Mods NUR fuer lokale Tests: JARs in libs/ ablegen (siehe BUILD_INSTRUCTIONS.md).
+    // Sie werden weder kompiliert noch in die Office-Rooms-JAR oder die Quell-ZIP aufgenommen.
+    flatDir { dirs 'libs' }
+}
+
+dependencies {
+    minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
+
+    // Unit-Tests des Raumplaners (reines Java, ohne Minecraft-Start)
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    // Optionale Moebel-Mods nur zur Laufzeit in runClient/runServer, falls in libs/ vorhanden.
+    // Office Rooms spricht sie ausschliesslich ueber Registry-IDs und Reflection an (keine Compile-Abhaengigkeit).
+    // 0.10.0: GeckoLib is a required dependency (animated creature models). Put the official
+    // geckolib-forge-1.20.1-4.8.4.jar into libs/ as geckolib-forge-1.20.1-4.8.4-0.jar. It is never bundled.
+    implementation fg.deobf("local:geckolib-forge-1.20.1-4.8.4:0")
+
+    def optionalMods = [
+        'GameFantom-OfficeCraft-Forge-1.20.1-1.0.3',
+        'refurbished_furniture-forge-1.20.1-1.0.20',
+        'framework-forge-1.20.1-0.7.15',
+        // 0.25.0: quest book tests only (never bundled)
+        'architectury-9.2.14-forge',
+        'ftb-library-forge-2001.2.13',
+        'ftb-teams-forge-2001.3.2',
+        'ftb-quests-forge-2001.4.22'
+    ]
+    optionalMods.each { name ->
+        if (file("libs/${name}-0.jar").exists()) {
+            runtimeOnly fg.deobf("local:${name}:0")
+        }
+    }
+}
+
+tasks.named('test', Test).configure {
+    useJUnitPlatform()
+    maxHeapSize = '2G'
+    testLogging {
+        events 'passed', 'failed'
+        showStandardStreams = true
+        exceptionFormat = 'full'
+    }
+}
+
+// Platzhalter in mods.toml und pack.mcmeta aus gradle.properties befuellen.
+tasks.named('processResources', ProcessResources).configure {
+    var replaceProperties = [
+            minecraft_version      : minecraft_version,
+            minecraft_version_range: minecraft_version_range,
+            forge_version          : forge_version,
+            forge_version_range    : forge_version_range,
+            loader_version_range   : loader_version_range,
+            mod_id                 : mod_id,
+            mod_name               : mod_name,
+            mod_license            : mod_license,
+            mod_version            : mod_version,
+            mod_authors            : mod_authors,
+            mod_description        : mod_description,
+            pack_format_number     : pack_format_number,
+    ]
+    inputs.properties replaceProperties
+
+    filesMatching(['META-INF/mods.toml', 'pack.mcmeta']) {
+        expand replaceProperties + [project: project]
+    }
+}
+
+tasks.named('jar', Jar).configure {
+    manifest {
+        attributes([
+                'Specification-Title'     : mod_id,
+                'Specification-Vendor'    : mod_authors,
+                'Specification-Version'   : '1',
+                'Implementation-Title'    : mod_name,
+                'Implementation-Version'  : project.jar.archiveVersion,
+                'Implementation-Vendor'   : mod_authors,
+                'Implementation-Timestamp': new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+        ])
+    }
+
+    // Remapping auf die Produktions-Namen (SRG), damit die JAR ausserhalb der IDE laeuft.
+    finalizedBy 'reobfJar'
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}

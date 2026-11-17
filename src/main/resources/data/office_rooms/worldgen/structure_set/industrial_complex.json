@@ -1,0 +1,11 @@
+{
+ "structures": [
+  {
+   "structure": "office_rooms:industrial_complex",
+   "weight": 1
+  }
+ ],
+ "placement": {
+  "type": "office_rooms:region_centre"
+ }
+}

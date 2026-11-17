@@ -1,0 +1,173 @@
+{
+	images: [
+		{
+			x: 1.0d
+			y: 0.0d
+			width: 16.0d
+			height: 9.0d
+			rotation: 0.0d
+			image: "office_rooms:textures/gui/quests/atrium_3.png"
+			color: 16777215
+			alpha: 150
+			order: -1
+			hover: [ ]
+			click: ""
+			dev: false
+			corner: false
+		}
+	]
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "office_rooms_outposts"
+	group: "2B674EAFE9EE221B"
+	icon: "minecraft:lever"
+	id: "50CD6AFEA97D7FC0"
+	order_index: 5
+	quest_links: [ ]
+	quests: [
+		{
+			id: "08D175B0351155DD"
+			title: "Abandoned Outposts"
+			subtitle: "Lever, warning, button"
+			description: [
+				"Optional: everything here is in the Overworld or the Nether."
+				"In ancient cities, jungle temples, deep caves and the Nether, a research team built small outposts. A few rare stations stand alone in open country, and a drilling rig or two out on the deep ocean."
+				"Each one holds a gateway into the Office Rooms. The notes inside explain the procedure."
+				""
+				"&6How: &rJust tick the checkmark."
+			]
+			dependencies: [
+				"044A329740308215"
+			]
+			shape: "hexagon"
+			optional: true
+			icon: "office_rooms:power_lever"
+			size: 1.25d
+			tasks: [
+				{
+					id: "75326926C518C66A"
+					type: "checkmark"
+				}
+			]
+			rewards: [
+				{
+					id: "2FC0D9CF9CD85226"
+					type: "xp"
+					xp: 20
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			id: "32A2746834A75F34"
+			title: "Gateway Online"
+			subtitle: "Pull. Wait. Press."
+			description: [
+				"Pull the power lever, wait out the warnings, then press the red emergency button."
+				"Stand back."
+				""
+				"&6How: &rPull the power lever in an outpost, wait out the warnings, press the red button (be within 32 blocks)."
+			]
+			dependencies: [
+				"08D175B0351155DD"
+			]
+			shape: "diamond"
+			optional: true
+			icon: "office_rooms:emergency_button"
+			size: 1.25d
+			tasks: [
+				{
+					id: "6B41A018EEC9EF89"
+					type: "advancement"
+					advancement: "office_rooms:milestones/outpost_gateway"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "57A626864C4625D0"
+					type: "item"
+					item: "office_rooms:research_file"
+					count: 2
+				}
+				{
+					id: "3F02D818F5A44677"
+					type: "item"
+					item: "office_rooms:electronic_component"
+					count: 3
+				}
+				{
+					id: "2B436FD9859C7A27"
+					type: "xp"
+					xp: 300
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			id: "24723CD3478B3C34"
+			title: "Under the Ancient City"
+			description: [
+				"The quietest outpost. Sculk all around it."
+				""
+				"&6How: &rEcho shards from Ancient City chests."
+			]
+			dependencies: [
+				"08D175B0351155DD"
+			]
+			optional: true
+			tasks: [
+				{
+					id: "02367C2994233039"
+					type: "item"
+					item: "minecraft:echo_shard"
+				}
+			]
+			rewards: [
+				{
+					id: "541ADEC4ADDB4B13"
+					type: "xp"
+					xp: 100
+				}
+			]
+			x: 2.0d
+			y: -1.5d
+		}
+		{
+			id: "688A01936E8AB5B7"
+			title: "Through the Heat"
+			description: [
+				"One team went to the Nether. Their outpost is still standing."
+				""
+				"&6How: &rEnter the Nether."
+			]
+			dependencies: [
+				"08D175B0351155DD"
+			]
+			optional: true
+			icon: "minecraft:netherrack"
+			tasks: [
+				{
+					id: "736939620A5053FA"
+					type: "dimension"
+					dimension: "minecraft:the_nether"
+				}
+			]
+			rewards: [
+				{
+					id: "2DFEFC04A9EE8FC0"
+					type: "xp"
+					xp: 60
+				}
+			]
+			x: 2.0d
+			y: 1.5d
+		}
+	]
+	subtitle: [
+		"Someone tried to build a door"
+	]
+	title: "VI. Research Outposts (optional)"
+}

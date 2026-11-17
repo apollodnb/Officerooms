@@ -1,0 +1,115 @@
+{
+ "type": "minecraft:chest",
+ "pools": [
+  {
+   "rolls": 3,
+   "entries": [
+    {
+     "type": "minecraft:loot_table",
+     "name": "office_rooms:tiers/uncommon"
+    }
+   ]
+  },
+  {
+   "rolls": 1,
+   "entries": [
+    {
+     "type": "minecraft:loot_table",
+     "name": "office_rooms:tiers/rare"
+    }
+   ]
+  },
+  {
+   "rolls": 1,
+   "entries": [
+    {
+     "type": "minecraft:loot_table",
+     "name": "office_rooms:tiers/rare"
+    }
+   ],
+   "conditions": [
+    {
+     "condition": "minecraft:random_chance",
+     "chance": 0.5
+    }
+   ]
+  },
+  {
+   "rolls": 1,
+   "entries": [
+    {
+     "type": "minecraft:loot_table",
+     "name": "office_rooms:tiers/stories"
+    }
+   ],
+   "conditions": [
+    {
+     "condition": "minecraft:random_chance",
+     "chance": 0.5
+    }
+   ]
+  },
+  {
+   "rolls": 1,
+   "conditions": [
+    {
+     "condition": "minecraft:random_chance",
+     "chance": 0.25
+    }
+   ],
+   "entries": [
+    {
+     "type": "minecraft:item",
+     "name": "office_rooms:anomaly_detector",
+     "weight": 1
+    }
+   ]
+  },
+  {
+   "rolls": 1,
+   "conditions": [
+    {
+     "condition": "minecraft:random_chance",
+     "chance": 0.2
+    }
+   ],
+   "entries": [
+    {
+     "type": "minecraft:item",
+     "name": "office_rooms:level_2_access_card",
+     "weight": 1
+    }
+   ]
+  },
+  {
+   "rolls": 1,
+   "conditions": [
+    {
+     "condition": "minecraft:random_chance",
+     "chance": 0.08
+    }
+   ],
+   "entries": [
+    {
+     "type": "minecraft:item",
+     "name": "office_rooms:research_file"
+    }
+   ]
+  },
+  {
+   "rolls": 1,
+   "conditions": [
+    {
+     "condition": "minecraft:random_chance",
+     "chance": 0.08
+    }
+   ],
+   "entries": [
+    {
+     "type": "minecraft:item",
+     "name": "office_rooms:gas_mask"
+    }
+   ]
+  }
+ ]
+}

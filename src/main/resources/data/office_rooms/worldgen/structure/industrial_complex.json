@@ -1,0 +1,8 @@
+{
+ "type": "office_rooms:megastructure",
+ "kind": "industrial",
+ "biomes": "#office_rooms:has_structure/megastructure",
+ "step": "surface_structures",
+ "spawn_overrides": {},
+ "terrain_adaptation": "none"
+}

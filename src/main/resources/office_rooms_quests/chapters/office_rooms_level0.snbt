@@ -1,0 +1,210 @@
+{
+	images: [
+		{
+			x: 3.0d
+			y: 0.0d
+			width: 16.0d
+			height: 9.0d
+			rotation: 0.0d
+			image: "office_rooms:textures/gui/quests/atrium_2.png"
+			color: 16777215
+			alpha: 150
+			order: -1
+			hover: [ ]
+			click: ""
+			dev: false
+			corner: false
+		}
+	]
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "office_rooms_level0"
+	group: "2B674EAFE9EE221B"
+	icon: "minecraft:yellow_wool"
+	id: "3E7BB5817BA80600"
+	order_index: 7
+	quest_links: [ ]
+	quests: [
+		{
+			id: "3E7F43C95C3D26D5"
+			title: "Above the Top Floor"
+			subtitle: "Break through the ceiling"
+			description: [
+				"Above the highest storey of the Office Rooms there is a ceiling that should not be there."
+				"Something on the other side is waiting. Only one thing."
+				""
+				"&6How: &rBreak the ceiling above the highest storey of the Office Rooms."
+			]
+			dependencies: [
+				"76BBE88AC96F5FE9"
+			]
+			shape: "hexagon"
+			optional: true
+			icon: "office_rooms:level0_wallpaper"
+			size: 1.25d
+			tasks: [
+				{
+					id: "602DB44DFF17D471"
+					type: "dimension"
+					dimension: "office_rooms:level_0"
+				}
+			]
+			rewards: [
+				{
+					id: "287370D84AF6AB6E"
+					type: "item"
+					item: "office_rooms:almond_water"
+					count: 4
+				}
+				{
+					id: "2C2D14F89017F3ED"
+					type: "xp"
+					xp: 200
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			id: "5BB8383F868F35E1"
+			title: "It Does Not Die"
+			subtitle: "Do not fight it"
+			description: [
+				"There is a Flayed in Level 0. It cannot be killed. Look at it once, then run."
+				""
+				"&6How: &rLook at the Flayed in Level 0 for one second."
+			]
+			dependencies: [
+				"3E7F43C95C3D26D5"
+			]
+			optional: true
+			icon: "office_rooms:flayed_spawn_egg"
+			tasks: [
+				{
+					id: "47FCBD4B94C37DEF"
+					type: "observation"
+					observe_type: 5
+					to_observe: "office_rooms:flayed"
+					timer: 20L
+				}
+			]
+			rewards: [
+				{
+					id: "19830000513E412B"
+					type: "xp"
+					xp: 150
+				}
+			]
+			x: 2.0d
+			y: -1.5d
+		}
+		{
+			id: "2EAFD20B21965E40"
+			title: "Manila"
+			subtitle: "The room that is the wrong colour"
+			description: [
+				"Somewhere among the yellow rooms is a room the colour of an envelope."
+				"Expect to search for a while."
+				""
+				"&6How: &rFind and step onto the manila carpet of a Manila Room."
+			]
+			dependencies: [
+				"3E7F43C95C3D26D5"
+			]
+			optional: true
+			icon: "office_rooms:manila_carpet"
+			tasks: [
+				{
+					id: "4E7A0D66B1775847"
+					type: "advancement"
+					advancement: "office_rooms:milestones/level0_manila"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "27CB36B2FD99C1C3"
+					type: "xp"
+					xp: 300
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			id: "030CF9C0D17BA044"
+			title: "A Bucket of Water"
+			subtitle: "You will understand"
+			description: [
+				"Bring a water bucket."
+				""
+				"&6How: &rFill a bucket with water."
+			]
+			dependencies: [
+				"2EAFD20B21965E40"
+			]
+			optional: true
+			tasks: [
+				{
+					id: "5BBBAC577D516EC1"
+					type: "item"
+					item: "minecraft:water_bucket"
+				}
+			]
+			rewards: [
+				{
+					id: "648DD03AB4989F61"
+					type: "xp"
+					xp: 30
+				}
+			]
+			x: 4.0d
+			y: 1.5d
+		}
+		{
+			id: "4B559CE7A8A9AF04"
+			title: "Out"
+			subtitle: "Through the narrow passage"
+			description: [
+				"Find the way out of the Manila Room. You will bring something back with you."
+				""
+				"&6How: &rPour water into the narrow shaft of the Manila Room and swim out."
+			]
+			dependencies: [
+				"2EAFD20B21965E40"
+				"030CF9C0D17BA044"
+			]
+			shape: "diamond"
+			optional: true
+			icon: "minecraft:water_bucket"
+			size: 1.5d
+			tasks: [
+				{
+					id: "61A9D68DCB8D612E"
+					type: "advancement"
+					advancement: "office_rooms:milestones/level0_escaped"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "48D9FACBE8CFBA1A"
+					type: "item"
+					item: "office_rooms:research_file"
+					count: 2
+				}
+				{
+					id: "2FAE34820AE1260D"
+					type: "xp"
+					xp: 800
+				}
+			]
+			x: 6.0d
+			y: 0.0d
+		}
+	]
+	subtitle: [
+		"Above the top floor"
+	]
+	title: "VIII. Level 0 (optional)"
+}

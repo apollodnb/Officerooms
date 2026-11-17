@@ -1,0 +1,82 @@
+{
+ "parent": "block/block",
+ "ambientocclusion": false,
+ "render_type": "minecraft:cutout",
+ "textures": {
+  "particle": "office_rooms:block/ceiling_light_on",
+  "light": "office_rooms:block/ceiling_light_on",
+  "frame": "office_rooms:block/ceiling_light_off"
+ },
+ "elements": [
+  {
+   "from": [
+    2,
+    15,
+    2
+   ],
+   "to": [
+    14,
+    16,
+    14
+   ],
+   "faces": {
+    "down": {
+     "texture": "#light",
+     "uv": [
+      2,
+      2,
+      14,
+      14
+     ]
+    },
+    "up": {
+     "texture": "#frame",
+     "uv": [
+      2,
+      2,
+      14,
+      14
+     ],
+     "cullface": "up"
+    },
+    "north": {
+     "texture": "#frame",
+     "uv": [
+      2,
+      0,
+      14,
+      1
+     ]
+    },
+    "south": {
+     "texture": "#frame",
+     "uv": [
+      2,
+      0,
+      14,
+      1
+     ]
+    },
+    "east": {
+     "texture": "#frame",
+     "uv": [
+      2,
+      0,
+      14,
+      1
+     ]
+    },
+    "west": {
+     "texture": "#frame",
+     "uv": [
+      2,
+      0,
+      14,
+      1
+     ]
+    }
+   },
+   "shade": false
+  }
+ ]
+}

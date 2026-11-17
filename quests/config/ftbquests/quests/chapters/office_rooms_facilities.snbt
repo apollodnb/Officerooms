@@ -1,0 +1,404 @@
+{
+	images: [
+		{
+			x: 5.0d
+			y: 0.0d
+			width: 18.0d
+			height: 10.12d
+			rotation: 0.0d
+			image: "office_rooms:textures/gui/quests/atrium_3.png"
+			color: 16777215
+			alpha: 150
+			order: -1
+			hover: [ ]
+			click: ""
+			dev: false
+			corner: false
+		}
+	]
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "office_rooms_facilities"
+	group: "2B674EAFE9EE221B"
+	icon: "office_rooms:gas_mask"
+	id: "4E3ADF3A60745990"
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			id: "39F9A6C4C08B8B72"
+			title: "The Monitors Are Always Right"
+			subtitle: "Read the screens"
+			description: [
+				"HAZARD ZONE and POWER warnings appear on the monitors in offices and corridors long before anything happens."
+				""
+				"Craft a Hazard Monitor for yourself (or just keep reading the ones on the walls)."
+				""
+				"&6How: &rCraft: iron, glass panes and an electronic component."
+			]
+			dependencies: [
+				"76BBE88AC96F5FE9"
+			]
+			shape: "hexagon"
+			size: 1.25d
+			tasks: [
+				{
+					id: "25C9D2F54F1ED2E6"
+					type: "item"
+					item: "office_rooms:hazard_monitor"
+				}
+			]
+			rewards: [
+				{
+					id: "25CE21907A8E8CF9"
+					type: "xp"
+					xp: 60
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			id: "2F3DB676AC3D9640"
+			title: "Lights Out"
+			subtitle: "Repair the fuse box"
+			description: [
+				"Blackouts are announced on the monitors. When the lights die, a fuse box on your floor breaks."
+				"Find it in the dark and repair it. Repairs are rewarded."
+				""
+				"&6How: &rWait for a POWER warning on the monitors. When the lights die, find the sparking fuse box on the floor the message names and right-click it holding 3 Electronic Components."
+			]
+			dependencies: [
+				"39F9A6C4C08B8B72"
+			]
+			shape: "diamond"
+			icon: "office_rooms:fuse_box"
+			tasks: [
+				{
+					id: "6B57EC163D9FB050"
+					type: "advancement"
+					advancement: "office_rooms:milestones/fuse_box_repaired"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "3ADE50B27A9176E2"
+					type: "item"
+					item: "office_rooms:research_file"
+				}
+				{
+					id: "212EE64C8EA4AE17"
+					type: "item"
+					item: "office_rooms:portable_battery"
+				}
+				{
+					id: "4DCFD046774EE31F"
+					type: "xp"
+					xp: 120
+				}
+			]
+			x: 2.0d
+			y: -1.5d
+		}
+		{
+			id: "2A6301A5A95561D1"
+			title: "Electronic Components"
+			subtitle: "Salvage"
+			description: [
+				"Server rooms and the industrial complex are the best places to look."
+				""
+				"&6How: &rServer rooms, hidden maintenance rooms and security offices, now and then office drawers; plenty in the Industrial Complex, research outposts and Hazard Zone caches."
+			]
+			dependencies: [
+				"39F9A6C4C08B8B72"
+			]
+			tasks: [
+				{
+					id: "5DA1D042CB3CE579"
+					type: "item"
+					item: "office_rooms:electronic_component"
+					count: 4L
+				}
+			]
+			rewards: [
+				{
+					id: "71183CFAFBEE7584"
+					type: "xp"
+					xp: 40
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			id: "69D1122D8EAC42E8"
+			title: "Night Vision Goggles"
+			subtitle: "See without being seen"
+			description: [
+				"They run on battery. A portable battery in your hand charges goggles you are wearing."
+				""
+				"&6How: &rCraft: iron, an electronic component, glass panes and leather. Also from research outposts and fuse box rewards."
+			]
+			dependencies: [
+				"2A6301A5A95561D1"
+			]
+			tasks: [
+				{
+					id: "4E134DF4C9A6A28F"
+					type: "item"
+					item: "office_rooms:night_vision_goggles"
+				}
+			]
+			rewards: [
+				{
+					id: "4A15BCFE24DA951F"
+					type: "item"
+					item: "office_rooms:portable_battery"
+				}
+				{
+					id: "71452324B9941714"
+					type: "xp"
+					xp: 80
+				}
+			]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			id: "382E00FDF983610B"
+			title: "Gas Filter"
+			subtitle: "Charcoal, paper, a nugget"
+			description: [
+				"A gas mask is worthless without a fresh filter."
+				""
+				"&6How: &rCraft: iron nugget, charcoal and paper (vertical). Also maintenance rooms, supply closets, hotel rooms."
+			]
+			dependencies: [
+				"39F9A6C4C08B8B72"
+			]
+			tasks: [
+				{
+					id: "0988CD2ACBD8A896"
+					type: "item"
+					item: "office_rooms:gas_filter"
+					count: 2L
+				}
+			]
+			rewards: [
+				{
+					id: "059ADA9026AF765D"
+					type: "item"
+					item: "office_rooms:gas_filter"
+				}
+				{
+					id: "4AC5381D47241F4A"
+					type: "xp"
+					xp: 30
+				}
+			]
+			x: 2.0d
+			y: 1.5d
+		}
+		{
+			id: "51C37C79AA66DA48"
+			title: "Gas Mask"
+			subtitle: "Breathe"
+			description: [
+				"Hazard Zones poison the air. A mask with a filter keeps you alive in them for ten minutes."
+				""
+				"&6How: &rOffice desks and cabinets of almost every room type, hidden rooms, secure storage."
+			]
+			dependencies: [
+				"382E00FDF983610B"
+			]
+			tasks: [
+				{
+					id: "29A1166220A3D0F0"
+					type: "item"
+					item: "office_rooms:gas_mask"
+				}
+			]
+			rewards: [
+				{
+					id: "38EB0463551F4BFB"
+					type: "item"
+					item: "office_rooms:gas_filter"
+					count: 2
+				}
+				{
+					id: "2EFC7A234F41E1B5"
+					type: "xp"
+					xp: 80
+				}
+			]
+			x: 4.0d
+			y: 1.5d
+		}
+		{
+			id: "3B10C5765B10D07A"
+			title: "Special Event Detector"
+			subtitle: "Where is it this time?"
+			description: [
+				"Hold it to find an announced or active Hazard Zone."
+				""
+				"&6How: &rSecurity offices, labs, industrial control rooms, vaults, Hazard Zone caches."
+			]
+			dependencies: [
+				"51C37C79AA66DA48"
+			]
+			tasks: [
+				{
+					id: "695A14D2BDF5CFDE"
+					type: "item"
+					item: "office_rooms:special_event_detector"
+				}
+			]
+			rewards: [
+				{
+					id: "4A400F7DE312006C"
+					type: "xp"
+					xp: 60
+				}
+			]
+			x: 6.0d
+			y: 1.5d
+		}
+		{
+			id: "34147213C4BF9474"
+			title: "Toxic Crystal"
+			subtitle: "Only inside the zone"
+			description: [
+				"Toxic Crystals grow only inside an active Hazard Zone, guarded by what the gas brings with it."
+				""
+				"&6How: &rOnly inside an active Hazard Zone (follow the monitors and the Special Event Detector). Wear a mask with a filter."
+			]
+			dependencies: [
+				"3B10C5765B10D07A"
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					id: "5A567F68D0E95FB5"
+					type: "item"
+					item: "office_rooms:toxic_crystal"
+				}
+			]
+			rewards: [
+				{
+					id: "1A5E0023F62B59F7"
+					type: "item"
+					item: "office_rooms:gas_filter"
+					count: 2
+				}
+				{
+					id: "3E6DC8D13845D663"
+					type: "xp"
+					xp: 150
+				}
+			]
+			x: 8.0d
+			y: 1.5d
+		}
+		{
+			id: "0148FD0F2134BE42"
+			title: "Hazard Visor"
+			subtitle: "Mask and goggles, fused"
+			description: [
+				"Combine a gas mask, night vision goggles and a toxic crystal."
+				""
+				"&6How: &rCraft: gas mask + night vision goggles + toxic crystal (shapeless)."
+			]
+			dependencies: [
+				"34147213C4BF9474"
+				"69D1122D8EAC42E8"
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{
+					id: "14AFD459B4A1F8D6"
+					type: "item"
+					item: "office_rooms:hazard_visor"
+				}
+			]
+			rewards: [
+				{
+					id: "3A40995D160A3B38"
+					type: "item"
+					item: "office_rooms:research_file"
+					count: 2
+				}
+				{
+					id: "00803A6A7C1ABE75"
+					type: "xp"
+					xp: 250
+				}
+			]
+			x: 10.0d
+			y: 0.75d
+		}
+		{
+			id: "68BD3F4E2F169F00"
+			title: "Anomaly Detector"
+			subtitle: "It never says what it is"
+			description: [
+				"The closer a creature, the stronger the signal."
+				""
+				"&6How: &rHidden labs, Neighbourhood houses, research outposts, uncommon office loot."
+			]
+			dependencies: [
+				"69D1122D8EAC42E8"
+			]
+			tasks: [
+				{
+					id: "63246F3360BA90FA"
+					type: "item"
+					item: "office_rooms:anomaly_detector"
+				}
+			]
+			rewards: [
+				{
+					id: "3687790D59B1A115"
+					type: "xp"
+					xp: 80
+				}
+			]
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			id: "4C7A87EC6DD903C3"
+			title: "Going Up"
+			subtitle: "Build an elevator"
+			description: [
+				"Floors are endless in both directions. Elevators make them shorter."
+				""
+				"&6How: &rCraft: iron, a piston, an ender pearl and redstone."
+			]
+			dependencies: [
+				"2A6301A5A95561D1"
+			]
+			tasks: [
+				{
+					id: "04DA5BA93CD88A34"
+					type: "item"
+					item: "office_rooms:elevator"
+				}
+			]
+			rewards: [
+				{
+					id: "38DE7E6B6FD2A5E4"
+					type: "xp"
+					xp: 60
+				}
+			]
+			x: 4.0d
+			y: -1.5d
+		}
+	]
+	subtitle: [
+		"Power, air and what lives in the dark"
+	]
+	title: "III. Facilities"
+}

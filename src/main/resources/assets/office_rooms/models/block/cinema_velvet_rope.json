@@ -1,0 +1,73 @@
+{
+ "parent": "minecraft:block/block",
+ "textures": {
+  "v": "office_rooms:block/cinema_velvet",
+  "particle": "office_rooms:block/cinema_velvet"
+ },
+ "elements": [
+  {
+   "from": [
+    0,
+    9,
+    7
+   ],
+   "to": [
+    16,
+    11,
+    9
+   ],
+   "faces": {
+    "north": {
+     "texture": "#v"
+    },
+    "south": {
+     "texture": "#v"
+    },
+    "east": {
+     "texture": "#v"
+    },
+    "west": {
+     "texture": "#v"
+    },
+    "up": {
+     "texture": "#v"
+    },
+    "down": {
+     "texture": "#v"
+    }
+   }
+  },
+  {
+   "from": [
+    0,
+    9,
+    7
+   ],
+   "to": [
+    16,
+    11,
+    9
+   ],
+   "faces": {
+    "north": {
+     "texture": "#v"
+    },
+    "south": {
+     "texture": "#v"
+    },
+    "east": {
+     "texture": "#v"
+    },
+    "west": {
+     "texture": "#v"
+    },
+    "up": {
+     "texture": "#v"
+    },
+    "down": {
+     "texture": "#v"
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,111 @@
+{
+ "parent": "minecraft:block/block",
+ "textures": {
+  "c": "office_rooms:block/chrome",
+  "k": "office_rooms:block/dark_plastic",
+  "o": "office_rooms:block/projector_lens",
+  "particle": "office_rooms:block/chrome"
+ },
+ "elements": [
+  {
+   "from": [
+    7.5,
+    14,
+    7.5
+   ],
+   "to": [
+    8.5,
+    16,
+    8.5
+   ],
+   "faces": {
+    "north": {
+     "texture": "#c"
+    },
+    "south": {
+     "texture": "#c"
+    },
+    "east": {
+     "texture": "#c"
+    },
+    "west": {
+     "texture": "#c"
+    },
+    "up": {
+     "texture": "#c"
+    },
+    "down": {
+     "texture": "#c"
+    }
+   }
+  },
+  {
+   "from": [
+    5,
+    11.5,
+    4
+   ],
+   "to": [
+    11,
+    14,
+    12
+   ],
+   "faces": {
+    "north": {
+     "texture": "#k"
+    },
+    "south": {
+     "texture": "#k"
+    },
+    "east": {
+     "texture": "#k"
+    },
+    "west": {
+     "texture": "#k"
+    },
+    "up": {
+     "texture": "#k"
+    },
+    "down": {
+     "texture": "#k"
+    }
+   }
+  },
+  {
+   "from": [
+    6.5,
+    12,
+    3
+   ],
+   "to": [
+    9.5,
+    13.5,
+    4
+   ],
+   "faces": {
+    "north": {
+     "texture": "#o"
+    },
+    "south": {
+     "texture": "#k"
+    },
+    "east": {
+     "texture": "#k"
+    },
+    "west": {
+     "texture": "#k"
+    },
+    "up": {
+     "texture": "#k"
+    },
+    "down": {
+     "texture": "#k"
+    }
+   },
+   "forge_data": {
+    "block_light": 10,
+    "sky_light": 10
+   }
+  }
+ ]
+}

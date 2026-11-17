@@ -1,0 +1,16 @@
+{
+ "variants": {
+  "facing=north": {
+   "model": "office_rooms:block/cage_lamp_broken"
+  },
+  "facing=east": {
+   "model": "office_rooms:block/cage_lamp_broken"
+  },
+  "facing=south": {
+   "model": "office_rooms:block/cage_lamp_broken"
+  },
+  "facing=west": {
+   "model": "office_rooms:block/cage_lamp_broken"
+  }
+ }
+}

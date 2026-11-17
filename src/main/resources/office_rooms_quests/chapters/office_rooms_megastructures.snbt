@@ -1,0 +1,950 @@
+{
+	images: [
+		{
+			x: 4.0d
+			y: 3.0d
+			width: 32.0d
+			height: 18.0d
+			rotation: 0.0d
+			image: "office_rooms:textures/gui/quests/atrium_2.png"
+			color: 16777215
+			alpha: 150
+			order: -1
+			hover: [ ]
+			click: ""
+			dev: false
+			corner: false
+		}
+	]
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "office_rooms_megastructures"
+	group: "2B674EAFE9EE221B"
+	icon: "office_rooms:pool_tile"
+	id: "031D6922C424F2D6"
+	order_index: 4
+	quest_links: [ ]
+	quests: [
+		{
+			id: "68F15C46402017C3"
+			title: "Beyond the Floor Plan"
+			subtitle: "Megastructures"
+			description: [
+				"Between the endless offices lie whole structures that do not belong there."
+				"Each one keeps an artifact. You will want all seven."
+				""
+				"&6How: &rCarry a Level 1 Access Card."
+			]
+			dependencies: [
+				"76BBE88AC96F5FE9"
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{
+					id: "0F20B31331EA44DA"
+					type: "item"
+					item: "office_rooms:level_1_access_card"
+				}
+			]
+			rewards: [
+				{
+					id: "375BC3BCF96A478F"
+					type: "item"
+					item: "office_rooms:glowstick"
+					count: 4
+				}
+				{
+					id: "5D7DAC48CEA17633"
+					type: "xp"
+					xp: 60
+				}
+			]
+			x: 0.0d
+			y: 3.75d
+		}
+		{
+			id: "5C173F715D65D5D6"
+			title: "The Poolrooms"
+			subtitle: "Warm water, white tiles, no exits"
+			description: [
+				"Tiles and lukewarm water as far as you can see. Somewhere below the surface there is a labyrinth."
+				""
+				"&6How: &rExplore the Office Rooms: megastructures fill whole regions on certain storeys. Walking into one counts."
+			]
+			dependencies: [
+				"68F15C46402017C3"
+			]
+			shape: "circle"
+			icon: "office_rooms:pool_tile"
+			tasks: [
+				{
+					id: "1FF325AE6C0B12EE"
+					type: "advancement"
+					advancement: "office_rooms:milestones/discover_poolrooms"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "5E96D120AFC04C06"
+					type: "random"
+					table_id: 4103091957774285532L
+				}
+				{
+					id: "61213236B4E007ED"
+					type: "xp"
+					xp: 150
+				}
+			]
+			x: 2.5d
+			y: 0.0d
+		}
+		{
+			id: "43FBD36D565E1DCD"
+			title: "Chlorine Pearl"
+			subtitle: "Artifact"
+			description: [
+				"From the very end of the underwater labyrinth."
+				""
+				"&8Needed for the Underside Key."
+				""
+				"&6How: &rIn the structure's vault or special chest (see the description)."
+			]
+			dependencies: [
+				"5C173F715D65D5D6"
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					id: "5A59FCCD81499EAC"
+					type: "item"
+					item: "office_rooms:chlorine_pearl"
+				}
+			]
+			rewards: [
+				{
+					id: "5C57A01D65C33702"
+					type: "item"
+					item: "office_rooms:research_file"
+				}
+				{
+					id: "44DE43D479E932D5"
+					type: "xp"
+					xp: 300
+				}
+			]
+			x: 4.5d
+			y: 0.0d
+		}
+		{
+			id: "64B5AB709871E4BD"
+			title: "The Maze"
+			subtitle: "Walls that move when you blink"
+			description: [
+				"Yellowed wallpaper, endless turns. There is a vault at the heart of it."
+				""
+				"&6How: &rExplore the Office Rooms: megastructures fill whole regions on certain storeys. Walking into one counts."
+			]
+			dependencies: [
+				"68F15C46402017C3"
+			]
+			shape: "circle"
+			icon: "office_rooms:maze_wallpaper"
+			tasks: [
+				{
+					id: "61D66C7490B19815"
+					type: "advancement"
+					advancement: "office_rooms:milestones/discover_maze"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "65FD199446E43B24"
+					type: "random"
+					table_id: 4103091957774285532L
+				}
+				{
+					id: "0843B47F20B3D317"
+					type: "xp"
+					xp: 150
+				}
+			]
+			x: 2.5d
+			y: 1.5d
+		}
+		{
+			id: "3473BD8B68DE5540"
+			title: "Thread of the Maze"
+			subtitle: "Artifact"
+			description: [
+				"Unwound in the vault of the Maze."
+				""
+				"&8Needed for the Underside Key."
+				""
+				"&6How: &rIn the structure's vault or special chest (see the description)."
+			]
+			dependencies: [
+				"64B5AB709871E4BD"
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					id: "23F43D2059B8E5A3"
+					type: "item"
+					item: "office_rooms:thread_of_the_maze"
+				}
+			]
+			rewards: [
+				{
+					id: "2828137EA3D6E2D2"
+					type: "item"
+					item: "office_rooms:research_file"
+				}
+				{
+					id: "1E59C08D86C0AE75"
+					type: "xp"
+					xp: 300
+				}
+			]
+			x: 4.5d
+			y: 1.5d
+		}
+		{
+			id: "77DE0DABF87EB0C4"
+			title: "The Abandoned Hotel"
+			subtitle: "No vacancy"
+			description: [
+				"Lobby, corridors, rooms that were never checked out. The vault is in the basement."
+				""
+				"&6How: &rExplore the Office Rooms: megastructures fill whole regions on certain storeys. Walking into one counts."
+			]
+			dependencies: [
+				"68F15C46402017C3"
+			]
+			shape: "circle"
+			icon: "office_rooms:hotel_carpet"
+			tasks: [
+				{
+					id: "4DC6AB94A4DDE0F1"
+					type: "advancement"
+					advancement: "office_rooms:milestones/discover_hotel"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "775011058B7F461F"
+					type: "random"
+					table_id: 4103091957774285532L
+				}
+				{
+					id: "42ECBF3E91A060E6"
+					type: "xp"
+					xp: 150
+				}
+			]
+			x: 2.5d
+			y: 3.0d
+		}
+		{
+			id: "5CA0BE01043BA876"
+			title: "Room Key 000"
+			subtitle: "Artifact"
+			description: [
+				"From the hotel vault. There is no room 000."
+				""
+				"&8Needed for the Underside Key."
+				""
+				"&6How: &rIn the structure's vault or special chest (see the description)."
+			]
+			dependencies: [
+				"77DE0DABF87EB0C4"
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					id: "1645D78ECF632672"
+					type: "item"
+					item: "office_rooms:room_key_000"
+				}
+			]
+			rewards: [
+				{
+					id: "07590DCF34997230"
+					type: "item"
+					item: "office_rooms:research_file"
+				}
+				{
+					id: "79FFB83EF22A12D7"
+					type: "xp"
+					xp: 300
+				}
+			]
+			x: 4.5d
+			y: 3.0d
+		}
+		{
+			id: "49679B2938C697DF"
+			title: "The Industrial Complex"
+			subtitle: "Steam, grates and generator halls"
+			description: [
+				"Five levels of pipes and machines. Something still hums in the generator halls."
+				""
+				"&6How: &rExplore the Office Rooms: megastructures fill whole regions on certain storeys. Walking into one counts."
+			]
+			dependencies: [
+				"68F15C46402017C3"
+			]
+			shape: "circle"
+			icon: "office_rooms:industrial_wall"
+			tasks: [
+				{
+					id: "314A92C134636993"
+					type: "advancement"
+					advancement: "office_rooms:milestones/discover_industrial"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "2C7F0BC2121A36A3"
+					type: "random"
+					table_id: 4103091957774285532L
+				}
+				{
+					id: "35A2795FF33D3642"
+					type: "xp"
+					xp: 150
+				}
+			]
+			x: 2.5d
+			y: 4.5d
+		}
+		{
+			id: "7AB764845197DCD8"
+			title: "Humming Fuse"
+			subtitle: "Artifact"
+			description: [
+				"From a generator hall."
+				""
+				"&8Needed for the Underside Key."
+				""
+				"&6How: &rIn the structure's vault or special chest (see the description)."
+			]
+			dependencies: [
+				"49679B2938C697DF"
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					id: "18D51D4192060179"
+					type: "item"
+					item: "office_rooms:humming_fuse"
+				}
+			]
+			rewards: [
+				{
+					id: "020BB4A895CF9B32"
+					type: "item"
+					item: "office_rooms:research_file"
+				}
+				{
+					id: "15B05CC7A2E1E954"
+					type: "xp"
+					xp: 300
+				}
+			]
+			x: 4.5d
+			y: 4.5d
+		}
+		{
+			id: "69D4DE38B5120D27"
+			title: "The Neighbourhood"
+			subtitle: "Houses inside an office"
+			description: [
+				"A street of houses under fluorescent light. Their families are in the photographs."
+				""
+				"&6How: &rExplore the Office Rooms: megastructures fill whole regions on certain storeys. Walking into one counts."
+			]
+			dependencies: [
+				"68F15C46402017C3"
+			]
+			shape: "circle"
+			icon: "minecraft:oak_door"
+			tasks: [
+				{
+					id: "4DE09A742EC5EC7A"
+					type: "advancement"
+					advancement: "office_rooms:milestones/discover_neighbourhood"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "5A2AED77D6E41B61"
+					type: "random"
+					table_id: 4103091957774285532L
+				}
+				{
+					id: "3342EDF28F6A9424"
+					type: "xp"
+					xp: 150
+				}
+			]
+			x: 2.5d
+			y: 6.0d
+		}
+		{
+			id: "3FBA3FBD2F731556"
+			title: "Faded Photograph"
+			subtitle: "Artifact"
+			description: [
+				"From one of the houses."
+				""
+				"&8Needed for the Underside Key."
+				""
+				"&6How: &rIn the structure's vault or special chest (see the description)."
+			]
+			dependencies: [
+				"69D4DE38B5120D27"
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					id: "636BC8091D740208"
+					type: "item"
+					item: "office_rooms:faded_photograph"
+				}
+			]
+			rewards: [
+				{
+					id: "55408F140C756435"
+					type: "item"
+					item: "office_rooms:research_file"
+				}
+				{
+					id: "3957FE8780B378AA"
+					type: "xp"
+					xp: 300
+				}
+			]
+			x: 4.5d
+			y: 6.0d
+		}
+		{
+			id: "4EE34CC7B600496A"
+			title: "Level Fun"
+			subtitle: "=)"
+			description: [
+				"Balloons, confetti, presents. The Partygoers are very happy to see you."
+				""
+				"&6How: &rExplore the Office Rooms: megastructures fill whole regions on certain storeys. Walking into one counts."
+			]
+			dependencies: [
+				"68F15C46402017C3"
+			]
+			shape: "circle"
+			icon: "office_rooms:balloon_red"
+			tasks: [
+				{
+					id: "58108BA4F568723E"
+					type: "advancement"
+					advancement: "office_rooms:milestones/discover_level_fun"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "13D42C41C1D3C91B"
+					type: "random"
+					table_id: 4103091957774285532L
+				}
+				{
+					id: "0ADFA5649E1BFE8F"
+					type: "xp"
+					xp: 150
+				}
+			]
+			x: 2.5d
+			y: 7.5d
+		}
+		{
+			id: "1349953B7E098B8A"
+			title: "Party Smile Badge"
+			subtitle: "Artifact"
+			description: [
+				"A present from Level Fun."
+				""
+				"&8Needed for the Underside Key."
+				""
+				"&6How: &rIn the structure's vault or special chest (see the description)."
+			]
+			dependencies: [
+				"4EE34CC7B600496A"
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					id: "732556A34E6D7F6B"
+					type: "item"
+					item: "office_rooms:party_smile_badge"
+				}
+			]
+			rewards: [
+				{
+					id: "593A7A6D7F75FB84"
+					type: "item"
+					item: "office_rooms:research_file"
+				}
+				{
+					id: "3383FC815C677511"
+					type: "xp"
+					xp: 300
+				}
+			]
+			x: 4.5d
+			y: 7.5d
+		}
+		{
+			id: "5873286181054F72"
+			title: "The Abandoned Cinema"
+			subtitle: "Now showing: nothing"
+			description: [
+				"Three floors of dark auditoriums around a lobby nobody cleaned. Some screens still flicker. Only in worlds made with 0.31.0 or newer."
+				""
+				"&6How: &rExplore the Office Rooms: megastructures fill whole regions on certain storeys. Walking into one counts."
+			]
+			dependencies: [
+				"68F15C46402017C3"
+			]
+			shape: "circle"
+			icon: "office_rooms:cinema_projector"
+			tasks: [
+				{
+					id: "5D88D682BFDB7138"
+					type: "advancement"
+					advancement: "office_rooms:milestones/discover_cinema"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "1FC91E99D63E88DD"
+					type: "random"
+					table_id: 4103091957774285532L
+				}
+				{
+					id: "34A8BE3465CA140F"
+					type: "xp"
+					xp: 150
+				}
+			]
+			x: 2.5d
+			y: 9.0d
+		}
+		{
+			id: "24A857F9CA89926D"
+			title: "Ticket Stub"
+			subtitle: "Artifact"
+			description: [
+				"Admit one. From the box office or the lost-and-found chests of the cinema."
+				""
+				"&8Needed for the Underside Key."
+				""
+				"&6How: &rIn the structure's vault or special chest (see the description)."
+			]
+			dependencies: [
+				"5873286181054F72"
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					id: "4DD8358D660AE8A4"
+					type: "item"
+					item: "office_rooms:ticket_stub"
+				}
+			]
+			rewards: [
+				{
+					id: "6C2A17344C017335"
+					type: "item"
+					item: "office_rooms:research_file"
+				}
+				{
+					id: "53BECA03D268FCE8"
+					type: "xp"
+					xp: 300
+				}
+			]
+			x: 4.5d
+			y: 9.0d
+		}
+		{
+			id: "5A951547E18A999E"
+			title: "Level 2 Access Card"
+			subtitle: "Deeper doors"
+			description: [
+				"Found in Neighbourhood houses, special rooms and the Poolrooms vault."
+				""
+				"&6How: &rNeighbourhood houses, hotel reception, hidden labs and security offices, Poolrooms vault, secure storage level 1."
+			]
+			dependencies: [
+				"69D4DE38B5120D27"
+				"5C173F715D65D5D6"
+			]
+			dependency_requirement: "one_completed"
+			tasks: [
+				{
+					id: "604095DE233A3C6B"
+					type: "item"
+					item: "office_rooms:level_2_access_card"
+				}
+			]
+			rewards: [
+				{
+					id: "676789062928EE2A"
+					type: "xp"
+					xp: 150
+				}
+			]
+			x: 6.5d
+			y: 6.0d
+		}
+		{
+			id: "25D5E0E19F89C8F7"
+			title: "Level 3 Access Card"
+			subtitle: "The deepest doors"
+			description: [
+				"Only in the Poolrooms vault and the vault of the Maze."
+				""
+				"&6How: &rPoolrooms and Maze vaults, hotel vault, concealed hidden rooms, secure storage level 2, Hazard Zone cores."
+			]
+			dependencies: [
+				"5A951547E18A999E"
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					id: "20F5CB8F5B7D586E"
+					type: "item"
+					item: "office_rooms:level_3_access_card"
+				}
+			]
+			rewards: [
+				{
+					id: "53E71968FF6757DB"
+					type: "item"
+					item: "office_rooms:research_file"
+				}
+				{
+					id: "635B05C48FE76629"
+					type: "xp"
+					xp: 300
+				}
+			]
+			x: 8.0d
+			y: 6.0d
+		}
+		{
+			id: "5C349E6D3098EAFA"
+			title: "Master Key"
+			subtitle: "Every door, for a while"
+			description: [
+				"Opens any security door. It will not last forever."
+				""
+				"&6How: &rVaults, maintenance and concealed hidden rooms, secure storage level 3."
+			]
+			dependencies: [
+				"5A951547E18A999E"
+			]
+			tasks: [
+				{
+					id: "6C6A1A294A9D57E9"
+					type: "item"
+					item: "office_rooms:master_key"
+				}
+			]
+			rewards: [
+				{
+					id: "527D43EB06C6795D"
+					type: "xp"
+					xp: 150
+				}
+			]
+			x: 8.0d
+			y: 7.5d
+		}
+		{
+			id: "55ED0456A8F731D2"
+			title: "Screens 25 to 36"
+			subtitle: "The top floor"
+			description: [
+				"The stairs in the cinema lobby climb past two galleries. Reach the third floor."
+				"Mind the railings. They are not everywhere."
+				""
+				"&6How: &rFind an Abandoned Cinema and climb the stairs in its lobby atrium to the third floor (screens 25 to 36)."
+			]
+			dependencies: [
+				"5873286181054F72"
+			]
+			optional: true
+			icon: "office_rooms:cinema_seat"
+			tasks: [
+				{
+					id: "3946E6482F4FB773"
+					type: "advancement"
+					advancement: "office_rooms:milestones/cinema_top"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "19B11E2E950E156A"
+					type: "item"
+					item: "office_rooms:office_coin"
+					count: 4
+				}
+				{
+					id: "1DD86F4FACF2653F"
+					type: "xp"
+					xp: 120
+				}
+			]
+			x: 6.5d
+			y: 9.0d
+		}
+		{
+			id: "1BAA506CC9C8845C"
+			title: "Top Floor, No Vacancy"
+			subtitle: "Through the labyrinth"
+			description: [
+				"The hotel corridors twist and the staircases turn. Find your way to the highest guest floor."
+				"Only in worlds made with 0.36.0 or newer."
+				""
+				"&6How: &rClimb the staircases of an Abandoned Hotel up to its highest guest floor."
+			]
+			dependencies: [
+				"77DE0DABF87EB0C4"
+			]
+			optional: true
+			icon: "office_rooms:hotel_bed"
+			tasks: [
+				{
+					id: "093AD9E86FEDA471"
+					type: "advancement"
+					advancement: "office_rooms:milestones/hotel_top"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "019A1CAB17CB0D32"
+					type: "random"
+					table_id: 4103091957774285532L
+				}
+				{
+					id: "7599FF6A2313DDBB"
+					type: "xp"
+					xp: 150
+				}
+			]
+			x: 6.5d
+			y: 4.5d
+		}
+		{
+			id: "5070A0C4B4A96075"
+			title: "Down the Pipe"
+			subtitle: "Wheee"
+			description: [
+				"Some office walls have a round opening with a draught coming out of it. Climb in (use it)."
+				"You will come out somewhere wet."
+				""
+				"&6How: &rFind a round slide opening in an office wall (rare, worlds made with 0.35.0+) and right-click it."
+			]
+			dependencies: [
+				"5C173F715D65D5D6"
+			]
+			optional: true
+			icon: "office_rooms:slide_entrance"
+			tasks: [
+				{
+					id: "2FE1662CE80F60AC"
+					type: "advancement"
+					advancement: "office_rooms:milestones/slide_ride"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "19A73A8CD037E6B8"
+					type: "item"
+					item: "office_rooms:almond_water"
+					count: 2
+				}
+				{
+					id: "1A2332E5DD5F4460"
+					type: "xp"
+					xp: 80
+				}
+			]
+			x: 6.5d
+			y: 0.0d
+		}
+		{
+			id: "707C68EC7F747E39"
+			title: "The Temporal Watch"
+			subtitle: "Four slow seconds"
+			description: [
+				"Slows every creature around you. Rare tiers and the maze vault."
+				""
+				"&6How: &rMaze vault, concealed hidden rooms, secure storage level 2 and 3, rare office loot."
+			]
+			dependencies: [
+				"64B5AB709871E4BD"
+			]
+			optional: true
+			tasks: [
+				{
+					id: "7AA14AEC53C8200D"
+					type: "item"
+					item: "office_rooms:temporal_watch"
+				}
+			]
+			rewards: [
+				{
+					id: "3784C4E333DCE2F2"
+					type: "xp"
+					xp: 200
+				}
+			]
+			x: 6.5d
+			y: 1.5d
+		}
+		{
+			id: "1E2C0A21B213C0D6"
+			title: "Witherfang"
+			subtitle: "Vault weapon"
+			description: [
+				"Its cuts wither whatever they touch."
+				""
+				"&6How: &rMaze vault, rare and special office loot (Liquid Pain: hidden labs, uncommon loot)."
+			]
+			dependencies: [
+				"68F15C46402017C3"
+			]
+			optional: true
+			tasks: [
+				{
+					id: "3BC08CE847D5F682"
+					type: "item"
+					item: "office_rooms:witherfang"
+				}
+			]
+			rewards: [
+				{
+					id: "44200896DF7114D2"
+					type: "xp"
+					xp: 200
+				}
+			]
+			x: 6.5d
+			y: -1.5d
+		}
+		{
+			id: "4928704439105B88"
+			title: "Leaden Edge"
+			subtitle: "Vault weapon"
+			description: [
+				"Every hit drags the target down."
+				""
+				"&6How: &rMaze vault, rare and special office loot (Liquid Pain: hidden labs, uncommon loot)."
+			]
+			dependencies: [
+				"68F15C46402017C3"
+			]
+			optional: true
+			tasks: [
+				{
+					id: "42D547E1BE0E05DA"
+					type: "item"
+					item: "office_rooms:leaden_edge"
+				}
+			]
+			rewards: [
+				{
+					id: "03A76000518E74D1"
+					type: "xp"
+					xp: 200
+				}
+			]
+			x: 8.0d
+			y: -1.5d
+		}
+		{
+			id: "45A01EA0940F50D4"
+			title: "Venomtongue"
+			subtitle: "Vault weapon"
+			description: [
+				"Every hit leaves poison behind."
+				""
+				"&6How: &rMaze vault, rare and special office loot (Liquid Pain: hidden labs, uncommon loot)."
+			]
+			dependencies: [
+				"68F15C46402017C3"
+			]
+			optional: true
+			tasks: [
+				{
+					id: "5C36DB3CF955BC3C"
+					type: "item"
+					item: "office_rooms:venomtongue"
+				}
+			]
+			rewards: [
+				{
+					id: "3C7892CB22E067A6"
+					type: "xp"
+					xp: 200
+				}
+			]
+			x: 6.5d
+			y: -3.0d
+		}
+		{
+			id: "0C8730892F9F044D"
+			title: "Liquid Pain"
+			subtitle: "Vault weapon"
+			description: [
+				"Do not drink."
+				""
+				"&6How: &rMaze vault, rare and special office loot (Liquid Pain: hidden labs, uncommon loot)."
+			]
+			dependencies: [
+				"68F15C46402017C3"
+			]
+			optional: true
+			tasks: [
+				{
+					id: "3C4720F30D82F273"
+					type: "item"
+					item: "office_rooms:liquid_pain"
+				}
+			]
+			rewards: [
+				{
+					id: "65F9147DD51FE651"
+					type: "xp"
+					xp: 200
+				}
+			]
+			x: 8.0d
+			y: -3.0d
+		}
+	]
+	subtitle: [
+		"Places the floor plan does not show"
+	]
+	title: "V. Megastructures"
+}

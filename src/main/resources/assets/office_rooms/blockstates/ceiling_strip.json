@@ -1,0 +1,32 @@
+{
+ "variants": {
+  "axis=x,center=true,lit=true": {
+   "model": "office_rooms:block/ceiling_strip_on"
+  },
+  "axis=z,center=true,lit=true": {
+   "model": "office_rooms:block/ceiling_strip_on",
+   "y": 90
+  },
+  "axis=x,center=false,lit=true": {
+   "model": "office_rooms:block/ceiling_strip_on"
+  },
+  "axis=z,center=false,lit=true": {
+   "model": "office_rooms:block/ceiling_strip_on",
+   "y": 90
+  },
+  "axis=x,center=true,lit=false": {
+   "model": "office_rooms:block/ceiling_strip_off"
+  },
+  "axis=z,center=true,lit=false": {
+   "model": "office_rooms:block/ceiling_strip_off",
+   "y": 90
+  },
+  "axis=x,center=false,lit=false": {
+   "model": "office_rooms:block/ceiling_strip_off"
+  },
+  "axis=z,center=false,lit=false": {
+   "model": "office_rooms:block/ceiling_strip_off",
+   "y": 90
+  }
+ }
+}

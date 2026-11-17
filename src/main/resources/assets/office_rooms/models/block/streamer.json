@@ -1,0 +1,30 @@
+{
+ "parent": "minecraft:block/block",
+ "render_type": "minecraft:cutout",
+ "textures": {
+  "s": "office_rooms:block/streamer",
+  "particle": "office_rooms:block/streamer"
+ },
+ "elements": [
+  {
+   "from": [
+    0,
+    10,
+    8
+   ],
+   "to": [
+    16,
+    16,
+    8
+   ],
+   "faces": {
+    "north": {
+     "texture": "#s"
+    },
+    "south": {
+     "texture": "#s"
+    }
+   }
+  }
+ ]
+}

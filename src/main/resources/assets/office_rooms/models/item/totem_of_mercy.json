@@ -1,0 +1,6 @@
+{
+ "parent": "minecraft:item/generated",
+ "textures": {
+  "layer0": "office_rooms:item/totem_of_mercy"
+ }
+}

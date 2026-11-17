@@ -1,0 +1,45 @@
+{
+ "parent": "minecraft:block/block",
+ "textures": {
+  "l": "office_rooms:block/cinema_aisle_light",
+  "particle": "office_rooms:block/cinema_aisle_light"
+ },
+ "elements": [
+  {
+   "from": [
+    5,
+    1,
+    14
+   ],
+   "to": [
+    11,
+    4,
+    16
+   ],
+   "faces": {
+    "north": {
+     "texture": "#l"
+    },
+    "south": {
+     "texture": "#l"
+    },
+    "east": {
+     "texture": "#l"
+    },
+    "west": {
+     "texture": "#l"
+    },
+    "up": {
+     "texture": "#l"
+    },
+    "down": {
+     "texture": "#l"
+    }
+   },
+   "forge_data": {
+    "block_light": 12,
+    "sky_light": 12
+   }
+  }
+ ]
+}

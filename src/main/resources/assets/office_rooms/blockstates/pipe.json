@@ -1,0 +1,16 @@
+{
+ "variants": {
+  "axis=y": {
+   "model": "office_rooms:block/pipe"
+  },
+  "axis=z": {
+   "model": "office_rooms:block/pipe",
+   "x": 90
+  },
+  "axis=x": {
+   "model": "office_rooms:block/pipe",
+   "x": 90,
+   "y": 90
+  }
+ }
+}

@@ -1,0 +1,7 @@
+{
+ "type": "office_rooms:abandoned_office_shrine",
+ "biomes": "#office_rooms:has_structure/abandoned_office_shrine",
+ "step": "surface_structures",
+ "spawn_overrides": {},
+ "terrain_adaptation": "beard_thin"
+}

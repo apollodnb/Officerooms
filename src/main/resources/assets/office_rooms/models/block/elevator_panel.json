@@ -1,0 +1,69 @@
+{
+ "parent": "minecraft:block/block",
+ "textures": {
+  "p": "office_rooms:block/elevator_panel",
+  "s": "office_rooms:block/elevator_wall",
+  "particle": "office_rooms:block/elevator_panel"
+ },
+ "elements": [
+  {
+   "from": [
+    5,
+    2,
+    15
+   ],
+   "to": [
+    11,
+    14,
+    16
+   ],
+   "faces": {
+    "north": {
+     "uv": [
+      5,
+      2,
+      11,
+      14
+     ],
+     "texture": "#p"
+    },
+    "east": {
+     "uv": [
+      0,
+      2,
+      1,
+      14
+     ],
+     "texture": "#s"
+    },
+    "west": {
+     "uv": [
+      0,
+      2,
+      1,
+      14
+     ],
+     "texture": "#s"
+    },
+    "up": {
+     "uv": [
+      5,
+      0,
+      11,
+      1
+     ],
+     "texture": "#s"
+    },
+    "down": {
+     "uv": [
+      5,
+      0,
+      11,
+      1
+     ],
+     "texture": "#s"
+    }
+   }
+  }
+ ]
+}

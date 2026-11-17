@@ -1,0 +1,185 @@
+{
+	images: [
+		{
+			x: 3.0d
+			y: 0.0d
+			width: 14.0d
+			height: 7.88d
+			rotation: 0.0d
+			image: "office_rooms:textures/gui/quests/atrium_1.png"
+			color: 16777215
+			alpha: 150
+			order: -1
+			hover: [ ]
+			click: ""
+			dev: false
+			corner: false
+		}
+	]
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "office_rooms_underside"
+	group: "2B674EAFE9EE221B"
+	icon: "office_rooms:underside_key"
+	id: "6F4DC1E749D7FC8A"
+	order_index: 6
+	quest_links: [ ]
+	quests: [
+		{
+			id: "7449B554E9C083C7"
+			title: "Underside Key"
+			subtitle: "Seven artifacts, one key"
+			description: [
+				"Combine the seven artifacts of the megastructures. The cinema ticket counts."
+				"Use the key on the bedrock beneath the lowest floor of the Office Rooms."
+				""
+				"&6How: &rCraft from the six megastructure artifacts (shapeless)."
+			]
+			dependencies: [
+				"43FBD36D565E1DCD"
+				"3473BD8B68DE5540"
+				"5CA0BE01043BA876"
+				"7AB764845197DCD8"
+				"3FBA3FBD2F731556"
+				"1349953B7E098B8A"
+				"24A857F9CA89926D"
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{
+					id: "490403965CB60DD0"
+					type: "item"
+					item: "office_rooms:underside_key"
+				}
+			]
+			rewards: [
+				{
+					id: "3319EE73871A4051"
+					type: "xp"
+					xp: 500
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			id: "52F1805373152CFD"
+			title: "Upside Down"
+			subtitle: "Fall through"
+			description: [
+				"Below the bedrock there is only void. Fall into it."
+				"You land somewhere with grass on the ceiling."
+				""
+				"&6How: &rUse the key on the bedrock under the lowest floor of the Office Rooms and fall into the void."
+			]
+			dependencies: [
+				"7449B554E9C083C7"
+			]
+			icon: "minecraft:bedrock"
+			tasks: [
+				{
+					id: "1B2316679F01500F"
+					type: "dimension"
+					dimension: "office_rooms:underside"
+				}
+			]
+			rewards: [
+				{
+					id: "4446BFCD53654046"
+					type: "item"
+					item: "office_rooms:almond_water"
+					count: 3
+				}
+				{
+					id: "1CDAD4F52053F802"
+					type: "item"
+					item: "office_rooms:bandage"
+					count: 3
+				}
+				{
+					id: "2EEDA2112C84B75B"
+					type: "xp"
+					xp: 200
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			id: "4214EA1B93F3B6A6"
+			title: "[Unknown]"
+			subtitle: "It burrows"
+			description: [
+				"Twenty seconds after you arrive, the ground starts to shake."
+				"Defeat it."
+				""
+				"&6How: &rIt appears 20 seconds after you arrive in the Underside. Hit it when it surfaces."
+			]
+			dependencies: [
+				"52F1805373152CFD"
+			]
+			shape: "gear"
+			size: 2.0d
+			tasks: [
+				{
+					id: "14A84EEA72C15A1A"
+					type: "kill"
+					entity: "office_rooms:unknown"
+					value: 1L
+				}
+			]
+			rewards: [
+				{
+					id: "68BDBCB755BB6A3A"
+					type: "xp"
+					xp: 1500
+				}
+			]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			id: "00CAB4C7E582A4E6"
+			title: "Noclip"
+			subtitle: "Walls are a suggestion"
+			description: [
+				"The Noclip Sword lets you walk through walls (not floors) for ten seconds."
+				"Two portals appear: one back to the office, one to the Overworld."
+				""
+				"&6How: &rDropped by [Unknown]."
+			]
+			dependencies: [
+				"4214EA1B93F3B6A6"
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{
+					id: "17028C4B4D90EE6B"
+					type: "item"
+					item: "office_rooms:noclip_sword"
+				}
+			]
+			rewards: [
+				{
+					id: "577D7EF0FEE86F84"
+					type: "item"
+					item: "office_rooms:research_file"
+					count: 5
+				}
+				{
+					id: "3846D907E3BA6421"
+					type: "xp"
+					xp: 1000
+				}
+			]
+			x: 6.0d
+			y: 0.0d
+		}
+	]
+	subtitle: [
+		"Beneath the bedrock"
+	]
+	title: "VII. The Underside"
+}

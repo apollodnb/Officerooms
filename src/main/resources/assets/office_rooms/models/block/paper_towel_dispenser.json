@@ -1,0 +1,42 @@
+{
+ "parent": "minecraft:block/block",
+ "textures": {
+  "w": "office_rooms:block/white_plastic",
+  "f": "office_rooms:block/paper_towel_front",
+  "particle": "office_rooms:block/white_plastic"
+ },
+ "elements": [
+  {
+   "from": [
+    4,
+    2,
+    12
+   ],
+   "to": [
+    12,
+    15,
+    16
+   ],
+   "faces": {
+    "north": {
+     "texture": "#f"
+    },
+    "south": {
+     "texture": "#w"
+    },
+    "east": {
+     "texture": "#w"
+    },
+    "west": {
+     "texture": "#w"
+    },
+    "up": {
+     "texture": "#w"
+    },
+    "down": {
+     "texture": "#w"
+    }
+   }
+  }
+ ]
+}

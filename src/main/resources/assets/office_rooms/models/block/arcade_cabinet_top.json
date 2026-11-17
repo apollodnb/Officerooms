@@ -1,0 +1,78 @@
+{
+ "parent": "minecraft:block/block",
+ "textures": {
+  "c": "office_rooms:block/arcade_side",
+  "x": "office_rooms:block/arcade_screen",
+  "particle": "office_rooms:block/arcade_side"
+ },
+ "elements": [
+  {
+   "from": [
+    2,
+    0,
+    3
+   ],
+   "to": [
+    14,
+    15,
+    15
+   ],
+   "faces": {
+    "north": {
+     "texture": "#c"
+    },
+    "south": {
+     "texture": "#c"
+    },
+    "east": {
+     "texture": "#c"
+    },
+    "west": {
+     "texture": "#c"
+    },
+    "up": {
+     "texture": "#c"
+    },
+    "down": {
+     "texture": "#c"
+    }
+   }
+  },
+  {
+   "from": [
+    3,
+    2,
+    2.5
+   ],
+   "to": [
+    13,
+    13,
+    3
+   ],
+   "faces": {
+    "north": {
+     "texture": "#x"
+    },
+    "south": {
+     "texture": "#x"
+    },
+    "east": {
+     "texture": "#x"
+    },
+    "west": {
+     "texture": "#x"
+    },
+    "up": {
+     "texture": "#x"
+    },
+    "down": {
+     "texture": "#x"
+    }
+   },
+   "forge_data": {
+    "block_light": 12,
+    "sky_light": 12
+   }
+  }
+ ]
+}

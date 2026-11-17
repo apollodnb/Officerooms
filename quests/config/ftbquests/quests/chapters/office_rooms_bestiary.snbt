@@ -1,0 +1,507 @@
+{
+	images: [
+		{
+			x: 5.0d
+			y: 3.75d
+			width: 18.67d
+			height: 10.5d
+			rotation: 0.0d
+			image: "office_rooms:textures/gui/quests/atrium_3.png"
+			color: 16777215
+			alpha: 150
+			order: -1
+			hover: [ ]
+			click: ""
+			dev: false
+			corner: false
+		}
+	]
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "office_rooms_bestiary"
+	group: "2B674EAFE9EE221B"
+	icon: "minecraft:skeleton_skull"
+	id: "220C62D49A89EDD0"
+	order_index: 8
+	quest_links: [ ]
+	quests: [
+		{
+			id: "7B02A88CFB7C1FF4"
+			title: "Field Notes"
+			subtitle: "Know what hunts you"
+			description: [
+				"Every creature of the Office Rooms. Some are worth avoiding more than others."
+				""
+				"&6How: &rJust tick the checkmark."
+			]
+			dependencies: [
+				"76BBE88AC96F5FE9"
+			]
+			shape: "hexagon"
+			icon: "minecraft:writable_book"
+			size: 1.25d
+			tasks: [
+				{
+					id: "09E3095EC08EB0A3"
+					type: "checkmark"
+				}
+			]
+			rewards: [
+				{
+					id: "1C7466E036569ADF"
+					type: "xp"
+					xp: 20
+				}
+			]
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			id: "1D01496F171F2F9F"
+			title: "The Gaunt"
+			subtitle: "Kill one"
+			description: [
+				"Too tall, too thin. Comes with the dark."
+				""
+				"&6How: &rKill it yourself (where it lives is in the description)."
+			]
+			dependencies: [
+				"7B02A88CFB7C1FF4"
+			]
+			tasks: [
+				{
+					id: "5DD0A4CF85E10699"
+					type: "kill"
+					entity: "office_rooms:gaunt"
+					value: 1L
+				}
+			]
+			rewards: [
+				{
+					id: "4E3148A2ECACA7A8"
+					type: "xp"
+					xp: 100
+				}
+				{
+					id: "464D9E5F07481F47"
+					type: "random"
+					table_id: 4103091957774285532L
+				}
+			]
+			x: 2.0d
+			y: 1.5d
+		}
+		{
+			id: "5D5891CBDB2C17C4"
+			title: "Wolfspider"
+			subtitle: "Kill one"
+			description: [
+				"Hunts in the offices. Hates light."
+				""
+				"&6How: &rKill it yourself (where it lives is in the description)."
+			]
+			dependencies: [
+				"7B02A88CFB7C1FF4"
+			]
+			tasks: [
+				{
+					id: "2BE3BA66C936B42C"
+					type: "kill"
+					entity: "office_rooms:wolfspider"
+					value: 1L
+				}
+			]
+			rewards: [
+				{
+					id: "1B79E7768CB342B4"
+					type: "xp"
+					xp: 140
+				}
+				{
+					id: "2A38180A981DC6A0"
+					type: "random"
+					table_id: 4103091957774285532L
+				}
+			]
+			x: 3.5d
+			y: 1.5d
+		}
+		{
+			id: "1A8E4F03058830E0"
+			title: "The Smiler"
+			subtitle: "Kill one"
+			description: [
+				"Only a smile in the dark."
+				""
+				"&6How: &rKill it yourself (where it lives is in the description)."
+			]
+			dependencies: [
+				"7B02A88CFB7C1FF4"
+			]
+			tasks: [
+				{
+					id: "368D95855979EB66"
+					type: "kill"
+					entity: "office_rooms:smiler"
+					value: 1L
+				}
+			]
+			rewards: [
+				{
+					id: "26EC243E69A5F430"
+					type: "xp"
+					xp: 180
+				}
+				{
+					id: "08E665C73E0DC609"
+					type: "random"
+					table_id: 4103091957774285532L
+				}
+			]
+			x: 5.0d
+			y: 1.5d
+		}
+		{
+			id: "144D77B7C527B296"
+			title: "The Colony"
+			subtitle: "Kill one"
+			description: [
+				"Many small things acting as one. It hunts in the warm water of the Poolrooms."
+				""
+				"&6How: &rKill it yourself (where it lives is in the description)."
+			]
+			dependencies: [
+				"7B02A88CFB7C1FF4"
+			]
+			tasks: [
+				{
+					id: "4C6FCB256684B54B"
+					type: "kill"
+					entity: "office_rooms:colony"
+					value: 1L
+				}
+			]
+			rewards: [
+				{
+					id: "62F903316FD3B042"
+					type: "xp"
+					xp: 220
+				}
+				{
+					id: "0A5DBC866BCD4093"
+					type: "random"
+					table_id: 4103091957774285532L
+				}
+			]
+			x: 6.5d
+			y: 1.5d
+		}
+		{
+			id: "44069C5ED4C67BB1"
+			title: "Deathmoth"
+			subtitle: "Kill one"
+			description: [
+				"It waits on dark walls. Do not stand too close to a wall you have not looked at."
+				""
+				"&6How: &rKill it yourself (where it lives is in the description)."
+			]
+			dependencies: [
+				"7B02A88CFB7C1FF4"
+			]
+			tasks: [
+				{
+					id: "496C8408F6111430"
+					type: "kill"
+					entity: "office_rooms:deathmoth"
+					value: 1L
+				}
+			]
+			rewards: [
+				{
+					id: "1A0347BFA0A3EED3"
+					type: "xp"
+					xp: 260
+				}
+				{
+					id: "54BA3FB52A4E5052"
+					type: "random"
+					table_id: 4103091957774285532L
+				}
+			]
+			x: 8.0d
+			y: 1.5d
+		}
+		{
+			id: "1DCF42DA23C283C4"
+			title: "The Hound"
+			subtitle: "Kill one"
+			description: [
+				"Hotel corridors. Do not run, do not stop."
+				""
+				"&6How: &rKill it yourself (where it lives is in the description)."
+			]
+			dependencies: [
+				"7B02A88CFB7C1FF4"
+				"77DE0DABF87EB0C4"
+			]
+			tasks: [
+				{
+					id: "17CB813965559354"
+					type: "kill"
+					entity: "office_rooms:hound"
+					value: 1L
+				}
+			]
+			rewards: [
+				{
+					id: "3CC039B5BA4BEAF7"
+					type: "xp"
+					xp: 300
+				}
+				{
+					id: "288B96874E417617"
+					type: "random"
+					table_id: 4103091957774285532L
+				}
+			]
+			x: 2.0d
+			y: 4.5d
+		}
+		{
+			id: "0AC4EE3B06CD9235"
+			title: "Partygoer"
+			subtitle: "Kill 3"
+			description: [
+				"Hit one and the whole party comes."
+				""
+				"&6How: &rKill it yourself (where it lives is in the description)."
+			]
+			dependencies: [
+				"7B02A88CFB7C1FF4"
+				"4EE34CC7B600496A"
+			]
+			tasks: [
+				{
+					id: "08545EB673AB281E"
+					type: "kill"
+					entity: "office_rooms:partygoer"
+					value: 3L
+				}
+			]
+			rewards: [
+				{
+					id: "2BEFEBCBCFFE0BBF"
+					type: "xp"
+					xp: 340
+				}
+				{
+					id: "08D18C97F7216648"
+					type: "random"
+					table_id: 4103091957774285532L
+				}
+			]
+			x: 3.5d
+			y: 4.5d
+		}
+		{
+			id: "750009914E22689C"
+			title: "Headless Warden"
+			subtitle: "Kill one"
+			description: [
+				"Guards the Sculk Offices. Blind. Listening."
+				""
+				"&6How: &rKill it yourself (where it lives is in the description)."
+			]
+			dependencies: [
+				"7B02A88CFB7C1FF4"
+			]
+			tasks: [
+				{
+					id: "079A067F332004C9"
+					type: "kill"
+					entity: "office_rooms:headless_warden"
+					value: 1L
+				}
+			]
+			rewards: [
+				{
+					id: "1A0C8FE4A2F17D96"
+					type: "xp"
+					xp: 380
+				}
+				{
+					id: "4DAB05C78A6E5494"
+					type: "random"
+					table_id: 4103091957774285532L
+				}
+			]
+			x: 5.0d
+			y: 4.5d
+		}
+		{
+			id: "34D53DD0D00600F5"
+			title: "The Flayed"
+			subtitle: "Kill one"
+			description: [
+				"Wire-thin and very, very fast."
+				""
+				"&6How: &rKill it yourself (where it lives is in the description)."
+			]
+			dependencies: [
+				"7B02A88CFB7C1FF4"
+				"3E7FF9EBD1CE31EE"
+			]
+			tasks: [
+				{
+					id: "3D7F63385D6D392B"
+					type: "kill"
+					entity: "office_rooms:flayed"
+					value: 1L
+				}
+			]
+			rewards: [
+				{
+					id: "402E86E4313211F4"
+					type: "xp"
+					xp: 420
+				}
+				{
+					id: "49C71895DDCA21BF"
+					type: "random"
+					table_id: 4103091957774285532L
+				}
+			]
+			x: 6.5d
+			y: 4.5d
+		}
+		{
+			id: "3B4B701C6D4B8F21"
+			title: "Aranea Membri"
+			subtitle: "Kill one"
+			description: [
+				"It nests in the ceiling. If you hear scratching above you, do not stand still."
+				""
+				"&6How: &rKill it yourself (where it lives is in the description)."
+			]
+			dependencies: [
+				"7B02A88CFB7C1FF4"
+			]
+			tasks: [
+				{
+					id: "6FE50028A8147EB5"
+					type: "kill"
+					entity: "office_rooms:aranea_membri"
+					value: 1L
+				}
+			]
+			rewards: [
+				{
+					id: "2D725F1E1172A51C"
+					type: "xp"
+					xp: 460
+				}
+				{
+					id: "6780B1EECD57F17D"
+					type: "random"
+					table_id: 4103091957774285532L
+				}
+			]
+			x: 8.0d
+			y: 4.5d
+		}
+		{
+			id: "5A8A08649AA9203B"
+			title: "The Observer"
+			subtitle: "It is gone when you get close"
+			description: [
+				"You cannot catch it. Just see it."
+				""
+				"&6How: &rLook at an Observer for half a second before it vanishes. It watches from far away in the offices."
+			]
+			dependencies: [
+				"7B02A88CFB7C1FF4"
+			]
+			icon: "minecraft:ender_eye"
+			tasks: [
+				{
+					id: "5B25806CB2F53C85"
+					type: "observation"
+					observe_type: 5
+					to_observe: "office_rooms:observer"
+					timer: 10L
+				}
+			]
+			rewards: [
+				{
+					id: "0B91CD21504E0B5C"
+					type: "xp"
+					xp: 150
+				}
+			]
+			x: 2.0d
+			y: 4.5d
+		}
+		{
+			id: "53F6204D5C258E62"
+			title: "Exterminator"
+			subtitle: "Ten of each"
+			description: [
+				"Gaunts, wolfspiders and smilers. Ten each."
+				""
+				"&6How: &rKill them yourself, ten each."
+			]
+			dependencies: [
+				"1D01496F171F2F9F"
+				"5D5891CBDB2C17C4"
+				"1A8E4F03058830E0"
+			]
+			shape: "diamond"
+			optional: true
+			size: 1.5d
+			tasks: [
+				{
+					id: "3CDA9138EB41E06C"
+					type: "kill"
+					entity: "office_rooms:gaunt"
+					value: 10L
+				}
+				{
+					id: "27EAFFF53462BEEC"
+					type: "kill"
+					entity: "office_rooms:wolfspider"
+					value: 10L
+				}
+				{
+					id: "460780B09D0CDC30"
+					type: "kill"
+					entity: "office_rooms:smiler"
+					value: 10L
+				}
+			]
+			rewards: [
+				{
+					id: "6E3A1441691735B4"
+					type: "item"
+					item: "office_rooms:research_file"
+					count: 2
+				}
+				{
+					id: "1D4ECF0D82D18D2A"
+					type: "item"
+					item: "office_rooms:glitched_ingot"
+				}
+				{
+					id: "2778CC843A0E3743"
+					type: "xp"
+					xp: 1000
+				}
+			]
+			x: 10.0d
+			y: 6.0d
+		}
+	]
+	subtitle: [
+		"Everything that walks the halls"
+	]
+	title: "IX. Bestiary"
+}

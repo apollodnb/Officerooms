@@ -1,0 +1,41 @@
+{
+ "textures": {
+  "m": "office_rooms:block/outpost_metal_light",
+  "l": "office_rooms:block/facility_light",
+  "particle": "office_rooms:block/facility_light"
+ },
+ "elements": [
+  {
+   "from": [
+    1,
+    14,
+    3
+   ],
+   "to": [
+    15,
+    16,
+    13
+   ],
+   "faces": {
+    "down": {
+     "texture": "#l"
+    },
+    "up": {
+     "texture": "#m"
+    },
+    "north": {
+     "texture": "#m"
+    },
+    "south": {
+     "texture": "#m"
+    },
+    "east": {
+     "texture": "#m"
+    },
+    "west": {
+     "texture": "#m"
+    }
+   }
+  }
+ ]
+}

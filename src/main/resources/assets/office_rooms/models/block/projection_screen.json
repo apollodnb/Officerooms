@@ -1,0 +1,46 @@
+{
+ "parent": "minecraft:block/block",
+ "textures": {
+  "g": "office_rooms:block/white_plastic",
+  "s": "office_rooms:block/projection_screen",
+  "particle": "office_rooms:block/white_plastic"
+ },
+ "elements": [
+  {
+   "from": [
+    0,
+    0,
+    15
+   ],
+   "to": [
+    16,
+    16,
+    16
+   ],
+   "faces": {
+    "north": {
+     "texture": "#s"
+    },
+    "south": {
+     "texture": "#g"
+    },
+    "east": {
+     "texture": "#g"
+    },
+    "west": {
+     "texture": "#g"
+    },
+    "up": {
+     "texture": "#g"
+    },
+    "down": {
+     "texture": "#g"
+    }
+   },
+   "forge_data": {
+    "block_light": 11,
+    "sky_light": 11
+   }
+  }
+ ]
+}

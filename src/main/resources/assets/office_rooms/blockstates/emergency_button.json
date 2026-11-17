@@ -1,0 +1,10 @@
+{
+ "variants": {
+  "powered=false": {
+   "model": "office_rooms:block/emergency_button"
+  },
+  "powered=true": {
+   "model": "office_rooms:block/emergency_button_pressed"
+  }
+ }
+}

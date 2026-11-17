@@ -1,0 +1,18 @@
+{
+ "structures": [
+  {
+   "structure": "office_rooms:abandoned_office_shrine",
+   "weight": 1
+  }
+ ],
+ "placement": {
+  "type": "minecraft:random_spread",
+  "spacing": 48,
+  "separation": 20,
+  "salt": 731846299,
+  "exclusion_zone": {
+   "other_set": "minecraft:villages",
+   "chunk_count": 6
+  }
+ }
+}

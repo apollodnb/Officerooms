@@ -1,0 +1,10 @@
+{
+ "variants": {
+  "lit=false": {
+   "model": "office_rooms:block/facility_light"
+  },
+  "lit=true": {
+   "model": "office_rooms:block/facility_light_on"
+  }
+ }
+}

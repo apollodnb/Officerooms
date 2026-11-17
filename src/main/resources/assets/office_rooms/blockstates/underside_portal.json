@@ -1,0 +1,10 @@
+{
+ "variants": {
+  "overworld=false": {
+   "model": "office_rooms:block/underside_portal_office"
+  },
+  "overworld=true": {
+   "model": "office_rooms:block/underside_portal_overworld"
+  }
+ }
+}

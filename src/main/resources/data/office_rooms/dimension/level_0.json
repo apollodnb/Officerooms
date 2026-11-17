@@ -1,0 +1,10 @@
+{
+ "type": "office_rooms:level_0",
+ "generator": {
+  "type": "office_rooms:level_0",
+  "biome_source": {
+   "type": "minecraft:fixed",
+   "biome": "office_rooms:level_0"
+  }
+ }
+}

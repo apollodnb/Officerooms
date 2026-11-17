@@ -1,0 +1,156 @@
+{
+ "type": "minecraft:chest",
+ "pools": [
+  {
+   "rolls": {
+    "type": "minecraft:uniform",
+    "min": 2,
+    "max": 4
+   },
+   "conditions": [
+    {
+     "condition": "office_rooms:tier_chance",
+     "room": "sculk_special",
+     "tier": "common"
+    }
+   ],
+   "entries": [
+    {
+     "type": "minecraft:loot_table",
+     "name": "office_rooms:tiers/common"
+    }
+   ]
+  },
+  {
+   "rolls": {
+    "type": "minecraft:uniform",
+    "min": 1,
+    "max": 2
+   },
+   "conditions": [
+    {
+     "condition": "office_rooms:tier_chance",
+     "room": "sculk_special",
+     "tier": "uncommon"
+    }
+   ],
+   "entries": [
+    {
+     "type": "minecraft:loot_table",
+     "name": "office_rooms:tiers/uncommon"
+    }
+   ]
+  },
+  {
+   "rolls": 1,
+   "conditions": [
+    {
+     "condition": "office_rooms:tier_chance",
+     "room": "sculk_special",
+     "tier": "rare"
+    }
+   ],
+   "entries": [
+    {
+     "type": "minecraft:loot_table",
+     "name": "office_rooms:tiers/rare"
+    }
+   ]
+  },
+  {
+   "rolls": 1,
+   "conditions": [
+    {
+     "condition": "office_rooms:tier_chance",
+     "room": "sculk_special",
+     "tier": "special"
+    }
+   ],
+   "entries": [
+    {
+     "type": "minecraft:loot_table",
+     "name": "office_rooms:tiers/special"
+    }
+   ]
+  },
+  {
+   "rolls": 1,
+   "conditions": [
+    {
+     "condition": "office_rooms:tier_chance",
+     "room": "sculk_special",
+     "tier": "multidimensional"
+    }
+   ],
+   "entries": [
+    {
+     "type": "minecraft:loot_table",
+     "name": "office_rooms:tiers/multidimensional"
+    }
+   ]
+  },
+  {
+   "rolls": 1,
+   "conditions": [
+    {
+     "condition": "office_rooms:tier_chance",
+     "room": "sculk_special",
+     "tier": "wood"
+    }
+   ],
+   "entries": [
+    {
+     "type": "minecraft:loot_table",
+     "name": "office_rooms:tiers/wood"
+    }
+   ]
+  },
+  {
+   "rolls": 1,
+   "conditions": [
+    {
+     "condition": "office_rooms:tier_chance",
+     "room": "sculk_special",
+     "tier": "stories"
+    }
+   ],
+   "entries": [
+    {
+     "type": "minecraft:loot_table",
+     "name": "office_rooms:tiers/stories"
+    }
+   ]
+  },
+  {
+   "rolls": 1,
+   "conditions": [
+    {
+     "condition": "office_rooms:tier_chance",
+     "room": "sculk_special",
+     "tier": "supplies"
+    }
+   ],
+   "entries": [
+    {
+     "type": "minecraft:loot_table",
+     "name": "office_rooms:tiers/supplies"
+    }
+   ]
+  },
+  {
+   "rolls": 1,
+   "conditions": [
+    {
+     "condition": "minecraft:random_chance",
+     "chance": 0.15
+    }
+   ],
+   "entries": [
+    {
+     "type": "minecraft:item",
+     "name": "office_rooms:research_file"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,889 @@
+{
+	images: [
+		{
+			x: 5.25d
+			y: 0.25d
+			width: 25.78d
+			height: 14.5d
+			rotation: 0.0d
+			image: "office_rooms:textures/gui/quests/atrium_1.png"
+			color: 16777215
+			alpha: 150
+			order: -1
+			hover: [ ]
+			click: ""
+			dev: false
+			corner: false
+		}
+	]
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "office_rooms_research"
+	group: "2B674EAFE9EE221B"
+	icon: "office_rooms:research_file"
+	id: "6A23BD0E18FD1EF3"
+	order_index: 3
+	quest_links: [ ]
+	quests: [
+		{
+			id: "3E7FF9EBD1CE31EE"
+			title: "Classified"
+			subtitle: "Your first Research File"
+			description: [
+				"Research Files are rare. Labs, security offices, vaults and repaired fuse boxes are good places to look."
+				""
+				"&6How: &rLabs, security offices, vaults, executive offices, hotel safes, fuse box rewards. Flayed and Partygoers sometimes drop one."
+			]
+			dependencies: [
+				"76BBE88AC96F5FE9"
+			]
+			shape: "hexagon"
+			size: 1.25d
+			tasks: [
+				{
+					id: "6FD97E2C27D8798E"
+					type: "item"
+					item: "office_rooms:research_file"
+				}
+			]
+			rewards: [
+				{
+					id: "77EAC96014BE2856"
+					type: "xp"
+					xp: 80
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			id: "343CECDA6727E241"
+			title: "Research Table"
+			subtitle: "Paper, books, iron"
+			description: [
+				"Exchange Research Files at a Research Table: more hearts, or a reforged weapon."
+				""
+				"&6How: &rCraft: paper, a book, iron and a crafting table."
+			]
+			dependencies: [
+				"3E7FF9EBD1CE31EE"
+			]
+			tasks: [
+				{
+					id: "7A9AB1026A3D1F99"
+					type: "item"
+					item: "office_rooms:research_table"
+				}
+			]
+			rewards: [
+				{
+					id: "363B4F535D4AF5C9"
+					type: "xp"
+					xp: 60
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			id: "3535D2457C27C041"
+			title: "Heart Research"
+			subtitle: "+1 heart, for good"
+			description: [
+				"Three files buy one more heart. It survives death."
+				""
+				"&6How: &rOpen a Research Table with 3 Research Files and choose Heart Research."
+			]
+			dependencies: [
+				"343CECDA6727E241"
+			]
+			icon: "minecraft:golden_apple"
+			tasks: [
+				{
+					id: "39DE6CEDB1EABFED"
+					type: "advancement"
+					advancement: "office_rooms:milestones/heart_research"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "3E114CA64D045AB5"
+					type: "item"
+					item: "office_rooms:research_file"
+				}
+				{
+					id: "4683EAA1CBAEB823"
+					type: "xp"
+					xp: 150
+				}
+			]
+			x: 4.0d
+			y: -1.0d
+		}
+		{
+			id: "2A10252F18C10D5E"
+			title: "Five Hearts Later"
+			subtitle: "Maximum Heart Research"
+			description: [
+				"Complete all five stages of Heart Research."
+				""
+				"&6How: &rRepeat Heart Research until all five hearts are bought (15 files)."
+			]
+			dependencies: [
+				"3535D2457C27C041"
+			]
+			shape: "diamond"
+			icon: "minecraft:enchanted_golden_apple"
+			size: 1.25d
+			tasks: [
+				{
+					id: "50509A06A901EE48"
+					type: "advancement"
+					advancement: "office_rooms:milestones/heart_research_max"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "35FE6ED42BEFF23E"
+					type: "item"
+					item: "office_rooms:glitched_ingot"
+					count: 2
+				}
+				{
+					id: "7703C1B2872D06C6"
+					type: "xp"
+					xp: 500
+				}
+			]
+			x: 6.0d
+			y: -1.0d
+		}
+		{
+			id: "5F22AD237D9B49DF"
+			title: "Reforged"
+			subtitle: "Sharper than before"
+			description: [
+				"Reforge a weapon at the Research Table. Enchantments stay."
+				""
+				"&6How: &rPut a weapon into the Research Table and reforge it (2 / 3 / 4 files per level)."
+			]
+			dependencies: [
+				"343CECDA6727E241"
+			]
+			icon: "minecraft:anvil"
+			tasks: [
+				{
+					id: "14BB83C89E8D1642"
+					type: "advancement"
+					advancement: "office_rooms:milestones/reforge"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "5FEFA94530538877"
+					type: "item"
+					item: "office_rooms:research_file"
+				}
+				{
+					id: "34E555AA96FB949C"
+					type: "xp"
+					xp: 150
+				}
+			]
+			x: 4.0d
+			y: 1.0d
+		}
+		{
+			id: "7817467EC1A86146"
+			title: "Masterwork"
+			subtitle: "Reforge level 3"
+			description: [
+				"Take one weapon all the way."
+				""
+				"&6How: &rReforge one weapon three times."
+			]
+			dependencies: [
+				"5F22AD237D9B49DF"
+			]
+			shape: "diamond"
+			icon: "minecraft:smithing_table"
+			size: 1.25d
+			tasks: [
+				{
+					id: "1292CB93D7E8E4BC"
+					type: "advancement"
+					advancement: "office_rooms:milestones/reforge_max"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "6DC0C6AC59141B6E"
+					type: "item"
+					item: "office_rooms:glitched_ingot"
+					count: 2
+				}
+				{
+					id: "114927626F2BD1E0"
+					type: "xp"
+					xp: 500
+				}
+			]
+			x: 6.0d
+			y: 1.0d
+		}
+		{
+			id: "0971C0723934057A"
+			title: "Microscope"
+			subtitle: "Equip a lab"
+			description: [
+				"Build a Microscope for your own laboratory."
+				""
+				"&6How: &rCraft it (recipe in JEI or the recipe book). Hidden labs show how it looks."
+			]
+			dependencies: [
+				"343CECDA6727E241"
+			]
+			optional: true
+			tasks: [
+				{
+					id: "777AB512DC759CB2"
+					type: "item"
+					item: "office_rooms:microscope"
+				}
+			]
+			rewards: [
+				{
+					id: "15AC4D9EBFA4B4E5"
+					type: "xp"
+					xp: 40
+				}
+			]
+			x: 2.0d
+			y: 3.0d
+		}
+		{
+			id: "47EA67FA2BA88B41"
+			title: "Specimen Jar"
+			subtitle: "Equip a lab"
+			description: [
+				"Build a Specimen Jar for your own laboratory."
+				""
+				"&6How: &rCraft it (recipe in JEI or the recipe book). Hidden labs show how it looks."
+			]
+			dependencies: [
+				"0971C0723934057A"
+			]
+			optional: true
+			tasks: [
+				{
+					id: "6B349B081BC6AB45"
+					type: "item"
+					item: "office_rooms:specimen_jar"
+				}
+			]
+			rewards: [
+				{
+					id: "6E35A26CA7127D41"
+					type: "xp"
+					xp: 40
+				}
+			]
+			x: 3.5d
+			y: 3.0d
+		}
+		{
+			id: "580FCCEF53EAFF29"
+			title: "Lab Cabinet"
+			subtitle: "Equip a lab"
+			description: [
+				"Build a Lab Cabinet for your own laboratory."
+				""
+				"&6How: &rCraft it (recipe in JEI or the recipe book). Hidden labs show how it looks."
+			]
+			dependencies: [
+				"47EA67FA2BA88B41"
+			]
+			optional: true
+			tasks: [
+				{
+					id: "7B5D9EFFCBA25A58"
+					type: "item"
+					item: "office_rooms:lab_cabinet"
+				}
+			]
+			rewards: [
+				{
+					id: "5487B2FB6A73601B"
+					type: "xp"
+					xp: 40
+				}
+			]
+			x: 5.0d
+			y: 3.0d
+		}
+		{
+			id: "25488AD24E59B7BD"
+			title: "Containment Tank"
+			subtitle: "Equip a lab"
+			description: [
+				"Build a Containment Tank for your own laboratory."
+				""
+				"&6How: &rCraft it (recipe in JEI or the recipe book). Hidden labs show how it looks."
+			]
+			dependencies: [
+				"580FCCEF53EAFF29"
+			]
+			optional: true
+			tasks: [
+				{
+					id: "01367125F45770C9"
+					type: "item"
+					item: "office_rooms:containment_tank"
+				}
+			]
+			rewards: [
+				{
+					id: "6989D97D5EAAE49F"
+					type: "xp"
+					xp: 40
+				}
+			]
+			x: 6.5d
+			y: 3.0d
+		}
+		{
+			id: "64D7EB2DAE6C4AA1"
+			title: "Experiment Machine"
+			subtitle: "Equip a lab"
+			description: [
+				"Build a Experiment Machine for your own laboratory."
+				""
+				"&6How: &rCraft it (recipe in JEI or the recipe book). Hidden labs show how it looks."
+			]
+			dependencies: [
+				"25488AD24E59B7BD"
+			]
+			optional: true
+			tasks: [
+				{
+					id: "23CEB8DC00DC60C2"
+					type: "item"
+					item: "office_rooms:experiment_machine"
+				}
+			]
+			rewards: [
+				{
+					id: "524F9C320A58E4CA"
+					type: "xp"
+					xp: 40
+				}
+			]
+			x: 8.0d
+			y: 3.0d
+		}
+		{
+			id: "3E61ED623D57EAE9"
+			title: "CRT Monitor"
+			subtitle: "Equip a security office"
+			description: [
+				"Build a CRT Monitor."
+				""
+				"&6How: &rCraft it (recipe in JEI or the recipe book)."
+			]
+			dependencies: [
+				"343CECDA6727E241"
+			]
+			optional: true
+			tasks: [
+				{
+					id: "0BDFB9643D0BEFAE"
+					type: "item"
+					item: "office_rooms:crt_monitor"
+				}
+			]
+			rewards: [
+				{
+					id: "20E5182BC5DF7484"
+					type: "xp"
+					xp: 40
+				}
+			]
+			x: 2.0d
+			y: 4.5d
+		}
+		{
+			id: "12D656B1CBBEED43"
+			title: "CCTV Bank"
+			subtitle: "Equip a security office"
+			description: [
+				"Build a CCTV Bank."
+				""
+				"&6How: &rCraft it (recipe in JEI or the recipe book)."
+			]
+			dependencies: [
+				"3E61ED623D57EAE9"
+			]
+			optional: true
+			tasks: [
+				{
+					id: "096EB0755E005957"
+					type: "item"
+					item: "office_rooms:cctv_bank"
+				}
+			]
+			rewards: [
+				{
+					id: "2EF0A8FE0E80C3A4"
+					type: "xp"
+					xp: 40
+				}
+			]
+			x: 3.5d
+			y: 4.5d
+		}
+		{
+			id: "75E08AC1099AF034"
+			title: "Control Panel"
+			subtitle: "Equip a security office"
+			description: [
+				"Build a Control Panel."
+				""
+				"&6How: &rCraft it (recipe in JEI or the recipe book)."
+			]
+			dependencies: [
+				"12D656B1CBBEED43"
+			]
+			optional: true
+			tasks: [
+				{
+					id: "1365BD20DEBB7C6B"
+					type: "item"
+					item: "office_rooms:control_panel"
+				}
+			]
+			rewards: [
+				{
+					id: "25CF44768610DE8E"
+					type: "xp"
+					xp: 40
+				}
+			]
+			x: 5.0d
+			y: 4.5d
+		}
+		{
+			id: "2AF6161FBD8F2F87"
+			title: "Server Rack"
+			subtitle: "Equip a security office"
+			description: [
+				"Build a Server Rack."
+				""
+				"&6How: &rCraft it (recipe in JEI or the recipe book)."
+			]
+			dependencies: [
+				"75E08AC1099AF034"
+			]
+			optional: true
+			tasks: [
+				{
+					id: "7615B3480816B9EB"
+					type: "item"
+					item: "office_rooms:server_rack"
+				}
+			]
+			rewards: [
+				{
+					id: "141287DE87A9016B"
+					type: "xp"
+					xp: 40
+				}
+			]
+			x: 6.5d
+			y: 4.5d
+		}
+		{
+			id: "46357C8ED5B62183"
+			title: "Glitched Ingot"
+			subtitle: "Metal that is not quite here"
+			description: [
+				"Found in vaults and deep loot. It flickers when you are not looking."
+				""
+				"&6How: &rVaults (Maze, Hotel, Poolrooms), hidden labs, generator halls, research outposts, fuse box rewards, Hazard Zone cores."
+			]
+			dependencies: [
+				"3E7FF9EBD1CE31EE"
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					id: "190EA8E94AED7FAD"
+					type: "item"
+					item: "office_rooms:glitched_ingot"
+				}
+			]
+			rewards: [
+				{
+					id: "1C1EDCACE0930B4A"
+					type: "xp"
+					xp: 120
+				}
+			]
+			x: 2.0d
+			y: -2.5d
+		}
+		{
+			id: "12D18D1603CD9793"
+			title: "Multidimensional Rod"
+			description: [
+				"The handle for everything that follows."
+				""
+				"&6How: &rThe vault of the Maze, or very rare special loot."
+			]
+			dependencies: [
+				"46357C8ED5B62183"
+			]
+			tasks: [
+				{
+					id: "5C6C895683F44C2B"
+					type: "item"
+					item: "office_rooms:multidimensional_rod"
+				}
+			]
+			rewards: [
+				{
+					id: "3E3A197B53BD03BD"
+					type: "xp"
+					xp: 120
+				}
+			]
+			x: 4.0d
+			y: -2.5d
+		}
+		{
+			id: "6836E9A3768D9F17"
+			title: "Multidimensional Sword"
+			subtitle: "Glitched gear"
+			description: [
+				"Craft the Multidimensional Sword."
+				""
+				"&6How: &rCraft from Glitched Ingots and the Multidimensional Rod (tool and armour shapes)."
+			]
+			dependencies: [
+				"12D18D1603CD9793"
+			]
+			tasks: [
+				{
+					id: "6F6F214A26E704DB"
+					type: "item"
+					item: "office_rooms:multidimensional_sword"
+				}
+			]
+			rewards: [
+				{
+					id: "6EEDC45BBF8636DF"
+					type: "xp"
+					xp: 100
+				}
+			]
+			x: 6.0d
+			y: -4.0d
+		}
+		{
+			id: "4CCEF70E055A13EE"
+			title: "Multidimensional Pickaxe"
+			subtitle: "Glitched gear"
+			description: [
+				"Craft the Multidimensional Pickaxe."
+				""
+				"&6How: &rCraft from Glitched Ingots and the Multidimensional Rod (tool and armour shapes)."
+			]
+			dependencies: [
+				"12D18D1603CD9793"
+			]
+			tasks: [
+				{
+					id: "517AFDEE0C8AD83A"
+					type: "item"
+					item: "office_rooms:multidimensional_pickaxe"
+				}
+			]
+			rewards: [
+				{
+					id: "474B4A0C84E80186"
+					type: "xp"
+					xp: 100
+				}
+			]
+			x: 7.25d
+			y: -4.0d
+		}
+		{
+			id: "5150FDF67B1E46E6"
+			title: "Multidimensional Axe"
+			subtitle: "Glitched gear"
+			description: [
+				"Craft the Multidimensional Axe."
+				""
+				"&6How: &rCraft from Glitched Ingots and the Multidimensional Rod (tool and armour shapes)."
+			]
+			dependencies: [
+				"12D18D1603CD9793"
+			]
+			tasks: [
+				{
+					id: "22B2F226B2E8578C"
+					type: "item"
+					item: "office_rooms:multidimensional_axe"
+				}
+			]
+			rewards: [
+				{
+					id: "1526FBB0E688A8D1"
+					type: "xp"
+					xp: 100
+				}
+			]
+			x: 8.5d
+			y: -4.0d
+		}
+		{
+			id: "6B56EAE5A9130089"
+			title: "Multidimensional Shovel"
+			subtitle: "Glitched gear"
+			description: [
+				"Craft the Multidimensional Shovel."
+				""
+				"&6How: &rCraft from Glitched Ingots and the Multidimensional Rod (tool and armour shapes)."
+			]
+			dependencies: [
+				"12D18D1603CD9793"
+			]
+			optional: true
+			tasks: [
+				{
+					id: "719F1C514215771C"
+					type: "item"
+					item: "office_rooms:multidimensional_shovel"
+				}
+			]
+			rewards: [
+				{
+					id: "5D43D323EF4CF0F8"
+					type: "xp"
+					xp: 100
+				}
+			]
+			x: 6.0d
+			y: -2.75d
+		}
+		{
+			id: "4D2480D6AC94848F"
+			title: "Multidimensional Hoe"
+			subtitle: "Glitched gear"
+			description: [
+				"Craft the Multidimensional Hoe."
+				""
+				"&6How: &rCraft from Glitched Ingots and the Multidimensional Rod (tool and armour shapes)."
+			]
+			dependencies: [
+				"12D18D1603CD9793"
+			]
+			optional: true
+			tasks: [
+				{
+					id: "21DDB538219C0378"
+					type: "item"
+					item: "office_rooms:multidimensional_hoe"
+				}
+			]
+			rewards: [
+				{
+					id: "2EE7422BD9FEE416"
+					type: "xp"
+					xp: 100
+				}
+			]
+			x: 7.25d
+			y: -2.75d
+		}
+		{
+			id: "6383FE73DC73D72F"
+			title: "Multidimensional Helmet"
+			subtitle: "Glitched gear"
+			description: [
+				"Craft the Multidimensional Helmet."
+				""
+				"&6How: &rCraft from Glitched Ingots and the Multidimensional Rod (tool and armour shapes)."
+			]
+			dependencies: [
+				"12D18D1603CD9793"
+			]
+			tasks: [
+				{
+					id: "20594B082087C7B7"
+					type: "item"
+					item: "office_rooms:multidimensional_helmet"
+				}
+			]
+			rewards: [
+				{
+					id: "08FE150D4162B58B"
+					type: "xp"
+					xp: 100
+				}
+			]
+			x: 8.5d
+			y: -2.75d
+		}
+		{
+			id: "6BB6789D8996987C"
+			title: "Multidimensional Chestplate"
+			subtitle: "Glitched gear"
+			description: [
+				"Craft the Multidimensional Chestplate."
+				""
+				"&6How: &rCraft from Glitched Ingots and the Multidimensional Rod (tool and armour shapes)."
+			]
+			dependencies: [
+				"12D18D1603CD9793"
+			]
+			tasks: [
+				{
+					id: "685A46AED52EAD83"
+					type: "item"
+					item: "office_rooms:multidimensional_chestplate"
+				}
+			]
+			rewards: [
+				{
+					id: "169AF2F42F2CBB38"
+					type: "xp"
+					xp: 100
+				}
+			]
+			x: 6.0d
+			y: -1.5d
+		}
+		{
+			id: "7889D15D537ECAAA"
+			title: "Multidimensional Leggings"
+			subtitle: "Glitched gear"
+			description: [
+				"Craft the Multidimensional Leggings."
+				""
+				"&6How: &rCraft from Glitched Ingots and the Multidimensional Rod (tool and armour shapes)."
+			]
+			dependencies: [
+				"12D18D1603CD9793"
+			]
+			tasks: [
+				{
+					id: "19D44011BE4BD733"
+					type: "item"
+					item: "office_rooms:multidimensional_leggings"
+				}
+			]
+			rewards: [
+				{
+					id: "2E03A02FD8AF72EB"
+					type: "xp"
+					xp: 100
+				}
+			]
+			x: 7.25d
+			y: -1.5d
+		}
+		{
+			id: "1998FD909B5E744C"
+			title: "Multidimensional Boots"
+			subtitle: "Glitched gear"
+			description: [
+				"Craft the Multidimensional Boots."
+				""
+				"&6How: &rCraft from Glitched Ingots and the Multidimensional Rod (tool and armour shapes)."
+			]
+			dependencies: [
+				"12D18D1603CD9793"
+			]
+			tasks: [
+				{
+					id: "20B9D253EE19600F"
+					type: "item"
+					item: "office_rooms:multidimensional_boots"
+				}
+			]
+			rewards: [
+				{
+					id: "492B31EC7EDCDC3F"
+					type: "xp"
+					xp: 100
+				}
+			]
+			x: 8.5d
+			y: -1.5d
+		}
+		{
+			id: "455F7F7C07505720"
+			title: "Out of Phase"
+			subtitle: "The full multidimensional armour"
+			description: [
+				"Wear what does not quite exist."
+				""
+				"&6How: &rCarry all four armour pieces."
+			]
+			dependencies: [
+				"6383FE73DC73D72F"
+				"6BB6789D8996987C"
+				"7889D15D537ECAAA"
+				"1998FD909B5E744C"
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{
+					id: "7C54A0A008897C93"
+					type: "item"
+					item: "office_rooms:multidimensional_helmet"
+				}
+				{
+					id: "39B6934E593AFC41"
+					type: "item"
+					item: "office_rooms:multidimensional_chestplate"
+				}
+				{
+					id: "6B5828A71D1F4E30"
+					type: "item"
+					item: "office_rooms:multidimensional_leggings"
+				}
+				{
+					id: "176BB0EC25C77006"
+					type: "item"
+					item: "office_rooms:multidimensional_boots"
+				}
+			]
+			rewards: [
+				{
+					id: "2DDCE5EBD01D6040"
+					type: "item"
+					item: "office_rooms:research_file"
+					count: 3
+				}
+				{
+					id: "7A97EB9DBB30A925"
+					type: "xp"
+					xp: 800
+				}
+			]
+			x: 10.5d
+			y: -2.75d
+		}
+	]
+	subtitle: [
+		"Classified findings and what they buy"
+	]
+	title: "IV. Research Division"
+}

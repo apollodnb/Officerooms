@@ -1,0 +1,30 @@
+{
+ "parent": "minecraft:block/block",
+ "render_type": "minecraft:translucent",
+ "textures": {
+  "p": "office_rooms:block/underside_portal_overworld",
+  "particle": "office_rooms:block/underside_portal_overworld"
+ },
+ "elements": [
+  {
+   "from": [
+    0,
+    0,
+    6
+   ],
+   "to": [
+    16,
+    16,
+    10
+   ],
+   "faces": {
+    "north": {
+     "texture": "#p"
+    },
+    "south": {
+     "texture": "#p"
+    }
+   }
+  }
+ ]
+}

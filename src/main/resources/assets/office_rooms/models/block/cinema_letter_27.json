@@ -1,0 +1,46 @@
+{
+ "parent": "minecraft:block/block",
+ "textures": {
+  "l": "office_rooms:block/cinema_letter_27",
+  "b": "office_rooms:block/cinema_seat_frame",
+  "particle": "office_rooms:block/cinema_letter_27"
+ },
+ "elements": [
+  {
+   "from": [
+    0,
+    0,
+    14
+   ],
+   "to": [
+    16,
+    16,
+    16
+   ],
+   "faces": {
+    "north": {
+     "texture": "#l"
+    },
+    "south": {
+     "texture": "#b"
+    },
+    "east": {
+     "texture": "#b"
+    },
+    "west": {
+     "texture": "#b"
+    },
+    "up": {
+     "texture": "#b"
+    },
+    "down": {
+     "texture": "#b"
+    }
+   },
+   "forge_data": {
+    "block_light": 14,
+    "sky_light": 14
+   }
+  }
+ ]
+}

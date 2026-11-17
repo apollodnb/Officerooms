@@ -1,0 +1,19 @@
+{
+ "variants": {
+  "facing=north": {
+   "model": "office_rooms:block/streamer"
+  },
+  "facing=east": {
+   "model": "office_rooms:block/streamer",
+   "y": 90
+  },
+  "facing=south": {
+   "model": "office_rooms:block/streamer",
+   "y": 180
+  },
+  "facing=west": {
+   "model": "office_rooms:block/streamer",
+   "y": 270
+  }
+ }
+}

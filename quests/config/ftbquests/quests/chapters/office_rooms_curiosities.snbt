@@ -1,0 +1,368 @@
+{
+	images: [
+		{
+			x: 2.25d
+			y: 3.75d
+			width: 24.0d
+			height: 13.5d
+			rotation: 0.0d
+			image: "office_rooms:textures/gui/quests/atrium_1.png"
+			color: 16777215
+			alpha: 150
+			order: -1
+			hover: [ ]
+			click: ""
+			dev: false
+			corner: false
+		}
+	]
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "office_rooms_curiosities"
+	group: "2B674EAFE9EE221B"
+	icon: "office_rooms:office_coin"
+	id: "04687E383821AB46"
+	order_index: 9
+	quest_links: [ ]
+	quests: [
+		{
+			id: "75A05172C96C1D3B"
+			title: "Curiosities"
+			subtitle: "Keep your eyes open"
+			description: [
+				"Some ordinary-looking doors lead into rooms that are anything but."
+				"They are rare and appear only in worlds created with version 0.29.0 or newer. Old Coins buy things from vending machines."
+				""
+				"&6How: &rFind an Old Coin: they are common in ordinary containers."
+			]
+			dependencies: [
+				"76BBE88AC96F5FE9"
+			]
+			shape: "hexagon"
+			optional: true
+			size: 1.5d
+			tasks: [
+				{
+					id: "165924CD7E2EA2F6"
+					type: "item"
+					item: "office_rooms:office_coin"
+				}
+			]
+			rewards: [
+				{
+					id: "54F143469D8465CA"
+					type: "xp"
+					xp: 30
+				}
+			]
+			x: 0.0d
+			y: 3.75d
+		}
+		{
+			id: "6F4C91EC2279B0C9"
+			title: "Cold Storage"
+			subtitle: "Frost on the carpet"
+			description: [
+				"An office kept freezing cold. The barrels along the walls are freezers. Someone stocked them for a long stay."
+				""
+				"&6How: &rExplore the offices: these rooms look like any other room from the corridor. Walking in counts. Only in worlds made with 0.29.0+."
+			]
+			dependencies: [
+				"75A05172C96C1D3B"
+			]
+			shape: "circle"
+			optional: true
+			icon: "minecraft:packed_ice"
+			tasks: [
+				{
+					id: "22F20DC59E28B3D8"
+					type: "advancement"
+					advancement: "office_rooms:milestones/room_cold_storage"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "08B53D8EA9E83F3D"
+					type: "random"
+					table_id: 4103091957774285532L
+				}
+				{
+					id: "66C62D9BB9B915B0"
+					type: "item"
+					item: "office_rooms:office_coin"
+					count: 3
+				}
+				{
+					id: "33A02D5BC9728DF9"
+					type: "xp"
+					xp: 120
+				}
+			]
+			x: 2.5d
+			y: 0.0d
+		}
+		{
+			id: "25D6409CCDD6C670"
+			title: "The Last Meeting"
+			subtitle: "Nobody adjourned it"
+			description: [
+				"Chairs pushed back, cups still on the table, the projector still on. Read the minutes."
+				""
+				"&6How: &rExplore the offices: these rooms look like any other room from the corridor. Walking in counts. Only in worlds made with 0.29.0+."
+			]
+			dependencies: [
+				"75A05172C96C1D3B"
+			]
+			shape: "circle"
+			optional: true
+			icon: "minecraft:lectern"
+			tasks: [
+				{
+					id: "2DD994A8F72EC850"
+					type: "advancement"
+					advancement: "office_rooms:milestones/room_last_meeting"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "0F6882D2C63C09B9"
+					type: "random"
+					table_id: 4103091957774285532L
+				}
+				{
+					id: "790C5D589ECE8135"
+					type: "item"
+					item: "office_rooms:office_coin"
+					count: 3
+				}
+				{
+					id: "5E1FCAD13E8EB865"
+					type: "xp"
+					xp: 120
+				}
+			]
+			x: 2.5d
+			y: 1.5d
+		}
+		{
+			id: "04DC9ECBCA6A57B3"
+			title: "The Mail Room"
+			subtitle: "Undeliverable"
+			description: [
+				"Shelves of parcels nobody collected. Some of them can be opened. The phone rings for nobody."
+				""
+				"&6How: &rExplore the offices: these rooms look like any other room from the corridor. Walking in counts. Only in worlds made with 0.29.0+."
+			]
+			dependencies: [
+				"75A05172C96C1D3B"
+			]
+			shape: "circle"
+			optional: true
+			icon: "office_rooms:parcel_stack"
+			tasks: [
+				{
+					id: "61BD7628928FD272"
+					type: "advancement"
+					advancement: "office_rooms:milestones/room_mail_room"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "498FC7B9E3A45983"
+					type: "random"
+					table_id: 4103091957774285532L
+				}
+				{
+					id: "0902B44B13CE0A48"
+					type: "item"
+					item: "office_rooms:office_coin"
+					count: 3
+				}
+				{
+					id: "0A4AD3C99AB55191"
+					type: "xp"
+					xp: 120
+				}
+			]
+			x: 2.5d
+			y: 3.0d
+		}
+		{
+			id: "1EB8D5EA64CCDAC0"
+			title: "The Rain Room"
+			subtitle: "Indoors, it rains"
+			description: [
+				"Water falls from the ceiling of an ordinary office. Only the desk in the middle stays dry."
+				""
+				"&6How: &rExplore the offices: these rooms look like any other room from the corridor. Walking in counts. Only in worlds made with 0.29.0+."
+			]
+			dependencies: [
+				"75A05172C96C1D3B"
+			]
+			shape: "circle"
+			optional: true
+			icon: "minecraft:water_bucket"
+			tasks: [
+				{
+					id: "6F555B88694E8A02"
+					type: "advancement"
+					advancement: "office_rooms:milestones/room_rain_room"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "35114DC15F04E6EA"
+					type: "random"
+					table_id: 4103091957774285532L
+				}
+				{
+					id: "22AD440697079D9C"
+					type: "item"
+					item: "office_rooms:office_coin"
+					count: 3
+				}
+				{
+					id: "4ED35E359050B4AC"
+					type: "xp"
+					xp: 120
+				}
+			]
+			x: 2.5d
+			y: 4.5d
+		}
+		{
+			id: "479D000889288C8D"
+			title: "The Canteen"
+			subtitle: "Exact change only"
+			description: [
+				"Tables, a serving counter and vending machines. They take Old Coins."
+				""
+				"&6How: &rExplore the offices: these rooms look like any other room from the corridor. Walking in counts. Only in worlds made with 0.29.0+."
+			]
+			dependencies: [
+				"75A05172C96C1D3B"
+			]
+			shape: "circle"
+			optional: true
+			icon: "office_rooms:vending_machine"
+			tasks: [
+				{
+					id: "2F890ACA52A15F06"
+					type: "advancement"
+					advancement: "office_rooms:milestones/room_canteen"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "01BE6FC9EA74C060"
+					type: "random"
+					table_id: 4103091957774285532L
+				}
+				{
+					id: "206C33EFA0660132"
+					type: "item"
+					item: "office_rooms:office_coin"
+					count: 3
+				}
+				{
+					id: "5E1CAF4BA6637351"
+					type: "xp"
+					xp: 120
+				}
+			]
+			x: 2.5d
+			y: 6.0d
+		}
+		{
+			id: "1DD351CF1C3A2449"
+			title: "The Arcade"
+			subtitle: "Insert coin"
+			description: [
+				"A dark room full of humming cabinets. Their screens are the only light. Very rare."
+				""
+				"&6How: &rExplore the offices: these rooms look like any other room from the corridor. Walking in counts. Only in worlds made with 0.29.0+."
+			]
+			dependencies: [
+				"75A05172C96C1D3B"
+			]
+			shape: "circle"
+			optional: true
+			icon: "office_rooms:arcade_cabinet"
+			tasks: [
+				{
+					id: "02FEF9C4298777C5"
+					type: "advancement"
+					advancement: "office_rooms:milestones/room_arcade"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "352821C582099892"
+					type: "random"
+					table_id: 4103091957774285532L
+				}
+				{
+					id: "1F7EFE3EAA4BAD1F"
+					type: "item"
+					item: "office_rooms:office_coin"
+					count: 3
+				}
+				{
+					id: "1E299A5B7C2EBE38"
+					type: "xp"
+					xp: 120
+				}
+			]
+			x: 2.5d
+			y: 7.5d
+		}
+		{
+			id: "5A7C9CF2A17120BF"
+			title: "Exact Change"
+			subtitle: "Feed the machine"
+			description: [
+				"Hand in five Old Coins. The vending machines in a canteen take them one at a time, too."
+				""
+				"&6How: &rHand in five Old Coins (they are taken)."
+			]
+			dependencies: [
+				"479D000889288C8D"
+			]
+			optional: true
+			tasks: [
+				{
+					id: "568E73AB02999A04"
+					type: "item"
+					item: "office_rooms:office_coin"
+					count: 5L
+					consume_items: true
+				}
+			]
+			rewards: [
+				{
+					id: "30481F7F72360647"
+					type: "item"
+					item: "office_rooms:almond_water"
+					count: 2
+				}
+				{
+					id: "5C0E052288B8B491"
+					type: "xp"
+					xp: 40
+				}
+			]
+			x: 4.5d
+			y: 6.0d
+		}
+	]
+	subtitle: [
+		"Rooms that should not be here"
+	]
+	title: "X. Curiosities (optional)"
+}

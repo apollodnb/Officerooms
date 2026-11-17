@@ -1,0 +1,19 @@
+{
+ "variants": {
+  "facing=north": {
+   "model": "office_rooms:block/hazard_monitor"
+  },
+  "facing=east": {
+   "model": "office_rooms:block/hazard_monitor",
+   "y": 90
+  },
+  "facing=south": {
+   "model": "office_rooms:block/hazard_monitor",
+   "y": 180
+  },
+  "facing=west": {
+   "model": "office_rooms:block/hazard_monitor",
+   "y": 270
+  }
+ }
+}

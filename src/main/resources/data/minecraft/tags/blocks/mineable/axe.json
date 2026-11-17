@@ -1,0 +1,25 @@
+{
+ "replace": false,
+ "values": [
+  "office_rooms:maze_wallpaper",
+  "office_rooms:loose_panel",
+  "office_rooms:research_table",
+  "office_rooms:hotel_wallpaper",
+  "office_rooms:hotel_wainscot",
+  "office_rooms:hotel_bed",
+  "office_rooms:hotel_bed_foot",
+  "office_rooms:hotel_nightstand",
+  "office_rooms:hotel_dresser",
+  "office_rooms:hotel_reception_desk",
+  "office_rooms:fun_wallpaper",
+  "office_rooms:party_table",
+  "office_rooms:gift_box",
+  "office_rooms:flipchart",
+  "office_rooms:reception_desk",
+  "office_rooms:wall_clock",
+  "office_rooms:executive_chair",
+  "office_rooms:arcade_cabinet",
+  "office_rooms:arcade_cabinet_top",
+  "office_rooms:parcel_stack"
+ ]
+}

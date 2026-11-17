@@ -1,0 +1,19 @@
+{
+ "variants": {
+  "facing=north": {
+   "model": "office_rooms:block/research_table"
+  },
+  "facing=east": {
+   "model": "office_rooms:block/research_table",
+   "y": 90
+  },
+  "facing=south": {
+   "model": "office_rooms:block/research_table",
+   "y": 180
+  },
+  "facing=west": {
+   "model": "office_rooms:block/research_table",
+   "y": 270
+  }
+ }
+}

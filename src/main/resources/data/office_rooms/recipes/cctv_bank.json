@@ -1,0 +1,17 @@
+{
+ "type": "minecraft:crafting_shaped",
+ "category": "misc",
+ "pattern": [
+  "MM",
+  "MM"
+ ],
+ "key": {
+  "M": {
+   "item": "office_rooms:crt_monitor"
+  }
+ },
+ "result": {
+  "item": "office_rooms:cctv_bank",
+  "count": 2
+ }
+}

@@ -1,0 +1,49 @@
+{
+	id: "38F11C657FE5FADC"
+	title: "Office Supplies"
+	loot_size: 1
+	hide_tooltip: false
+	use_title: true
+	rewards: [
+		{
+			item: "office_rooms:almond_water"
+			count: 2
+			weight: 30.0d
+		}
+		{
+			item: "office_rooms:bandage"
+			count: 2
+			weight: 25.0d
+		}
+		{
+			item: "office_rooms:glowstick"
+			count: 3
+			weight: 25.0d
+		}
+		{
+			item: "office_rooms:chalk"
+			weight: 15.0d
+		}
+		{
+			item: "office_rooms:emergency_flare"
+			weight: 10.0d
+		}
+		{
+			item: "office_rooms:portable_battery"
+			weight: 8.0d
+		}
+		{
+			item: "office_rooms:gas_filter"
+			weight: 8.0d
+		}
+		{
+			item: "office_rooms:electronic_component"
+			count: 2
+			weight: 10.0d
+		}
+		{
+			item: "office_rooms:research_file"
+			weight: 2.0d
+		}
+	]
+}

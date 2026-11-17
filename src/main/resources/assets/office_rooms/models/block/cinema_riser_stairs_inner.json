@@ -1,0 +1,8 @@
+{
+ "parent": "minecraft:block/inner_stairs",
+ "textures": {
+  "bottom": "office_rooms:block/cinema_carpet",
+  "top": "office_rooms:block/cinema_carpet",
+  "side": "office_rooms:block/cinema_riser"
+ }
+}

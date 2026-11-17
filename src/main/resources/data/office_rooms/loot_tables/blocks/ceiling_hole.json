@@ -1,0 +1,1 @@
+{"type": "minecraft:block", "pools": [{"rolls": 1, "entries": [{"type": "minecraft:item", "name": "office_rooms:ceiling_hole"}], "conditions": [{"condition": "minecraft:survives_explosion"}]}]}

@@ -1,0 +1,27 @@
+# Test report 0.23.0
+
+- Build OK; unit tests pass.
+- In game, on a fresh world with Refurbished Furniture and brightness at 0 % (screenshots in the chat):
+  - **Restroom**:
+    - tiled floor and walls;
+    - 3 stalls with partitions and toilets facing the room, one of them locked;
+    - 3 basins with mirrors;
+    - paper towel dispenser and dim light.
+  - **Training room**:
+    - glowing screen and projector;
+    - lectern with the handout (book data checked);
+    - flipchart, about 40 aligned chairs and a wall clock.
+  - **Executive office**:
+    - rug, 3 desks, a lit lamp, the executive chair and dark oak visitor chairs;
+    - bookshelves, a cabinet, a sofa, a plant and a clock.
+  - **Reception**:
+    - counter, bell, NOW SERVING display, waiting chairs;
+    - magazine table, sofa, plants and ticket dispenser.
+  - No errors in the server log.
+- Not tested:
+  - the drip and ticking sounds and the bell (no audio in the test setup);
+  - the vanilla fallbacks without Refurbished Furniture;
+  - multiplayer;
+  - all random variants (chair turned around, executive chair facing the wall).
+  - The redrawn clock face is only checked as a texture.
+- The room frequencies are the configured chances. I did not count them over a large area.

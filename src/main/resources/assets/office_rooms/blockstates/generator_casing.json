@@ -1,0 +1,7 @@
+{
+ "variants": {
+  "": {
+   "model": "office_rooms:block/generator_casing"
+  }
+ }
+}

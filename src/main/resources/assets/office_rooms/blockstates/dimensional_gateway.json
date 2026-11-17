@@ -1,0 +1,11 @@
+{
+ "variants": {
+  "axis=x": {
+   "model": "office_rooms:block/dimensional_gateway"
+  },
+  "axis=z": {
+   "model": "office_rooms:block/dimensional_gateway",
+   "y": 90
+  }
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "variants": {
+  "facing=north": {
+   "model": "office_rooms:block/gift_box"
+  },
+  "facing=east": {
+   "model": "office_rooms:block/gift_box",
+   "y": 90
+  },
+  "facing=south": {
+   "model": "office_rooms:block/gift_box",
+   "y": 180
+  },
+  "facing=west": {
+   "model": "office_rooms:block/gift_box",
+   "y": 270
+  }
+ }
+}

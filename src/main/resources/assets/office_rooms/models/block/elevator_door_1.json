@@ -1,0 +1,127 @@
+{
+ "parent": "minecraft:block/block",
+ "textures": {
+  "d": "office_rooms:block/elevator_door",
+  "particle": "office_rooms:block/elevator_door"
+ },
+ "elements": [
+  {
+   "from": [
+    0,
+    0,
+    6.5
+   ],
+   "to": [
+    4.8,
+    16,
+    9.5
+   ],
+   "faces": {
+    "north": {
+     "uv": [
+      8,
+      0,
+      12.8,
+      16
+     ],
+     "texture": "#d"
+    },
+    "south": {
+     "uv": [
+      3.2,
+      0,
+      8,
+      16
+     ],
+     "texture": "#d"
+    },
+    "east": {
+     "uv": [
+      7,
+      0,
+      8,
+      16
+     ],
+     "texture": "#d"
+    },
+    "up": {
+     "uv": [
+      0,
+      6,
+      4.8,
+      9
+     ],
+     "texture": "#d"
+    },
+    "down": {
+     "uv": [
+      0,
+      6,
+      4.8,
+      9
+     ],
+     "texture": "#d"
+    }
+   }
+  },
+  {
+   "from": [
+    11.2,
+    0,
+    6.5
+   ],
+   "to": [
+    16,
+    16,
+    9.5
+   ],
+   "faces": {
+    "north": {
+     "uv": [
+      3.2,
+      0,
+      8,
+      16
+     ],
+     "texture": "#d"
+    },
+    "south": {
+     "uv": [
+      8,
+      0,
+      12.8,
+      16
+     ],
+     "texture": "#d"
+    },
+    "west": {
+     "uv": [
+      8,
+      0,
+      9,
+      16
+     ],
+     "texture": "#d"
+    },
+    "up": {
+     "uv": [
+      11.2,
+      6,
+      16,
+      9
+     ],
+     "texture": "#d"
+    },
+    "down": {
+     "uv": [
+      11.2,
+      6,
+      16,
+      9
+     ],
+     "texture": "#d"
+    }
+   }
+  }
+ ]
+}

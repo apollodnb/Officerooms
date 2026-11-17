@@ -1,0 +1,36 @@
+{
+ "variants": {
+  "facing=north,broken=false": {
+   "model": "office_rooms:block/fuse_box",
+   "y": 0
+  },
+  "facing=north,broken=true": {
+   "model": "office_rooms:block/fuse_box_broken",
+   "y": 0
+  },
+  "facing=east,broken=false": {
+   "model": "office_rooms:block/fuse_box",
+   "y": 90
+  },
+  "facing=east,broken=true": {
+   "model": "office_rooms:block/fuse_box_broken",
+   "y": 90
+  },
+  "facing=south,broken=false": {
+   "model": "office_rooms:block/fuse_box",
+   "y": 180
+  },
+  "facing=south,broken=true": {
+   "model": "office_rooms:block/fuse_box_broken",
+   "y": 180
+  },
+  "facing=west,broken=false": {
+   "model": "office_rooms:block/fuse_box",
+   "y": 270
+  },
+  "facing=west,broken=true": {
+   "model": "office_rooms:block/fuse_box_broken",
+   "y": 270
+  }
+ }
+}

@@ -1,0 +1,228 @@
+{
+	images: [
+		{
+			x: 2.0d
+			y: 0.0d
+			width: 16.0d
+			height: 9.0d
+			rotation: 0.0d
+			image: "office_rooms:textures/gui/quests/atrium_1.png"
+			color: 16777215
+			alpha: 150
+			order: -1
+			hover: [ ]
+			click: ""
+			dev: false
+			corner: false
+		}
+	]
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "office_rooms_threshold"
+	group: "2B674EAFE9EE221B"
+	icon: "minecraft:sculk_sensor"
+	id: "186786A95CEE38F9"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			id: "044A329740308215"
+			title: "Memo #001"
+			subtitle: "Read me first"
+			description: [
+				"&7FROM: Facilities"
+				"&7TO: New staff"
+				""
+				"Somewhere in the world there is an office that should not exist."
+				"Some people find a way in. Most of them do not find a way out."
+				""
+				"This book will follow you. It does not judge. It only keeps track."
+				""
+				"&6How: &rJust tick the checkmark."
+			]
+			shape: "gear"
+			icon: "minecraft:paper"
+			size: 1.5d
+			tasks: [
+				{
+					id: "2D27F5812DD73627"
+					type: "checkmark"
+				}
+			]
+			rewards: [
+				{
+					id: "3CE358C3693001DA"
+					type: "item"
+					item: "office_rooms:bandage"
+					count: 2
+				}
+				{
+					id: "56BFE58773487D12"
+					type: "xp"
+					xp: 10
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			id: "0EA719568FE11202"
+			title: "The Shrine"
+			subtitle: "An office in the wilderness"
+			description: [
+				"Very rarely, a piece of an office stands alone in the wild: overgrown, lit by candles, with a lectern."
+				"Its chest holds what you need to open the way."
+				""
+				"&8Hint: it is an Abandoned Office Shrine. With cheats: /locate structure office_rooms:abandoned_office_shrine"
+				""
+				"&6How: &rFind an Abandoned Office Shrine in the Overworld (rare, natural biomes, away from villages). Its chest holds a sculk sensor - or mine one in a Deep Dark."
+			]
+			dependencies: [
+				"044A329740308215"
+			]
+			optional: true
+			tasks: [
+				{
+					id: "396281EA2D1ABECA"
+					type: "item"
+					item: "minecraft:sculk_sensor"
+				}
+			]
+			rewards: [
+				{
+					id: "0B577121A02E82D4"
+					type: "item"
+					item: "office_rooms:glowstick"
+					count: 4
+				}
+				{
+					id: "22964970A6DF5F6E"
+					type: "xp"
+					xp: 25
+				}
+			]
+			x: 2.0d
+			y: -1.5d
+		}
+		{
+			id: "0396E5F36C64C285"
+			title: "Something That Falls"
+			description: [
+				"The rift opens where sand falls onto a sculk sensor."
+				"Any sand will do. It always does."
+				""
+				"&6How: &rAny sand from a beach or desert."
+			]
+			dependencies: [
+				"044A329740308215"
+			]
+			optional: true
+			tasks: [
+				{
+					id: "7F0B02B53AF861AC"
+					type: "item"
+					item: "minecraft:sand"
+					count: 4L
+				}
+			]
+			rewards: [
+				{
+					id: "7884112AB5E90DC1"
+					type: "xp"
+					xp: 10
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			id: "68F9119005F579D2"
+			title: "A Door Someone Built"
+			subtitle: "Or: start at a research outpost"
+			description: [
+				"There is a second way in. Research teams built outposts under ancient cities, in jungle temples, deep in caves and in the Nether."
+				"Pull the lever, wait out the warnings, press the red button. The gateway leads into the Office Rooms."
+				""
+				"&6How: &rFind a research outpost (under an Ancient City, beside a Jungle Temple, deep in a cave, in the Nether, rarely as a fenced station on flat land or as a drilling rig over deep ocean), pull the power lever, wait for the warnings to end and press the red button."
+			]
+			dependencies: [
+				"044A329740308215"
+			]
+			optional: true
+			icon: "office_rooms:power_lever"
+			tasks: [
+				{
+					id: "1B8DE842AFB89A29"
+					type: "advancement"
+					advancement: "office_rooms:milestones/outpost_gateway"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "783EAC9282A2B9C6"
+					type: "item"
+					item: "office_rooms:electronic_component"
+					count: 2
+				}
+				{
+					id: "13E028C395B638D0"
+					type: "xp"
+					xp: 60
+				}
+			]
+			x: 2.0d
+			y: 1.5d
+		}
+		{
+			id: "485E307510A6DABF"
+			title: "The Office Rooms"
+			subtitle: "However you got here"
+			description: [
+				"Through a Liminal Rift (sand dropped onto a sculk sensor), through an outpost gateway, or simply because you woke up here."
+				"You will arrive in a room. The lights will hum. That is normal."
+				""
+				"&8Everything in the Overworld is optional: you never have to go back."
+				""
+				"&6How: &rEnter the Office Rooms any way you like: drop sand onto a placed sculk sensor and walk into the rift, or use an outpost gateway."
+			]
+			dependencies: [
+				"044A329740308215"
+			]
+			shape: "hexagon"
+			icon: "minecraft:sculk_sensor"
+			size: 1.5d
+			tasks: [
+				{
+					id: "5328C85BAA27F918"
+					type: "dimension"
+					dimension: "office_rooms:office_rooms"
+				}
+			]
+			rewards: [
+				{
+					id: "067856A776FB462E"
+					type: "item"
+					item: "office_rooms:almond_water"
+					count: 3
+				}
+				{
+					id: "090D7D1210DE3E4B"
+					type: "item"
+					item: "office_rooms:chalk"
+				}
+				{
+					id: "1BBADE159CF930C2"
+					type: "xp"
+					xp: 50
+				}
+			]
+			x: 4.0d
+			y: 0.0d
+		}
+	]
+	subtitle: [
+		"How to get in. You should not want to."
+	]
+	title: "I. The Threshold"
+}

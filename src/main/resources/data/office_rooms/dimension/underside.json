@@ -1,0 +1,10 @@
+{
+ "type": "office_rooms:underside",
+ "generator": {
+  "type": "office_rooms:underside",
+  "biome_source": {
+   "type": "minecraft:fixed",
+   "biome": "office_rooms:underside_meadow"
+  }
+ }
+}

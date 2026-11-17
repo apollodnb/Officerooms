@@ -1,0 +1,46 @@
+{
+ "parent": "minecraft:block/block",
+ "textures": {
+  "p": "office_rooms:block/cinema_popcorn",
+  "particle": "office_rooms:block/cinema_popcorn"
+ },
+ "elements": [
+  {
+   "from": [
+    2,
+    0,
+    2
+   ],
+   "to": [
+    14,
+    16,
+    14
+   ],
+   "faces": {
+    "north": {
+     "texture": "#p"
+    },
+    "south": {
+     "texture": "#p"
+    },
+    "east": {
+     "texture": "#p"
+    },
+    "west": {
+     "texture": "#p"
+    },
+    "up": {
+     "texture": "#p"
+    },
+    "down": {
+     "texture": "#p"
+    }
+   },
+   "forge_data": {
+    "block_light": 10,
+    "sky_light": 10
+   }
+  }
+ ],
+ "render_type": "minecraft:cutout"
+}

@@ -1,0 +1,6 @@
+{
+ "parent": "minecraft:item/generated",
+ "textures": {
+  "layer0": "office_rooms:item/thread_of_the_maze"
+ }
+}

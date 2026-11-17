@@ -1,0 +1,34 @@
+{
+ "render_type": "minecraft:cutout",
+ "ambientocclusion": false,
+ "textures": {
+  "particle": "office_rooms:block/chalk_cross",
+  "mark": "office_rooms:block/chalk_cross"
+ },
+ "elements": [
+  {
+   "from": [
+    0,
+    0,
+    15.95
+   ],
+   "to": [
+    16,
+    16,
+    15.95
+   ],
+   "shade": false,
+   "faces": {
+    "north": {
+     "uv": [
+      0,
+      0,
+      16,
+      16
+     ],
+     "texture": "#mark"
+    }
+   }
+  }
+ ]
+}

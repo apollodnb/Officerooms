@@ -1,0 +1,34 @@
+{
+ "variants": {
+  "broken=false,facing=north": {
+   "model": "office_rooms:block/hazard_monitor"
+  },
+  "broken=true,facing=north": {
+   "model": "office_rooms:block/hazard_monitor_broken"
+  },
+  "broken=false,facing=east": {
+   "model": "office_rooms:block/hazard_monitor",
+   "y": 90
+  },
+  "broken=true,facing=east": {
+   "model": "office_rooms:block/hazard_monitor_broken",
+   "y": 90
+  },
+  "broken=false,facing=south": {
+   "model": "office_rooms:block/hazard_monitor",
+   "y": 180
+  },
+  "broken=true,facing=south": {
+   "model": "office_rooms:block/hazard_monitor_broken",
+   "y": 180
+  },
+  "broken=false,facing=west": {
+   "model": "office_rooms:block/hazard_monitor",
+   "y": 270
+  },
+  "broken=true,facing=west": {
+   "model": "office_rooms:block/hazard_monitor_broken",
+   "y": 270
+  }
+ }
+}

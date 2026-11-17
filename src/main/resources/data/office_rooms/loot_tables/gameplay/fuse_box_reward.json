@@ -1,0 +1,50 @@
+{
+ "type": "minecraft:chest",
+ "pools": [
+  {
+   "rolls": 1,
+   "entries": [
+    {
+     "type": "minecraft:item",
+     "name": "office_rooms:research_file",
+     "weight": 1
+    }
+   ]
+  },
+  {
+   "rolls": 1,
+   "entries": [
+    {
+     "type": "minecraft:item",
+     "name": "office_rooms:portable_battery",
+     "weight": 3
+    },
+    {
+     "type": "minecraft:item",
+     "name": "office_rooms:glitched_ingot",
+     "weight": 3,
+     "functions": [
+      {
+       "function": "minecraft:set_count",
+       "count": {
+        "type": "minecraft:uniform",
+        "min": 2,
+        "max": 3
+       }
+      }
+     ]
+    },
+    {
+     "type": "minecraft:item",
+     "name": "office_rooms:gas_filter",
+     "weight": 3
+    },
+    {
+     "type": "minecraft:item",
+     "name": "office_rooms:night_vision_goggles",
+     "weight": 1
+    }
+   ]
+  }
+ ]
+}
