@@ -396,7 +396,7 @@ public final class MobSpawner {
         spawnInBand(level, p, site.rx, site.rz, y, player, type, 20, 44, null);
     }
 
-    /** 0.32.0: the Abandoned Cinema: at most one Aranea Membri nests in its ceilings. */
+    /** 0.32.0: the Abandoned Cinema: Aranea Membri nests in its ceilings (0.41.1: at most one per cinema floor). */
     private static void cinema(ServerLevel level, OfficePlanner p, ServerPlayer player) {
         de.officerooms.megastructure.Cinema.Site site = p.cinema.at(player.getBlockX(), player.getBlockY(), player.getBlockZ());
         if (site == null || level.random.nextDouble() >= OfficeRoomsConfig.ARANEA_CINEMA_CHANCE.get()) {
@@ -404,10 +404,11 @@ public final class MobSpawner {
         }
         int baseX = site.rx * p.regionBlocks;
         int baseZ = site.rz * p.regionBlocks;
-        AABB band = new AABB(baseX, site.yBase, baseZ, baseX + p.regionBlocks, site.yBase + de.officerooms.megastructure.Cinema.H, baseZ + p.regionBlocks);
-        if (level.getEntities(ModEntities.ARANEA.get(), band.inflate(8, 2, 8), e -> e.isAlive()).isEmpty()) {
-            // 0.37.1: on the cinema floor of the player (three floors since 0.37.0)
-            int fl = Math.max(0, Math.min(de.officerooms.megastructure.Cinema.FLOORS - 1, (player.getBlockY() - site.yBase) / de.officerooms.megastructure.Cinema.FH));
+        // 0.37.1: on the cinema floor of the player (three floors since 0.37.0); 0.41.1: one per floor instead of one per cinema
+        int fl = Math.max(0, Math.min(de.officerooms.megastructure.Cinema.FLOORS - 1, (player.getBlockY() - site.yBase) / de.officerooms.megastructure.Cinema.FH));
+        int fy = site.yBase + fl * de.officerooms.megastructure.Cinema.FH;
+        AABB band = new AABB(baseX, fy, baseZ, baseX + p.regionBlocks, fy + de.officerooms.megastructure.Cinema.FH, baseZ + p.regionBlocks);
+        if (level.getEntities(ModEntities.ARANEA.get(), band.inflate(8, 0, 8), e -> e.isAlive()).isEmpty()) {
             spawnInBand(level, p, site.rx, site.rz, site.yBase + fl * de.officerooms.megastructure.Cinema.FH + 1, player, ModEntities.ARANEA.get(), 20, 56, null);
         }
     }

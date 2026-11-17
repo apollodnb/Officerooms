@@ -42,7 +42,7 @@ public final class OfficeRoomsSkyEffects extends DimensionSpecialEffects {
                                      float blockLightRedFlicker, float skyLight, int pixelX, int pixelY, org.joml.Vector3f colors) {
         float b = Math.max(pixelX, pixelY) / 15.0F;
         float dim = de.officerooms.hazard.BlackoutState.dim;           // 0.22.0: blackout (1 = normal, 0.1 = power out)
-        colors.mul((0.35F + 0.65F * (float) Math.pow(b, 1.6)) * dim * 0.7F);   // 0.26.0: the whole dimension 30 % darker
+        colors.mul((0.35F + 0.65F * (float) Math.pow(b, 1.6)) * dim * 0.8F);   // 0.26.0: the whole dimension 30 % darker; 0.41.1: 20 % (user: a bit brighter)
     }
 
     @Override

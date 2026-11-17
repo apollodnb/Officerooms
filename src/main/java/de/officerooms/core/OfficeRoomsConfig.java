@@ -131,7 +131,7 @@ public final class OfficeRoomsConfig {
     private static final java.util.Map<String, ForgeConfigSpec.ConfigValue<java.util.List<? extends Double>>> LOOT = new java.util.HashMap<>();
 
     /** 0.6.2: Spawn-Balance. Ältere Config-Dateien behalten sonst ihre alten Werte. */
-    public static final int CURRENT_BALANCE = 5;
+    public static final int CURRENT_BALANCE = 6;
     /** 0.29.0: curiosity room chances (copied into SpecialRooms.CURIO on load). */
     public static final ForgeConfigSpec.DoubleValue[] CURIO = new ForgeConfigSpec.DoubleValue[6];
 
@@ -147,6 +147,16 @@ public final class OfficeRoomsConfig {
         if (BALANCE_VERSION.get() >= CURRENT_BALANCE) {
             return;
         }
+        if (BALANCE_VERSION.get() == 5) {
+            // 0.41.1: Aranea Membri lurks more often in cinemas (only if still at the old default)
+            if (Math.abs(ARANEA_CINEMA_CHANCE.get() - 0.04) < 1e-9) {
+                ARANEA_CINEMA_CHANCE.set(ARANEA_CINEMA_CHANCE.getDefault());
+            }
+            BALANCE_VERSION.set(CURRENT_BALANCE);
+            BALANCE_VERSION.save();
+            de.officerooms.OfficeRooms.LOGGER.info("Office Rooms: balance 6 applied to the config.");
+            return;
+        }
         if (BALANCE_VERSION.get() == 4) {
             // 0.27.0: Gaunt and Colony are tougher (only if still at the old defaults)
             if (Math.abs(GAUNT_HEALTH.get() - 40.0) < 1e-9) {
@@ -155,9 +165,9 @@ public final class OfficeRoomsConfig {
             if (Math.abs(COLONY_HEALTH.get() - 50.0) < 1e-9) {
                 COLONY_HEALTH.set(COLONY_HEALTH.getDefault());
             }
-            BALANCE_VERSION.set(CURRENT_BALANCE);
-            BALANCE_VERSION.save();
+            BALANCE_VERSION.set(5);
             de.officerooms.OfficeRooms.LOGGER.info("Office Rooms: balance 5 applied to the config.");
+            applyBalance();
             return;
         }
         if (BALANCE_VERSION.get() == 3) {
@@ -406,8 +416,8 @@ public final class OfficeRoomsConfig {
         ARANEA_DAMAGE = b.defineInRange("damage", 9.0, 0.0, 4096.0);
         ARANEA_SPAWN_CHANCE = b.comment("Chance per spawn check (every 3 seconds, per player) in the normal Office Rooms. 0.002 = rare")
                 .defineInRange("spawnChance", 0.002, 0.0, 1.0);
-        ARANEA_CINEMA_CHANCE = b.comment("Chance per spawn check while a player is inside an Abandoned Cinema (at most one per cinema)")
-                .defineInRange("cinemaChance", 0.04, 0.0, 1.0);
+        ARANEA_CINEMA_CHANCE = b.comment("Chance per spawn check while a player is inside an Abandoned Cinema (at most one per cinema floor)")
+                .defineInRange("cinemaChance", 0.12, 0.0, 1.0);
         b.pop();
 
         b.comment("0.40.0: FTB Quests support").push("quests");

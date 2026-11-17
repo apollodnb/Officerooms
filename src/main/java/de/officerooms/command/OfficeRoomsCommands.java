@@ -578,25 +578,14 @@ public final class OfficeRoomsCommands {
         int[] best = null;
         double bestD = Double.MAX_VALUE;
         if (type.isSpecial()) {
-            // Spezialräume sind selten: 5 × 5 Regionen und alle Geschosse durchsuchen
-            de.officerooms.special.SpecialType want = de.officerooms.special.SpecialType.valueOf(type.name());
-            for (int dx = -2; dx <= 2; dx++) {
-                for (int dz = -2; dz <= 2; dz++) {
-                    RegionLayout ll = p.layout(rx + dx, rz + dz);
-                    for (Room r : ll.rooms) {
-                        if (de.officerooms.special.SpecialRooms.of(p, rx + dx, rz + dz, r) != want) {
-                            continue;
-                        }
-                        int[] v = fp.room(rx + dx, rz + dz, r).view();
-                        if (v == null) {
-                            continue;
-                        }
-                        double d = Math.pow(v[0] - pos.getX(), 2) + Math.pow(v[2] - pos.getZ(), 2) + 25 * Math.pow(v[1] - pos.getY(), 2);
-                        if (d < bestD) {
-                            bestD = d;
-                            best = v;
-                        }
-                    }
+            // 0.41.1: same fast search as locate (nearest candidates only), 5 x 5 regions, all storeys
+            java.util.List<Hit> hs = new java.util.ArrayList<>();
+            specialHits(p, level, s, typeId, pos, hs, 2);
+            for (Hit h : hs) {
+                double d = h.dist();
+                if (d < bestD) {
+                    bestD = d;
+                    best = new int[] {h.x(), h.y(), h.z(), h.x(), h.z() + 1};
                 }
             }
         }
@@ -651,7 +640,8 @@ public final class OfficeRoomsCommands {
 
     private static final java.util.List<String> LOCATE_TYPES = java.util.List.of("all", "poolrooms", "neighbourhood", "maze",
             "maze_vault", "hotel", "hotel_vault", "industrial", "level_fun", "cinema", "elevator", "secure_storage", "hideout", "villager_outpost", "lush_cave", "water_office", "sculk_office", "abandoned_camp", "oasis", "exit_room",
-            "maintenance_room", "supply_closet", "forgotten_break_room", "security_office", "research_lab", "concealed_room", "outpost", "shrine");
+            "maintenance_room", "supply_closet", "forgotten_break_room", "security_office", "research_lab", "concealed_room",
+            "cold_storage", "last_meeting", "mail_room", "rain_room", "canteen", "arcade", "outpost", "shrine");
 
     private record Hit(String what, int x, int y, int z, int storey, double dist) {
     }
@@ -896,21 +886,34 @@ public final class OfficeRoomsCommands {
         de.officerooms.furnish.FurnishingPlanner fp = ((OfficeChunkGenerator) level.getChunkSource().getGenerator()).furnishing(s);
         int rx0 = p.regionOf(from.getX());
         int rz0 = p.regionOf(from.getZ());
+        // 0.41.1: special rooms are many (hundreds per region over all storeys); furnishing every match took 20 s.
+        // Pre-sort by region centre + storey height and only furnish the nearest candidates.
+        java.util.List<Object[]> cand = new java.util.ArrayList<>();
         for (int dx = -rad; dx <= rad; dx++) {
             for (int dz = -rad; dz <= rad; dz++) {
-                RegionLayout ll = p.layout(rx0 + dx, rz0 + dz);
+                int rx = rx0 + dx;
+                int rz = rz0 + dz;
+                RegionLayout ll = p.layout(rx, rz);
+                double cx = rx * p.regionBlocks + p.regionBlocks / 2.0;
+                double cz = rz * p.regionBlocks + p.regionBlocks / 2.0;
                 for (Room r : ll.rooms) {
-                    if (de.officerooms.special.SpecialRooms.of(p, rx0 + dx, rz0 + dz, r) != want) {
+                    if (de.officerooms.special.SpecialRooms.of(p, rx, rz, r) != want) {
                         continue;
                     }
-                    int[] v = fp.room(rx0 + dx, rz0 + dz, r).view();
-                    if (v == null) {
-                        continue;
-                    }
-                    double d = Math.sqrt(Math.pow(v[0] - from.getX(), 2) + Math.pow(v[2] - from.getZ(), 2) + Math.pow(v[1] - from.getY(), 2));
-                    out.add(new Hit(t, v[0], v[1], v[2], r.bottom, d));
+                    double approx = Math.hypot(cx - from.getX(), cz - from.getZ()) + 4 * Math.abs(p.floorY(r.bottom) - from.getY());
+                    cand.add(new Object[] {approx, rx, rz, r});
                 }
             }
+        }
+        cand.sort(java.util.Comparator.comparingDouble(o -> (Double) o[0]));
+        for (int i = 0; i < Math.min(12, cand.size()); i++) {
+            Room r = (Room) cand.get(i)[3];
+            int[] v = fp.room((Integer) cand.get(i)[1], (Integer) cand.get(i)[2], r).view();
+            if (v == null) {
+                continue;
+            }
+            double d = Math.sqrt(Math.pow(v[0] - from.getX(), 2) + Math.pow(v[2] - from.getZ(), 2) + Math.pow(v[1] - from.getY(), 2));
+            out.add(new Hit(t, v[0], v[1], v[2], r.bottom, d));
         }
     }
 
