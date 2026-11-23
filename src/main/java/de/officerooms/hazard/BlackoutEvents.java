@@ -330,7 +330,7 @@ public final class BlackoutEvents {
 
     /** Gaunts come up out of the dark (out of sight, 14–26 blocks away, at most N at a time). */
     private static void gaunts(ServerLevel l, BlackoutData d) {
-        if (l.random.nextFloat() > 0.08F) {
+        if (l.random.nextFloat() > 0.08F || !de.officerooms.core.OfficeRoomsConfig.mobsAllowed(l)) {   // 0.41.2
             return;
         }
         int count = 0;

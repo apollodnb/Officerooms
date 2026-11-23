@@ -44,7 +44,8 @@ public final class ObserverDirector {
 
     private static void onTick(TickEvent.LevelTickEvent event) {
         if (event.phase != TickEvent.Phase.END || !(event.level instanceof ServerLevel level)
-                || level.dimension() != OfficeRoomsDimension.LEVEL_KEY || level.getGameTime() % INTERVAL != 13) {
+                || level.dimension() != OfficeRoomsDimension.LEVEL_KEY || level.getGameTime() % INTERVAL != 13
+                || !OfficeRoomsConfig.mobsAllowed(level)) {   // 0.41.2
             return;
         }
         for (ServerPlayer p : level.players()) {

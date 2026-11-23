@@ -143,6 +143,15 @@ public final class OfficeRoomsConfig {
         }
     }
 
+    /**
+     * 0.41.2: one switch for every hostile creature the mod spawns on its own: the spawn cycle, structure residents,
+     * elevator visitors, Observers, blackout Gaunts and hazard-zone creatures. Story bosses (Level 0, Underside) are not
+     * affected. Also off on Peaceful.
+     */
+    public static boolean mobsAllowed(net.minecraft.world.level.Level level) {
+        return SPAWN_ENABLED.get() && level.getDifficulty() != net.minecraft.world.Difficulty.PEACEFUL;
+    }
+
     public static void applyBalance() {
         if (BALANCE_VERSION.get() >= CURRENT_BALANCE) {
             return;
@@ -283,7 +292,7 @@ public final class OfficeRoomsConfig {
                 .defineInRange("lightFlickerRadius", 14, 4, 32);
         b.pop();
         b.push("spawning");
-        SPAWN_ENABLED = b.comment("Let creatures spawn in the Office Rooms dimension").define("enabled", true);
+        SPAWN_ENABLED = b.comment("Let hostile creatures spawn in the Office Rooms dimension (spawn cycle, structure residents, elevator visitors, Observers,", "blackout and hazard-zone creatures). Creatures that already exist stay. Story encounters in Level 0 and the Underside are not affected.").define("enabled", true);
         WOLFSPIDER_ROOMS_PER_MOB = b.comment("On average one Wolfspider per this many rooms near a player")
                 .defineInRange("wolfspiderRoomsPerMob", 70, 1, 100000);
         WOLFSPIDER_FRIENDLY_CHANCE = b.comment("Share of spawned Wolfspiders that are the friendly variant (0.05 = 5 %)")

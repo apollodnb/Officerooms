@@ -451,7 +451,7 @@ public final class ElevatorRides {
 
         /** Rarely, something is waiting in front of the doors. */
         void maybeVisitor() {
-            if (megaDone || rnd.nextFloat() >= 0.08F) {
+            if (megaDone || rnd.nextFloat() >= 0.08F || !de.officerooms.core.OfficeRoomsConfig.mobsAllowed(level)) {   // 0.41.2
                 return;
             }
             int doors = sh.ex().doors[target];

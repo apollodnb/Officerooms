@@ -3,6 +3,17 @@ Newest version first. Versions before 0.6.0 were early development builds.
 
 ---
 
+## 0.41.2
+
+- **Fix: `[spawning] enabled = false` now really turns creature spawns off** (reported by players). Before, it only stopped the
+  regular spawn cycle; these still spawned creatures and now follow the switch (and Peaceful):
+  - residents of the Neighbourhood and the Headless Warden in sculk offices (placed when chunks generate),
+  - visitors waiting in front of elevator doors,
+  - Observers,
+  - Gaunts during blackouts and creatures in hazard zones.
+- Creatures that already exist stay in the world. Story encounters (the Flayed in Level 0, the boss of the Underside) are not affected.
+
+
 ## 0.41.1
 
 - **A bit brighter:** the Office Rooms are now 20 % darker than vanilla light instead of 30 %. Dark storeys, blackouts and night vision work as before.

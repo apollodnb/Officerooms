@@ -341,7 +341,8 @@ public final class SpecialDecorator {
                 level.addFreshEntityWithPassengers(m);
             }
             case HEADLESS_WARDEN -> {
-                HeadlessWarden w = ModEntities.HEADLESS_WARDEN.get().create(level.getLevel());
+                HeadlessWarden w = de.officerooms.core.OfficeRoomsConfig.mobsAllowed(level.getLevel())
+                        ? ModEntities.HEADLESS_WARDEN.get().create(level.getLevel()) : null;   // 0.41.2
                 if (w == null) {
                     return;
                 }

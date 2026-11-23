@@ -446,6 +446,9 @@ public final class HazardEvents {
     // --- creatures ----------------------------------------------------------------------------------------
 
     private static void spawnCreatures(ServerLevel office, HazardData d) {
+        if (!de.officerooms.core.OfficeRoomsConfig.mobsAllowed(office)) {   // 0.41.2
+            return;
+        }
         AABB zone = new AABB(d.box[0], d.box[1], d.box[2], d.box[3] + 1, d.box[4] + 1, d.box[5] + 1);
         for (ServerPlayer p : office.players()) {
             if (!inZone(d, p) || p.isSpectator() || office.getRandom().nextFloat() > 0.35F) {

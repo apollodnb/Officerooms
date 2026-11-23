@@ -141,7 +141,7 @@ public final class MegaDecorator {
             case HOUND -> ModEntities.HOUND.get();
             case COLONY -> ModEntities.COLONY.get();
         };
-        Mob m = type.create(level.getLevel());
+        Mob m = de.officerooms.core.OfficeRoomsConfig.mobsAllowed(level.getLevel()) ? type.create(level.getLevel()) : null;   // 0.41.2
         if (m == null) {
             return;
         }
