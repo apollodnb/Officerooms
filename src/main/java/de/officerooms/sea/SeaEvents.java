@@ -159,6 +159,12 @@ public final class SeaEvents {
         return spawnInVent(level, p, d);
     }
 
+    /** Test command (0.43.0): a waving Mascot down the corridor the player looks along. */
+    public static boolean spawnMascotWaving(ServerLevel level, ServerPlayer p, int d) {
+        Ship s = Ship.at(SeaChunkGenerator.seedOf(level), p.getBlockX(), p.getBlockZ());
+        return s != null && spawnWaving(level, s, p, d);
+    }
+
     static boolean spawnInVent(ServerLevel level, ServerPlayer p, int d) {
         int cy = Ship.fy(d) + 4;
         java.util.List<BlockPos> vents = new java.util.ArrayList<>();

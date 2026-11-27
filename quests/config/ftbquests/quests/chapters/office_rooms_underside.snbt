@@ -28,12 +28,12 @@
 		{
 			id: "7449B554E9C083C7"
 			title: "Underside Key"
-			subtitle: "Seven artifacts, one key"
+			subtitle: "Nine artifacts, one key"
 			description: [
-				"Combine the seven artifacts of the megastructures. The cinema ticket counts."
+				"Combine the nine artifacts: one from each megastructure (the cinema ticket and the mall pin count) and the Captain's Compass from the SS Fun =)."
 				"Use the key on the bedrock beneath the lowest floor of the Office Rooms."
 				""
-				"&6How: &rCraft from the six megastructure artifacts (shapeless)."
+				"&6How: &rCraft from the nine artifacts (shapeless): seven megastructures, the mall pin and the Captain's Compass."
 			]
 			dependencies: [
 				"43FBD36D565E1DCD"
@@ -43,6 +43,8 @@
 				"3FBA3FBD2F731556"
 				"1349953B7E098B8A"
 				"24A857F9CA89926D"
+				"3007E8D38DD237F7"
+				"455C911D6710F7B8"
 			]
 			shape: "hexagon"
 			size: 1.5d

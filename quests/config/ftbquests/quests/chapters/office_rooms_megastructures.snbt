@@ -2,9 +2,9 @@
 	images: [
 		{
 			x: 4.0d
-			y: 3.75d
-			width: 34.67d
-			height: 19.5d
+			y: 4.5d
+			width: 37.33d
+			height: 21.0d
 			rotation: 0.0d
 			image: "office_rooms:textures/gui/quests/atrium_2.png"
 			color: 16777215
@@ -31,7 +31,7 @@
 			subtitle: "Megastructures"
 			description: [
 				"Between the endless offices lie whole structures that do not belong there."
-				"Each one keeps an artifact. You will want all seven."
+				"Each one keeps an artifact. The Underside Key needs all eight, and one more from the sea."
 				""
 				"&6How: &rCarry a Level 1 Access Card."
 			]
@@ -582,6 +582,80 @@
 			y: 9.0d
 		}
 		{
+			id: "308E2E23EC9E30EE"
+			title: "The Dead Mall"
+			subtitle: "Always open"
+			description: [
+				"Three floors of shops around atriums under grey skylights. The escalators stopped long ago, the fountain is dry, the music still plays. Something lives above the ceiling tiles. Only in worlds made with 0.43.0 or newer."
+				""
+				"&6How: &rExplore the Office Rooms: megastructures fill whole regions on certain storeys. Walking into one counts."
+			]
+			dependencies: [
+				"68F15C46402017C3"
+			]
+			shape: "circle"
+			icon: "office_rooms:mall_escalator"
+			tasks: [
+				{
+					id: "521B736FE8ECACF1"
+					type: "advancement"
+					advancement: "office_rooms:milestones/discover_mall"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "558ED1BBF1588672"
+					type: "random"
+					table_id: 4103091957774285532L
+				}
+				{
+					id: "32C431ECB613A021"
+					type: "xp"
+					xp: 150
+				}
+			]
+			x: 2.5d
+			y: 10.5d
+		}
+		{
+			id: "3007E8D38DD237F7"
+			title: "You Are Here"
+			subtitle: "Artifact"
+			description: [
+				"The red pin of a mall directory. The memo in the mall office says where it went: a stockroom on the top floor, behind the shops. In older worlds without malls, one lost-and-found chest of the cinema keeps it."
+				""
+				"&8Needed for the Underside Key."
+				""
+				"&6How: &rIn the structure's vault or special chest (see the description)."
+			]
+			dependencies: [
+				"308E2E23EC9E30EE"
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					id: "071A5F25B9BDDD47"
+					type: "item"
+					item: "office_rooms:you_are_here_pin"
+				}
+			]
+			rewards: [
+				{
+					id: "1D729FE68883B1DD"
+					type: "item"
+					item: "office_rooms:research_file"
+				}
+				{
+					id: "30EF5AD568B95FBF"
+					type: "xp"
+					xp: 300
+				}
+			]
+			x: 4.5d
+			y: 10.5d
+		}
+		{
 			id: "5A951547E18A999E"
 			title: "Level 2 Access Card"
 			subtitle: "Deeper doors"
@@ -716,42 +790,41 @@
 			y: 9.0d
 		}
 		{
-			id: "308E2E23EC9E30EE"
-			title: "The Dead Mall"
-			subtitle: "Always open"
+			id: "368474DCFC15F1A2"
+			title: "Out of Order"
+			subtitle: "Up the escalators"
 			description: [
-				"Three floors of shops around atriums under grey skylights. The escalators stopped long ago, the fountain is dry, the music still plays."
-				"Something lives above the ceiling tiles. Only in worlds made with 0.43.0 or newer."
+				"The escalators of the mall stopped long ago. Climb them anyway, to the top floor under the skylights."
 				""
-				"&6How: &rFind a Dead Mall (new worlds from 0.43.0). /officerooms locate mall shows the nearest one."
+				"&6How: &rClimb the escalators of a Dead Mall to the top floor."
 			]
 			dependencies: [
-				"68F15C46402017C3"
+				"308E2E23EC9E30EE"
 			]
-			shape: "circle"
 			optional: true
 			icon: "office_rooms:mall_escalator"
 			tasks: [
 				{
-					id: "521B736FE8ECACF1"
+					id: "56AE60FF38E8A896"
 					type: "advancement"
-					advancement: "office_rooms:milestones/discover_mall"
+					advancement: "office_rooms:milestones/mall_top"
 					criterion: ""
 				}
 			]
 			rewards: [
 				{
-					id: "558ED1BBF1588672"
-					type: "random"
-					table_id: 4103091957774285532L
+					id: "51BAF521ED9B7DF8"
+					type: "item"
+					item: "office_rooms:office_coin"
+					count: 4
 				}
 				{
-					id: "32C431ECB613A021"
+					id: "6F7A8C393445F853"
 					type: "xp"
-					xp: 150
+					xp: 120
 				}
 			]
-			x: 2.5d
+			x: 6.5d
 			y: 10.5d
 		}
 		{
@@ -789,7 +862,37 @@
 					xp: 120
 				}
 			]
-			x: 4.5d
+			x: 6.5d
+			y: 12.0d
+		}
+		{
+			id: "1CF3922AD9A36E5C"
+			title: "To All Tenants"
+			subtitle: "Mall management"
+			description: [
+				"The mall office is on the first floor, next to the food court side. A memo lies on a lectern. Read it."
+				""
+				"&6How: &rRead the memo on the lectern in the mall office (floor 1), then tick the box."
+			]
+			dependencies: [
+				"308E2E23EC9E30EE"
+			]
+			optional: true
+			icon: "minecraft:writable_book"
+			tasks: [
+				{
+					id: "20A4047D38979E1A"
+					type: "checkmark"
+				}
+			]
+			rewards: [
+				{
+					id: "3B7BDAF3D575C366"
+					type: "xp"
+					xp: 80
+				}
+			]
+			x: 8.0d
 			y: 10.5d
 		}
 		{

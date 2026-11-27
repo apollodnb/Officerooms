@@ -549,5 +549,9 @@
  "block.office_rooms.mall_for_lease_sign": "For Lease Sign",
  "block.office_rooms.mall_employees_only": "Staff Only Sign",
  "subtitles.office_rooms.mall.muzak": "Music from a ceiling speaker",
- "subtitles.office_rooms.mall.chime": "An announcement chime"
+ "subtitles.office_rooms.mall.chime": "An announcement chime",
+ "item.office_rooms.you_are_here_pin": "You Are Here",
+ "item.office_rooms.you_are_here_pin.desc": "The red dot from a mall directory. Wherever you put it down, you are there.",
+ "item.office_rooms.captains_compass": "Captain's Compass",
+ "item.office_rooms.captains_compass.desc": "From the captain's cabin of the SS Fun =). The needle points at a ship that is not there."
 }

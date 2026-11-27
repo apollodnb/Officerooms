@@ -71,6 +71,9 @@ public final class Milestones {
                     }
                     // 0.43.0: inside one of the closed department stores of the Dead Mall
                     var ms = pl.mall.at(p.getBlockX(), p.getBlockY(), p.getBlockZ());
+                    if (ms != null && p.getBlockY() >= ms.yBase + 2 * de.officerooms.megastructure.Mall.FH) {
+                        grant(p, "mall_top");
+                    }
                     if (ms != null) {
                         int lx = p.getBlockX() - ms.rx * pl.regionBlocks;
                         int lz = p.getBlockZ() - ms.rz * pl.regionBlocks;

@@ -425,3 +425,48 @@ snd['block.mall.chime'] = {"category": "ambient", "subtitle": "subtitles.office_
                            "sounds": [{"name": O + "block/mall/chime", "attenuation_distance": 48}]}
 w(S, snd)
 print('mall blocks with assets:', len(ALL))
+
+# ---- 0.43.0: two more artifacts for the Underside Key ------------------------------------------------------------------
+os.makedirs(f'{A}/textures/item', exist_ok=True)
+def item_tex(name, fn):
+    im = Image.new('RGBA', (16, 16)); px = im.load()
+    for y in range(16):
+        for x in range(16):
+            px[x, y] = cl(fn(x, y))
+    im.save(f'{A}/textures/item/{name}.png')
+def pin(x, y):
+    d = (x - 9) ** 2 + (y - 5) ** 2
+    if d <= 13:
+        return (255, 236, 236) if (x - 8) ** 2 + (y - 4) ** 2 <= 1 else nz((214, 30, 34) if d < 9 else (160, 18, 22), 6)
+    if x == 15 - y and 2 <= x <= 7 and y >= 8: return nz((180, 184, 190), 6)        # the needle
+    return (0, 0, 0, 0)
+item_tex('you_are_here_pin', pin)
+def compass(x, y):
+    d = (x - 7.5) ** 2 + (y - 8.5) ** 2
+    if 6.5 <= x <= 8.5 and y <= 1: return nz((176, 136, 60), 6)                   # the ring on top
+    if d > 46: return (0, 0, 0, 0)
+    if d > 30: return nz((176, 136, 60), 8)                                      # brass case
+    if abs(x - 7.5) <= 1 and 3 <= y <= 8: return (200, 30, 30)                    # red needle (pointing at nothing)
+    if abs(x - 7.5) <= 1 and 9 <= y <= 13: return (60, 60, 64)
+    return nz((222, 214, 190), 4)                                                # dial
+item_tex('captains_compass', compass)
+for a in ('you_are_here_pin', 'captains_compass'):
+    w(f'{A}/models/item/{a}.json', {"parent": "minecraft:item/generated", "textures": {"layer0": O + "item/" + a}})
+lang = json.load(open(L))
+lang.update({'item.office_rooms.you_are_here_pin': 'You Are Here',
+             'item.office_rooms.you_are_here_pin.desc': 'The red dot from a mall directory. Wherever you put it down, you are there.',
+             'item.office_rooms.captains_compass': "Captain's Compass",
+             'item.office_rooms.captains_compass.desc': 'From the captain\'s cabin of the SS Fun =). The needle points at a ship that is not there.'})
+w(L, lang)
+for base, tbl, art in (('mall_dept', 'mall_dept_artifact', 'you_are_here_pin'), ('ship_captain', 'ship_captain_artifact', 'captains_compass'),
+                       ('cinema_lost_found', 'cinema_lost_found_pin', 'you_are_here_pin')):
+    b = json.load(open(f'{D}/loot_tables/chests/{base}.json'))
+    b["pools"].append({"rolls": 1, "entries": [{"type": "minecraft:item", "name": O + art}]})
+    w(f'{D}/loot_tables/chests/{tbl}.json', b)
+KEY = ['chlorine_pearl', 'faded_photograph', 'thread_of_the_maze', 'room_key_000', 'humming_fuse', 'party_smile_badge', 'ticket_stub',
+       'you_are_here_pin', 'captains_compass']
+w(f'{D}/recipes/underside_key.json', {"type": "minecraft:crafting_shapeless", "category": "misc",
+  "ingredients": [{"item": O + a} for a in KEY], "result": {"item": O + "underside_key"}})
+for m in ('mall_top',):
+    w(f'{D}/advancements/milestones/{m}.json', {"criteria": {"done": {"trigger": "minecraft:impossible"}}})
+print('artifacts done')

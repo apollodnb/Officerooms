@@ -508,7 +508,8 @@ public final class MallDecorator {
             "PARKING\n\nThe parking garage is closed. There is no parking garage.\n\nPlease use the main entrance.",
             "THE MAIN ENTRANCE\n\nDo not open the main entrance doors. It is night outside.\n\nIt has been night outside for some time.",
             "MAINTENANCE\n\nTenants report something moving above the ceiling tiles.\n\nMaintenance has been informed. Maintenance has not come back.",
-            "LOST AND FOUND\n\nA child was found near the fountain. If your child is missing, please come to the mall office.\n\nPlease come soon."});
+            "LOST AND FOUND\n\nA child was found near the fountain. If your child is missing, please come to the mall office.\n\nPlease come soon.",
+            "INVENTORY\n\nThe department stores are closed for inventory. Staff use the service corridors.\n\nThe red pin from the directory was put away upstairs, in a top floor stockroom. Please do not ask for it."});
 
     static void management(U u) {
         P p = u.p;
@@ -568,8 +569,10 @@ public final class MallDecorator {
         p.mannequin(ux(q, 40), y, uz(q, 40), DIRS[p.rng.nextInt(4)], -1);
         p.rf(ux(q, 56), y, uz(q, 25), "red_sofa", (q & 2) == 0 ? N : S, MallBlocks.f(MallBlocks.BENCH, (q & 2) == 0 ? N : S));
         p.rf(ux(q, 57), y, uz(q, 25), "red_sofa", (q & 2) == 0 ? N : S, MallBlocks.f(MallBlocks.BENCH, (q & 2) == 0 ? N : S));
+        int pinQ = (int) (p.s.h(0xA1E0, 0, 0) * 4);
         for (int k = 0; k < 2; k++) {
-            p.loot(ux(q, 30 + k * 20), y, uz(q, 58), (q & 2) == 0 ? S : N, "mall_dept");
+            boolean pin = f == FLOORS - 1 && q == pinQ && k == 1;     // 0.43.0: the You Are Here pin (Underside Key)
+            p.loot(ux(q, 30 + k * 20), y, uz(q, 58), (q & 2) == 0 ? S : N, pin ? "mall_dept_artifact" : "mall_dept");
         }
         p.text("CLOSED", ux(q, 22), y + 4, uz(q, 30), (q & 1) == 0 ? Wd : E, 0.0);
     }
@@ -736,14 +739,24 @@ public final class MallDecorator {
         for (int k = 0; k < 16; k++) {
             lv[k] = Blocks.LIGHT.defaultBlockState().setValue(net.minecraft.world.level.block.LightBlock.LEVEL, k);
         }
-        for (int lx = 4; lx < 157; lx += 7) {
-            for (int lz = 4; lz < 157; lz += 7) {
+        for (int lx = 4; lx < 157; lx += 5) {
+            for (int lz = 4; lz < 157; lz += 5) {
                 if (!isVoid(lx, lz) || escalator(lx, 13, lz) != null || escalator(lx, 25, lz) != null) {
                     continue;
                 }
-                p.put(lx, p.s.yBase + 29, lz, lv[12]);
-                p.put(lx, p.s.yBase + 17, lz, lv[12]);
-                p.put(lx, p.s.yBase + 6, lz, lv[12]);
+                p.put(lx, p.s.yBase + 29, lz, lv[14]);
+                p.put(lx, p.s.yBase + 17, lz, lv[14]);
+                p.put(lx, p.s.yBase + 5, lz, lv[14]);
+            }
+        }
+        // shop lamps: their light reaches the shelves
+        for (int f = 0; f < FLOORS; f++) {
+            for (int lx = 3; lx < 157; lx++) {
+                for (int lz = 3; lz < 157; lz++) {
+                    if (!concourse(lx, lz) && p.s.part(lx, f * FH + 6, lz, false) == Part.LIGHT) {
+                        p.put(lx, p.s.yBase + f * FH + 4, lz, lv[12]);
+                    }
+                }
             }
         }
         // the lamps hang high under the gallery ceilings: their light reaches the floor through a hidden light below each
@@ -751,7 +764,7 @@ public final class MallDecorator {
             for (int lx = 3; lx < 157; lx += 6) {
                 for (int lz = 3; lz < 157; lz += 6) {
                     if (concourse(lx, lz) && !isVoid(lx, lz) && p.s.part(lx, f * FH + FH - 1, lz, false) == Part.LIGHT) {
-                        p.put(lx, p.s.yBase + f * FH + 6, lz, lv[13]);
+                        p.put(lx, p.s.yBase + f * FH + 6, lz, lv[14]);
                     }
                 }
             }

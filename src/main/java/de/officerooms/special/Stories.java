@@ -168,11 +168,12 @@ public final class Stories {
                     "Pools. Dozens of them. Halls of them. No one swimming. No one ever swimming.",
                     "It is the most peaceful place I have found, and I could not stay longer than an hour. Too quiet. The water is too still.",
             }),
-            new Book("okafor_six", "The Seven Things", "Okafor", new String[]{
+            new Book("okafor_six", "The Nine Things", "Okafor", new String[]{
                     "I found Abara's pack. Not Abara. Inside: a list in his handwriting, and the word UNDER underlined until the pencil went through the page.",
                     "1. a pearl, at the far end of the drowned maze under the pools\n2. a photograph, in the first empty house on the street that should not be indoors\n3. a thread, in the vault of the yellow maze",
                     "4. a key to room 000, in the cellar vault of the hotel\n5. a fuse that hums, in a generator hall\n6. a badge, inside a present at the party that never ends\n7. a ticket stub, from the cinema where nothing is showing",
-                    "Under the list: 'seven things, one key. the key does not open a door. it opens the floor.'",
+                    "8. a red pin, 'you are here', put away upstairs in the mall that is always open\n9. a compass, in the captain's cabin of the ship in the fog. the needle points at nothing",
+                    "Under the list: 'nine things, one key. the key does not open a door. it opens the floor.'",
                     "I don't know what floor he meant. There are so many floors. I am going to find out anyway, because he went first and he did not come back up.",
             }),
             new Book("abara_below", "Below the Last Floor", "Abara", new String[]{
@@ -240,7 +241,7 @@ public final class Stories {
                     "Abara says the structure has a bottom, and under the bottom a field. He says the field has a keeper.",
                     "He showed me a drawing of it. Long. Black lines. A ribcage every few segments. The head is all scribble.",
                     "In the scribble there is an eye, and I am almost certain the eye is his.",
-                    "We are going down together tomorrow. If this log is found, the seven things are in the seven big places. Do not follow us. Follow us.",
+                    "We are going down together tomorrow. If this log is found, the nine things are in the big places, and one is at sea. Do not follow us. Follow us.",
             }),
             new Book("case_ceiling", "Case File 0-117", "Facility Records", new String[]{
                     "CASE 0-117 (CLASSIFIED)\nSubject: maintenance worker, name withheld.\nLast seen: topmost floor, ladder against the ceiling, removing a tile.",

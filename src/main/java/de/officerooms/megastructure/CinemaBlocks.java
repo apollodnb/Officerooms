@@ -330,15 +330,18 @@ public final class CinemaBlocks {
         for (int sx : Cinema.STANDS) {
             chest(p, level, chunk, new BlockPos(baseX + sx + 15, y + 1, baseZ + Cinema.LOBBY_Z1), Direction.NORTH, "cinema_concessions");
         }
+        boolean pin = !p.cfg.v3();                                  // 0.43.0: worlds without the Dead Mall
         for (int j = 0; j < Cinema.FLOORS * Cinema.HALLS; j++) {
             int i = j % Cinema.HALLS;
             if (s.h(0x9C53, j, 0) < 0.45) {
+                String table = pin ? "cinema_lost_found_pin" : "cinema_lost_found";
+                pin = false;
                 boolean north = i < 6;
                 int x0 = 3 + 26 * (i % 6);
                 int t = 52;
                 int lz = north ? 56 - t : 104 + t;
                 chest(p, level, chunk, new BlockPos(baseX + x0 + 12, y + (j / Cinema.HALLS) * Cinema.FH + Cinema.level(t) + 1, baseZ + lz),
-                        north ? Direction.SOUTH : Direction.NORTH, "cinema_lost_found");
+                        north ? Direction.SOUTH : Direction.NORTH, table);
             }
         }
     }

@@ -22,6 +22,12 @@
   },
   {
    "item": "office_rooms:ticket_stub"
+  },
+  {
+   "item": "office_rooms:you_are_here_pin"
+  },
+  {
+   "item": "office_rooms:captains_compass"
   }
  ],
  "result": {

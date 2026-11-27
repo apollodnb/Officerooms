@@ -2,9 +2,9 @@
 	images: [
 		{
 			x: 3.25d
-			y: 3.0d
-			width: 16.0d
-			height: 9.0d
+			y: 3.75d
+			width: 18.67d
+			height: 10.5d
 			rotation: 0.0d
 			image: "office_rooms:textures/gui/quests/atrium_2.png"
 			color: 16777215
@@ -39,7 +39,6 @@
 				"76BBE88AC96F5FE9"
 			]
 			shape: "hexagon"
-			optional: true
 			icon: "office_rooms:boarding_gate"
 			size: 1.5d
 			tasks: [
@@ -73,7 +72,6 @@
 			dependencies: [
 				"614654AA13B3F856"
 			]
-			optional: true
 			icon: "office_rooms:ship_carpet"
 			tasks: [
 				{
@@ -102,6 +100,43 @@
 			]
 			x: 2.5d
 			y: 3.0d
+		}
+		{
+			id: "455C911D6710F7B8"
+			title: "Captain's Compass"
+			subtitle: "Artifact"
+			description: [
+				"The captain's cabin is on deck 10, behind the bridge, where most staircases do not go. The compass is in the captain's chest."
+				""
+				"&8Needed for the Underside Key."
+				""
+				"&6How: &rCaptain's cabin on deck 10 of the SS Fun =): the chest next to the desk. Reach deck 10 through the one staircase that goes past deck 8."
+			]
+			dependencies: [
+				"498735B8A2E2D2FA"
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					id: "66081E9340D84061"
+					type: "item"
+					item: "office_rooms:captains_compass"
+				}
+			]
+			rewards: [
+				{
+					id: "216F5DCCA9980439"
+					type: "item"
+					item: "office_rooms:research_file"
+				}
+				{
+					id: "79A8B3F6369047A5"
+					type: "xp"
+					xp: 300
+				}
+			]
+			x: 4.5d
+			y: 6.0d
 		}
 		{
 			id: "0540E6DE44F78940"
@@ -226,5 +261,5 @@
 	subtitle: [
 		"Now boarding at gate 26"
 	]
-	title: "XI. The SS Fun =) (optional)"
+	title: "XI. The SS Fun =)"
 }

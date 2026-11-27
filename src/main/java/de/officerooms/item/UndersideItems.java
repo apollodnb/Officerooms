@@ -35,7 +35,8 @@ import java.util.List;
 public final class UndersideItems {
 
     /** Order: Poolrooms, Neighbourhood, Maze, Hotel, Industrial Complex, Level Fun. */
-    public static final String[] ARTIFACTS = {"chlorine_pearl", "faded_photograph", "thread_of_the_maze", "room_key_000", "humming_fuse", "party_smile_badge"};
+    public static final String[] ARTIFACTS = {"chlorine_pearl", "faded_photograph", "thread_of_the_maze", "room_key_000", "humming_fuse", "party_smile_badge",
+            "you_are_here_pin", "captains_compass"};   // 0.43.0: Dead Mall, SS Fun =)
     public static final List<RegistryObject<Item>> ARTIFACT_ITEMS = new ArrayList<>();
     public static final RegistryObject<Item> UNDERSIDE_KEY;
     public static final RegistryObject<Item> NOCLIP_SWORD;

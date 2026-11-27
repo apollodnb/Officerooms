@@ -298,10 +298,16 @@ mega = [('poolrooms', 'The Poolrooms', 'Warm water, white tiles, no exits',
          'A present from Level Fun.'),
         ('cinema', 'The Abandoned Cinema', 'Now showing: nothing',
          'Three floors of dark auditoriums around a lobby nobody cleaned. Some screens still flicker. Only in worlds made with 0.31.0 or newer.',
-         'ticket_stub', 'Ticket Stub', 'Admit one. From the box office or the lost-and-found chests of the cinema.')]
+         'ticket_stub', 'Ticket Stub', 'Admit one. From the box office or the lost-and-found chests of the cinema.'),
+        ('mall', 'The Dead Mall', 'Always open',
+         'Three floors of shops around atriums under grey skylights. The escalators stopped long ago, the fountain is dry, the music still plays. '
+         'Something lives above the ceiling tiles. Only in worlds made with 0.43.0 or newer.',
+         'you_are_here_pin', 'You Are Here',
+         'The red pin of a mall directory. The memo in the mall office says where it went: a stockroom on the top floor, behind the shops. '
+         'In older worlds without malls, one lost-and-found chest of the cinema keeps it.')]
 quest('mega_start', 'Beyond the Floor Plan', 'Megastructures',
       ['Between the endless offices lie whole structures that do not belong there.',
-       'Each one keeps an artifact. You will want all seven.'],
+       'Each one keeps an artifact. The Underside Key needs all eight, and one more from the sea.'],
       [item('level_1_access_card')], [give('glowstick', 4), xp(60)], deps=['first_day_done'], x=0, y=3.75, shape='hexagon', size=1.5)
 for i, (k, t, sub, d, art, at, ad) in enumerate(mega):
     quest('find_' + k, t, sub, [d], [adv('discover_' + k)], [table('supplies'), xp(150)], deps=['mega_start'], x=2.5, y=i * 1.5, shape='circle')
@@ -319,13 +325,15 @@ quest('master', 'Master Key', 'Every door, for a while',
 quest('cinema_top', 'Screens 25 to 36', 'The top floor',
       ['The stairs in the cinema lobby climb past two galleries. Reach the third floor.', 'Mind the railings. They are not everywhere.'],
       [adv('cinema_top')], [give('office_coin', 4), xp(120)], deps=['find_cinema'], x=6.5, y=9, optional=True, icon='cinema_seat')
-quest('find_mall', 'The Dead Mall', 'Always open',
-      ['Three floors of shops around atriums under grey skylights. The escalators stopped long ago, the fountain is dry, the music still plays.',
-       'Something lives above the ceiling tiles. Only in worlds made with 0.43.0 or newer.'],
-      [adv('discover_mall')], [table('supplies'), xp(150)], deps=['mega_start'], x=2.5, y=10.5, shape='circle', optional=True, icon='mall_escalator')
+quest('mall_top', 'Out of Order', 'Up the escalators',
+      ['The escalators of the mall stopped long ago. Climb them anyway, to the top floor under the skylights.'],
+      [adv('mall_top')], [give('office_coin', 4), xp(120)], deps=['find_mall'], x=6.5, y=10.5, optional=True, icon='mall_escalator')
 quest('mall_dept', 'Closed for Inventory', 'Behind the shops',
       ['The department stores of the mall have no entrance from the concourse. Find the door marked STAFF ONLY and follow the service corridor.'],
-      [adv('mall_dept')], [give('office_coin', 4), xp(120)], deps=['find_mall'], x=4.5, y=10.5, optional=True, icon='mall_clothes_rack')
+      [adv('mall_dept')], [give('office_coin', 4), xp(120)], deps=['find_mall'], x=6.5, y=12, optional=True, icon='mall_clothes_rack')
+quest('mall_memo', 'To All Tenants', 'Mall management',
+      ['The mall office is on the first floor, next to the food court side. A memo lies on a lectern. Read it.'],
+      [check()], [xp(80)], deps=['find_mall'], x=8, y=10.5, optional=True, icon='minecraft:writable_book')
 quest('hotel_top', 'Top Floor, No Vacancy', 'Through the labyrinth',
       ['The hotel corridors twist and the staircases turn. Find your way to the highest guest floor.', 'Only in worlds made with 0.36.0 or newer.'],
       [adv('hotel_top')], [table('supplies'), xp(150)], deps=['find_hotel'], x=6.5, y=4.5, optional=True, icon='hotel_bed')
@@ -358,9 +366,10 @@ quest('out_nether', 'Through the Heat', '',
 
 # 7 --------------------------------------------------------------------------------------------
 chapter('underside', 'VII. The Underside', 'Beneath the bedrock', O + 'underside_key')
-quest('key', 'Underside Key', 'Seven artifacts, one key',
-      ['Combine the seven artifacts of the megastructures. The cinema ticket counts.', 'Use the key on the bedrock beneath the lowest floor of the Office Rooms.'],
-      [item('underside_key')], [xp(500)], deps=['art_' + m[0] for m in mega], x=0, y=0, shape='hexagon', size=1.5)
+quest('key', 'Underside Key', 'Nine artifacts, one key',
+      ['Combine the nine artifacts: one from each megastructure (the cinema ticket and the mall pin count) and the Captain\'s Compass from the SS Fun =).',
+       'Use the key on the bedrock beneath the lowest floor of the Office Rooms.'],
+      [item('underside_key')], [xp(500)], deps=['art_' + m[0] for m in mega] + ['art_ship'], x=0, y=0, shape='hexagon', size=1.5)
 quest('fall', 'Upside Down', 'Fall through',
       ['Below the bedrock there is only void. Fall into it.', 'You land somewhere with grass on the ceiling.'],
       [dim('underside')], [give('almond_water', 3), give('bandage', 3), xp(200)], deps=['key'], x=2, y=0)
@@ -441,15 +450,19 @@ quest('vend', 'Exact Change', 'Feed the machine',
       [item('office_coin', 5, True)], [give('almond_water', 2), xp(40)], deps=['room_canteen'], x=4.5, y=4 * 1.5, optional=True)
 
 # 0.42.0 --------------------------------------------------------------------------------------
-chapter('ss_fun', 'XI. The SS Fun =) (optional)', 'Now boarding at gate 26', O + 'ship_lifeboat_release')
+chapter('ss_fun', 'XI. The SS Fun =)', 'Now boarding at gate 26', O + 'ship_lifeboat_release')
 quest('ss_start', 'Now Boarding', 'Gate 26',
       ['Somewhere in the offices there is a departure lounge that should not be there: rows of seats, a board that says BOARDING, and fog in the windows.',
        'Departure gates are rare and only appear in worlds made with 0.42.0 or newer.'],
-      [adv('room_departure_gate')], [xp(80)], deps=['first_day_done'], x=0, y=3, shape='hexagon', size=1.5, optional=True, icon='boarding_gate')
+      [adv('room_departure_gate')], [xp(80)], deps=['first_day_done'], x=0, y=3, shape='hexagon', size=1.5, icon='boarding_gate')
 quest('ss_board', 'All Aboard', 'Welcome to the SS Fun =)',
       ['Right-click the gate. Endless corridors of cabins, a theatre, a casino, a kids\' club. Nobody else is on board.',
        'At least, nobody you can see.'],
-      [dim('the_sea')], [table('supplies'), give('office_coin', 4), xp(150)], deps=['ss_start'], x=2.5, y=3, optional=True, icon='ship_carpet')
+      [dim('the_sea')], [table('supplies'), give('office_coin', 4), xp(150)], deps=['ss_start'], x=2.5, y=3, icon='ship_carpet')
+quest('art_ship', "Captain's Compass", 'Artifact',
+      ["The captain's cabin is on deck 10, behind the bridge, where most staircases do not go. The compass is in the captain's chest.", '',
+       '&8Needed for the Underside Key.'],
+      [item('captains_compass')], [give('research_file'), xp(300)], deps=['ss_board'], x=4.5, y=6, shape='diamond')
 quest('ss_log', 'The Captain\'s Log', 'Day ?',
       ['The captain kept a log. You will find it on a lectern: in the library or in the captain\'s cabin on deck 10.'],
       [check()], [xp(100)], deps=['ss_board'], x=4.5, y=1.5, optional=True, icon='minecraft:writable_book')
@@ -529,7 +542,9 @@ HOW = {
     'ss_mascot': 'Aboard the SS Fun =): it hides in the ceiling vents. Walk under a dripping vent, or stare down a corridor.',
     'ss_escape': 'Find the one staircase that goes past deck 8, reach the promenade on deck 10 and right-click a red lifeboat handle.',
     'cinema_top': 'Find an Abandoned Cinema and climb the stairs in its lobby atrium to the third floor (screens 25 to 36).',
-    'find_mall': 'Find a Dead Mall (new worlds from 0.43.0). /officerooms locate mall shows the nearest one.',
+    'mall_top': 'Climb the escalators of a Dead Mall to the top floor.',
+    'mall_memo': 'Read the memo on the lectern in the mall office (floor 1), then tick the box.',
+    'art_ship': 'Captain\'s cabin on deck 10 of the SS Fun =): the chest next to the desk. Reach deck 10 through the one staircase that goes past deck 8.',
     'mall_dept': 'Enter one of the four closed department stores of a Dead Mall through the service corridors (STAFF ONLY doors).',
     'hotel_top': 'Climb the staircases of an Abandoned Hotel up to its highest guest floor.',
     'slide': 'Find a round slide opening in an office wall (rare, worlds made with 0.35.0+) and right-click it.',
@@ -544,7 +559,7 @@ HOW = {
     'out_gate': 'Pull the power lever in an outpost, wait out the warnings, press the red button (be within 32 blocks).',
     'out_ancient': 'Echo shards from Ancient City chests.',
     'out_nether': 'Enter the Nether.',
-    'key': 'Craft from the six megastructure artifacts (shapeless).',
+    'key': 'Craft from the nine artifacts (shapeless): seven megastructures, the mall pin and the Captain\'s Compass.',
     'fall': 'Use the key on the bedrock under the lowest floor of the Office Rooms and fall into the void.',
     'unknown': 'It appears 20 seconds after you arrive in the Underside. Hit it when it surfaces.',
     'noclip': 'Dropped by [Unknown].',
@@ -569,7 +584,7 @@ ICONS = {'find_cinema': O + 'cinema_projector', 'memo': 'minecraft:paper', 'faci
          'l0_flayed': O + 'flayed_spawn_egg', 'l0_manila': O + 'manila_carpet', 'l0_escape': 'minecraft:water_bucket',
          'bestiary': 'minecraft:writable_book', 'observer': 'minecraft:ender_eye', 'req_start': 'minecraft:writable_book',
          'find_poolrooms': O + 'pool_tile', 'find_maze': O + 'maze_wallpaper', 'find_hotel': O + 'hotel_carpet',
-         'find_industrial': O + 'industrial_wall', 'find_neighbourhood': 'minecraft:oak_door', 'find_level_fun': O + 'balloon_red'}
+         'find_industrial': O + 'industrial_wall', 'find_neighbourhood': 'minecraft:oak_door', 'find_level_fun': O + 'balloon_red', 'find_mall': O + 'mall_escalator'}
 
 
 def how(key):

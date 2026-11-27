@@ -884,7 +884,7 @@ public final class ShipDecorator {
         }
         p.put(cx - 3, y, C + 4, Blocks.CARTOGRAPHY_TABLE.defaultBlockState());
         p.bed(r.x0 + 1, y, r.z0, N, Blocks.BLUE_BED);
-        p.loot(cx + 3, y, C + 6, N, "ship_captain");
+        p.loot(cx + 3, y, C + 6, N, "ship_captain_artifact");   // 0.43.0: the Captain's Compass (Underside Key)
         p.book(cx - 2, y, C + 6, N, LOG);
     }
 

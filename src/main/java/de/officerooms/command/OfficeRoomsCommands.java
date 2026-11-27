@@ -239,7 +239,16 @@ public final class OfficeRoomsCommands {
                                 say(ctx.getSource(), "Something squeaks in the ceiling.");
                             }
                             return ok ? 1 : fail(ctx.getSource(), "No vent nearby (only on a ship).");
-                        })))
+                        }).then(Commands.literal("wave").executes(ctx -> {
+                            ServerPlayer pl = ctx.getSource().getPlayerOrException();
+                            int dk = (pl.getBlockY() - de.officerooms.sea.Ship.fy(0)) / de.officerooms.sea.Ship.DH;
+                            boolean ok = pl.serverLevel().dimension() == de.officerooms.sea.SeaEvents.LEVEL_KEY
+                                    && de.officerooms.sea.SeaEvents.spawnMascotWaving(pl.serverLevel(), pl, dk);
+                            if (ok) {
+                                say(ctx.getSource(), "Something waves at the end of the corridor.");
+                            }
+                            return ok ? 1 : fail(ctx.getSource(), "No free corridor in view.");
+                        }))))
                 .then(Commands.literal("verify")
                         .executes(ctx -> verify(ctx, 1))
                         .then(Commands.argument("radius", IntegerArgumentType.integer(0, 6))
