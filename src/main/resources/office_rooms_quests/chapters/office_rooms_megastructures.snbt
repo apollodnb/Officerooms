@@ -2,9 +2,9 @@
 	images: [
 		{
 			x: 4.0d
-			y: 3.0d
-			width: 32.0d
-			height: 18.0d
+			y: 3.75d
+			width: 34.67d
+			height: 19.5d
 			rotation: 0.0d
 			image: "office_rooms:textures/gui/quests/atrium_2.png"
 			color: 16777215
@@ -714,6 +714,83 @@
 			]
 			x: 6.5d
 			y: 9.0d
+		}
+		{
+			id: "308E2E23EC9E30EE"
+			title: "The Dead Mall"
+			subtitle: "Always open"
+			description: [
+				"Three floors of shops around atriums under grey skylights. The escalators stopped long ago, the fountain is dry, the music still plays."
+				"Something lives above the ceiling tiles. Only in worlds made with 0.43.0 or newer."
+				""
+				"&6How: &rFind a Dead Mall (new worlds from 0.43.0). /officerooms locate mall shows the nearest one."
+			]
+			dependencies: [
+				"68F15C46402017C3"
+			]
+			shape: "circle"
+			optional: true
+			icon: "office_rooms:mall_escalator"
+			tasks: [
+				{
+					id: "521B736FE8ECACF1"
+					type: "advancement"
+					advancement: "office_rooms:milestones/discover_mall"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "558ED1BBF1588672"
+					type: "random"
+					table_id: 4103091957774285532L
+				}
+				{
+					id: "32C431ECB613A021"
+					type: "xp"
+					xp: 150
+				}
+			]
+			x: 2.5d
+			y: 10.5d
+		}
+		{
+			id: "71C2E0FFCBD10C2D"
+			title: "Closed for Inventory"
+			subtitle: "Behind the shops"
+			description: [
+				"The department stores of the mall have no entrance from the concourse. Find the door marked STAFF ONLY and follow the service corridor."
+				""
+				"&6How: &rEnter one of the four closed department stores of a Dead Mall through the service corridors (STAFF ONLY doors)."
+			]
+			dependencies: [
+				"308E2E23EC9E30EE"
+			]
+			optional: true
+			icon: "office_rooms:mall_clothes_rack"
+			tasks: [
+				{
+					id: "1CE32E765A828837"
+					type: "advancement"
+					advancement: "office_rooms:milestones/mall_dept"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "024BF7C11B941AD0"
+					type: "item"
+					item: "office_rooms:office_coin"
+					count: 4
+				}
+				{
+					id: "7A3344A704CC4BDE"
+					type: "xp"
+					xp: 120
+				}
+			]
+			x: 4.5d
+			y: 10.5d
 		}
 		{
 			id: "1BAA506CC9C8845C"

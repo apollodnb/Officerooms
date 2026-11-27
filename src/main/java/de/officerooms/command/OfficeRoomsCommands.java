@@ -200,7 +200,7 @@ public final class OfficeRoomsCommands {
                         .then(Commands.argument("type", com.mojang.brigadier.arguments.StringArgumentType.word())
                                 .suggests((c, b) -> net.minecraft.commands.SharedSuggestionProvider.suggest(
                                         java.util.stream.Stream.concat(java.util.Arrays.stream(de.officerooms.furnish.RoomType.values()).map(t -> t.id),
-                                                java.util.stream.Stream.concat(java.util.stream.Stream.of("poolrooms", "poolrooms_maze", "neighbourhood", "maze", "maze_vault", "hotel", "hotel_vault", "industrial", "level_fun", "cinema", "hideout", "elevator", "secure_storage",
+                                                java.util.stream.Stream.concat(java.util.stream.Stream.of("poolrooms", "poolrooms_maze", "neighbourhood", "maze", "maze_vault", "hotel", "hotel_vault", "industrial", "level_fun", "cinema", "mall", "hideout", "elevator", "secure_storage",
                                                         "fuse_box", "hazard_zone", "outpost", "shrine", "ship"), java.util.Arrays.stream(HIDEOUT_IDS))), b))
                                 .executes(ctx -> gotoType(ctx, com.mojang.brigadier.arguments.StringArgumentType.getString(ctx, "type")))))
                 .then(Commands.literal("ship")                       // 0.42.0: SS Fun =)
@@ -554,7 +554,7 @@ public final class OfficeRoomsCommands {
             say(src, "Room type poolrooms at " + tx + " " + ty + " " + tz + (maze ? " (maze entrance)" : ""));
             return 1;
         }
-        if (java.util.List.of("hotel", "hotel_vault", "industrial", "level_fun", "cinema", "hideout", "elevator", "secure_storage").contains(typeId) || hideoutFilter(typeId) >= 0) {
+        if (java.util.List.of("hotel", "hotel_vault", "industrial", "level_fun", "cinema", "mall", "hideout", "elevator", "secure_storage").contains(typeId) || hideoutFilter(typeId) >= 0) {
             BlockPos from = player.level() == level ? player.blockPosition() : BlockPos.ZERO;
             java.util.List<Hit> hits = new java.util.ArrayList<>();
             megaHits(p, typeId, from, 30, hits);
@@ -694,7 +694,7 @@ public final class OfficeRoomsCommands {
     // --- 0.8.4: /officerooms locate <type|all> - list coordinates without teleporting -------------
 
     private static final java.util.List<String> LOCATE_TYPES = java.util.List.of("all", "poolrooms", "neighbourhood", "maze",
-            "maze_vault", "hotel", "hotel_vault", "industrial", "level_fun", "cinema", "elevator", "secure_storage", "hideout", "villager_outpost", "lush_cave", "water_office", "sculk_office", "abandoned_camp", "oasis", "exit_room",
+            "maze_vault", "hotel", "hotel_vault", "industrial", "level_fun", "cinema", "mall", "elevator", "secure_storage", "hideout", "villager_outpost", "lush_cave", "water_office", "sculk_office", "abandoned_camp", "oasis", "exit_room",
             "maintenance_room", "supply_closet", "forgotten_break_room", "security_office", "research_lab", "concealed_room",
             "cold_storage", "last_meeting", "mail_room", "rain_room", "canteen", "arcade", "departure_gate", "outpost", "shrine", "ship");
 
@@ -785,7 +785,7 @@ public final class OfficeRoomsCommands {
         for (String t : types) {
             java.util.List<Hit> hits = new java.util.ArrayList<>();
             boolean mega = t.equals("poolrooms") || t.equals("neighbourhood") || t.equals("maze") || t.equals("maze_vault")
-                    || t.equals("hotel") || t.equals("hotel_vault") || t.equals("industrial") || t.equals("level_fun") || t.equals("cinema")
+                    || t.equals("hotel") || t.equals("hotel_vault") || t.equals("industrial") || t.equals("level_fun") || t.equals("cinema") || t.equals("mall")
                     || t.equals("elevator") || t.equals("secure_storage") || t.equals("hideout") || hideoutFilter(t) >= 0;
             if (mega) {
                 megaHits(p, t, from, all ? 12 : 30, hits);
@@ -874,6 +874,17 @@ public final class OfficeRoomsCommands {
                         y = site.yBase + de.officerooms.megastructure.Poolrooms.FLOOR + 1;
                         st = site.s0;
                         what = "Poolrooms";
+                    }
+                    case "mall" -> {
+                        de.officerooms.megastructure.Mall.Site site = p.mall.site(rx, rz);
+                        if (site == null) {
+                            continue;
+                        }
+                        x = bx + 80;
+                        z = bz + 100;
+                        y = site.yBase + 1;
+                        st = site.s0;
+                        what = "Dead Mall";
                     }
                     case "cinema" -> {
                         de.officerooms.megastructure.Cinema.Site site = p.cinema.site(rx, rz);

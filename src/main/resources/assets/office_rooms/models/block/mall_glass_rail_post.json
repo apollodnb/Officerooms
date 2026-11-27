@@ -1,0 +1,9 @@
+{
+ "parent": "minecraft:block/template_glass_pane_post",
+ "textures": {
+  "pane": "office_rooms:block/mall_glass_rail",
+  "edge": "office_rooms:block/mall_glass_rail_top",
+  "particle": "office_rooms:block/mall_glass_rail"
+ },
+ "render_type": "minecraft:translucent"
+}

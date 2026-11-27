@@ -134,8 +134,9 @@ public final class OfficeChunkGenerator extends ChunkGenerator {
         long seed = randomState.getOrCreateRandomFactory(SEED_KEY).at(0, 0, 0).nextLong();
         int minY = level.getMinBuildHeight();
         int height = level.getHeight();
-        long key = seed ^ ((long) minY << 48) ^ ((long) height << 32);
-        BlockSampler s = samplers.computeIfAbsent(key, k -> new BlockSampler(new OfficePlanner(seed, settings, minY, height)));
+        int cap = ContentVersion.cap();                              // 0.43.0: the version stored with the world
+        long key = seed ^ ((long) minY << 48) ^ ((long) height << 32) ^ ((long) Math.min(cap, 1000) << 20);
+        BlockSampler s = samplers.computeIfAbsent(key, k -> new BlockSampler(new OfficePlanner(seed, ContentVersion.apply(settings), minY, height)));
         last = s;
         return s;
     }
@@ -198,6 +199,7 @@ public final class OfficeChunkGenerator extends ChunkGenerator {
             industrial(sampler, chunk, sections, bx, bz);
             levelFun(sampler, chunk, sections, bx, bz);
             cinema(sampler, chunk, sections, bx, bz);
+            mall(sampler, chunk, sections, bx, bz);
         } finally {
             for (LevelChunkSection s : sections) {
                 s.release();
@@ -674,6 +676,82 @@ public final class OfficeChunkGenerator extends ChunkGenerator {
                 }
             }
         }
+    }
+
+    // --- 0.43.0: the Dead Mall ---------------------------------------------------------------------------------------
+
+    private static BlockState[] mallStates;
+    private static BlockState[] mallRails;
+
+    private void mall(BlockSampler sampler, ChunkAccess chunk, LevelChunkSection[] sections, int bx, int bz) {
+        OfficePlanner p = sampler.planner();
+        int rx = p.regionOf(bx);
+        int rz = p.regionOf(bz);
+        de.officerooms.megastructure.Mall.Site site = p.mall.site(rx, rz);
+        if (site == null) {
+            return;
+        }
+        BlockState[] ps = mallStates;
+        if (ps == null) {
+            de.officerooms.megastructure.Mall.Part[] parts = de.officerooms.megastructure.Mall.Part.values();
+            ps = new BlockState[parts.length];
+            for (de.officerooms.megastructure.Mall.Part part : parts) {
+                ps[part.ordinal()] = de.officerooms.megastructure.MallBlocks.state(part);
+            }
+            BlockState[] rails = new BlockState[16];
+            for (int m = 0; m < 16; m++) {
+                rails[m] = de.officerooms.megastructure.MallBlocks.rail(m);
+            }
+            mallRails = rails;
+            mallStates = ps;
+        }
+        int baseX = rx * p.regionBlocks;
+        int baseZ = rz * p.regionBlocks;
+        int fh = de.officerooms.megastructure.Mall.FH;
+        for (int dx = 0; dx < 16; dx++) {
+            for (int dz = 0; dz < 16; dz++) {
+                int lx = bx + dx - baseX;
+                int lz = bz + dz - baseZ;
+                if (lx == 0 || lz == 0) {
+                    continue;
+                }
+                int side = site.ringSide(lx, lz);
+                for (int off = 0; off < de.officerooms.megastructure.Mall.H; off++) {
+                    int y = site.yBase + off;
+                    boolean door = side >= 0 && off % fh >= 1 && off % fh <= 3 && wallDoor(sampler, p, side, baseX, baseZ, bx + dx, y, bz + dz);
+                    de.officerooms.megastructure.Mall.Part part = site.part(lx, off, lz, door);
+                    if (part == de.officerooms.megastructure.Mall.Part.OFFICE) {
+                        continue;
+                    }
+                    BlockState st = ps[part.ordinal()];
+                    if (part == de.officerooms.megastructure.Mall.Part.RAIL) {
+                        st = mallRails[mallRail(lx, lz)];
+                    }
+                    sections[chunk.getSectionIndex(y)].setBlockState(dx, y & 15, dz, st, false);
+                }
+            }
+        }
+    }
+
+    private static int mallRail(int lx, int lz) {
+        int m = 0;
+        if (mallJoins(lx, lz - 1)) {
+            m |= 1;
+        }
+        if (mallJoins(lx, lz + 1)) {
+            m |= 2;
+        }
+        if (mallJoins(lx + 1, lz)) {
+            m |= 4;
+        }
+        if (mallJoins(lx - 1, lz)) {
+            m |= 8;
+        }
+        return m;
+    }
+
+    private static boolean mallJoins(int lx, int lz) {
+        return de.officerooms.megastructure.Mall.railCell(lx, lz) || de.officerooms.megastructure.Mall.pillar(lx, lz);
     }
 
     public FurnishingPlanner furnishing(BlockSampler sampler) {

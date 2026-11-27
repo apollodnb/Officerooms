@@ -20,6 +20,9 @@ public final class ModSounds {
     public static final RegistryObject<SoundEvent> HOUND_HUNT_LOOP = reg("entity.hound.hunt_loop");
     /** 0.31.0: the projector still rattling in an empty auditorium. */
     public static final RegistryObject<SoundEvent> CINEMA_PROJECTOR = reg("block.cinema.projector");
+    /** 0.43.0: the Dead Mall. */
+    public static final RegistryObject<SoundEvent> MALL_MUZAK = reg("block.mall.muzak");
+    public static final RegistryObject<SoundEvent> MALL_CHIME = reg("block.mall.chime");
     /** 0.32.0: Aranea Membri. */
     /** 0.35.0: riding the slide from an office into the Poolrooms. */
     public static final RegistryObject<SoundEvent> SLIDE_RUSH = reg("block.slide.rush");

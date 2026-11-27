@@ -1,0 +1,11 @@
+{
+ "structures": [
+  {
+   "structure": "office_rooms:dead_mall",
+   "weight": 1
+  }
+ ],
+ "placement": {
+  "type": "office_rooms:region_centre"
+ }
+}

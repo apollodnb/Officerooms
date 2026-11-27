@@ -69,6 +69,17 @@ public final class Milestones {
                     if (cs != null && p.getBlockY() >= cs.yBase + 2 * de.officerooms.megastructure.Cinema.FH) {
                         grant(p, "cinema_top");
                     }
+                    // 0.43.0: inside one of the closed department stores of the Dead Mall
+                    var ms = pl.mall.at(p.getBlockX(), p.getBlockY(), p.getBlockZ());
+                    if (ms != null) {
+                        int lx = p.getBlockX() - ms.rx * pl.regionBlocks;
+                        int lz = p.getBlockZ() - ms.rz * pl.regionBlocks;
+                        int a = lx < de.officerooms.megastructure.Mall.C0 ? de.officerooms.megastructure.Mall.C0 - 1 - lx : lx - de.officerooms.megastructure.Mall.C1 - 1;
+                        int b = lz < de.officerooms.megastructure.Mall.C0 ? de.officerooms.megastructure.Mall.C0 - 1 - lz : lz - de.officerooms.megastructure.Mall.C1 - 1;
+                        if (a >= 22 && b >= 22 && a <= 59 && b <= 59) {
+                            grant(p, "mall_dept");
+                        }
+                    }
                     var hs = pl.hotel.at(p.getBlockX(), p.getBlockY(), p.getBlockZ());
                     if (hs != null && hs.modern && pl.storeyOf(p.getBlockY()) >= hs.s0 + hs.storeys - 1) {
                         grant(p, "hotel_top");

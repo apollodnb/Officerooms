@@ -17,7 +17,7 @@ class MarkerAnchorTest {
     void everyMegastructureGetsAMarker() {
         GenSettings d = GenSettings.DEFAULT;
         GenSettings g = new GenSettings(d.grid(), d.roomHeights(), d.roomSizes(), d.compositeChance(), d.corridors(), d.stairsPerStorey(),
-                d.atria(), d.doors(), d.windows(), d.furnishing(), d.special(), 1);
+                d.atria(), d.doors(), d.windows(), d.furnishing(), d.special(), 3);
         OfficePlanner p = new OfficePlanner(7657905887809284474L, g, -64, 608);
         Map<Megastructures.Kind, Integer> n = new EnumMap<>(Megastructures.Kind.class);
         for (int rx = -20; rx <= 20; rx++) {

@@ -67,6 +67,10 @@ public final class MegaDecorator {
         if (fun != null) {
             LevelFunBlocks.decorate(p, fun, level, chunk, rx * p.regionBlocks, rz * p.regionBlocks);
         }
+        Mall.Site mall = p.mall.site(rx, rz);
+        if (mall != null) {
+            MallDecorator.decorate(p, mall, level, chunk);
+        }
         Cinema.Site cin = p.cinema.site(rx, rz);
         if (cin != null) {
             CinemaBlocks.decorate(p, cin, level, chunk, rx * p.regionBlocks, rz * p.regionBlocks);

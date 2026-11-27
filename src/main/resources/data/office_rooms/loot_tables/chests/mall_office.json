@@ -1,0 +1,79 @@
+{
+ "type": "minecraft:chest",
+ "pools": [
+  {
+   "rolls": {
+    "type": "minecraft:uniform",
+    "min": 3,
+    "max": 6
+   },
+   "entries": [
+    {
+     "type": "minecraft:item",
+     "name": "office_rooms:research_file",
+     "weight": 4,
+     "functions": [
+      {
+       "function": "minecraft:set_count",
+       "count": {
+        "type": "minecraft:uniform",
+        "min": 1,
+        "max": 2
+       }
+      }
+     ]
+    },
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:paper",
+     "weight": 4,
+     "functions": [
+      {
+       "function": "minecraft:set_count",
+       "count": {
+        "type": "minecraft:uniform",
+        "min": 2,
+        "max": 6
+       }
+      }
+     ]
+    },
+    {
+     "type": "minecraft:item",
+     "name": "office_rooms:office_coin",
+     "weight": 4,
+     "functions": [
+      {
+       "function": "minecraft:set_count",
+       "count": {
+        "type": "minecraft:uniform",
+        "min": 3,
+        "max": 10
+       }
+      }
+     ]
+    },
+    {
+     "type": "minecraft:item",
+     "name": "office_rooms:master_key",
+     "weight": 1
+    },
+    {
+     "type": "minecraft:item",
+     "name": "office_rooms:level_2_access_card",
+     "weight": 1
+    },
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:writable_book",
+     "weight": 2
+    },
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:map",
+     "weight": 1
+    }
+   ]
+  }
+ ]
+}

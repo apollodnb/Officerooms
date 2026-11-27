@@ -1720,5 +1720,36 @@
     "attenuation_distance": 32
    }
   ]
+ },
+ "block.mall.muzak": {
+  "category": "ambient",
+  "subtitle": "subtitles.office_rooms.mall.muzak",
+  "sounds": [
+   {
+    "name": "office_rooms:block/mall/muzak1",
+    "attenuation_distance": 28,
+    "stream": true
+   },
+   {
+    "name": "office_rooms:block/mall/muzak2",
+    "attenuation_distance": 28,
+    "stream": true
+   },
+   {
+    "name": "office_rooms:block/mall/muzak3",
+    "attenuation_distance": 28,
+    "stream": true
+   }
+  ]
+ },
+ "block.mall.chime": {
+  "category": "ambient",
+  "subtitle": "subtitles.office_rooms.mall.chime",
+  "sounds": [
+   {
+    "name": "office_rooms:block/mall/chime",
+    "attenuation_distance": 48
+   }
+  ]
  }
 }

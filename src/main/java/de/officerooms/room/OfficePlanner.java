@@ -51,13 +51,15 @@ public final class OfficePlanner {
     /** 0.16.0: Level Fun with its Partygoers. */
     public final de.officerooms.megastructure.LevelFun fun = new de.officerooms.megastructure.LevelFun(this);
     public final de.officerooms.megastructure.Cinema cinema = new de.officerooms.megastructure.Cinema(this);
+    /** 0.43.0 */
+    public final de.officerooms.megastructure.Mall mall = new de.officerooms.megastructure.Mall(this);
 
     /** 0.9.0: elevators and secure storage rooms laid over the plan. */
     public final Extras extras = new Extras(this);
 
     /** Whether the position lies in the band of any megastructure (own architecture, not the office plan). */
     public boolean megaContains(int x, int y, int z) {
-        return pools.contains(x, y, z) || hood.contains(x, y, z) || maze.contains(x, y, z) || hotel.contains(x, y, z) || industrial.contains(x, y, z) || fun.contains(x, y, z) || cinema.contains(x, y, z);
+        return pools.contains(x, y, z) || hood.contains(x, y, z) || maze.contains(x, y, z) || hotel.contains(x, y, z) || industrial.contains(x, y, z) || fun.contains(x, y, z) || cinema.contains(x, y, z) || mall.contains(x, y, z);
     }
 
     private final PlanCache<RegionLayout> layouts = new PlanCache<>(64);

@@ -40,6 +40,9 @@ public final class SpecialRooms {
         if (p.cinema.overlaps(rx, rz, r)) {
             return SpecialType.CINEMA;
         }
+        if (p.mall.overlaps(rx, rz, r)) {
+            return SpecialType.MALL;
+        }
         if (r == null || r.kind != Room.Kind.ROOM || r.sealed || r.cells == 0) {
             return SpecialType.NONE;
         }

@@ -2,7 +2,7 @@
 
 *A new liminal dimension for Minecraft: an endless office full of empty halls, strange megastructures and things that move when you're not looking. You feel alone. Unfortunately, you're not.*
 
-**Version 0.42.0 (beta): a liminal office dimension with furniture, light, special rooms, megastructures, creatures, its own gear and music**
+**Version 0.43.0 (beta): a liminal office dimension with furniture, light, special rooms, megastructures, creatures, its own gear and music**
 
 > **New in 0.40.0 (beta):** the quest book installs itself when FTB Quests is present and merges into a modpack's quest book ([docs/NEW_IN_0.40.0.md](docs/NEW_IN_0.40.0.md)). **0.39.1:** logo, credits and license in the mod list, cleanup ([docs/NEW_IN_0.39.1.md](docs/NEW_IN_0.39.1.md)). **0.39.0:** rare field stations on land and drilling rigs on the ocean as new research outposts ([docs/NEW_IN_0.39.0.md](docs/NEW_IN_0.39.0.md)). **0.38.1:** fixes for Poolrooms, hotel stairs and ramps ([docs/NEW_IN_0.38.1.md](docs/NEW_IN_0.38.1.md)). **0.38.0:** the Underside Key needs the cinema Ticket Stub; new quests for the cinema, hotel, slides and Aranea Membri ([docs/NEW_IN_0.38.0.md](docs/NEW_IN_0.38.0.md)). **0.37.1:** fixes for the cinema stairs, Aranea spawns and Hazard Zones in the cinema ([docs/NEW_IN_0.37.1.md](docs/NEW_IN_0.37.1.md)). **0.37.0:** the Abandoned Cinema is a three-floor multiplex with 36 screens, a lobby atrium with galleries and freestanding stairs ([docs/NEW_IN_0.37.0.md](docs/NEW_IN_0.37.0.md)). **0.36.1:** Refurbished Furniture in the Hotel and the Neighbourhood. **0.36.0:** the Hotel is a labyrinth of small rooms with a purpose, winding corridors and L-shaped staircases over seven storeys; more storeys and new room kinds for the Industrial Complex, Level Fun and the Neighbourhood (new worlds). See [docs/NEW_IN_0.36.0.md](docs/NEW_IN_0.36.0.md).
 
@@ -39,6 +39,8 @@
 > **New in 0.10.0 (beta):** requires **GeckoLib** (Forge 1.20.1, 4.4+). First redesigned creature: the Gaunt with a new model and animations. See [docs/NEW_IN_0.10.0.md](docs/NEW_IN_0.10.0.md).
 >
 > **New in 0.9.0 (beta):** elevators, sound hints for megastructures, flickering lights near creatures, secure storage rooms for Level Access Cards, much faster OfficeCraft furniture with shader packs. See [docs/NEW_IN_0.9.0.md](docs/NEW_IN_0.9.0.md).
+>
+> **New in 0.43.0:** the Dead Mall: a three-floor shopping centre with escalators, food court, service corridors and Aranea Membri in the ceilings. See [docs/NEW_IN_0.43.0.md](docs/NEW_IN_0.43.0.md).
 >
 > **New in 0.42.0:** the SS Fun =): a foggy sea dimension with endless cruise ships and the Mascot, reached through rare departure gates. See [docs/NEW_IN_0.42.0.md](docs/NEW_IN_0.42.0.md).
 >

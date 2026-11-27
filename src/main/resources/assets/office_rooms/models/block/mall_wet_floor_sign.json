@@ -1,0 +1,105 @@
+{
+ "parent": "minecraft:block/block",
+ "textures": {
+  "y": "office_rooms:block/mall_wet_floor",
+  "particle": "office_rooms:block/mall_wet_floor"
+ },
+ "elements": [
+  {
+   "from": [
+    4,
+    0,
+    6
+   ],
+   "to": [
+    12,
+    13,
+    7
+   ],
+   "faces": {
+    "north": {
+     "texture": "#y"
+    },
+    "south": {
+     "texture": "#y"
+    },
+    "east": {
+     "texture": "#y"
+    },
+    "west": {
+     "texture": "#y"
+    },
+    "up": {
+     "texture": "#y"
+    },
+    "down": {
+     "texture": "#y"
+    }
+   }
+  },
+  {
+   "from": [
+    4,
+    0,
+    9
+   ],
+   "to": [
+    12,
+    13,
+    10
+   ],
+   "faces": {
+    "north": {
+     "texture": "#y"
+    },
+    "south": {
+     "texture": "#y"
+    },
+    "east": {
+     "texture": "#y"
+    },
+    "west": {
+     "texture": "#y"
+    },
+    "up": {
+     "texture": "#y"
+    },
+    "down": {
+     "texture": "#y"
+    }
+   }
+  },
+  {
+   "from": [
+    4,
+    12,
+    6
+   ],
+   "to": [
+    12,
+    13,
+    10
+   ],
+   "faces": {
+    "north": {
+     "texture": "#y"
+    },
+    "south": {
+     "texture": "#y"
+    },
+    "east": {
+     "texture": "#y"
+    },
+    "west": {
+     "texture": "#y"
+    },
+    "up": {
+     "texture": "#y"
+    },
+    "down": {
+     "texture": "#y"
+    }
+   }
+  }
+ ]
+}

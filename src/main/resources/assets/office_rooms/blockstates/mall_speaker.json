@@ -1,0 +1,20 @@
+{
+ "variants": {
+  "facing=north": {
+   "model": "office_rooms:block/mall_speaker",
+   "y": 0
+  },
+  "facing=east": {
+   "model": "office_rooms:block/mall_speaker",
+   "y": 90
+  },
+  "facing=south": {
+   "model": "office_rooms:block/mall_speaker",
+   "y": 180
+  },
+  "facing=west": {
+   "model": "office_rooms:block/mall_speaker",
+   "y": 270
+  }
+ }
+}

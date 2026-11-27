@@ -126,6 +126,7 @@ public final class MobSpawner {
                         && !p.megaContains(player.getBlockX(), player.getBlockY(), player.getBlockZ()))
                 spawnAround(level, p, player, ModEntities.ARANEA.get(), null, 0, wardenRooms, WARDEN_RADIUS, WARDEN_STOREYS, 40, 1, 24);
                 cinema(level, p, player);
+                mall(level, p, player);
                 if (level.random.nextDouble() < OfficeRoomsConfig.WARDEN_SPAWN_CHANCE.get())
                 spawnAround(level, p, player, ModEntities.HEADLESS_WARDEN.get(), null, 0, wardenRooms, WARDEN_RADIUS, WARDEN_STOREYS,
                         OfficeRoomsConfig.WARDEN_ROOMS_PER_MOB.get(), OfficeRoomsConfig.WARDEN_MAX_NEAR_PLAYER.get(),
@@ -410,6 +411,23 @@ public final class MobSpawner {
         AABB band = new AABB(baseX, fy, baseZ, baseX + p.regionBlocks, fy + de.officerooms.megastructure.Cinema.FH, baseZ + p.regionBlocks);
         if (level.getEntities(ModEntities.ARANEA.get(), band.inflate(8, 0, 8), e -> e.isAlive()).isEmpty()) {
             spawnInBand(level, p, site.rx, site.rz, site.yBase + fl * de.officerooms.megastructure.Cinema.FH + 1, player, ModEntities.ARANEA.get(), 20, 56, null);
+        }
+    }
+
+    /** 0.43.0: the Dead Mall: Aranea Membri nests in its ceilings, at most one per mall floor. */
+    private static void mall(ServerLevel level, OfficePlanner p, ServerPlayer player) {
+        de.officerooms.megastructure.Mall.Site site = p.mall.at(player.getBlockX(), player.getBlockY(), player.getBlockZ());
+        if (site == null || level.random.nextDouble() >= OfficeRoomsConfig.ARANEA_MALL_CHANCE.get()) {
+            return;
+        }
+        int baseX = site.rx * p.regionBlocks;
+        int baseZ = site.rz * p.regionBlocks;
+        int fh = de.officerooms.megastructure.Mall.FH;
+        int fl = Math.max(0, Math.min(de.officerooms.megastructure.Mall.FLOORS - 1, (player.getBlockY() - site.yBase) / fh));
+        int fy = site.yBase + fl * fh;
+        AABB band = new AABB(baseX, fy, baseZ, baseX + p.regionBlocks, fy + fh, baseZ + p.regionBlocks);
+        if (level.getEntities(ModEntities.ARANEA.get(), band.inflate(8, 0, 8), e -> e.isAlive()).isEmpty()) {
+            spawnInBand(level, p, site.rx, site.rz, fy + 1, player, ModEntities.ARANEA.get(), 20, 56, null);
         }
     }
 

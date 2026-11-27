@@ -148,7 +148,7 @@ public final class RoomFurnisher {
     }
 
     private Result run() {
-        if (p.pools.overlaps(rx, rz, r) || p.hood.overlaps(rx, rz, r) || p.maze.overlaps(rx, rz, r) || p.hotel.overlaps(rx, rz, r) || p.industrial.overlaps(rx, rz, r) || p.fun.overlaps(rx, rz, r) || p.cinema.overlaps(rx, rz, r)) {
+        if (p.pools.overlaps(rx, rz, r) || p.hood.overlaps(rx, rz, r) || p.maze.overlaps(rx, rz, r) || p.hotel.overlaps(rx, rz, r) || p.industrial.overlaps(rx, rz, r) || p.fun.overlaps(rx, rz, r) || p.cinema.overlaps(rx, rz, r) || p.mall.overlaps(rx, rz, r)) {
             // im Band der Poolrooms gibt es keine Büroeinrichtung
             return new Result(RoomType.EMPTY, "none", List.of());
         }

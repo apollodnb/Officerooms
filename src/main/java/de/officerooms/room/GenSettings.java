@@ -40,6 +40,11 @@ public record GenSettings(
         return contentVersion >= 2;
     }
 
+    /** 0.43.0: content version 3: the Dead Mall. */
+    public boolean v3() {
+        return contentVersion >= 3;
+    }
+
     /**
      * Raster.
      *

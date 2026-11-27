@@ -1,0 +1,8 @@
+{
+ "parent": "minecraft:block/stairs",
+ "textures": {
+  "bottom": "office_rooms:block/mall_escalator_side",
+  "top": "office_rooms:block/mall_escalator_top",
+  "side": "office_rooms:block/mall_escalator_side"
+ }
+}

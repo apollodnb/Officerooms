@@ -120,6 +120,8 @@ public final class OfficeRoomsConfig {
     public static final ForgeConfigSpec.DoubleValue ARANEA_DAMAGE;
     public static final ForgeConfigSpec.DoubleValue ARANEA_SPAWN_CHANCE;
     public static final ForgeConfigSpec.DoubleValue ARANEA_CINEMA_CHANCE;
+    /** 0.43.0 */
+    public static final ForgeConfigSpec.DoubleValue ARANEA_MALL_CHANCE;
     public static final ForgeConfigSpec.BooleanValue INSTALL_QUESTS;
     public static final ForgeConfigSpec.DoubleValue FLAYED_CHASE_MULTIPLIER;
     public static final ForgeConfigSpec.IntValue FLAYED_CHASE_SECONDS;
@@ -435,6 +437,8 @@ public final class OfficeRoomsConfig {
                 .defineInRange("spawnChance", 0.002, 0.0, 1.0);
         ARANEA_CINEMA_CHANCE = b.comment("Chance per spawn check while a player is inside an Abandoned Cinema (at most one per cinema floor)")
                 .defineInRange("cinemaChance", 0.12, 0.0, 1.0);
+        ARANEA_MALL_CHANCE = b.comment("0.43.0: chance per spawn check while a player is inside a Dead Mall (at most one per mall floor)")
+                .defineInRange("mallChance", 0.12, 0.0, 1.0);
         b.pop();
 
         b.comment("0.42.0: the SS Fun =) and its Mascot. Departure gates are rare special rooms in new worlds.").push("ss_fun");

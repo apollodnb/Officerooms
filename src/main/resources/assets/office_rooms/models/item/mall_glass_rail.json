@@ -1,0 +1,7 @@
+{
+ "parent": "minecraft:item/generated",
+ "textures": {
+  "layer0": "office_rooms:block/mall_glass_rail"
+ },
+ "render_type": "minecraft:translucent"
+}

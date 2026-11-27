@@ -16,7 +16,7 @@ import de.officerooms.room.Room;
 public final class Megastructures {
 
     public enum Kind {
-        NONE, POOLROOMS, NEIGHBOURHOOD, MAZE, HOTEL, INDUSTRIAL, LEVEL_FUN, CINEMA
+        NONE, POOLROOMS, NEIGHBOURHOOD, MAZE, HOTEL, INDUSTRIAL, LEVEL_FUN, CINEMA, MALL
     }
 
     private Megastructures() {
@@ -49,6 +49,9 @@ public final class Megastructures {
         }
         if (u < 6 * c && p.cfg.modern()) {
             return Kind.CINEMA;               // 0.31.0, new worlds only
+        }
+        if (u < 7 * c && p.cfg.v3()) {
+            return Kind.MALL;                 // 0.43.0, worlds from 0.43.0 on
         }
         return Kind.NONE;
     }
@@ -88,6 +91,10 @@ public final class Megastructures {
             case CINEMA -> {
                 var s = p.cinema.site(rx, rz);
                 return s == null ? null : new int[]{bx + 80, s.yBase + 1, bz + 84};
+            }
+            case MALL -> {
+                var s = p.mall.site(rx, rz);
+                return s == null ? null : new int[]{bx + 80, s.yBase + 1, bz + 100};
             }
             default -> {
                 return null;

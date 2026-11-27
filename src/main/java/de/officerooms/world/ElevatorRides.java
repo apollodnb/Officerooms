@@ -549,6 +549,15 @@ public final class ElevatorRides {
                         }
                     }
                     if (c == null) {
+                        de.officerooms.megastructure.Mall.Site ms = p.mall.site(rx, rz);
+                        if (ms != null) {
+                            c = new BlockPos(bx + 80, ms.yBase + 1, bz + 100);
+                            s0 = ms.s0;
+                            n = de.officerooms.megastructure.Mall.STOREYS;
+                            name = "Mall";
+                        }
+                    }
+                    if (c == null) {
                         LevelFun.Site f = p.fun.site(rx, rz);
                         if (f != null) {
                             c = new BlockPos(bx + 80, f.yBase + 1, bz + 80);

@@ -32,7 +32,9 @@ public enum SpecialType {
     /** 0.31.0: room lies in the band of the abandoned cinema. */
     CINEMA("cinema"),
     /** 0.42.0: departure gate to the SS Fun =) (content version 2). */
-    DEPARTURE_GATE("departure_gate");
+    DEPARTURE_GATE("departure_gate"),
+    /** 0.43.0: room lies in the band of the Dead Mall. */
+    MALL("mall");
 
     public final String id;
 
@@ -43,7 +45,7 @@ public enum SpecialType {
     /** Spezialräume schließen alle Öffnungen bis auf eine Tür (Villager, Wasser). */
     /** Megastructure placeholder: the room is replaced by the megastructure's own architecture. */
     public boolean isMegastructure() {
-        return this == POOLROOMS || this == NEIGHBOURHOOD || this == MAZE || this == HOTEL || this == INDUSTRIAL || this == LEVEL_FUN || this == CINEMA;
+        return this == POOLROOMS || this == NEIGHBOURHOOD || this == MAZE || this == HOTEL || this == INDUSTRIAL || this == LEVEL_FUN || this == CINEMA || this == MALL;
     }
 
     public boolean sealsOpenings() {

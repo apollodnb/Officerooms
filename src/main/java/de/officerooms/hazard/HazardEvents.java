@@ -217,7 +217,7 @@ public final class HazardEvents {
         return false;
     }
 
-    private static final String[] NAMES = {"", "Poolrooms", "Neighbourhood", "The Maze", "Abandoned Hotel", "Industrial Complex", "Level Fun", "Abandoned Cinema"};
+    private static final String[] NAMES = {"", "Poolrooms", "Neighbourhood", "The Maze", "Abandoned Hotel", "Industrial Complex", "Level Fun", "Abandoned Cinema", "Dead Mall"};
 
     /** {s0, storeys, kind ordinal} of the megastructure in a region, or null. */
     static int[] band(OfficePlanner p, int rx, int rz) {
@@ -272,6 +272,14 @@ public final class HazardEvents {
                 }
                 s0 = s.s0;
                 n = de.officerooms.megastructure.Cinema.STOREYS;
+            }
+            case MALL -> {
+                var s = p.mall.site(rx, rz);
+                if (s == null) {
+                    return null;
+                }
+                s0 = s.s0;
+                n = de.officerooms.megastructure.Mall.STOREYS;
             }
             case LEVEL_FUN -> {
                 var s = p.fun.site(rx, rz);

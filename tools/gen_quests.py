@@ -319,6 +319,13 @@ quest('master', 'Master Key', 'Every door, for a while',
 quest('cinema_top', 'Screens 25 to 36', 'The top floor',
       ['The stairs in the cinema lobby climb past two galleries. Reach the third floor.', 'Mind the railings. They are not everywhere.'],
       [adv('cinema_top')], [give('office_coin', 4), xp(120)], deps=['find_cinema'], x=6.5, y=9, optional=True, icon='cinema_seat')
+quest('find_mall', 'The Dead Mall', 'Always open',
+      ['Three floors of shops around atriums under grey skylights. The escalators stopped long ago, the fountain is dry, the music still plays.',
+       'Something lives above the ceiling tiles. Only in worlds made with 0.43.0 or newer.'],
+      [adv('discover_mall')], [table('supplies'), xp(150)], deps=['mega_start'], x=2.5, y=10.5, shape='circle', optional=True, icon='mall_escalator')
+quest('mall_dept', 'Closed for Inventory', 'Behind the shops',
+      ['The department stores of the mall have no entrance from the concourse. Find the door marked STAFF ONLY and follow the service corridor.'],
+      [adv('mall_dept')], [give('office_coin', 4), xp(120)], deps=['find_mall'], x=4.5, y=10.5, optional=True, icon='mall_clothes_rack')
 quest('hotel_top', 'Top Floor, No Vacancy', 'Through the labyrinth',
       ['The hotel corridors twist and the staircases turn. Find your way to the highest guest floor.', 'Only in worlds made with 0.36.0 or newer.'],
       [adv('hotel_top')], [table('supplies'), xp(150)], deps=['find_hotel'], x=6.5, y=4.5, optional=True, icon='hotel_bed')
@@ -522,6 +529,8 @@ HOW = {
     'ss_mascot': 'Aboard the SS Fun =): it hides in the ceiling vents. Walk under a dripping vent, or stare down a corridor.',
     'ss_escape': 'Find the one staircase that goes past deck 8, reach the promenade on deck 10 and right-click a red lifeboat handle.',
     'cinema_top': 'Find an Abandoned Cinema and climb the stairs in its lobby atrium to the third floor (screens 25 to 36).',
+    'find_mall': 'Find a Dead Mall (new worlds from 0.43.0). /officerooms locate mall shows the nearest one.',
+    'mall_dept': 'Enter one of the four closed department stores of a Dead Mall through the service corridors (STAFF ONLY doors).',
     'hotel_top': 'Climb the staircases of an Abandoned Hotel up to its highest guest floor.',
     'slide': 'Find a round slide opening in an office wall (rare, worlds made with 0.35.0+) and right-click it.',
     'find_': 'Explore the Office Rooms: megastructures fill whole regions on certain storeys. Walking into one counts.',

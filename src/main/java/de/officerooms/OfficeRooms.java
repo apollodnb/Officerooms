@@ -35,6 +35,8 @@ public final class OfficeRooms {
         de.officerooms.outpost.OutpostBlocks.init();
         de.officerooms.level0.Level0Blocks.init();
         de.officerooms.megastructure.CinemaBlocks.init();
+        de.officerooms.megastructure.MallBlocks.init();
+        de.officerooms.worldgen.ContentVersion.register();
         de.officerooms.megastructure.PoolBlocks.init();
         de.officerooms.block.RoomDecorBlocks.init();
         de.officerooms.block.CuriosityBlocks.init();

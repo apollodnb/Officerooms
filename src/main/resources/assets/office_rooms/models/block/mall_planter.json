@@ -1,0 +1,42 @@
+{
+ "parent": "minecraft:block/block",
+ "textures": {
+  "a": "office_rooms:block/mall_planter",
+  "t": "office_rooms:block/mall_planter_top",
+  "particle": "office_rooms:block/mall_planter"
+ },
+ "elements": [
+  {
+   "from": [
+    0,
+    0,
+    0
+   ],
+   "to": [
+    16,
+    16,
+    16
+   ],
+   "faces": {
+    "north": {
+     "texture": "#a"
+    },
+    "south": {
+     "texture": "#a"
+    },
+    "east": {
+     "texture": "#a"
+    },
+    "west": {
+     "texture": "#a"
+    },
+    "up": {
+     "texture": "#t"
+    },
+    "down": {
+     "texture": "#a"
+    }
+   }
+  }
+ ]
+}
