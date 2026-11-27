@@ -79,7 +79,6 @@ dependencies {
     implementation fg.deobf("local:geckolib-forge-1.20.1-4.8.4:0")
 
     def optionalMods = [
-        'GameFantom-OfficeCraft-Forge-1.20.1-1.0.3',
         'refurbished_furniture-forge-1.20.1-1.0.20',
         'framework-forge-1.20.1-0.7.15',
         // 0.25.0: quest book tests only (never bundled)

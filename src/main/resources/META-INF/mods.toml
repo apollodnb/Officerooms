@@ -10,7 +10,7 @@ authors="${mod_authors}"
 description='''${mod_description}'''
 logoFile="office_rooms_logo.png"
 logoBlur=false
-credits="Concept, design, music and sounds: Apollo - Developed with Claude (Anthropic) - Optional furniture: GameFantom OfficeCraft, MrCrayfish's Refurbished Furniture (not included) - Creature models made with GeckoLib"
+credits="Concept, design, music and sounds: Apollo - Developed with Claude (Anthropic) - Optional furniture: MrCrayfish's Refurbished Furniture (not included) - Creature models made with GeckoLib"
 
 [[dependencies.${mod_id}]]
     modId="forge"
@@ -31,13 +31,6 @@ credits="Concept, design, music and sounds: Apollo - Developed with Claude (Anth
     modId="geckolib"
     mandatory=true
     versionRange="[4.4,)"
-    ordering="AFTER"
-    side="BOTH"
-
-[[dependencies.${mod_id}]]
-    modId="gamefantom_officecraft"
-    mandatory=false
-    versionRange="[1.0.3,)"
     ordering="AFTER"
     side="BOTH"
 

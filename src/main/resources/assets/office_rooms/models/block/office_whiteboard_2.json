@@ -1,0 +1,79 @@
+{
+ "parent": "minecraft:block/block",
+ "textures": {
+  "w0": "office_rooms:block/office_whiteboard_0",
+  "w1": "office_rooms:block/office_whiteboard_1",
+  "w2": "office_rooms:block/office_whiteboard_2",
+  "w3": "office_rooms:block/office_whiteboard_3",
+  "w4": "office_rooms:block/office_whiteboard_4",
+  "w5": "office_rooms:block/office_whiteboard_5",
+  "f": "office_rooms:block/office_partition_trim",
+  "particle": "office_rooms:block/office_whiteboard_0"
+ },
+ "elements": [
+  {
+   "from": [
+    0,
+    4,
+    7.5
+   ],
+   "to": [
+    16,
+    16,
+    8.5
+   ],
+   "faces": {
+    "north": {
+     "texture": "#w2"
+    },
+    "south": {
+     "texture": "#w2"
+    },
+    "east": {
+     "texture": "#f"
+    },
+    "west": {
+     "texture": "#f"
+    },
+    "up": {
+     "texture": "#f"
+    },
+    "down": {
+     "texture": "#f"
+    }
+   }
+  },
+  {
+   "from": [
+    7,
+    0,
+    6
+   ],
+   "to": [
+    9,
+    4,
+    10
+   ],
+   "faces": {
+    "north": {
+     "texture": "#f"
+    },
+    "south": {
+     "texture": "#f"
+    },
+    "east": {
+     "texture": "#f"
+    },
+    "west": {
+     "texture": "#f"
+    },
+    "up": {
+     "texture": "#f"
+    },
+    "down": {
+     "texture": "#f"
+    }
+   }
+  }
+ ]
+}

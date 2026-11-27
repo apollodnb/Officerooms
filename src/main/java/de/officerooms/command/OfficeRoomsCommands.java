@@ -70,7 +70,21 @@ public final class OfficeRoomsCommands {
                         .then(Commands.literal("stop").executes(ctx -> hazard(ctx.getSource(), "stop"))))
                 .then(Commands.literal("info").executes(OfficeRoomsCommands::info))
                 .then(Commands.literal("stats").executes(OfficeRoomsCommands::stats))
-                .then(Commands.literal("furniture").executes(OfficeRoomsCommands::furniture))
+                .then(Commands.literal("furniture").executes(OfficeRoomsCommands::furniture)
+                        .then(Commands.literal("showcase").executes(ctx -> {
+                            // 0.44.0: every piece of office furniture in a row in front of the player (for screenshots)
+                            ServerPlayer pl = ctx.getSource().getPlayerOrException();
+                            BlockPos base = pl.blockPosition().relative(pl.getDirection(), 4);
+                            net.minecraft.core.Direction along = pl.getDirection().getClockWise();
+                            int k = 0;
+                            for (String id : new String[]{"office_desk", "cubicle_workstation", "cubicle_partitions", "chair_black", "chair_gray", "chair_brown",
+                                    "conference_medium", "presentation_board", "water_cooler", "vending_machine", "printer", "coffee_machine"}) {
+                                de.officerooms.block.OfficeFurniture.place(pl.serverLevel(), base.relative(along, k), id, pl.getDirection().getOpposite(), 3);
+                                k += id.startsWith("conference") ? 7 : id.contains("desk") || id.contains("cubicle") || id.contains("board") ? 4 : 2;
+                            }
+                            say(ctx.getSource(), "Office furniture placed.");
+                            return 1;
+                        })))
                 .then(Commands.literal("mobs").executes(OfficeRoomsCommands::mobs))
                 .then(Commands.literal("find").then(Commands.argument("block", net.minecraft.commands.arguments.blocks.BlockStateArgument.block(ctxBuild))
                         .then(Commands.argument("radius", IntegerArgumentType.integer(1, 64)).executes(ctx -> {
@@ -1048,19 +1062,12 @@ public final class OfficeRoomsCommands {
     /** Diagnose: erkannte Möbel-Mods und tatsächliche Belegung der OfficeCraft-Möbel je Ausrichtung. */
     private static int furniture(CommandContext<CommandSourceStack> ctx) {
         CommandSourceStack src = ctx.getSource();
-        say(src, "OfficeCraft: " + de.officerooms.compat.OfficeCraftCompat.isAvailable()
-                + ", Refurbished: " + net.minecraftforge.fml.ModList.get().isLoaded("refurbished_furniture"));
-        if (!de.officerooms.compat.OfficeCraftCompat.isAvailable()) {
-            return 1;
-        }
-        for (net.minecraft.world.level.block.Block b : net.minecraft.core.registries.BuiltInRegistries.BLOCK) {
-            net.minecraft.resources.ResourceLocation id = net.minecraft.core.registries.BuiltInRegistries.BLOCK.getKey(b);
-            if (!id.getNamespace().equals(de.officerooms.compat.OfficeCraftCompat.MOD_ID)) {
-                continue;
-            }
-            StringBuilder sb = new StringBuilder(id.getPath()).append(" props=").append(b.getStateDefinition().getProperties());
+        say(src, "Office furniture: built in (0.44.0), Refurbished: " + net.minecraftforge.fml.ModList.get().isLoaded("refurbished_furniture"));
+        for (String id : new String[]{"office_desk", "cubicle_workstation", "cubicle_partitions", "chair_gray", "conference_large", "conference_medium",
+                "presentation_board", "water_cooler", "vending_machine", "printer", "coffee_machine"}) {
+            StringBuilder sb = new StringBuilder(id);
             for (net.minecraft.core.Direction d : net.minecraft.core.Direction.Plane.HORIZONTAL) {
-                java.util.List<BlockPos> cells = de.officerooms.compat.OfficeCraftCompat.cells(id.getPath(), d);
+                java.util.List<BlockPos> cells = de.officerooms.compat.OfficeCraftCompat.cells(id, d);
                 sb.append(" | ").append(d.getName()).append(':');
                 for (BlockPos c : cells) {
                     sb.append('(').append(c.getX()).append(',').append(c.getY()).append(',').append(c.getZ()).append(')');

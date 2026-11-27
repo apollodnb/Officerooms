@@ -409,8 +409,8 @@ public final class MobSpawner {
         int fl = Math.max(0, Math.min(de.officerooms.megastructure.Cinema.FLOORS - 1, (player.getBlockY() - site.yBase) / de.officerooms.megastructure.Cinema.FH));
         int fy = site.yBase + fl * de.officerooms.megastructure.Cinema.FH;
         AABB band = new AABB(baseX, fy, baseZ, baseX + p.regionBlocks, fy + de.officerooms.megastructure.Cinema.FH, baseZ + p.regionBlocks);
-        if (level.getEntities(ModEntities.ARANEA.get(), band.inflate(8, 0, 8), e -> e.isAlive()).isEmpty()) {
-            spawnInBand(level, p, site.rx, site.rz, site.yBase + fl * de.officerooms.megastructure.Cinema.FH + 1, player, ModEntities.ARANEA.get(), 20, 56, null);
+        if (level.getEntities(ModEntities.ARANEA.get(), band.inflate(8, 0, 8), e -> e.isAlive()).size() < 2) {     // 0.44.0: two per floor, closer
+            spawnInBand(level, p, site.rx, site.rz, site.yBase + fl * de.officerooms.megastructure.Cinema.FH + 1, player, ModEntities.ARANEA.get(), 14, 40, null);
         }
     }
 
@@ -426,8 +426,8 @@ public final class MobSpawner {
         int fl = Math.max(0, Math.min(de.officerooms.megastructure.Mall.FLOORS - 1, (player.getBlockY() - site.yBase) / fh));
         int fy = site.yBase + fl * fh;
         AABB band = new AABB(baseX, fy, baseZ, baseX + p.regionBlocks, fy + fh, baseZ + p.regionBlocks);
-        if (level.getEntities(ModEntities.ARANEA.get(), band.inflate(8, 0, 8), e -> e.isAlive()).isEmpty()) {
-            spawnInBand(level, p, site.rx, site.rz, fy + 1, player, ModEntities.ARANEA.get(), 20, 56, null);
+        if (level.getEntities(ModEntities.ARANEA.get(), band.inflate(8, 0, 8), e -> e.isAlive()).size() < 2) {     // 0.44.0: two per floor, closer
+            spawnInBand(level, p, site.rx, site.rz, fy + 1, player, ModEntities.ARANEA.get(), 14, 40, null);
         }
     }
 

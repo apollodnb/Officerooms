@@ -62,8 +62,6 @@ public final class ClientSetup {
         event.registerEntityRenderer(ModEntities.SMILER.get(), ctx -> new GeoMobRenderer<>(ctx, "smiler", 0.0F, 1.0F, false, false));
         event.registerEntityRenderer(ModEntities.HUNTER.get(), ctx -> new GeoMobRenderer<>(ctx, "hunter", 0.0F, 1.0F, false, true));
         event.registerEntityRenderer(ModEntities.COLONY.get(), ctx -> new GeoMobRenderer<>(ctx, "colony", 1.3F, 1.4F, false, false));
-        // nach OfficeCraft (mods.toml: ordering AFTER), ersetzt dessen Möbel-Renderer durch eine Hülle
-        OfficeCraftShaderCompat.register(event);
     }
 
     @SubscribeEvent

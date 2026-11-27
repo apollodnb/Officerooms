@@ -2,7 +2,7 @@
 
 *A new liminal dimension for Minecraft: an endless office full of empty halls, strange megastructures and things that move when you're not looking. You feel alone. Unfortunately, you're not.*
 
-**Version 0.43.0 (beta): a liminal office dimension with furniture, light, special rooms, megastructures, creatures, its own gear and music**
+**Version 0.44.0 (beta): a liminal office dimension with furniture, light, special rooms, megastructures, creatures, its own gear and music**
 
 > **New in 0.40.0 (beta):** the quest book installs itself when FTB Quests is present and merges into a modpack's quest book ([docs/NEW_IN_0.40.0.md](docs/NEW_IN_0.40.0.md)). **0.39.1:** logo, credits and license in the mod list, cleanup ([docs/NEW_IN_0.39.1.md](docs/NEW_IN_0.39.1.md)). **0.39.0:** rare field stations on land and drilling rigs on the ocean as new research outposts ([docs/NEW_IN_0.39.0.md](docs/NEW_IN_0.39.0.md)). **0.38.1:** fixes for Poolrooms, hotel stairs and ramps ([docs/NEW_IN_0.38.1.md](docs/NEW_IN_0.38.1.md)). **0.38.0:** the Underside Key needs the cinema Ticket Stub; new quests for the cinema, hotel, slides and Aranea Membri ([docs/NEW_IN_0.38.0.md](docs/NEW_IN_0.38.0.md)). **0.37.1:** fixes for the cinema stairs, Aranea spawns and Hazard Zones in the cinema ([docs/NEW_IN_0.37.1.md](docs/NEW_IN_0.37.1.md)). **0.37.0:** the Abandoned Cinema is a three-floor multiplex with 36 screens, a lobby atrium with galleries and freestanding stairs ([docs/NEW_IN_0.37.0.md](docs/NEW_IN_0.37.0.md)). **0.36.1:** Refurbished Furniture in the Hotel and the Neighbourhood. **0.36.0:** the Hotel is a labyrinth of small rooms with a purpose, winding corridors and L-shaped staircases over seven storeys; more storeys and new room kinds for the Industrial Complex, Level Fun and the Neighbourhood (new worlds). See [docs/NEW_IN_0.36.0.md](docs/NEW_IN_0.36.0.md).
 
@@ -39,6 +39,8 @@
 > **New in 0.10.0 (beta):** requires **GeckoLib** (Forge 1.20.1, 4.4+). First redesigned creature: the Gaunt with a new model and animations. See [docs/NEW_IN_0.10.0.md](docs/NEW_IN_0.10.0.md).
 >
 > **New in 0.9.0 (beta):** elevators, sound hints for megastructures, flickering lights near creatures, secure storage rooms for Level Access Cards, much faster OfficeCraft furniture with shader packs. See [docs/NEW_IN_0.9.0.md](docs/NEW_IN_0.9.0.md).
+>
+> **New in 0.44.0:** Office Rooms has its own office furniture (desks, cubicles, office chairs, conference tables, whiteboards, water coolers, printers, coffee machines); OfficeCraft is no longer needed. Aranea Membri is met more often in cinemas and malls. See [docs/NEW_IN_0.44.0.md](docs/NEW_IN_0.44.0.md).
 >
 > **New in 0.43.0:** the Dead Mall: a three-floor shopping centre with escalators, food court, service corridors and Aranea Membri in the ceilings. See [docs/NEW_IN_0.43.0.md](docs/NEW_IN_0.43.0.md).
 >
@@ -90,7 +92,6 @@ The dimension is home to the **Wolfspider** (rarely a tameable friendly variant)
 
 | Mod | Tested version | Used for |
 |---|---|---|
-| OfficeCraft (`gamefantom_officecraft`) | 1.0.3 | desks, cubicles, office chairs, conference tables, boards, printers, coffee machines, water coolers, vending machines, ceiling lights |
 | MrCrayfish's Furniture Mod: Refurbished (`refurbished_furniture`) | 1.0.20 | drawers, cabinets, kitchen counters, sink, fridge, microwave, tables and chairs |
 | Framework (`framework`) | 0.7.15+ / 0.8.0 | required by Refurbished, not by Office Rooms |
 
@@ -100,7 +101,7 @@ Both furniture mods are **optional**. Without them Office Rooms uses simple vani
 
 1. Install Minecraft 1.20.1 with **Forge 47.4.28**.
 2. Copy `OfficeRooms-0.40.0.jar` and GeckoLib into `.minecraft/mods`.
-3. Optionally add OfficeCraft 1.0.3 and Refurbished 1.0.20 (with Framework) to the same folder.
+3. Optionally add Refurbished 1.0.20 (with Framework) to the same folder. Office furniture is built in since 0.44.0 (OfficeCraft is no longer used).
 4. Survival: drop sand onto a sculk sensor to open a Liminal Rift. With cheats: `/officerooms enter`.
 
 **Server:** the JAR is needed on the server **and** on every client (creature models, music, dimension effects). The furniture mods must be present on server and clients alike, or missing on both.
@@ -135,7 +136,7 @@ All commands need permission level 2. Spawn eggs for all creatures and all items
 | Architecture, atriums, windows, room types, light, special rooms (`special_rooms`) | `data/office_rooms/dimension/office_rooms.json` (datapack, per world) |
 | Loot contents | `data/office_rooms/loot_tables/tiers/*.json` (datapack) |
 | Loot chances per room type and tier, creatures, spawns, performance | `config/office_rooms-common.toml` |
-| Lamp hum and heartbeat volume, music, OfficeCraft shader compatibility | `config/office_rooms-client.toml` |
+| Lamp hum and heartbeat volume, music | `config/office_rooms-client.toml` |
 
 ## 5. Documentation
 
@@ -149,7 +150,7 @@ All commands need permission level 2. Spawn eggs for all creatures and all items
 
 ## 6. Legal
 
-- Office Rooms does not embed foreign mod JARs and does not redistribute any of their content. Furniture is only referenced at runtime by registry ID when the mod is installed; the OfficeCraft shader compatibility reads OfficeCraft's meshes from the installed OfficeCraft JAR at runtime.
+- Office Rooms does not embed foreign mod JARs and does not redistribute any of their content. Refurbished furniture is only referenced at runtime by registry ID when the mod is installed.
 - The Headless Warden model references the vanilla texture `minecraft:textures/entity/warden/warden.png` at runtime; it is loaded from the installed game, not copied.
 - The music `sounds/music/office_rooms.ogg` is the recording supplied by the project owner (only converted to Ogg Vorbis). All other sounds and all own textures (creatures, lights, items, armor, blocks) were made for this project (`tools/gen_*.py`). The friendly Wolfspider uses the vanilla wolf sounds of the installed game.
 - The `libs/` folder (development only) is not part of the source archive.

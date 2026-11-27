@@ -138,7 +138,7 @@ public final class OfficeRoomsConfig {
     private static final java.util.Map<String, ForgeConfigSpec.ConfigValue<java.util.List<? extends Double>>> LOOT = new java.util.HashMap<>();
 
     /** 0.6.2: Spawn-Balance. Ältere Config-Dateien behalten sonst ihre alten Werte. */
-    public static final int CURRENT_BALANCE = 6;
+    public static final int CURRENT_BALANCE = 7;
     /** 0.29.0: curiosity room chances (copied into SpecialRooms.CURIO on load). */
     public static final ForgeConfigSpec.DoubleValue[] CURIO = new ForgeConfigSpec.DoubleValue[6];
 
@@ -164,6 +164,19 @@ public final class OfficeRoomsConfig {
 
     public static void applyBalance() {
         if (BALANCE_VERSION.get() >= CURRENT_BALANCE) {
+            return;
+        }
+        if (BALANCE_VERSION.get() == 6) {
+            // 0.44.0: Aranea Membri is met more often in cinemas and malls (only if still at the old defaults)
+            if (Math.abs(ARANEA_CINEMA_CHANCE.get() - 0.12) < 1e-9) {
+                ARANEA_CINEMA_CHANCE.set(ARANEA_CINEMA_CHANCE.getDefault());
+            }
+            if (Math.abs(ARANEA_MALL_CHANCE.get() - 0.12) < 1e-9) {
+                ARANEA_MALL_CHANCE.set(ARANEA_MALL_CHANCE.getDefault());
+            }
+            BALANCE_VERSION.set(CURRENT_BALANCE);
+            BALANCE_VERSION.save();
+            de.officerooms.OfficeRooms.LOGGER.info("Office Rooms: balance 7 applied to the config.");
             return;
         }
         if (BALANCE_VERSION.get() == 5) {
@@ -435,10 +448,10 @@ public final class OfficeRoomsConfig {
         ARANEA_DAMAGE = b.defineInRange("damage", 9.0, 0.0, 4096.0);
         ARANEA_SPAWN_CHANCE = b.comment("Chance per spawn check (every 3 seconds, per player) in the normal Office Rooms. 0.002 = rare")
                 .defineInRange("spawnChance", 0.002, 0.0, 1.0);
-        ARANEA_CINEMA_CHANCE = b.comment("Chance per spawn check while a player is inside an Abandoned Cinema (at most one per cinema floor)")
-                .defineInRange("cinemaChance", 0.12, 0.0, 1.0);
-        ARANEA_MALL_CHANCE = b.comment("0.43.0: chance per spawn check while a player is inside a Dead Mall (at most one per mall floor)")
-                .defineInRange("mallChance", 0.12, 0.0, 1.0);
+        ARANEA_CINEMA_CHANCE = b.comment("Chance per spawn check while a player is inside an Abandoned Cinema (at most two per cinema floor)")
+                .defineInRange("cinemaChance", 0.3, 0.0, 1.0);
+        ARANEA_MALL_CHANCE = b.comment("0.43.0: chance per spawn check while a player is inside a Dead Mall (at most two per mall floor)")
+                .defineInRange("mallChance", 0.3, 0.0, 1.0);
         b.pop();
 
         b.comment("0.42.0: the SS Fun =) and its Mascot. Departure gates are rare special rooms in new worlds.").push("ss_fun");
