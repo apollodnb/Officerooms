@@ -4,9 +4,9 @@ import com.mojang.serialization.Codec;
 import de.officerooms.core.OfficeRoomsIds;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.chunk.ChunkGenerator;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredRegister;
+import net.neoforged.neoforge.registries.DeferredHolder;
 
 /**
  * Registriert den Codec des Office-Rooms-Chunk-Generators unter {@code office_rooms:office_rooms}.
@@ -17,7 +17,7 @@ public final class OfficeWorldgen {
     public static final DeferredRegister<Codec<? extends ChunkGenerator>> CHUNK_GENERATORS =
             DeferredRegister.create(Registries.CHUNK_GENERATOR, OfficeRoomsIds.MOD_ID);
 
-    public static final RegistryObject<Codec<OfficeChunkGenerator>> OFFICE =
+    public static final DeferredHolder<Codec<OfficeChunkGenerator>> OFFICE =
             CHUNK_GENERATORS.register("office_rooms", () -> OfficeChunkGenerator.CODEC);
     static {
         CHUNK_GENERATORS.register("underside", () -> de.officerooms.underside.UndersideChunkGenerator.CODEC);

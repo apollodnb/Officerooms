@@ -29,13 +29,13 @@ public final class ShipShape {
     static final BlockState WATER = Blocks.WATER.defaultBlockState();
     private static final BlockState NOFLIGHT = Blocks.STRUCTURE_VOID.defaultBlockState();
 
-    static BlockState b(net.minecraftforge.registries.RegistryObject<Block> r) {
+    static BlockState b(net.neoforged.neoforge.registries.DeferredHolder<Block> r) {
         return r.get().defaultBlockState();
     }
 
     /** A block of this mod (or another) by id, or air when it is missing. */
     static BlockState id(String id) {
-        Block bl = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(id.contains(":") ? id : "office_rooms:" + id));
+        Block bl = ForgeRegistries.BLOCKS.getValue(ResourceLocation.parse(id.contains(":") ? id : "office_rooms:" + id));
         return bl == null ? AIR : bl.defaultBlockState();
     }
 

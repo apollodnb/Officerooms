@@ -1,0 +1,172 @@
+{
+ "type": "minecraft:chest",
+ "pools": [
+  {
+   "rolls": 1,
+   "entries": [
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:netherite_sword",
+     "weight": 40,
+     "functions": [
+      {
+       "function": "minecraft:enchant_with_levels",
+       "levels": {
+        "type": "minecraft:uniform",
+        "min": 30,
+        "max": 39
+       },
+       "treasure": true
+      }
+     ]
+    },
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:netherite_pickaxe",
+     "weight": 40,
+     "functions": [
+      {
+       "function": "minecraft:enchant_with_levels",
+       "levels": {
+        "type": "minecraft:uniform",
+        "min": 30,
+        "max": 39
+       },
+       "treasure": true
+      }
+     ]
+    },
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:netherite_helmet",
+     "weight": 20,
+     "functions": [
+      {
+       "function": "minecraft:enchant_with_levels",
+       "levels": {
+        "type": "minecraft:uniform",
+        "min": 30,
+        "max": 39
+       },
+       "treasure": true
+      }
+     ]
+    },
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:netherite_chestplate",
+     "weight": 20,
+     "functions": [
+      {
+       "function": "minecraft:enchant_with_levels",
+       "levels": {
+        "type": "minecraft:uniform",
+        "min": 30,
+        "max": 39
+       },
+       "treasure": true
+      }
+     ]
+    },
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:netherite_leggings",
+     "weight": 20,
+     "functions": [
+      {
+       "function": "minecraft:enchant_with_levels",
+       "levels": {
+        "type": "minecraft:uniform",
+        "min": 30,
+        "max": 39
+       },
+       "treasure": true
+      }
+     ]
+    },
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:netherite_boots",
+     "weight": 20,
+     "functions": [
+      {
+       "function": "minecraft:enchant_with_levels",
+       "levels": {
+        "type": "minecraft:uniform",
+        "min": 30,
+        "max": 39
+       },
+       "treasure": true
+      }
+     ]
+    },
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:book",
+     "weight": 70,
+     "functions": [
+      {
+       "function": "minecraft:enchant_with_levels",
+       "levels": {
+        "type": "minecraft:uniform",
+        "min": 30,
+        "max": 39
+       },
+       "treasure": true
+      }
+     ]
+    },
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:enchanted_golden_apple",
+     "weight": 40
+    },
+    {
+     "type": "minecraft:item",
+     "name": "office_rooms:multidimensional_rod",
+     "weight": 30
+    },
+    {
+     "type": "minecraft:item",
+     "name": "office_rooms:glitched_ingot",
+     "weight": 10
+    },
+    {
+     "type": "minecraft:item",
+     "name": "office_rooms:totem_of_mercy",
+     "weight": 5
+    },
+    {
+     "type": "minecraft:item",
+     "name": "office_rooms:witherfang",
+     "weight": 10
+    },
+    {
+     "type": "minecraft:item",
+     "name": "office_rooms:leaden_edge",
+     "weight": 10
+    },
+    {
+     "type": "minecraft:item",
+     "name": "office_rooms:venomtongue",
+     "weight": 10
+    },
+    {
+     "type": "minecraft:item",
+     "name": "office_rooms:level_1_access_card",
+     "weight": 2
+    },
+    {
+     "type": "minecraft:item",
+     "name": "office_rooms:level_2_access_card",
+     "weight": 1
+    },
+    {
+     "type": "minecraft:item",
+     "name": "office_rooms:master_key",
+     "weight": 5
+    }
+   ]
+  }
+ ]
+}

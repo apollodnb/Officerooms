@@ -1,0 +1,36 @@
+{
+ "type": "minecraft:crafting_shapeless",
+ "category": "misc",
+ "ingredients": [
+  {
+   "item": "office_rooms:chlorine_pearl"
+  },
+  {
+   "item": "office_rooms:faded_photograph"
+  },
+  {
+   "item": "office_rooms:thread_of_the_maze"
+  },
+  {
+   "item": "office_rooms:room_key_000"
+  },
+  {
+   "item": "office_rooms:humming_fuse"
+  },
+  {
+   "item": "office_rooms:party_smile_badge"
+  },
+  {
+   "item": "office_rooms:ticket_stub"
+  },
+  {
+   "item": "office_rooms:you_are_here_pin"
+  },
+  {
+   "item": "office_rooms:captains_compass"
+  }
+ ],
+ "result": {
+  "id": "office_rooms:underside_key"
+ }
+}

@@ -46,7 +46,7 @@ public final class ShrinePiece extends StructurePiece {
     private static final int S = ShrineStructure.SIZE;
     private static final int F = 4;
     private static final int H = 12;
-    private static final ResourceLocation LOOT = new ResourceLocation(OfficeRoomsIds.MOD_ID, "chests/office_shrine");
+    private static final ResourceLocation LOOT = ResourceLocation.fromNamespaceAndPath(OfficeRoomsIds.MOD_ID, "chests/office_shrine");
 
     private final long seed;
 

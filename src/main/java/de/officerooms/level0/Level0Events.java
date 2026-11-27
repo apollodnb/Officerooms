@@ -29,15 +29,15 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.event.entity.EntityJoinLevelEvent;
-import net.minecraftforge.event.entity.EntityTeleportEvent;
-import net.minecraftforge.event.entity.living.LivingAttackEvent;
-import net.minecraftforge.event.level.BlockEvent;
-import net.minecraftforge.event.level.ExplosionEvent;
-import net.minecraftforge.eventbus.api.EventPriority;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.tick.ServerTickEvent;
+import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
+import net.neoforged.neoforge.event.entity.EntityTeleportEvent;
+import net.neoforged.neoforge.event.entity.living.LivingAttackEvent;
+import net.neoforged.neoforge.event.level.BlockEvent;
+import net.neoforged.neoforge.event.level.ExplosionEvent;
+import net.neoforged.bus.api.EventPriority;
+import net.neoforged.bus.api.SubscribeEvent;
 
 import java.util.List;
 import java.util.UUID;
@@ -49,7 +49,7 @@ import java.util.UUID;
  */
 public final class Level0Events {
 
-    public static final ResourceKey<Level> LEVEL_KEY = ResourceKey.create(Registries.DIMENSION, new ResourceLocation(OfficeRoomsIds.MOD_ID, "level_0"));
+    public static final ResourceKey<Level> LEVEL_KEY = ResourceKey.create(Registries.DIMENSION, ResourceLocation.fromNamespaceAndPath(OfficeRoomsIds.MOD_ID, "level_0"));
     static final String TICKET = "office_rooms_l0_ticket", FROM_X = "office_rooms_l0_x", FROM_Z = "office_rooms_l0_z", DRY = "office_rooms_l0_dry";
     public static final String IMMORTAL = "office_rooms.immortal";
 
@@ -61,7 +61,7 @@ public final class Level0Events {
     }
 
     public static void register() {
-        MinecraftForge.EVENT_BUS.register(Level0Events.class);
+        NeoForge.EVENT_BUS.register(Level0Events.class);
     }
 
     static boolean inLevel0(Entity e) {
@@ -185,7 +185,7 @@ public final class Level0Events {
 
     /** Emptying the bucket into the narrow hole fills the whole shaft (otherwise the water would only cover the bottom). */
     @SubscribeEvent
-    public static void onBucket(net.minecraftforge.event.entity.player.FillBucketEvent e) {
+    public static void onBucket(net.neoforged.neoforge.event.entity.player.FillBucketEvent e) {
         if (!(e.getLevel() instanceof ServerLevel l) || l.dimension() != LEVEL_KEY || !e.getEmptyBucket().is(net.minecraft.world.item.Items.WATER_BUCKET)
                 || !(e.getTarget() instanceof net.minecraft.world.phys.BlockHitResult hit) || hit.getType() != net.minecraft.world.phys.HitResult.Type.BLOCK) {
             return;
@@ -200,7 +200,7 @@ public final class Level0Events {
         l.setBlock(top, net.minecraft.world.level.block.Blocks.WATER.defaultBlockState(), 11);
         l.playSound(null, top, SoundEvents.BUCKET_EMPTY, SoundSource.BLOCKS, 1.0F, 1.0F);
         e.setFilledBucket(new ItemStack(net.minecraft.world.item.Items.BUCKET));
-        e.setResult(net.minecraftforge.eventbus.api.Event.Result.ALLOW);
+        e.setResult(net.neoforged.bus.api.Event.Result.ALLOW);
     }
 
     // --- rules inside -----------------------------------------------------------------------------------------
@@ -260,8 +260,8 @@ public final class Level0Events {
 
     // --- every second -----------------------------------------------------------------------------------------
     @SubscribeEvent
-    public static void onServerTick(TickEvent.ServerTickEvent e) {
-        if (e.phase != TickEvent.Phase.END || e.getServer().getTickCount() % 20 != 0) {
+    public static void onServerTick(ServerTickEvent.Post e) {
+        if (e.getServer().getTickCount() % 20 != 0) {
             return;
         }
         ServerLevel l = e.getServer().getLevel(LEVEL_KEY);

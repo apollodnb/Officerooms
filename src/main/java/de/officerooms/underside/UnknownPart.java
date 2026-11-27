@@ -6,7 +6,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.world.entity.Pose;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.entity.PartEntity;
+import net.neoforged.neoforge.entity.PartEntity;
 
 /** 0.19.0: one body segment of [Unknown] (hitbox only; drawn by the boss renderer). */
 public final class UnknownPart extends PartEntity<Unknown> {

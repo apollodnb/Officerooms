@@ -1,0 +1,16 @@
+{
+ "type": "minecraft:crafting_shaped",
+ "category": "building",
+ "pattern": [
+  "###"
+ ],
+ "key": {
+  "#": {
+   "item": "office_rooms:pool_tile"
+  }
+ },
+ "result": {
+  "count": 6,
+  "id": "office_rooms:pool_tile_slab"
+ }
+}

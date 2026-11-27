@@ -26,9 +26,9 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.monster.Enemy;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.event.server.ServerStoppingEvent;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.tick.LevelTickEvent;
+import net.neoforged.neoforge.event.server.ServerStoppingEvent;
 
 /**
  * 0.9.0: Atmosphere of the Office Rooms.
@@ -50,8 +50,8 @@ public final class Atmosphere {
     }
 
     public static void register() {
-        MinecraftForge.EVENT_BUS.addListener(Atmosphere::onLevelTick);
-        MinecraftForge.EVENT_BUS.addListener((ServerStoppingEvent e) -> {
+        NeoForge.EVENT_BUS.addListener(Atmosphere::onLevelTick);
+        NeoForge.EVENT_BUS.addListener((ServerStoppingEvent e) -> {
             ServerLevel level = e.getServer().getLevel(OfficeRoomsDimension.LEVEL_KEY);
             if (level != null) {
                 restore(level, Long.MAX_VALUE);
@@ -61,8 +61,8 @@ public final class Atmosphere {
         });
     }
 
-    private static void onLevelTick(TickEvent.LevelTickEvent event) {
-        if (event.phase != TickEvent.Phase.END || !(event.level instanceof ServerLevel level)
+    private static void onLevelTick(LevelTickEvent.Post event) {
+        if (!(event.getLevel() instanceof ServerLevel level)
                 || level.dimension() != OfficeRoomsDimension.LEVEL_KEY) {
             return;
         }

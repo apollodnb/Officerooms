@@ -3,10 +3,10 @@ package de.officerooms;
 import de.officerooms.command.OfficeRoomsCommands;
 import de.officerooms.core.OfficeRoomsIds;
 import de.officerooms.dimension.OfficeRoomsDimension;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -68,16 +68,16 @@ public final class OfficeRooms {
         de.officerooms.entity.ObserverDirector.register();
         de.officerooms.entity.DeathmothDirector.register();
         de.officerooms.quest.Milestones.register();
-        net.minecraftforge.fml.ModLoadingContext.get().registerConfig(net.minecraftforge.fml.config.ModConfig.Type.COMMON,
+        net.neoforged.fml.ModLoadingContext.get().registerConfig(net.neoforged.fml.config.ModConfig.Type.COMMON,
                 de.officerooms.core.OfficeRoomsConfig.COMMON_SPEC);
-        net.minecraftforge.fml.ModLoadingContext.get().registerConfig(net.minecraftforge.fml.config.ModConfig.Type.CLIENT,
+        net.neoforged.fml.ModLoadingContext.get().registerConfig(net.neoforged.fml.config.ModConfig.Type.CLIENT,
                 de.officerooms.core.OfficeRoomsConfig.CLIENT_SPEC);
         de.officerooms.worldgen.FurnishingTicker.register();
         de.officerooms.block.PortalIgnition.register();
 
         modEventBus.addListener(this::onCommonSetup);
         // 0.6.2: neue Spawn-Balance einmalig in bestehende Config-Dateien übernehmen
-        modEventBus.addListener((net.minecraftforge.fml.event.config.ModConfigEvent.Loading e) -> {
+        modEventBus.addListener((net.neoforged.fml.event.config.ModConfigEvent.Loading e) -> {
             if (e.getConfig().getSpec() == de.officerooms.core.OfficeRoomsConfig.COMMON_SPEC) {
                 de.officerooms.core.OfficeRoomsConfig.applyBalance();
                 de.officerooms.core.OfficeRoomsConfig.applyCurio();

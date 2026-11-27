@@ -39,7 +39,7 @@ import net.minecraft.world.level.block.state.BlockState;
  */
 public class Flayed extends Monster implements software.bernie.geckolib.animatable.GeoEntity {
 
-    private final software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache geoCache =
+    private final software.bernie.geckolib.animatable.instance.AnimatableInstanceCache geoCache =
             software.bernie.geckolib.util.GeckoLibUtil.createInstanceCache(this);
 
     private static final UUID PHASE_ID = UUID.fromString("5f0c1d2e-7a41-4c35-9a0e-0ff1ce000013");
@@ -84,12 +84,12 @@ public class Flayed extends Monster implements software.bernie.geckolib.animatab
     }
 
     @Override
-    public void registerControllers(software.bernie.geckolib.core.animation.AnimatableManager.ControllerRegistrar controllers) {
+    public void registerControllers(software.bernie.geckolib.animation.AnimatableManager.ControllerRegistrar controllers) {
         GeoAnims.register(this, controllers, 0.02, "scream", "falter");
     }
 
     @Override
-    public software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache getAnimatableInstanceCache() {
+    public software.bernie.geckolib.animatable.instance.AnimatableInstanceCache getAnimatableInstanceCache() {
         return geoCache;
     }
 
@@ -148,7 +148,7 @@ public class Flayed extends Monster implements software.bernie.geckolib.animatab
         super.aiStep();
         if (level().isClientSide) {
             if (hunting()) {
-                net.minecraftforge.fml.DistExecutor.unsafeRunWhenOn(net.minecraftforge.api.distmarker.Dist.CLIENT, () -> () ->
+                net.neoforged.fml.DistExecutor.unsafeRunWhenOn(net.neoforged.api.distmarker.Dist.CLIENT, () -> () ->
                         de.officerooms.client.MobLoops.hunting(this, ModSounds.FLAYED_HUNT_LOOP.get(), Flayed::hunting));
             }
             return;

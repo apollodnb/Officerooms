@@ -10,10 +10,10 @@ import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.entity.player.PlayerSleepInBedEvent;
-import net.minecraftforge.event.entity.player.SleepingTimeCheckEvent;
-import net.minecraftforge.eventbus.api.Event;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.entity.player.PlayerSleepInBedEvent;
+import net.neoforged.neoforge.event.entity.player.SleepingTimeCheckEvent;
+import net.neoforged.bus.api.Event;
 
 /**
  * 0.26.0: beds work in the Office Rooms: sleeping and setting the respawn point.
@@ -29,8 +29,8 @@ public final class OfficeSleep {
     }
 
     public static void register() {
-        MinecraftForge.EVENT_BUS.addListener(OfficeSleep::onTimeCheck);
-        MinecraftForge.EVENT_BUS.addListener(OfficeSleep::onSleep);
+        NeoForge.EVENT_BUS.addListener(OfficeSleep::onTimeCheck);
+        NeoForge.EVENT_BUS.addListener(OfficeSleep::onSleep);
     }
 
     private static boolean office(Player p) {

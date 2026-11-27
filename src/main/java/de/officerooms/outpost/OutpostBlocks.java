@@ -44,7 +44,7 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.neoforge.registries.DeferredHolder;
 import org.joml.Vector3f;
 
 /** 0.20.0: the equipment of the abandoned research outposts (lever, emergency button, monitors, lights, gateway). */
@@ -58,35 +58,35 @@ public final class OutpostBlocks {
         return Block.Properties.of().mapColor(MapColor.METAL).strength(3.0F, 6.0F).sound(SoundType.METAL).noOcclusion().lightLevel(s -> light);
     }
 
-    private static <B extends Block> RegistryObject<B> reg(String name, java.util.function.Supplier<B> b) {
-        RegistryObject<B> r = ModBlocks.BLOCKS.register(name, b);
+    private static <B extends Block> DeferredHolder<B, B> reg(String name, java.util.function.Supplier<B> b) {
+        DeferredHolder<B, B> r = ModBlocks.BLOCKS.register(name, b);
         ModBlocks.DECOR_ITEMS.add(ModBlocks.ITEMS.register(name, () -> new BlockItem(r.get(), new Item.Properties())));
         return r;
     }
 
-    public static final RegistryObject<Block> OUTPOST_WALL = reg("outpost_wall", () -> new Block(Block.Properties.of().mapColor(MapColor.TERRACOTTA_WHITE).strength(2.0F, 6.0F).sound(SoundType.STONE)));
-    public static final RegistryObject<Block> OUTPOST_FLOOR = reg("outpost_floor", () -> new Block(Block.Properties.of().mapColor(MapColor.COLOR_LIGHT_GRAY).strength(2.0F, 6.0F).sound(SoundType.STONE)));
-    public static final RegistryObject<Block> OUTPOST_CEILING = reg("outpost_ceiling", () -> new Block(Block.Properties.of().mapColor(MapColor.COLOR_LIGHT_GRAY).strength(1.5F, 6.0F).sound(SoundType.STONE)));
-    public static final RegistryObject<Block> HAZARD_FLOOR = reg("hazard_floor", () -> new Block(Block.Properties.of().mapColor(MapColor.COLOR_YELLOW).strength(2.0F, 6.0F).sound(SoundType.METAL)));
-    public static final RegistryObject<PowerLever> POWER_LEVER = reg("power_lever", () -> new PowerLever(metal(0)));
-    public static final RegistryObject<EmergencyButton> EMERGENCY_BUTTON = reg("emergency_button", () -> new EmergencyButton(metal(0)));
-    public static final RegistryObject<Monitor> OUTPOST_MONITOR = reg("outpost_monitor", () -> new Monitor(metal(0), Block.box(0, 2, 6, 16, 14, 16)));
-    public static final RegistryObject<Console> CONTROL_CONSOLE = reg("control_console", () -> new Console(metal(0)));
-    public static final RegistryObject<Lamp> WARNING_LIGHT = reg("warning_light", () -> new Lamp(Block.Properties.of().mapColor(MapColor.COLOR_RED).strength(1.0F)
+    public static final DeferredHolder<Block, Block> OUTPOST_WALL = reg("outpost_wall", () -> new Block(Block.Properties.of().mapColor(MapColor.TERRACOTTA_WHITE).strength(2.0F, 6.0F).sound(SoundType.STONE)));
+    public static final DeferredHolder<Block, Block> OUTPOST_FLOOR = reg("outpost_floor", () -> new Block(Block.Properties.of().mapColor(MapColor.COLOR_LIGHT_GRAY).strength(2.0F, 6.0F).sound(SoundType.STONE)));
+    public static final DeferredHolder<Block, Block> OUTPOST_CEILING = reg("outpost_ceiling", () -> new Block(Block.Properties.of().mapColor(MapColor.COLOR_LIGHT_GRAY).strength(1.5F, 6.0F).sound(SoundType.STONE)));
+    public static final DeferredHolder<Block, Block> HAZARD_FLOOR = reg("hazard_floor", () -> new Block(Block.Properties.of().mapColor(MapColor.COLOR_YELLOW).strength(2.0F, 6.0F).sound(SoundType.METAL)));
+    public static final DeferredHolder<PowerLever, PowerLever> POWER_LEVER = reg("power_lever", () -> new PowerLever(metal(0)));
+    public static final DeferredHolder<EmergencyButton, EmergencyButton> EMERGENCY_BUTTON = reg("emergency_button", () -> new EmergencyButton(metal(0)));
+    public static final DeferredHolder<Monitor, Monitor> OUTPOST_MONITOR = reg("outpost_monitor", () -> new Monitor(metal(0), Block.box(0, 2, 6, 16, 14, 16)));
+    public static final DeferredHolder<Console, Console> CONTROL_CONSOLE = reg("control_console", () -> new Console(metal(0)));
+    public static final DeferredHolder<Lamp, Lamp> WARNING_LIGHT = reg("warning_light", () -> new Lamp(Block.Properties.of().mapColor(MapColor.COLOR_RED).strength(1.0F)
             .sound(SoundType.GLASS).noOcclusion().lightLevel(s -> s.getValue(LIT) ? 11 : 0), Block.box(5, 9, 5, 11, 16, 11), true));
-    public static final RegistryObject<Lamp> FACILITY_LIGHT = reg("facility_light", () -> new Lamp(Block.Properties.of().mapColor(MapColor.METAL).strength(1.0F)
+    public static final DeferredHolder<Lamp, Lamp> FACILITY_LIGHT = reg("facility_light", () -> new Lamp(Block.Properties.of().mapColor(MapColor.METAL).strength(1.0F)
             .sound(SoundType.GLASS).noOcclusion().lightLevel(s -> s.getValue(LIT) ? 15 : 0), Block.box(1, 14, 3, 15, 16, 13), false));
-    public static final RegistryObject<Frame> GATEWAY_FRAME = reg("gateway_frame", () -> new Frame(Block.Properties.of().mapColor(MapColor.COLOR_GRAY)
+    public static final DeferredHolder<Frame, Frame> GATEWAY_FRAME = reg("gateway_frame", () -> new Frame(Block.Properties.of().mapColor(MapColor.COLOR_GRAY)
             .strength(5.0F, 1200.0F).sound(SoundType.NETHERITE_BLOCK).lightLevel(s -> s.getValue(ACTIVE) ? 7 : 0)));
-    public static final RegistryObject<Gateway> GATEWAY = ModBlocks.BLOCKS.register("dimensional_gateway", () -> new Gateway(Block.Properties.of()
+    public static final DeferredHolder<Gateway, Gateway> GATEWAY = ModBlocks.BLOCKS.register("dimensional_gateway", () -> new Gateway(Block.Properties.of()
             .mapColor(MapColor.COLOR_CYAN).strength(-1.0F, 3600000.0F).noCollission().noOcclusion().sound(SoundType.GLASS).lightLevel(s -> 13)
             .noLootTable().pushReaction(PushReaction.BLOCK)));
 
     @SuppressWarnings("DataFlowIssue")
-    public static final RegistryObject<BlockEntityType<Controller>> CONTROLLER_BE = ModBlocks.BLOCK_ENTITIES.register("outpost_controller",
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<Controller>> CONTROLLER_BE = ModBlocks.BLOCK_ENTITIES.register("outpost_controller",
             () -> BlockEntityType.Builder.of(Controller::new, POWER_LEVER.get()).build(null));
     @SuppressWarnings("DataFlowIssue")
-    public static final RegistryObject<BlockEntityType<MonitorEntity>> MONITOR_BE = ModBlocks.BLOCK_ENTITIES.register("outpost_monitor",
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<MonitorEntity>> MONITOR_BE = ModBlocks.BLOCK_ENTITIES.register("outpost_monitor",
             () -> BlockEntityType.Builder.of(MonitorEntity::new, OUTPOST_MONITOR.get()).build(null));
 
     private OutpostBlocks() {

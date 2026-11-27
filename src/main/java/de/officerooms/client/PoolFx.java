@@ -6,8 +6,8 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.TickEvent;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.client.event.ClientTickEvent;
 
 /**
  * 0.28.1: the Poolrooms feel a little more alive: a faint haze drifts over the water and now and then a ring spreads
@@ -23,11 +23,11 @@ public final class PoolFx {
     }
 
     public static void register() {
-        MinecraftForge.EVENT_BUS.addListener(PoolFx::onTick);
+        NeoForge.EVENT_BUS.addListener(PoolFx::onTick);
     }
 
-    private static void onTick(TickEvent.ClientTickEvent e) {
-        if (e.phase != TickEvent.Phase.END) {
+    private static void onTick(ClientTickEvent.Post e) {
+        if (false) {
             return;
         }
         Minecraft mc = Minecraft.getInstance();

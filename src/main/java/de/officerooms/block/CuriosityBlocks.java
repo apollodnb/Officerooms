@@ -35,7 +35,7 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.neoforge.registries.DeferredHolder;
 
 /**
  * 0.29.0: blocks of the new special rooms (canteen, mail room, rain room, arcade). Own designs. The vending machine
@@ -65,7 +65,7 @@ public final class CuriosityBlocks {
                 if (!player.getAbilities().instabuild) {
                     held.shrink(1);
                 }
-                LootTable table = sl.getServer().getLootData().getLootTable(new ResourceLocation(OfficeRoomsIds.MOD_ID, "gameplay/vending"));
+                LootTable table = sl.getServer().getLootData().getLootTable(ResourceLocation.fromNamespaceAndPath(OfficeRoomsIds.MOD_ID, "gameplay/vending"));
                 LootParams params = new LootParams.Builder(sl).withParameter(LootContextParams.ORIGIN, Vec3.atCenterOf(pos))
                         .withParameter(LootContextParams.THIS_ENTITY, player).create(LootContextParamSets.GIFT);
                 Direction f = s.getValue(FACING);
@@ -112,27 +112,27 @@ public final class CuriosityBlocks {
         return Block.Properties.of().mapColor(c).strength(1.5F, 6.0F).sound(st).lightLevel(s -> light).noOcclusion();
     }
 
-    private static RegistryObject<Block> item(String name, RegistryObject<Block> b) {
+    private static DeferredHolder<Block, Block> item(String name, DeferredHolder<Block, Block> b) {
         ModBlocks.DECOR_ITEMS.add(ModBlocks.ITEMS.register(name, () -> new BlockItem(b.get(), new Item.Properties())));
         return b;
     }
 
-    public static final RegistryObject<Block> VENDING = item("vending_machine",
+    public static final DeferredHolder<Block, Block> VENDING = item("vending_machine",
             ModBlocks.BLOCKS.register("vending_machine", () -> new VendingMachine(props(MapColor.COLOR_RED, SoundType.METAL, 0))));
-    public static final RegistryObject<Block> VENDING_TOP = item("vending_machine_top",
+    public static final DeferredHolder<Block, Block> VENDING_TOP = item("vending_machine_top",
             ModBlocks.BLOCKS.register("vending_machine_top", () -> new DecorBlock(props(MapColor.COLOR_RED, SoundType.METAL, 8), Block.box(1, 0, 1, 15, 15, 15))));
-    public static final RegistryObject<Block> ARCADE = item("arcade_cabinet",
+    public static final DeferredHolder<Block, Block> ARCADE = item("arcade_cabinet",
             ModBlocks.BLOCKS.register("arcade_cabinet", () -> new DecorBlock(props(MapColor.COLOR_PURPLE, SoundType.WOOD, 0), Block.box(2, 0, 1, 14, 16, 15))));
-    public static final RegistryObject<Block> ARCADE_TOP = item("arcade_cabinet_top",
+    public static final DeferredHolder<Block, Block> ARCADE_TOP = item("arcade_cabinet_top",
             ModBlocks.BLOCKS.register("arcade_cabinet_top", () -> new DecorBlock(props(MapColor.COLOR_PURPLE, SoundType.WOOD, 9), Block.box(2, 0, 3, 14, 15, 15))));
-    public static final RegistryObject<Block> PARCELS = item("parcel_stack",
+    public static final DeferredHolder<Block, Block> PARCELS = item("parcel_stack",
             ModBlocks.BLOCKS.register("parcel_stack", () -> new DecorBlock(props(MapColor.WOOD, SoundType.WOOL, 0), Block.box(1, 0, 1, 15, 14, 15))));
-    public static final RegistryObject<Block> ARCADE_CARPET = item("arcade_carpet",
+    public static final DeferredHolder<Block, Block> ARCADE_CARPET = item("arcade_carpet",
             ModBlocks.BLOCKS.register("arcade_carpet", () -> new CarpetBlock(Block.Properties.of().mapColor(MapColor.COLOR_BLUE).strength(0.3F).sound(SoundType.WOOL))));
-    public static final RegistryObject<Block> RAIN = ModBlocks.BLOCKS.register("rain_emitter",
+    public static final DeferredHolder<Block, Block> RAIN = ModBlocks.BLOCKS.register("rain_emitter",
             () -> new RainEmitter(Block.Properties.of().noCollission().noOcclusion().noLootTable().strength(-1.0F, 3600000.0F).replaceable()));
 
-    public static BlockState f(RegistryObject<Block> b, Direction front) {
+    public static BlockState f(DeferredHolder<Block, Block> b, Direction front) {
         return b.get().defaultBlockState().setValue(DecorBlock.FACING, front);
     }
 

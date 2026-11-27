@@ -31,8 +31,8 @@ import java.util.Random;
  */
 public class UnknownRenderer extends EntityRenderer<Unknown> {
 
-    public static final ModelLayerLocation LAYER = new ModelLayerLocation(new ResourceLocation(OfficeRoomsIds.MOD_ID, "unknown"), "main");
-    private static final ResourceLocation TEX = new ResourceLocation(OfficeRoomsIds.MOD_ID, "textures/entity/unknown.png");
+    public static final ModelLayerLocation LAYER = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(OfficeRoomsIds.MOD_ID, "unknown"), "main");
+    private static final ResourceLocation TEX = ResourceLocation.fromNamespaceAndPath(OfficeRoomsIds.MOD_ID, "textures/entity/unknown.png");
     private static final float SPINE_Y = 1.8F;
 
     private final ModelPart head, seg, rib, legR, legL, armR, armL;

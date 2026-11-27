@@ -7,11 +7,11 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.player.Player;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.entity.living.LivingEvent;
-import net.minecraftforge.event.level.LevelEvent;
-import net.minecraftforge.event.server.ServerStartedEvent;
-import net.minecraftforge.event.TickEvent;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.entity.living.LivingEvent;
+import net.neoforged.neoforge.event.level.LevelEvent;
+import net.neoforged.neoforge.event.server.ServerStartedEvent;
+import net.neoforged.neoforge.event.tick.LevelTickEvent;
 
 /**
  * Performance (0.7.0). Die Dimension ist auf ganzer Höhe bebaut; in den geladenen Chunks ticken
@@ -32,10 +32,10 @@ public final class TickThrottle {
     }
 
     public static void register() {
-        MinecraftForge.EVENT_BUS.addListener(TickThrottle::onLivingTick);
-        MinecraftForge.EVENT_BUS.addListener(TickThrottle::onServerStarted);
-        MinecraftForge.EVENT_BUS.addListener(TickThrottle::onLevelLoad);
-        MinecraftForge.EVENT_BUS.addListener(TickThrottle::onLevelTick);
+        NeoForge.EVENT_BUS.addListener(TickThrottle::onLivingTick);
+        NeoForge.EVENT_BUS.addListener(TickThrottle::onServerStarted);
+        NeoForge.EVENT_BUS.addListener(TickThrottle::onLevelLoad);
+        NeoForge.EVENT_BUS.addListener(TickThrottle::onLevelTick);
     }
 
     private static void onLivingTick(LivingEvent.LivingTickEvent event) {
@@ -76,8 +76,8 @@ public final class TickThrottle {
     }
 
     /** Schwierigkeitswechsel setzen die Spawn-Einstellungen aller Welten neu: selten nachziehen. */
-    private static void onLevelTick(TickEvent.LevelTickEvent event) {
-        if (event.phase == TickEvent.Phase.START && event.level instanceof ServerLevel level
+    private static void onLevelTick(LevelTickEvent.Pre event) {
+        if (event.getLevel() instanceof ServerLevel level
                 && level.dimension() == OfficeRoomsDimension.LEVEL_KEY && level.getGameTime() % 100 == 3) {
             level.setSpawnSettings(false, false);
         }

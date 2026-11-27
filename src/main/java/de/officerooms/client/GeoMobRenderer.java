@@ -8,7 +8,7 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.LivingEntity;
-import software.bernie.geckolib.core.animatable.GeoAnimatable;
+import software.bernie.geckolib.animatable.GeoAnimatable;
 import software.bernie.geckolib.model.DefaultedEntityGeoModel;
 import software.bernie.geckolib.renderer.GeoEntityRenderer;
 import com.mojang.blaze3d.vertex.VertexConsumer;
@@ -26,10 +26,10 @@ public class GeoMobRenderer<T extends LivingEntity & GeoAnimatable> extends GeoE
     private final boolean fullBright;
 
     public GeoMobRenderer(EntityRendererProvider.Context ctx, String name, float shadow, float scale, boolean translucent, boolean fullBright) {
-        super(ctx, new DefaultedEntityGeoModel<>(new ResourceLocation(OfficeRoomsIds.MOD_ID, name), true));
+        super(ctx, new DefaultedEntityGeoModel<>(ResourceLocation.fromNamespaceAndPath(OfficeRoomsIds.MOD_ID, name), true));
         // Glow layer: drawn full bright with the vanilla "eyes" render type, which also works in dimensions
         // without sky light (GeckoLib's own glow layer uses sky light and stays dark in the Office Rooms).
-        RenderType glow = RenderType.eyes(new ResourceLocation(OfficeRoomsIds.MOD_ID, "textures/entity/" + name + "_glowmask.png"));
+        RenderType glow = RenderType.eyes(ResourceLocation.fromNamespaceAndPath(OfficeRoomsIds.MOD_ID, "textures/entity/" + name + "_glowmask.png"));
         addRenderLayer(new GeoRenderLayer<>(this) {
             @Override
             public void render(PoseStack pose, T animatable, BakedGeoModel model, RenderType type, MultiBufferSource buffers,

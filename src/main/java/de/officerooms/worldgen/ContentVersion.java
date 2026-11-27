@@ -6,8 +6,8 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.saveddata.SavedData;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.level.LevelEvent;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.level.LevelEvent;
 
 /**
  * 0.43.0: the content version a world was created with. The dimension JSON is read from the mod's data pack every time
@@ -38,7 +38,7 @@ public final class ContentVersion {
     }
 
     public static void register() {
-        MinecraftForge.EVENT_BUS.addListener(ContentVersion::onLoad);
+        NeoForge.EVENT_BUS.addListener(ContentVersion::onLoad);
     }
 
     private static void onLoad(LevelEvent.Load e) {

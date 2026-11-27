@@ -13,9 +13,9 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.event.entity.living.LivingEvent;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.tick.PlayerTickEvent;
+import net.neoforged.neoforge.event.entity.living.LivingEvent;
 
 /**
  * 0.9.0: Riding elevators. Jumping on an elevator plate rides up, sneaking rides down. In the generated
@@ -32,8 +32,8 @@ public final class Elevators {
     }
 
     public static void register() {
-        MinecraftForge.EVENT_BUS.addListener(Elevators::onJump);
-        MinecraftForge.EVENT_BUS.addListener(Elevators::onPlayerTick);
+        NeoForge.EVENT_BUS.addListener(Elevators::onJump);
+        NeoForge.EVENT_BUS.addListener(Elevators::onPlayerTick);
     }
 
     private static int step(ServerPlayer player) {
@@ -69,8 +69,8 @@ public final class Elevators {
         }
     }
 
-    private static void onPlayerTick(TickEvent.PlayerTickEvent event) {
-        if (event.phase != TickEvent.Phase.END || !(event.player instanceof ServerPlayer player)) {
+    private static void onPlayerTick(PlayerTickEvent.Post event) {
+        if (!(event.getEntity() instanceof ServerPlayer player)) {
             return;
         }
         if (player.isShiftKeyDown() && player.onGround() && !player.isSpectator()) {

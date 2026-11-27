@@ -14,10 +14,10 @@ import net.minecraft.world.level.chunk.ChunkAccess;
 import net.minecraft.world.level.levelgen.structure.BoundingBox;
 import net.minecraft.world.level.levelgen.structure.Structure;
 import net.minecraft.world.level.levelgen.structure.StructureStart;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.event.level.ChunkEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.tick.ServerTickEvent;
+import net.neoforged.neoforge.event.level.ChunkEvent;
+import net.neoforged.bus.api.SubscribeEvent;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentLinkedQueue;
@@ -30,7 +30,7 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 public final class OutpostPlacer {
 
     static final double ANCIENT = 0.6, JUNGLE = 0.4, CAVE = 1.0 / 1800, NETHER = 1.0 / 500, SURFACE = 1.0 / 2500, OCEAN = 1.0 / 900;   // 0.39.0: rare (ocean: only deep ocean chunks count)
-    private static final ResourceLocation ANCIENT_CITY = new ResourceLocation("ancient_city"), JUNGLE_PYRAMID = new ResourceLocation("jungle_pyramid");
+    private static final ResourceLocation ANCIENT_CITY = ResourceLocation.parse("ancient_city"), JUNGLE_PYRAMID = ResourceLocation.parse("jungle_pyramid");
 
     record Job(ResourceKey<Level> dim, OutpostBuilder.Theme theme, BoundingBox box, ChunkPos chunk, long seed) {
     }
@@ -41,7 +41,7 @@ public final class OutpostPlacer {
     }
 
     public static void register() {
-        MinecraftForge.EVENT_BUS.register(OutpostPlacer.class);
+        NeoForge.EVENT_BUS.register(OutpostPlacer.class);
     }
 
     static double roll(long seed, int x, int z, int salt) {
@@ -89,8 +89,8 @@ public final class OutpostPlacer {
     }
 
     @SubscribeEvent
-    public static void onServerTick(TickEvent.ServerTickEvent e) {
-        if (e.phase != TickEvent.Phase.END || QUEUE.isEmpty()) {
+    public static void onServerTick(ServerTickEvent.Post e) {
+        if (QUEUE.isEmpty()) {
             return;
         }
         Job j = QUEUE.poll();

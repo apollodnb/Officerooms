@@ -52,7 +52,7 @@ public class Mascot extends Monster implements software.bernie.geckolib.animatab
     public static final int LURK = 0, WAVE = 1, HUNT = 2;
     private static final EntityDataAccessor<Integer> DATA_MODE = SynchedEntityData.defineId(Mascot.class, EntityDataSerializers.INT);
 
-    private final software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache geoCache =
+    private final software.bernie.geckolib.animatable.instance.AnimatableInstanceCache geoCache =
             software.bernie.geckolib.util.GeckoLibUtil.createInstanceCache(this);
 
     private int squeakTimer = 80;
@@ -119,25 +119,25 @@ public class Mascot extends Monster implements software.bernie.geckolib.animatab
     }
 
     @Override
-    public void registerControllers(software.bernie.geckolib.core.animation.AnimatableManager.ControllerRegistrar controllers) {
-        var c = new software.bernie.geckolib.core.animation.AnimationController<>(this, "move", 4, state -> {
+    public void registerControllers(software.bernie.geckolib.animation.AnimatableManager.ControllerRegistrar controllers) {
+        var c = new software.bernie.geckolib.animation.AnimationController<>(this, "move", 4, state -> {
             if (mode() == WAVE) {
-                return state.setAndContinue(software.bernie.geckolib.core.animation.RawAnimation.begin().thenLoop("wave"));
+                return state.setAndContinue(software.bernie.geckolib.animation.RawAnimation.begin().thenLoop("wave"));
             }
             if (hugTicks > 0) {
-                return state.setAndContinue(software.bernie.geckolib.core.animation.RawAnimation.begin().thenLoop("hug"));
+                return state.setAndContinue(software.bernie.geckolib.animation.RawAnimation.begin().thenLoop("hug"));
             }
             if (state.isMoving()) {
                 return state.setAndContinue(isAggressive() ? GeoAnims.RUN : GeoAnims.WALK);
             }
             return state.setAndContinue(GeoAnims.IDLE);
         });
-        c.triggerableAnim("drop", software.bernie.geckolib.core.animation.RawAnimation.begin().thenPlay("drop"));
+        c.triggerableAnim("drop", software.bernie.geckolib.animation.RawAnimation.begin().thenPlay("drop"));
         controllers.add(c);
     }
 
     @Override
-    public software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache getAnimatableInstanceCache() {
+    public software.bernie.geckolib.animatable.instance.AnimatableInstanceCache getAnimatableInstanceCache() {
         return geoCache;
     }
 

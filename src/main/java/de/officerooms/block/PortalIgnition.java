@@ -12,9 +12,9 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SculkSensorBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.SculkSensorPhase;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.event.entity.EntityLeaveLevelEvent;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.tick.LevelTickEvent;
+import net.neoforged.neoforge.event.entity.EntityLeaveLevelEvent;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -43,8 +43,8 @@ public final class PortalIgnition {
     }
 
     public static void register() {
-        MinecraftForge.EVENT_BUS.addListener(PortalIgnition::onLeave);
-        MinecraftForge.EVENT_BUS.addListener(PortalIgnition::onTick);
+        NeoForge.EVENT_BUS.addListener(PortalIgnition::onLeave);
+        NeoForge.EVENT_BUS.addListener(PortalIgnition::onTick);
     }
 
     private static boolean isSand(BlockState s) {
@@ -82,8 +82,8 @@ public final class PortalIgnition {
         }
     }
 
-    private static void onTick(TickEvent.LevelTickEvent event) {
-        if (event.phase != TickEvent.Phase.END || !(event.level instanceof ServerLevel level)) {
+    private static void onTick(LevelTickEvent.Post event) {
+        if (!(event.getLevel() instanceof ServerLevel level)) {
             return;
         }
         synchronized (PENDING) {

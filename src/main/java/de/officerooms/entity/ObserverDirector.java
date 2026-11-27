@@ -12,8 +12,8 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.TickEvent;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.tick.LevelTickEvent;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,11 +39,11 @@ public final class ObserverDirector {
     }
 
     public static void register() {
-        MinecraftForge.EVENT_BUS.addListener(ObserverDirector::onTick);
+        NeoForge.EVENT_BUS.addListener(ObserverDirector::onTick);
     }
 
-    private static void onTick(TickEvent.LevelTickEvent event) {
-        if (event.phase != TickEvent.Phase.END || !(event.level instanceof ServerLevel level)
+    private static void onTick(LevelTickEvent.Post event) {
+        if (!(event.getLevel() instanceof ServerLevel level)
                 || level.dimension() != OfficeRoomsDimension.LEVEL_KEY || level.getGameTime() % INTERVAL != 13
                 || !OfficeRoomsConfig.mobsAllowed(level)) {   // 0.41.2
             return;

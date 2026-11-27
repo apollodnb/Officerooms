@@ -106,7 +106,7 @@ public final class MegaDecorator {
     private static void chest(OfficePlanner p, WorldGenLevel level, BlockPos pos, Direction facing, String table) {
         level.setBlock(pos, Blocks.CHEST.defaultBlockState().setValue(ChestBlock.FACING, facing), 2);
         if (level.getBlockEntity(pos) instanceof RandomizableContainerBlockEntity be) {
-            be.setLootTable(new ResourceLocation(OfficeRoomsIds.MOD_ID, "chests/" + table), p.seed ^ pos.asLong());
+            be.setLootTable(ResourceLocation.fromNamespaceAndPath(OfficeRoomsIds.MOD_ID, "chests/" + table), p.seed ^ pos.asLong());
         }
     }
 
@@ -218,7 +218,7 @@ public final class MegaDecorator {
             level.setBlock(new BlockPos(cx - 1, y, cz), Blocks.BARREL.defaultBlockState(), 2);
             level.setBlock(new BlockPos(cx - 1, y + 1, cz), ModBlocks.monitor(Direction.SOUTH, (cx * 31 + cz) % 6 == 0), 2);
             if (level.getBlockEntity(new BlockPos(cx - 1, y, cz)) instanceof RandomizableContainerBlockEntity be) {
-                be.setLootTable(new ResourceLocation(OfficeRoomsIds.MOD_ID, "chests/secure_storage_supplies"), p.seed ^ (cx * 31L + cz));
+                be.setLootTable(ResourceLocation.fromNamespaceAndPath(OfficeRoomsIds.MOD_ID, "chests/secure_storage_supplies"), p.seed ^ (cx * 31L + cz));
             }
         }
     }

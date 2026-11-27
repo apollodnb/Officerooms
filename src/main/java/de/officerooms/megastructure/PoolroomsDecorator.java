@@ -45,7 +45,7 @@ public final class PoolroomsDecorator {
             level.setBlock(pos, Blocks.CHEST.defaultBlockState().setValue(ChestBlock.FACING, DIR[c.facing() & 3])
                     .setValue(ChestBlock.WATERLOGGED, wet), 2);
             if (level.getBlockEntity(pos) instanceof RandomizableContainerBlockEntity be) {
-                be.setLootTable(new ResourceLocation(OfficeRoomsIds.MOD_ID, "chests/" + c.loot()),
+                be.setLootTable(ResourceLocation.fromNamespaceAndPath(OfficeRoomsIds.MOD_ID, "chests/" + c.loot()),
                         p.seed ^ pos.asLong());
             }
         }

@@ -1,10 +1,10 @@
 package de.officerooms.entity;
 
 import net.minecraft.world.entity.Mob;
-import software.bernie.geckolib.core.animatable.GeoAnimatable;
-import software.bernie.geckolib.core.animation.AnimatableManager;
-import software.bernie.geckolib.core.animation.AnimationController;
-import software.bernie.geckolib.core.animation.RawAnimation;
+import software.bernie.geckolib.animatable.GeoAnimatable;
+import software.bernie.geckolib.animation.AnimatableManager;
+import software.bernie.geckolib.animation.AnimationController;
+import software.bernie.geckolib.animation.RawAnimation;
 
 /** 0.11.0: shared GeckoLib controller for the creatures: idle / walk / run plus triggerable one-shots. */
 public final class GeoAnims {

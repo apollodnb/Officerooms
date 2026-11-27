@@ -15,8 +15,8 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.phys.AABB;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.TickEvent;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.tick.LevelTickEvent;
 
 import java.util.ArrayList;
 import java.util.IdentityHashMap;
@@ -46,11 +46,11 @@ public final class MobSpawner {
     }
 
     public static void register() {
-        MinecraftForge.EVENT_BUS.addListener(MobSpawner::onLevelTick);
+        NeoForge.EVENT_BUS.addListener(MobSpawner::onLevelTick);
     }
 
-    private static void onLevelTick(TickEvent.LevelTickEvent event) {
-        if (event.phase != TickEvent.Phase.END || !(event.level instanceof ServerLevel level)
+    private static void onLevelTick(LevelTickEvent.Post event) {
+        if (!(event.getLevel() instanceof ServerLevel level)
                 || level.dimension() != OfficeRoomsDimension.LEVEL_KEY || level.getGameTime() % INTERVAL != 7) {
             return;
         }

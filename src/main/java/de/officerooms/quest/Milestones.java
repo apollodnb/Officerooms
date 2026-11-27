@@ -8,8 +8,8 @@ import net.minecraft.advancements.Advancement;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.TickEvent;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 
 import java.util.Locale;
 
@@ -24,7 +24,7 @@ public final class Milestones {
     }
 
     public static void register() {
-        MinecraftForge.EVENT_BUS.addListener(Milestones::onTick);
+        NeoForge.EVENT_BUS.addListener(Milestones::onTick);
     }
 
     /** Grants {@code office_rooms:milestones/<path>} (no-op if already done or unknown). */
@@ -32,14 +32,14 @@ public final class Milestones {
         if (p == null || p.server == null) {
             return;
         }
-        Advancement a = p.server.getAdvancements().getAdvancement(new ResourceLocation("office_rooms", "milestones/" + path));
+        Advancement a = p.server.getAdvancements().getAdvancement(ResourceLocation.fromNamespaceAndPath("office_rooms", "milestones/" + path));
         if (a != null && !p.getAdvancements().getOrStartProgress(a).isDone()) {
             p.getAdvancements().award(a, "done");
         }
     }
 
-    private static void onTick(TickEvent.PlayerTickEvent e) {
-        if (e.phase != TickEvent.Phase.END || !(e.player instanceof ServerPlayer p) || p.tickCount % 40 != 13 || p.isSpectator()) {
+    private static void onTick(PlayerTickEvent.Post e) {
+        if (!(e.getEntity() instanceof ServerPlayer p) || p.tickCount % 40 != 13 || p.isSpectator()) {
             return;
         }
         ServerLevel level = p.serverLevel();

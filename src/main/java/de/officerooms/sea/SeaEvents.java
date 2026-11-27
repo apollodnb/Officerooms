@@ -21,8 +21,8 @@ import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.AABB;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.TickEvent;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.tick.LevelTickEvent;
 
 /**
  * 0.42.0: getting on and off the SS Fun =), and the Mascot's spawning.
@@ -36,7 +36,7 @@ import net.minecraftforge.event.TickEvent;
  */
 public final class SeaEvents {
 
-    public static final ResourceKey<Level> LEVEL_KEY = ResourceKey.create(Registries.DIMENSION, new ResourceLocation(OfficeRoomsIds.MOD_ID, "the_sea"));
+    public static final ResourceKey<Level> LEVEL_KEY = ResourceKey.create(Registries.DIMENSION, ResourceLocation.fromNamespaceAndPath(OfficeRoomsIds.MOD_ID, "the_sea"));
     static final String FROM_X = OfficeRoomsIds.MOD_ID + ".gate_x", FROM_Z = OfficeRoomsIds.MOD_ID + ".gate_z";
     static final String ABOARD = OfficeRoomsIds.MOD_ID + ".aboard";
 
@@ -44,8 +44,8 @@ public final class SeaEvents {
     }
 
     public static void register() {
-        MinecraftForge.EVENT_BUS.addListener(SeaEvents::onLevelTick);
-        MinecraftForge.EVENT_BUS.addListener((net.minecraftforge.event.server.ServerStartedEvent e) -> {
+        NeoForge.EVENT_BUS.addListener(SeaEvents::onLevelTick);
+        NeoForge.EVENT_BUS.addListener((net.neoforged.neoforge.event.server.ServerStartedEvent e) -> {
             ServerLevel sea = e.getServer().getLevel(LEVEL_KEY);
             if (sea != null) {
                 SeaChunkGenerator.seedOf(sea);                      // /locate needs the ship seed before the first sea chunk
@@ -124,8 +124,8 @@ public final class SeaEvents {
 
     // --- the Mascot --------------------------------------------------------------------------------------------------
 
-    private static void onLevelTick(TickEvent.LevelTickEvent event) {
-        if (event.phase != TickEvent.Phase.END || !(event.level instanceof ServerLevel level) || level.dimension() != LEVEL_KEY
+    private static void onLevelTick(LevelTickEvent.Post event) {
+        if (!(event.getLevel() instanceof ServerLevel level) || level.dimension() != LEVEL_KEY
                 || level.getGameTime() % 100 != 31) {
             return;
         }

@@ -21,7 +21,7 @@ import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.neoforge.registries.DeferredHolder;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -108,14 +108,14 @@ public final class RoomDecorBlocks {
         }
     }
 
-    public static final List<RegistryObject<Block>> DECOR = new ArrayList<>();
+    public static final List<DeferredHolder<Block, Block>> DECOR = new ArrayList<>();
 
     private static Block.Properties props(MapColor c, SoundType st, int light, boolean solid) {
         Block.Properties p = Block.Properties.of().mapColor(c).strength(1.0F, 3.0F).sound(st).lightLevel(s -> light);
         return solid ? p : p.noOcclusion();
     }
 
-    private static RegistryObject<Block> item(String name, RegistryObject<Block> b) {
+    private static DeferredHolder<Block, Block> item(String name, DeferredHolder<Block, Block> b) {
         ModBlocks.DECOR_ITEMS.add(ModBlocks.ITEMS.register(name, () -> new BlockItem(b.get(), new Item.Properties())));
         return b;
     }
@@ -125,14 +125,14 @@ public final class RoomDecorBlocks {
         DECOR.add(item(name, ModBlocks.BLOCKS.register(name, () -> new Piece(props(c, st, light, solid), b, fx))));
     }
 
-    private static RegistryObject<Block> carpet(String name, MapColor c, SoundType st) {
+    private static DeferredHolder<Block, Block> carpet(String name, MapColor c, SoundType st) {
         return item(name, ModBlocks.BLOCKS.register(name, () -> new CarpetBlock(Block.Properties.of().mapColor(c).strength(0.3F).sound(st))));
     }
 
-    public static final RegistryObject<Block> FLOOR_TILE = item("restroom_floor_tile", ModBlocks.BLOCKS.register("restroom_floor_tile",
+    public static final DeferredHolder<Block, Block> FLOOR_TILE = item("restroom_floor_tile", ModBlocks.BLOCKS.register("restroom_floor_tile",
             () -> new Block(Block.Properties.of().mapColor(MapColor.QUARTZ).strength(1.5F, 6.0F).sound(SoundType.STONE))));
-    public static final RegistryObject<Block> RUG = carpet("executive_rug", MapColor.COLOR_RED, SoundType.WOOL);
-    public static final RegistryObject<Block> DOORMAT = carpet("doormat", MapColor.WOOD, SoundType.WOOL);
+    public static final DeferredHolder<Block, Block> RUG = carpet("executive_rug", MapColor.COLOR_RED, SoundType.WOOL);
+    public static final DeferredHolder<Block, Block> DOORMAT = carpet("doormat", MapColor.WOOD, SoundType.WOOL);
 
     static {
         MapColor w = MapColor.QUARTZ, m = MapColor.METAL;

@@ -29,8 +29,9 @@ import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.TickEvent;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.tick.LevelTickEvent;
+import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 
 /**
  * 0.10.1: Server side of the QoL tools: flashlight beam, glowstick light, flare (light + repels creatures)
@@ -48,8 +49,8 @@ public final class ToolEffects {
     }
 
     public static void register() {
-        MinecraftForge.EVENT_BUS.addListener(ToolEffects::onPlayerTick);
-        MinecraftForge.EVENT_BUS.addListener(ToolEffects::onLevelTick);
+        NeoForge.EVENT_BUS.addListener(ToolEffects::onPlayerTick);
+        NeoForge.EVENT_BUS.addListener(ToolEffects::onLevelTick);
     }
 
     public static boolean flashlightAt(Level level, BlockPos pos) {
@@ -93,8 +94,8 @@ public final class ToolEffects {
 
     // --- Flashlight -----------------------------------------------------------------------------
 
-    private static void onPlayerTick(TickEvent.PlayerTickEvent e) {
-        if (e.phase != TickEvent.Phase.END || !(e.player instanceof ServerPlayer p)) {
+    private static void onPlayerTick(PlayerTickEvent.Post e) {
+        if (!(e.getEntity() instanceof ServerPlayer p)) {
             return;
         }
         long t = p.level().getGameTime();
@@ -134,8 +135,8 @@ public final class ToolEffects {
 
     // --- Flare and noise maker ------------------------------------------------------------------
 
-    private static void onLevelTick(TickEvent.LevelTickEvent e) {
-        if (e.phase != TickEvent.Phase.END || !(e.level instanceof ServerLevel level) || SOURCES.isEmpty()) {
+    private static void onLevelTick(LevelTickEvent.Post e) {
+        if (!(e.getLevel() instanceof ServerLevel level) || SOURCES.isEmpty()) {
             return;
         }
         long t = level.getGameTime();

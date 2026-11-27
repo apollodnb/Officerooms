@@ -1,0 +1,20 @@
+{
+ "type": "minecraft:crafting_shaped",
+ "category": "misc",
+ "pattern": [
+  "S",
+  "B"
+ ],
+ "key": {
+  "S": {
+   "item": "minecraft:slime_ball"
+  },
+  "B": {
+   "item": "minecraft:glass_bottle"
+  }
+ },
+ "result": {
+  "count": 1,
+  "id": "office_rooms:specimen_jar"
+ }
+}

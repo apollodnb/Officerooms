@@ -17,9 +17,9 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.phys.Vec3;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.entity.living.LivingDeathEvent;
-import net.minecraftforge.eventbus.api.EventPriority;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
+import net.neoforged.bus.api.EventPriority;
 
 import java.util.List;
 import java.util.Optional;
@@ -36,7 +36,7 @@ public final class TotemOfMercyItem extends Item {
     }
 
     public static void register() {
-        MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGH, TotemOfMercyItem::onDeath);
+        NeoForge.EVENT_BUS.addListener(EventPriority.HIGH, TotemOfMercyItem::onDeath);
     }
 
     private static void onDeath(LivingDeathEvent event) {

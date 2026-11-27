@@ -6,7 +6,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.eventbus.api.IEventBus;
+import net.neoforged.bus.api.IEventBus;
 
 /**
  * Bezeichner und Eckdaten der Office-Rooms-Dimension.
@@ -38,7 +38,7 @@ public final class OfficeRoomsDimension {
 
     /** Schlüssel der Dimension als Level-Key (für Teleport/Befehle). */
     public static final ResourceKey<Level> LEVEL_KEY =
-            ResourceKey.create(Registries.DIMENSION, new ResourceLocation(OfficeRoomsIds.MOD_ID, "office_rooms"));
+            ResourceKey.create(Registries.DIMENSION, ResourceLocation.fromNamespaceAndPath(OfficeRoomsIds.MOD_ID, "office_rooms"));
 
     /** Unterste Ebene (Bedrock-Boden). Muss ein Vielfaches von 16 sein. */
     public static final int MIN_Y = -64;

@@ -35,7 +35,7 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.neoforge.registries.DeferredHolder;
 
 /**
  * 0.42.0: blocks of the SS Fun =) and of the departure gate in the Office Rooms. All drawn in {@code tools/gen_0420.py}
@@ -172,120 +172,120 @@ public final class ShipBlocks {
         return Block.Properties.of().mapColor(c).strength(hard, hard * 4).sound(st).lightLevel(s -> light);
     }
 
-    private static RegistryObject<Block> reg(String name, Supplier<Block> b) {
+    private static DeferredHolder<Block, Block> reg(String name, Supplier<Block> b) {
         NAMES.add(name);
-        RegistryObject<Block> r = ModBlocks.BLOCKS.register(name, b);
+        DeferredHolder<Block, Block> r = ModBlocks.BLOCKS.register(name, b);
         ModBlocks.DECOR_ITEMS.add(ModBlocks.ITEMS.register(name, () -> new BlockItem(r.get(), new Item.Properties())));
         return r;
     }
 
-    private static RegistryObject<Block> full(String name, MapColor c, SoundType st, float hard, int light) {
+    private static DeferredHolder<Block, Block> full(String name, MapColor c, SoundType st, float hard, int light) {
         return reg(name, () -> new Block(props(c, st, hard, light)));
     }
 
-    private static RegistryObject<Block> turned(String name, MapColor c, SoundType st, int light, double... b) {
+    private static DeferredHolder<Block, Block> turned(String name, MapColor c, SoundType st, int light, double... b) {
         return reg(name, () -> new CinemaBlocks.Turned(props(c, st, 1.5F, light).noOcclusion(), b[0], b[1], b[2], b[3], b[4], b[5]));
     }
 
-    private static RegistryObject<Block> thin(String name, MapColor c, SoundType st, int light, double... b) {
+    private static DeferredHolder<Block, Block> thin(String name, MapColor c, SoundType st, int light, double... b) {
         return reg(name, () -> new Thin(props(c, st, 1.0F, light).noOcclusion(), b));
     }
 
-    private static RegistryObject<Block> lamp(String name, MapColor c, int light) {
+    private static DeferredHolder<Block, Block> lamp(String name, MapColor c, int light) {
         return reg(name, () -> new Lamp(props(c, SoundType.GLASS, 0.8F, 0).lightLevel(s -> s.getValue(Lamp.LIT) ? light : 0)));
     }
 
     // hull and structure (the outer hull is very hard: breaking out is possible, but slow)
-    public static final RegistryObject<Block> HULL = full("ship_hull", MapColor.SNOW, SoundType.METAL, 40F, 0);
-    public static final RegistryObject<Block> HULL_DARK = full("ship_hull_dark", MapColor.COLOR_BLUE, SoundType.METAL, 40F, 0);
-    public static final RegistryObject<Block> HULL_RUST = full("ship_hull_rust", MapColor.TERRACOTTA_WHITE, SoundType.METAL, 40F, 0);
-    public static final RegistryObject<Block> SMILE = reg("ship_smile", () -> new Variant(props(MapColor.SNOW, SoundType.METAL, 40F, 0)));
-    public static final RegistryObject<Block> FUNNEL = full("ship_funnel", MapColor.COLOR_RED, SoundType.METAL, 20F, 0);
-    public static final RegistryObject<Block> FUNNEL_TOP = full("ship_funnel_top", MapColor.COLOR_BLACK, SoundType.METAL, 20F, 0);
-    public static final RegistryObject<Block> FUNNEL_SMILE = reg("ship_funnel_smile", () -> new Variant(props(MapColor.COLOR_RED, SoundType.METAL, 20F, 0)));
-    public static final RegistryObject<Block> PORTHOLE = reg("ship_porthole", () -> new Glass(props(MapColor.SNOW, SoundType.GLASS, 3F, 0).noOcclusion()
+    public static final DeferredHolder<Block, Block> HULL = full("ship_hull", MapColor.SNOW, SoundType.METAL, 40F, 0);
+    public static final DeferredHolder<Block, Block> HULL_DARK = full("ship_hull_dark", MapColor.COLOR_BLUE, SoundType.METAL, 40F, 0);
+    public static final DeferredHolder<Block, Block> HULL_RUST = full("ship_hull_rust", MapColor.TERRACOTTA_WHITE, SoundType.METAL, 40F, 0);
+    public static final DeferredHolder<Block, Block> SMILE = reg("ship_smile", () -> new Variant(props(MapColor.SNOW, SoundType.METAL, 40F, 0)));
+    public static final DeferredHolder<Block, Block> FUNNEL = full("ship_funnel", MapColor.COLOR_RED, SoundType.METAL, 20F, 0);
+    public static final DeferredHolder<Block, Block> FUNNEL_TOP = full("ship_funnel_top", MapColor.COLOR_BLACK, SoundType.METAL, 20F, 0);
+    public static final DeferredHolder<Block, Block> FUNNEL_SMILE = reg("ship_funnel_smile", () -> new Variant(props(MapColor.COLOR_RED, SoundType.METAL, 20F, 0)));
+    public static final DeferredHolder<Block, Block> PORTHOLE = reg("ship_porthole", () -> new Glass(props(MapColor.SNOW, SoundType.GLASS, 3F, 0).noOcclusion()
             .isViewBlocking((s, l, p) -> false).isSuffocating((s, l, p) -> false)));
-    public static final RegistryObject<Block> WINDOW = reg("ship_window", () -> new Glass(props(MapColor.NONE, SoundType.GLASS, 3F, 0).noOcclusion()
+    public static final DeferredHolder<Block, Block> WINDOW = reg("ship_window", () -> new Glass(props(MapColor.NONE, SoundType.GLASS, 3F, 0).noOcclusion()
             .isViewBlocking((s, l, p) -> false).isSuffocating((s, l, p) -> false)));
     // passenger interior
-    public static final RegistryObject<Block> WALL_PANEL = full("ship_wall_panel", MapColor.SAND, SoundType.WOOD, 2F, 0);
-    public static final RegistryObject<Block> WAINSCOT = full("ship_wainscot", MapColor.WOOD, SoundType.WOOD, 2F, 0);
-    public static final RegistryObject<Block> WOOD_PANEL = full("ship_wood_panel", MapColor.COLOR_ORANGE, SoundType.WOOD, 2F, 0);
-    public static final RegistryObject<Block> TEAL_TRIM = full("ship_teal_trim", MapColor.COLOR_CYAN, SoundType.WOOD, 2F, 0);
-    public static final RegistryObject<Block> CEILING = full("ship_ceiling", MapColor.SAND, SoundType.WOOD, 2F, 0);
-    public static final RegistryObject<Block> GOLD_CEILING = full("ship_gold_ceiling", MapColor.GOLD, SoundType.METAL, 2F, 7);
-    public static final RegistryObject<Block> LIGHT = lamp("ship_ceiling_light", MapColor.SNOW, 13);
-    public static final RegistryObject<Block> CREW_LIGHT = lamp("ship_crew_light", MapColor.COLOR_ORANGE, 9);
-    public static final RegistryObject<Block> CARPET = full("ship_carpet", MapColor.COLOR_BLUE, SoundType.WOOL, 1F, 0);
-    public static final RegistryObject<Block> CARPET_STARS = full("ship_carpet_stars", MapColor.COLOR_BLUE, SoundType.WOOL, 1F, 0);
-    public static final RegistryObject<Block> CARPET_TEAL = full("ship_carpet_teal", MapColor.COLOR_CYAN, SoundType.WOOL, 1F, 0);
-    public static final RegistryObject<Block> CARPET_RED = full("ship_carpet_red", MapColor.COLOR_RED, SoundType.WOOL, 1F, 0);
-    public static final RegistryObject<Block> CARPET_BROWN = full("ship_carpet_brown", MapColor.COLOR_BROWN, SoundType.WOOL, 1F, 0);
-    public static final RegistryObject<Block> CARPET_WET = reg("ship_carpet_wet", () -> new Wet(props(MapColor.COLOR_BLUE, SoundType.WOOL, 1F, 0)));
-    public static final RegistryObject<Block> MARBLE = full("ship_marble", MapColor.TERRACOTTA_BROWN, SoundType.STONE, 3F, 0);
-    public static final RegistryObject<Block> TEAK = full("ship_teak", MapColor.WOOD, SoundType.WOOD, 2F, 0);
-    public static final RegistryObject<Block> POOL_TILE = full("ship_pool_tile", MapColor.COLOR_LIGHT_BLUE, SoundType.STONE, 3F, 0);
-    public static final RegistryObject<Block> BRASS_COLUMN = full("ship_brass_column", MapColor.GOLD, SoundType.METAL, 3F, 0);
-    public static final RegistryObject<Block> CURTAIN = full("ship_curtain", MapColor.COLOR_RED, SoundType.WOOL, 1F, 0);
-    public static final RegistryObject<Block> CARPET_STAIRS = reg("ship_carpet_stairs",
+    public static final DeferredHolder<Block, Block> WALL_PANEL = full("ship_wall_panel", MapColor.SAND, SoundType.WOOD, 2F, 0);
+    public static final DeferredHolder<Block, Block> WAINSCOT = full("ship_wainscot", MapColor.WOOD, SoundType.WOOD, 2F, 0);
+    public static final DeferredHolder<Block, Block> WOOD_PANEL = full("ship_wood_panel", MapColor.COLOR_ORANGE, SoundType.WOOD, 2F, 0);
+    public static final DeferredHolder<Block, Block> TEAL_TRIM = full("ship_teal_trim", MapColor.COLOR_CYAN, SoundType.WOOD, 2F, 0);
+    public static final DeferredHolder<Block, Block> CEILING = full("ship_ceiling", MapColor.SAND, SoundType.WOOD, 2F, 0);
+    public static final DeferredHolder<Block, Block> GOLD_CEILING = full("ship_gold_ceiling", MapColor.GOLD, SoundType.METAL, 2F, 7);
+    public static final DeferredHolder<Block, Block> LIGHT = lamp("ship_ceiling_light", MapColor.SNOW, 13);
+    public static final DeferredHolder<Block, Block> CREW_LIGHT = lamp("ship_crew_light", MapColor.COLOR_ORANGE, 9);
+    public static final DeferredHolder<Block, Block> CARPET = full("ship_carpet", MapColor.COLOR_BLUE, SoundType.WOOL, 1F, 0);
+    public static final DeferredHolder<Block, Block> CARPET_STARS = full("ship_carpet_stars", MapColor.COLOR_BLUE, SoundType.WOOL, 1F, 0);
+    public static final DeferredHolder<Block, Block> CARPET_TEAL = full("ship_carpet_teal", MapColor.COLOR_CYAN, SoundType.WOOL, 1F, 0);
+    public static final DeferredHolder<Block, Block> CARPET_RED = full("ship_carpet_red", MapColor.COLOR_RED, SoundType.WOOL, 1F, 0);
+    public static final DeferredHolder<Block, Block> CARPET_BROWN = full("ship_carpet_brown", MapColor.COLOR_BROWN, SoundType.WOOL, 1F, 0);
+    public static final DeferredHolder<Block, Block> CARPET_WET = reg("ship_carpet_wet", () -> new Wet(props(MapColor.COLOR_BLUE, SoundType.WOOL, 1F, 0)));
+    public static final DeferredHolder<Block, Block> MARBLE = full("ship_marble", MapColor.TERRACOTTA_BROWN, SoundType.STONE, 3F, 0);
+    public static final DeferredHolder<Block, Block> TEAK = full("ship_teak", MapColor.WOOD, SoundType.WOOD, 2F, 0);
+    public static final DeferredHolder<Block, Block> POOL_TILE = full("ship_pool_tile", MapColor.COLOR_LIGHT_BLUE, SoundType.STONE, 3F, 0);
+    public static final DeferredHolder<Block, Block> BRASS_COLUMN = full("ship_brass_column", MapColor.GOLD, SoundType.METAL, 3F, 0);
+    public static final DeferredHolder<Block, Block> CURTAIN = full("ship_curtain", MapColor.COLOR_RED, SoundType.WOOL, 1F, 0);
+    public static final DeferredHolder<Block, Block> CARPET_STAIRS = reg("ship_carpet_stairs",
             () -> new StairBlock(() -> CARPET.get().defaultBlockState(), props(MapColor.COLOR_BLUE, SoundType.WOOL, 1F, 0)));
-    public static final RegistryObject<Block> TEAL_STAIRS = reg("ship_teal_stairs",
+    public static final DeferredHolder<Block, Block> TEAL_STAIRS = reg("ship_teal_stairs",
             () -> new StairBlock(() -> CARPET_TEAL.get().defaultBlockState(), props(MapColor.COLOR_CYAN, SoundType.WOOL, 1F, 0)));
     // crew areas
-    public static final RegistryObject<Block> STEEL_WALL = full("ship_steel_wall", MapColor.SNOW, SoundType.METAL, 4F, 0);
-    public static final RegistryObject<Block> STEEL_FLOOR = full("ship_steel_floor", MapColor.COLOR_GRAY, SoundType.METAL, 4F, 0);
-    public static final RegistryObject<Block> STEEL_FRAME = full("ship_steel_frame", MapColor.SNOW, SoundType.METAL, 4F, 0);
-    public static final RegistryObject<Block> GRATE = reg("ship_grate", () -> new Glass(props(MapColor.COLOR_GRAY, SoundType.METAL, 4F, 0).noOcclusion()
+    public static final DeferredHolder<Block, Block> STEEL_WALL = full("ship_steel_wall", MapColor.SNOW, SoundType.METAL, 4F, 0);
+    public static final DeferredHolder<Block, Block> STEEL_FLOOR = full("ship_steel_floor", MapColor.COLOR_GRAY, SoundType.METAL, 4F, 0);
+    public static final DeferredHolder<Block, Block> STEEL_FRAME = full("ship_steel_frame", MapColor.SNOW, SoundType.METAL, 4F, 0);
+    public static final DeferredHolder<Block, Block> GRATE = reg("ship_grate", () -> new Glass(props(MapColor.COLOR_GRAY, SoundType.METAL, 4F, 0).noOcclusion()
             .isViewBlocking((s, l, p) -> false).isSuffocating((s, l, p) -> false)));
-    public static final RegistryObject<Block> STEEL_STAIRS = reg("ship_steel_stairs",
+    public static final DeferredHolder<Block, Block> STEEL_STAIRS = reg("ship_steel_stairs",
             () -> new StairBlock(() -> STEEL_FLOOR.get().defaultBlockState(), props(MapColor.COLOR_GRAY, SoundType.METAL, 4F, 0)));
-    public static final RegistryObject<Block> PIPES = full("ship_pipes", MapColor.COLOR_GRAY, SoundType.METAL, 4F, 0);
-    public static final RegistryObject<Block> ENGINE = full("ship_engine", MapColor.COLOR_GRAY, SoundType.METAL, 6F, 0);
-    public static final RegistryObject<Block> ENGINE_TOP = full("ship_engine_top", MapColor.COLOR_GRAY, SoundType.METAL, 6F, 0);
-    public static final RegistryObject<Block> VENT = reg("ship_vent", () -> new Vent(props(MapColor.COLOR_GRAY, SoundType.METAL, 2F, 0).noOcclusion(), false));
-    public static final RegistryObject<Block> VENT_BROKEN = reg("ship_vent_broken", () -> new Vent(props(MapColor.COLOR_BLACK, SoundType.METAL, 2F, 0).noOcclusion()
+    public static final DeferredHolder<Block, Block> PIPES = full("ship_pipes", MapColor.COLOR_GRAY, SoundType.METAL, 4F, 0);
+    public static final DeferredHolder<Block, Block> ENGINE = full("ship_engine", MapColor.COLOR_GRAY, SoundType.METAL, 6F, 0);
+    public static final DeferredHolder<Block, Block> ENGINE_TOP = full("ship_engine_top", MapColor.COLOR_GRAY, SoundType.METAL, 6F, 0);
+    public static final DeferredHolder<Block, Block> VENT = reg("ship_vent", () -> new Vent(props(MapColor.COLOR_GRAY, SoundType.METAL, 2F, 0).noOcclusion(), false));
+    public static final DeferredHolder<Block, Block> VENT_BROKEN = reg("ship_vent_broken", () -> new Vent(props(MapColor.COLOR_BLACK, SoundType.METAL, 2F, 0).noOcclusion()
             .noCollission(), true));
     // doors and rails
-    public static final RegistryObject<Block> CABIN_DOOR = reg("ship_cabin_door",
+    public static final DeferredHolder<Block, Block> CABIN_DOOR = reg("ship_cabin_door",
             () -> new DoorBlock(props(MapColor.SNOW, SoundType.WOOD, 2F, 0).noOcclusion(), BlockSetType.OAK));
-    public static final RegistryObject<Block> CREW_DOOR = reg("ship_crew_door",
+    public static final DeferredHolder<Block, Block> CREW_DOOR = reg("ship_crew_door",
             () -> new DoorBlock(props(MapColor.SNOW, SoundType.METAL, 3F, 0).noOcclusion(), BlockSetType.OAK));
-    public static final RegistryObject<Block> FIRE_DOOR = reg("ship_fire_door",
+    public static final DeferredHolder<Block, Block> FIRE_DOOR = reg("ship_fire_door",
             () -> new DoorBlock(props(MapColor.COLOR_GRAY, SoundType.METAL, 8F, 0).noOcclusion(), BlockSetType.IRON));
-    public static final RegistryObject<Block> RAILING = reg("ship_railing", () -> new FenceBlock(props(MapColor.SNOW, SoundType.METAL, 3F, 0)));
-    public static final RegistryObject<Block> BRASS_RAILING = reg("ship_brass_railing", () -> new FenceBlock(props(MapColor.GOLD, SoundType.METAL, 3F, 0)));
+    public static final DeferredHolder<Block, Block> RAILING = reg("ship_railing", () -> new FenceBlock(props(MapColor.SNOW, SoundType.METAL, 3F, 0)));
+    public static final DeferredHolder<Block, Block> BRASS_RAILING = reg("ship_brass_railing", () -> new FenceBlock(props(MapColor.GOLD, SoundType.METAL, 3F, 0)));
     // decor (front = the side facing into the room; wall-mounted parts sit at the back of the block)
-    public static final RegistryObject<Block> HANDRAIL = thin("ship_handrail", MapColor.WOOD, SoundType.WOOD, 0, 0, 7, 13, 16, 10, 16);
-    public static final RegistryObject<Block> LIFE_RING = thin("ship_life_ring", MapColor.COLOR_ORANGE, SoundType.WOOL, 0, 1, 1, 14, 15, 15, 16);
-    public static final RegistryObject<Block> EXIT_SIGN = thin("ship_exit_sign", MapColor.COLOR_GREEN, SoundType.GLASS, 8, 1, 4, 14, 15, 12, 16);
-    public static final RegistryObject<Block> SCONCE = thin("ship_sconce", MapColor.GOLD, SoundType.METAL, 11, 5, 3, 11, 11, 13, 16);
-    public static final RegistryObject<Block> FIRE_HOSE = turned("ship_fire_hose", MapColor.COLOR_RED, SoundType.METAL, 0, 1, 0, 9, 15, 14, 16);
-    public static final RegistryObject<Block> DECK_CHAIR = turned("ship_deck_chair", MapColor.SNOW, SoundType.WOOD, 0, 2, 0, 0, 14, 8, 16);
-    public static final RegistryObject<Block> SLOT_MACHINE = turned("ship_slot_machine", MapColor.COLOR_RED, SoundType.METAL, 0, 1, 0, 2, 15, 16, 15);
-    public static final RegistryObject<Block> SLOT_MACHINE_TOP = turned("ship_slot_machine_top", MapColor.COLOR_RED, SoundType.METAL, 9, 1, 0, 3, 15, 12, 15);
-    public static final RegistryObject<Block> BUFFET = turned("ship_buffet_counter", MapColor.SNOW, SoundType.METAL, 0, 0, 0, 0, 16, 16, 16);
-    public static final RegistryObject<Block> WASHER = turned("ship_washer", MapColor.SNOW, SoundType.METAL, 0, 0, 0, 1, 16, 16, 16);
-    public static final RegistryObject<Block> ELEVATOR_DOOR = turned("ship_elevator_door", MapColor.GOLD, SoundType.METAL, 0, 0, 0, 12, 16, 16, 16);
-    public static final RegistryObject<Block> SUITCASE = turned("ship_suitcase", MapColor.COLOR_BLUE, SoundType.WOOL, 0, 3, 0, 5, 13, 11, 11);
-    public static final RegistryObject<Block> CONSOLE = turned("ship_console", MapColor.COLOR_GRAY, SoundType.METAL, 4, 0, 0, 2, 16, 12, 16);
-    public static final RegistryObject<Block> POSTER = thin("ship_poster", MapColor.COLOR_YELLOW, SoundType.WOOL, 0, 1, 0, 15, 15, 16, 16);
+    public static final DeferredHolder<Block, Block> HANDRAIL = thin("ship_handrail", MapColor.WOOD, SoundType.WOOD, 0, 0, 7, 13, 16, 10, 16);
+    public static final DeferredHolder<Block, Block> LIFE_RING = thin("ship_life_ring", MapColor.COLOR_ORANGE, SoundType.WOOL, 0, 1, 1, 14, 15, 15, 16);
+    public static final DeferredHolder<Block, Block> EXIT_SIGN = thin("ship_exit_sign", MapColor.COLOR_GREEN, SoundType.GLASS, 8, 1, 4, 14, 15, 12, 16);
+    public static final DeferredHolder<Block, Block> SCONCE = thin("ship_sconce", MapColor.GOLD, SoundType.METAL, 11, 5, 3, 11, 11, 13, 16);
+    public static final DeferredHolder<Block, Block> FIRE_HOSE = turned("ship_fire_hose", MapColor.COLOR_RED, SoundType.METAL, 0, 1, 0, 9, 15, 14, 16);
+    public static final DeferredHolder<Block, Block> DECK_CHAIR = turned("ship_deck_chair", MapColor.SNOW, SoundType.WOOD, 0, 2, 0, 0, 14, 8, 16);
+    public static final DeferredHolder<Block, Block> SLOT_MACHINE = turned("ship_slot_machine", MapColor.COLOR_RED, SoundType.METAL, 0, 1, 0, 2, 15, 16, 15);
+    public static final DeferredHolder<Block, Block> SLOT_MACHINE_TOP = turned("ship_slot_machine_top", MapColor.COLOR_RED, SoundType.METAL, 9, 1, 0, 3, 15, 12, 15);
+    public static final DeferredHolder<Block, Block> BUFFET = turned("ship_buffet_counter", MapColor.SNOW, SoundType.METAL, 0, 0, 0, 0, 16, 16, 16);
+    public static final DeferredHolder<Block, Block> WASHER = turned("ship_washer", MapColor.SNOW, SoundType.METAL, 0, 0, 0, 1, 16, 16, 16);
+    public static final DeferredHolder<Block, Block> ELEVATOR_DOOR = turned("ship_elevator_door", MapColor.GOLD, SoundType.METAL, 0, 0, 0, 12, 16, 16, 16);
+    public static final DeferredHolder<Block, Block> SUITCASE = turned("ship_suitcase", MapColor.COLOR_BLUE, SoundType.WOOL, 0, 3, 0, 5, 13, 11, 11);
+    public static final DeferredHolder<Block, Block> CONSOLE = turned("ship_console", MapColor.COLOR_GRAY, SoundType.METAL, 4, 0, 0, 2, 16, 12, 16);
+    public static final DeferredHolder<Block, Block> POSTER = thin("ship_poster", MapColor.COLOR_YELLOW, SoundType.WOOL, 0, 1, 0, 15, 15, 16, 16);
     // lifeboats: the way off the ship
-    public static final RegistryObject<Block> LIFEBOAT = full("ship_lifeboat", MapColor.COLOR_ORANGE, SoundType.WOOD, 3F, 0);
-    public static final RegistryObject<Block> LIFEBOAT_CANOPY = full("ship_lifeboat_canopy", MapColor.SNOW, SoundType.WOOD, 3F, 0);
-    public static final RegistryObject<Block> LIFEBOAT_RELEASE = reg("ship_lifeboat_release", () -> new Use(props(MapColor.COLOR_RED, SoundType.METAL, 3F, 2)
+    public static final DeferredHolder<Block, Block> LIFEBOAT = full("ship_lifeboat", MapColor.COLOR_ORANGE, SoundType.WOOD, 3F, 0);
+    public static final DeferredHolder<Block, Block> LIFEBOAT_CANOPY = full("ship_lifeboat_canopy", MapColor.SNOW, SoundType.WOOD, 3F, 0);
+    public static final DeferredHolder<Block, Block> LIFEBOAT_RELEASE = reg("ship_lifeboat_release", () -> new Use(props(MapColor.COLOR_RED, SoundType.METAL, 3F, 2)
             .noOcclusion(), SeaEvents::launch, 3, 0, 10, 13, 14, 16));
     // departure gate in the Office Rooms
-    public static final RegistryObject<Block> TERMINAL_CARPET = full("terminal_carpet", MapColor.COLOR_GRAY, SoundType.WOOL, 1F, 0);
-    public static final RegistryObject<Block> TERMINAL_WINDOW = full("terminal_window", MapColor.COLOR_LIGHT_GREEN, SoundType.GLASS, 3F, 3);
-    public static final RegistryObject<Block> DEPARTURE_BOARD = reg("departure_board", () -> new Board(props(MapColor.COLOR_BLACK, SoundType.GLASS, 2F, 9).noOcclusion()));
-    public static final RegistryObject<Block> BOARDING_GATE = reg("boarding_gate", () -> new Use(props(MapColor.COLOR_GRAY, SoundType.METAL, 6F, 0)
+    public static final DeferredHolder<Block, Block> TERMINAL_CARPET = full("terminal_carpet", MapColor.COLOR_GRAY, SoundType.WOOL, 1F, 0);
+    public static final DeferredHolder<Block, Block> TERMINAL_WINDOW = full("terminal_window", MapColor.COLOR_LIGHT_GREEN, SoundType.GLASS, 3F, 3);
+    public static final DeferredHolder<Block, Block> DEPARTURE_BOARD = reg("departure_board", () -> new Board(props(MapColor.COLOR_BLACK, SoundType.GLASS, 2F, 9).noOcclusion()));
+    public static final DeferredHolder<Block, Block> BOARDING_GATE = reg("boarding_gate", () -> new Use(props(MapColor.COLOR_GRAY, SoundType.METAL, 6F, 0)
             .noOcclusion(), SeaEvents::board, 0, 0, 13, 16, 16, 16));
-    public static final RegistryObject<Block> BOARDING_GATE_TOP = reg("boarding_gate_top", () -> new Use(props(MapColor.COLOR_GRAY, SoundType.METAL, 6F, 6)
+    public static final DeferredHolder<Block, Block> BOARDING_GATE_TOP = reg("boarding_gate_top", () -> new Use(props(MapColor.COLOR_GRAY, SoundType.METAL, 6F, 6)
             .noOcclusion(), SeaEvents::board, 0, 0, 13, 16, 16, 16));
-    public static final RegistryObject<Block> GATE_DESK = turned("gate_desk", MapColor.COLOR_GRAY, SoundType.METAL, 0, 0, 0, 0, 16, 16, 16);
-    public static final RegistryObject<Block> GATE_SEATS = turned("gate_seats", MapColor.COLOR_BLUE, SoundType.METAL, 0, 0, 0, 2, 16, 9, 16);
+    public static final DeferredHolder<Block, Block> GATE_DESK = turned("gate_desk", MapColor.COLOR_GRAY, SoundType.METAL, 0, 0, 0, 0, 16, 16, 16);
+    public static final DeferredHolder<Block, Block> GATE_SEATS = turned("gate_seats", MapColor.COLOR_BLUE, SoundType.METAL, 0, 0, 0, 2, 16, 9, 16);
 
-    public static BlockState f(RegistryObject<Block> b, Direction front) {
+    public static BlockState f(DeferredHolder<Block, Block> b, Direction front) {
         return b.get().defaultBlockState().setValue(DecorBlock.FACING, front);
     }
 

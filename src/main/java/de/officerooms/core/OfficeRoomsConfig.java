@@ -1,6 +1,6 @@
 package de.officerooms.core;
 
-import net.minecraftforge.common.ForgeConfigSpec;
+import net.neoforged.neoforge.common.ModConfigSpec;
 
 /**
  * Zentrale Konfiguration für Mobs und Audio (Phase 3).
@@ -14,133 +14,133 @@ import net.minecraftforge.common.ForgeConfigSpec;
  */
 public final class OfficeRoomsConfig {
 
-    public static final ForgeConfigSpec COMMON_SPEC;
-    public static final ForgeConfigSpec CLIENT_SPEC;
-    public static ForgeConfigSpec.BooleanValue MEGA_HINTS;
-    public static ForgeConfigSpec.IntValue MEGA_HINT_STOREYS;
-    public static ForgeConfigSpec.BooleanValue LIGHT_FLICKER;
-    public static ForgeConfigSpec.IntValue LIGHT_FLICKER_RADIUS;
+    public static final ModConfigSpec COMMON_SPEC;
+    public static final ModConfigSpec CLIENT_SPEC;
+    public static ModConfigSpec.BooleanValue MEGA_HINTS;
+    public static ModConfigSpec.IntValue MEGA_HINT_STOREYS;
+    public static ModConfigSpec.BooleanValue LIGHT_FLICKER;
+    public static ModConfigSpec.IntValue LIGHT_FLICKER_RADIUS;
 
     public enum ShaderCompat { AUTO, ALWAYS, OFF }
 
-    public static ForgeConfigSpec.EnumValue<ShaderCompat> OFFICECRAFT_SHADER_COMPAT;
+    public static ModConfigSpec.EnumValue<ShaderCompat> OFFICECRAFT_SHADER_COMPAT;
     /** 0.9.0: level of detail of OfficeCraft furniture drawn through the shader compatibility renderer. */
     public enum ShaderDetail { FULL, BALANCED, SIMPLE }
-    public static ForgeConfigSpec.EnumValue<ShaderDetail> OFFICECRAFT_SHADER_DETAIL;
-    public static ForgeConfigSpec.IntValue OFFICECRAFT_SHADER_FULL_DISTANCE;
-    public static ForgeConfigSpec.IntValue OFFICECRAFT_SHADER_RENDER_DISTANCE;
-    public static ForgeConfigSpec.BooleanValue OFFICECRAFT_SHADER_SHADOWS;
+    public static ModConfigSpec.EnumValue<ShaderDetail> OFFICECRAFT_SHADER_DETAIL;
+    public static ModConfigSpec.IntValue OFFICECRAFT_SHADER_FULL_DISTANCE;
+    public static ModConfigSpec.IntValue OFFICECRAFT_SHADER_RENDER_DISTANCE;
+    public static ModConfigSpec.BooleanValue OFFICECRAFT_SHADER_SHADOWS;
 
     // Spawns
-    public static final ForgeConfigSpec.BooleanValue SPAWN_ENABLED;
-    public static final ForgeConfigSpec.IntValue WOLFSPIDER_ROOMS_PER_MOB;
-    public static final ForgeConfigSpec.IntValue WARDEN_ROOMS_PER_MOB;
-    public static final ForgeConfigSpec.IntValue WARDEN_MAX_NEAR_PLAYER;
-    public static final ForgeConfigSpec.IntValue SPAWN_MIN_DISTANCE;
+    public static final ModConfigSpec.BooleanValue SPAWN_ENABLED;
+    public static final ModConfigSpec.IntValue WOLFSPIDER_ROOMS_PER_MOB;
+    public static final ModConfigSpec.IntValue WARDEN_ROOMS_PER_MOB;
+    public static final ModConfigSpec.IntValue WARDEN_MAX_NEAR_PLAYER;
+    public static final ModConfigSpec.IntValue SPAWN_MIN_DISTANCE;
 
     // Wolfspider
-    public static final ForgeConfigSpec.DoubleValue WOLFSPIDER_HEALTH;
-    public static final ForgeConfigSpec.DoubleValue WOLFSPIDER_DAMAGE;
-    public static final ForgeConfigSpec.DoubleValue WOLFSPIDER_SPEED;
-    public static final ForgeConfigSpec.IntValue WOLFSPIDER_WITHER_SECONDS;
-    public static final ForgeConfigSpec.IntValue WOLFSPIDER_WITHER_LEVEL;
+    public static final ModConfigSpec.DoubleValue WOLFSPIDER_HEALTH;
+    public static final ModConfigSpec.DoubleValue WOLFSPIDER_DAMAGE;
+    public static final ModConfigSpec.DoubleValue WOLFSPIDER_SPEED;
+    public static final ModConfigSpec.IntValue WOLFSPIDER_WITHER_SECONDS;
+    public static final ModConfigSpec.IntValue WOLFSPIDER_WITHER_LEVEL;
 
     // Headless Warden
-    public static final ForgeConfigSpec.DoubleValue WARDEN_HEALTH;
-    public static final ForgeConfigSpec.DoubleValue WARDEN_DAMAGE;
-    public static final ForgeConfigSpec.DoubleValue WARDEN_SPEED;
-    public static final ForgeConfigSpec.DoubleValue WARDEN_CHASE_MULTIPLIER;
-    public static final ForgeConfigSpec.DoubleValue WARDEN_HEARING;
-    public static final ForgeConfigSpec.IntValue WARDEN_FORGET_SECONDS;
-    public static final ForgeConfigSpec.DoubleValue WOLFSPIDER_FRIENDLY_CHANCE;
-    public static final ForgeConfigSpec.DoubleValue WARDEN_INGOT_CHANCE;
-    public static final ForgeConfigSpec.DoubleValue GAUNT_HEALTH;
-    public static final ForgeConfigSpec.DoubleValue GAUNT_DAMAGE;
-    public static final ForgeConfigSpec.DoubleValue GAUNT_SPEED;
-    public static final ForgeConfigSpec.IntValue GAUNT_ROOMS_PER_MOB;
-    public static final ForgeConfigSpec.IntValue GAUNT_MAX_NEAR_PLAYER;
-    public static final ForgeConfigSpec.IntValue GAUNT_ALERT_RADIUS;
-    public static final ForgeConfigSpec.DoubleValue GAUNT_FOLLOW_RANGE;
-    public static final ForgeConfigSpec.IntValue GAUNT_SENSE_RANGE;
-    public static final ForgeConfigSpec.IntValue BALANCE_VERSION;
-    public static final ForgeConfigSpec.DoubleValue WARDEN_SPAWN_CHANCE;
-    public static final ForgeConfigSpec.BooleanValue FREEZE_FAR_MOBS;
-    public static final ForgeConfigSpec.DoubleValue FREEZE_HORIZONTAL;
-    public static final ForgeConfigSpec.DoubleValue FREEZE_VERTICAL;
-    public static final ForgeConfigSpec.DoubleValue OBSERVER_CHANCE;
+    public static final ModConfigSpec.DoubleValue WARDEN_HEALTH;
+    public static final ModConfigSpec.DoubleValue WARDEN_DAMAGE;
+    public static final ModConfigSpec.DoubleValue WARDEN_SPEED;
+    public static final ModConfigSpec.DoubleValue WARDEN_CHASE_MULTIPLIER;
+    public static final ModConfigSpec.DoubleValue WARDEN_HEARING;
+    public static final ModConfigSpec.IntValue WARDEN_FORGET_SECONDS;
+    public static final ModConfigSpec.DoubleValue WOLFSPIDER_FRIENDLY_CHANCE;
+    public static final ModConfigSpec.DoubleValue WARDEN_INGOT_CHANCE;
+    public static final ModConfigSpec.DoubleValue GAUNT_HEALTH;
+    public static final ModConfigSpec.DoubleValue GAUNT_DAMAGE;
+    public static final ModConfigSpec.DoubleValue GAUNT_SPEED;
+    public static final ModConfigSpec.IntValue GAUNT_ROOMS_PER_MOB;
+    public static final ModConfigSpec.IntValue GAUNT_MAX_NEAR_PLAYER;
+    public static final ModConfigSpec.IntValue GAUNT_ALERT_RADIUS;
+    public static final ModConfigSpec.DoubleValue GAUNT_FOLLOW_RANGE;
+    public static final ModConfigSpec.IntValue GAUNT_SENSE_RANGE;
+    public static final ModConfigSpec.IntValue BALANCE_VERSION;
+    public static final ModConfigSpec.DoubleValue WARDEN_SPAWN_CHANCE;
+    public static final ModConfigSpec.BooleanValue FREEZE_FAR_MOBS;
+    public static final ModConfigSpec.DoubleValue FREEZE_HORIZONTAL;
+    public static final ModConfigSpec.DoubleValue FREEZE_VERTICAL;
+    public static final ModConfigSpec.DoubleValue OBSERVER_CHANCE;
     // 0.6.0
-    public static final ForgeConfigSpec.DoubleValue HOUND_HEALTH;
-    public static final ForgeConfigSpec.DoubleValue HOUND_DAMAGE;
-    public static final ForgeConfigSpec.IntValue HOUND_ROOMS_PER_MOB;
-    public static final ForgeConfigSpec.IntValue HOUND_MAX_NEAR_PLAYER;
-    public static final ForgeConfigSpec.IntValue SMILER_ROOMS_PER_MOB;
-    public static final ForgeConfigSpec.IntValue SMILER_MAX_NEAR_PLAYER;
-    public static final ForgeConfigSpec.IntValue SMILER_MAX_LIGHT;
-    public static final ForgeConfigSpec.DoubleValue COLONY_HEALTH;
-    public static final ForgeConfigSpec.DoubleValue COLONY_DAMAGE;
-    public static final ForgeConfigSpec.DoubleValue COLONY_SPEED;
-    public static final ForgeConfigSpec.IntValue COLONY_ROOMS_PER_MOB;
-    public static final ForgeConfigSpec.IntValue COLONY_CHASE_SECONDS;
-    public static final ForgeConfigSpec.IntValue COLONY_FALTER_SECONDS;
-    public static final ForgeConfigSpec.DoubleValue COLONY_SPAWN_CHANCE;
-    public static final ForgeConfigSpec.BooleanValue BLACKOUT_ENABLED;
-    public static final ForgeConfigSpec.IntValue BLACKOUT_FIRST_DELAY;
-    public static final ForgeConfigSpec.IntValue BLACKOUT_PERIOD;
-    public static final ForgeConfigSpec.IntValue BLACKOUT_WARNING;
-    public static final ForgeConfigSpec.IntValue BLACKOUT_ACTIVE;
-    public static final ForgeConfigSpec.IntValue BLACKOUT_RADIUS;
-    public static final ForgeConfigSpec.IntValue BLACKOUT_STOREYS;
-    public static final ForgeConfigSpec.IntValue BLACKOUT_GAUNTS;
-    public static final ForgeConfigSpec.BooleanValue HAZARD_ENABLED;
-    public static final ForgeConfigSpec.IntValue HAZARD_FIRST_DELAY;
-    public static final ForgeConfigSpec.IntValue HAZARD_PERIOD;
-    public static final ForgeConfigSpec.IntValue HAZARD_WARNING;
-    public static final ForgeConfigSpec.IntValue HAZARD_ACTIVE;
-    public static final ForgeConfigSpec.IntValue HAZARD_RADIUS;
-    public static final ForgeConfigSpec.IntValue HAZARD_SEARCH_REGIONS;
-    public static final ForgeConfigSpec.IntValue HAZARD_CHESTS;
+    public static final ModConfigSpec.DoubleValue HOUND_HEALTH;
+    public static final ModConfigSpec.DoubleValue HOUND_DAMAGE;
+    public static final ModConfigSpec.IntValue HOUND_ROOMS_PER_MOB;
+    public static final ModConfigSpec.IntValue HOUND_MAX_NEAR_PLAYER;
+    public static final ModConfigSpec.IntValue SMILER_ROOMS_PER_MOB;
+    public static final ModConfigSpec.IntValue SMILER_MAX_NEAR_PLAYER;
+    public static final ModConfigSpec.IntValue SMILER_MAX_LIGHT;
+    public static final ModConfigSpec.DoubleValue COLONY_HEALTH;
+    public static final ModConfigSpec.DoubleValue COLONY_DAMAGE;
+    public static final ModConfigSpec.DoubleValue COLONY_SPEED;
+    public static final ModConfigSpec.IntValue COLONY_ROOMS_PER_MOB;
+    public static final ModConfigSpec.IntValue COLONY_CHASE_SECONDS;
+    public static final ModConfigSpec.IntValue COLONY_FALTER_SECONDS;
+    public static final ModConfigSpec.DoubleValue COLONY_SPAWN_CHANCE;
+    public static final ModConfigSpec.BooleanValue BLACKOUT_ENABLED;
+    public static final ModConfigSpec.IntValue BLACKOUT_FIRST_DELAY;
+    public static final ModConfigSpec.IntValue BLACKOUT_PERIOD;
+    public static final ModConfigSpec.IntValue BLACKOUT_WARNING;
+    public static final ModConfigSpec.IntValue BLACKOUT_ACTIVE;
+    public static final ModConfigSpec.IntValue BLACKOUT_RADIUS;
+    public static final ModConfigSpec.IntValue BLACKOUT_STOREYS;
+    public static final ModConfigSpec.IntValue BLACKOUT_GAUNTS;
+    public static final ModConfigSpec.BooleanValue HAZARD_ENABLED;
+    public static final ModConfigSpec.IntValue HAZARD_FIRST_DELAY;
+    public static final ModConfigSpec.IntValue HAZARD_PERIOD;
+    public static final ModConfigSpec.IntValue HAZARD_WARNING;
+    public static final ModConfigSpec.IntValue HAZARD_ACTIVE;
+    public static final ModConfigSpec.IntValue HAZARD_RADIUS;
+    public static final ModConfigSpec.IntValue HAZARD_SEARCH_REGIONS;
+    public static final ModConfigSpec.IntValue HAZARD_CHESTS;
     // 0.24.0: Deathmoth
-    public static final ForgeConfigSpec.BooleanValue DEATHMOTH_ENABLED;
-    public static final ForgeConfigSpec.IntValue DEATHMOTH_ROOMS_PER_MOB;
-    public static final ForgeConfigSpec.IntValue DEATHMOTH_MAX_NEAR_PLAYER;
-    public static final ForgeConfigSpec.DoubleValue DEATHMOTH_HEALTH;
-    public static final ForgeConfigSpec.DoubleValue DEATHMOTH_BITE;
-    public static final ForgeConfigSpec.DoubleValue DEATHMOTH_DRAIN;
-    public static final ForgeConfigSpec.DoubleValue DEATHMOTH_ATTACH_SECONDS;
-    public static final ForgeConfigSpec.IntValue DEATHMOTH_CHASE_SECONDS;
-    public static final ForgeConfigSpec.DoubleValue DEATHMOTH_RANGE;
-    public static final ForgeConfigSpec.DoubleValue FLAYED_HEALTH;
-    public static final ForgeConfigSpec.DoubleValue FLAYED_DAMAGE;
-    public static final ForgeConfigSpec.DoubleValue ARANEA_HEALTH;
-    public static final ForgeConfigSpec.DoubleValue MASCOT_HEALTH;
-    public static final ForgeConfigSpec.DoubleValue MASCOT_DAMAGE;
-    public static final ForgeConfigSpec.DoubleValue MASCOT_CHANCE;
-    public static final ForgeConfigSpec.IntValue MASCOT_MAX;
-    public static final ForgeConfigSpec.DoubleValue GATE_CHANCE;
-    public static final ForgeConfigSpec.DoubleValue ARANEA_DAMAGE;
-    public static final ForgeConfigSpec.DoubleValue ARANEA_SPAWN_CHANCE;
-    public static final ForgeConfigSpec.DoubleValue ARANEA_CINEMA_CHANCE;
+    public static final ModConfigSpec.BooleanValue DEATHMOTH_ENABLED;
+    public static final ModConfigSpec.IntValue DEATHMOTH_ROOMS_PER_MOB;
+    public static final ModConfigSpec.IntValue DEATHMOTH_MAX_NEAR_PLAYER;
+    public static final ModConfigSpec.DoubleValue DEATHMOTH_HEALTH;
+    public static final ModConfigSpec.DoubleValue DEATHMOTH_BITE;
+    public static final ModConfigSpec.DoubleValue DEATHMOTH_DRAIN;
+    public static final ModConfigSpec.DoubleValue DEATHMOTH_ATTACH_SECONDS;
+    public static final ModConfigSpec.IntValue DEATHMOTH_CHASE_SECONDS;
+    public static final ModConfigSpec.DoubleValue DEATHMOTH_RANGE;
+    public static final ModConfigSpec.DoubleValue FLAYED_HEALTH;
+    public static final ModConfigSpec.DoubleValue FLAYED_DAMAGE;
+    public static final ModConfigSpec.DoubleValue ARANEA_HEALTH;
+    public static final ModConfigSpec.DoubleValue MASCOT_HEALTH;
+    public static final ModConfigSpec.DoubleValue MASCOT_DAMAGE;
+    public static final ModConfigSpec.DoubleValue MASCOT_CHANCE;
+    public static final ModConfigSpec.IntValue MASCOT_MAX;
+    public static final ModConfigSpec.DoubleValue GATE_CHANCE;
+    public static final ModConfigSpec.DoubleValue ARANEA_DAMAGE;
+    public static final ModConfigSpec.DoubleValue ARANEA_SPAWN_CHANCE;
+    public static final ModConfigSpec.DoubleValue ARANEA_CINEMA_CHANCE;
     /** 0.43.0 */
-    public static final ForgeConfigSpec.DoubleValue ARANEA_MALL_CHANCE;
-    public static final ForgeConfigSpec.BooleanValue INSTALL_QUESTS;
-    public static final ForgeConfigSpec.DoubleValue FLAYED_CHASE_MULTIPLIER;
-    public static final ForgeConfigSpec.IntValue FLAYED_CHASE_SECONDS;
-    public static final ForgeConfigSpec.IntValue FLAYED_FALTER_SECONDS;
-    public static final ForgeConfigSpec.DoubleValue FLAYED_SPAWN_CHANCE;
-    public static final ForgeConfigSpec.DoubleValue HOUND_SPAWN_CHANCE;
-    public static final ForgeConfigSpec.DoubleValue SMILER_SPAWN_CHANCE;
+    public static final ModConfigSpec.DoubleValue ARANEA_MALL_CHANCE;
+    public static final ModConfigSpec.BooleanValue INSTALL_QUESTS;
+    public static final ModConfigSpec.DoubleValue FLAYED_CHASE_MULTIPLIER;
+    public static final ModConfigSpec.IntValue FLAYED_CHASE_SECONDS;
+    public static final ModConfigSpec.IntValue FLAYED_FALTER_SECONDS;
+    public static final ModConfigSpec.DoubleValue FLAYED_SPAWN_CHANCE;
+    public static final ModConfigSpec.DoubleValue HOUND_SPAWN_CHANCE;
+    public static final ModConfigSpec.DoubleValue SMILER_SPAWN_CHANCE;
 
     /** Qualitätsstufen der Loot-Tabellen (Reihenfolge der Werte in {@code [loot]}). */
     public static final java.util.List<String> LOOT_TIERS = java.util.List.of("common", "uncommon", "rare", "special", "multidimensional", "wood",
             "stories", "supplies");
     /** Standardchancen je Container und Stufe: common, uncommon, rare, special, multidimensional, wood. */
     private static final java.util.Map<String, java.util.List<Double>> LOOT_DEFAULTS = new java.util.LinkedHashMap<>();
-    private static final java.util.Map<String, ForgeConfigSpec.ConfigValue<java.util.List<? extends Double>>> LOOT = new java.util.HashMap<>();
+    private static final java.util.Map<String, ModConfigSpec.ConfigValue<java.util.List<? extends Double>>> LOOT = new java.util.HashMap<>();
 
     /** 0.6.2: Spawn-Balance. Ältere Config-Dateien behalten sonst ihre alten Werte. */
     public static final int CURRENT_BALANCE = 7;
     /** 0.29.0: curiosity room chances (copied into SpecialRooms.CURIO on load). */
-    public static final ForgeConfigSpec.DoubleValue[] CURIO = new ForgeConfigSpec.DoubleValue[6];
+    public static final ModConfigSpec.DoubleValue[] CURIO = new ModConfigSpec.DoubleValue[6];
 
     public static void applyCurio() {
         for (int k = 0; k < CURIO.length; k++) {
@@ -230,7 +230,7 @@ public final class OfficeRoomsConfig {
             applyBalance();
             return;
         }
-        for (ForgeConfigSpec.ConfigValue<?> v : java.util.List.<ForgeConfigSpec.ConfigValue<?>>of(
+        for (ModConfigSpec.ConfigValue<?> v : java.util.List.<ModConfigSpec.ConfigValue<?>>of(
                 GAUNT_ROOMS_PER_MOB, GAUNT_MAX_NEAR_PLAYER, GAUNT_ALERT_RADIUS, GAUNT_FOLLOW_RANGE, GAUNT_SENSE_RANGE,
                 HOUND_ROOMS_PER_MOB, HOUND_MAX_NEAR_PLAYER, HOUND_SPAWN_CHANCE,
                 SMILER_ROOMS_PER_MOB, SMILER_MAX_NEAR_PLAYER, SMILER_MAX_LIGHT, SMILER_SPAWN_CHANCE, WARDEN_SPAWN_CHANCE)) {
@@ -241,7 +241,7 @@ public final class OfficeRoomsConfig {
         de.officerooms.OfficeRooms.LOGGER.info("Office Rooms: spawn balance {} applied to the config.", CURRENT_BALANCE);
     }
 
-    private static <T> void reset(ForgeConfigSpec.ConfigValue<T> v) {
+    private static <T> void reset(ModConfigSpec.ConfigValue<T> v) {
         v.set(v.getDefault());
     }
 
@@ -272,7 +272,7 @@ public final class OfficeRoomsConfig {
 
     /** Chance einer Loot-Stufe in einem Container dieses Raumtyps (0, wenn nicht eingetragen). */
     public static double lootChance(String room, String tier) {
-        ForgeConfigSpec.ConfigValue<java.util.List<? extends Double>> v = LOOT.get(room);
+        ModConfigSpec.ConfigValue<java.util.List<? extends Double>> v = LOOT.get(room);
         int i = LOOT_TIERS.indexOf(tier);
         if (v == null || i < 0) {
             return 0.0;
@@ -292,19 +292,19 @@ public final class OfficeRoomsConfig {
     }
 
     // Client
-    public static final ForgeConfigSpec.DoubleValue HUM_VOLUME;
-    public static final ForgeConfigSpec.DoubleValue MUSIC_VOLUME;
-    public static final ForgeConfigSpec.BooleanValue ROOM_REVERB;
-    public static final ForgeConfigSpec.DoubleValue ROOM_REVERB_STRENGTH;
-    public static final ForgeConfigSpec.DoubleValue HEARTBEAT_VOLUME;
-    public static final ForgeConfigSpec.IntValue HEARTBEAT_RANGE;
-    public static final ForgeConfigSpec.IntValue MUSIC_INTERVAL_MINUTES;
-    public static final ForgeConfigSpec.DoubleValue AMBIENT_VOLUME;
-    public static final ForgeConfigSpec.IntValue AMBIENT_MIN_SECONDS;
-    public static final ForgeConfigSpec.IntValue AMBIENT_MAX_SECONDS;
+    public static final ModConfigSpec.DoubleValue HUM_VOLUME;
+    public static final ModConfigSpec.DoubleValue MUSIC_VOLUME;
+    public static final ModConfigSpec.BooleanValue ROOM_REVERB;
+    public static final ModConfigSpec.DoubleValue ROOM_REVERB_STRENGTH;
+    public static final ModConfigSpec.DoubleValue HEARTBEAT_VOLUME;
+    public static final ModConfigSpec.IntValue HEARTBEAT_RANGE;
+    public static final ModConfigSpec.IntValue MUSIC_INTERVAL_MINUTES;
+    public static final ModConfigSpec.DoubleValue AMBIENT_VOLUME;
+    public static final ModConfigSpec.IntValue AMBIENT_MIN_SECONDS;
+    public static final ModConfigSpec.IntValue AMBIENT_MAX_SECONDS;
 
     static {
-        ForgeConfigSpec.Builder b = new ForgeConfigSpec.Builder();
+        ModConfigSpec.Builder b = new ModConfigSpec.Builder();
         b.comment("Atmosphere (0.9.0)").push("atmosphere");
         MEGA_HINTS = b.comment("Sounds of a megastructure (water, neon hum, barking) seep through the storeys above and below it")
                 .define("megastructureHints", true);
@@ -487,7 +487,7 @@ public final class OfficeRoomsConfig {
         b.pop();
         COMMON_SPEC = b.build();
 
-        ForgeConfigSpec.Builder c = new ForgeConfigSpec.Builder();
+        ModConfigSpec.Builder c = new ModConfigSpec.Builder();
         c.push("audio");
         // 0.16.2: louder hum, much quieter music (new keys so existing configs pick up the new defaults)
         HUM_VOLUME = c.comment("Volume of the lamp hum (on top of the 'Ambient/Environment' slider)")

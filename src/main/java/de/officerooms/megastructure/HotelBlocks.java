@@ -23,7 +23,7 @@ import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraft.world.level.chunk.ChunkAccess;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.neoforge.registries.DeferredHolder;
 
 /** 0.14.0: block states of the Hotel and its decoration in the FEATURES stage (signs, chests, bell, vault). */
 public final class HotelBlocks {
@@ -31,7 +31,7 @@ public final class HotelBlocks {
     private HotelBlocks() {
     }
 
-    private static BlockState d(RegistryObject<Block> b, Direction f) {
+    private static BlockState d(DeferredHolder<Block, Block> b, Direction f) {
         return b.get().defaultBlockState().setValue(DecorBlock.FACING, f);
     }
 
@@ -216,7 +216,7 @@ public final class HotelBlocks {
     private static void container(OfficePlanner p, WorldGenLevel level, BlockPos pos, BlockState st, String table) {
         level.setBlock(pos, st, 2);
         if (level.getBlockEntity(pos) instanceof RandomizableContainerBlockEntity be) {
-            be.setLootTable(new ResourceLocation(OfficeRoomsIds.MOD_ID, "chests/" + table), p.seed ^ pos.asLong());
+            be.setLootTable(ResourceLocation.fromNamespaceAndPath(OfficeRoomsIds.MOD_ID, "chests/" + table), p.seed ^ pos.asLong());
         }
     }
 

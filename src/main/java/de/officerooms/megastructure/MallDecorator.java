@@ -32,7 +32,7 @@ import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.chunk.ChunkAccess;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.neoforge.registries.DeferredHolder;
 
 /**
  * 0.43.0: furnishing of the Dead Mall: shop interiors, the food court, kiosks, benches, signs, mannequins and loot.
@@ -131,7 +131,7 @@ public final class MallDecorator {
         if (op.loot() != null) {
             BlockEntity be = level.getBlockEntity(m);
             if (be instanceof RandomizableContainerBlockEntity rc) {
-                rc.setLootTable(new ResourceLocation(OfficeRoomsIds.MOD_ID, "chests/" + op.loot()), Hashing.hash(s.seed, m.getX(), m.getY(), m.getZ()));
+                rc.setLootTable(ResourceLocation.fromNamespaceAndPath(OfficeRoomsIds.MOD_ID, "chests/" + op.loot()), Hashing.hash(s.seed, m.getX(), m.getY(), m.getZ()));
             }
         }
         if (op.extra() instanceof Stories.Book book) {
@@ -171,7 +171,7 @@ public final class MallDecorator {
             ops.add(new Op(lx, y, lz, st, null, null, null, null, Boolean.TRUE));
         }
 
-        void decor(int lx, int y, int lz, RegistryObject<Block> b, Direction front) {
+        void decor(int lx, int y, int lz, DeferredHolder<Block, Block> b, Direction front) {
             put(lx, y, lz, MallBlocks.f(b, front));
         }
 
@@ -261,7 +261,7 @@ public final class MallDecorator {
             p.put(lx(d, w), y + o, lz(d, w), st);
         }
 
-        void decor(int d, int w, int o, RegistryObject<Block> b, Direction face) {
+        void decor(int d, int w, int o, DeferredHolder<Block, Block> b, Direction face) {
             p.decor(lx(d, w), y + o, lz(d, w), b, face);
         }
 
@@ -687,7 +687,7 @@ public final class MallDecorator {
             int lz = p.rng.nextDouble() < 0.5 ? C0 + p.rng.nextInt(33) : 4 + p.rng.nextInt(152);
             if (lz >= C0 && lz <= C1 || lx >= C0 && lx <= C1) {
                 if (freeFloor(lx, lz, f) && !(f == 0 && lx >= C0 && lx <= C1 && lz < 60)) {
-                    RegistryObject<Block> b = k % 3 == 0 ? MallBlocks.CART : k % 3 == 1 ? MallBlocks.WET_FLOOR : CinemaBlocks.TRASH;
+                    DeferredHolder<Block, Block> b = k % 3 == 0 ? MallBlocks.CART : k % 3 == 1 ? MallBlocks.WET_FLOOR : CinemaBlocks.TRASH;
                     p.decor(lx, y, lz, b, DIRS[p.rng.nextInt(4)]);
                 }
             }

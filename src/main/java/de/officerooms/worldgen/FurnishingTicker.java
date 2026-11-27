@@ -9,8 +9,8 @@ import de.officerooms.room.OfficePlanner;
 import de.officerooms.room.structure.BlockSampler;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.TickEvent;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.tick.LevelTickEvent;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -73,11 +73,11 @@ public final class FurnishingTicker {
     }
 
     public static void register() {
-        MinecraftForge.EVENT_BUS.addListener(FurnishingTicker::onLevelTick);
+        NeoForge.EVENT_BUS.addListener(FurnishingTicker::onLevelTick);
     }
 
-    private static void onLevelTick(TickEvent.LevelTickEvent event) {
-        if (event.phase != TickEvent.Phase.END || !(event.level instanceof ServerLevel level)
+    private static void onLevelTick(LevelTickEvent.Post event) {
+        if (!(event.getLevel() instanceof ServerLevel level)
                 || level.dimension() != OfficeRoomsDimension.LEVEL_KEY || level.getGameTime() % INTERVAL != 0
                 || level.players().isEmpty()) {
             return;

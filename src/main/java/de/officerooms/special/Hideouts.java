@@ -64,7 +64,7 @@ public final class Hideouts {
             }
             level.setBlock(p, st, 2);
             if (level.getBlockEntity(p) instanceof RandomizableContainerBlockEntity be) {
-                be.setLootTable(new ResourceLocation(OfficeRoomsIds.MOD_ID, "chests/" + table), seed ^ p.asLong());
+                be.setLootTable(ResourceLocation.fromNamespaceAndPath(OfficeRoomsIds.MOD_ID, "chests/" + table), seed ^ p.asLong());
             }
         }
 
@@ -205,7 +205,7 @@ public final class Hideouts {
         }
     }
 
-    private static BlockState decor(net.minecraftforge.registries.RegistryObject<Block> b, Direction facing) {
+    private static BlockState decor(net.neoforged.neoforge.registries.DeferredHolder<Block> b, Direction facing) {
         return b.get().defaultBlockState().setValue(de.officerooms.block.DecorBlock.FACING, facing);
     }
 

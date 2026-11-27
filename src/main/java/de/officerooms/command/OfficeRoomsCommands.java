@@ -23,8 +23,8 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.chunk.ChunkAccess;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.RegisterCommandsEvent;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.RegisterCommandsEvent;
 
 import java.util.Map;
 
@@ -47,7 +47,7 @@ public final class OfficeRoomsCommands {
     }
 
     public static void register() {
-        MinecraftForge.EVENT_BUS.addListener(OfficeRoomsCommands::onRegister);
+        NeoForge.EVENT_BUS.addListener(OfficeRoomsCommands::onRegister);
     }
 
     private static void onRegister(RegisterCommandsEvent event) {
@@ -497,7 +497,7 @@ public final class OfficeRoomsCommands {
         // shrine: vanilla structure search in the Overworld
         ServerLevel ow = srv.overworld();
         var reg = ow.registryAccess().registryOrThrow(net.minecraft.core.registries.Registries.STRUCTURE);
-        var key = net.minecraft.resources.ResourceKey.create(net.minecraft.core.registries.Registries.STRUCTURE, new ResourceLocation("office_rooms", "abandoned_office_shrine"));
+        var key = net.minecraft.resources.ResourceKey.create(net.minecraft.core.registries.Registries.STRUCTURE, ResourceLocation.fromNamespaceAndPath("office_rooms", "abandoned_office_shrine"));
         var holder = reg.getHolder(key);
         if (holder.isEmpty()) {
             return fail(src, "Shrine structure not registered.");
@@ -781,7 +781,7 @@ public final class OfficeRoomsCommands {
         if (typeId.equals("shrine")) {                // 0.41.0: same search as /locate structure office_rooms:abandoned_office_shrine
             ServerLevel ow = src.getServer().overworld();
             var holder = ow.registryAccess().registryOrThrow(net.minecraft.core.registries.Registries.STRUCTURE)
-                    .getHolder(net.minecraft.resources.ResourceKey.create(net.minecraft.core.registries.Registries.STRUCTURE, new ResourceLocation("office_rooms", "abandoned_office_shrine")));
+                    .getHolder(net.minecraft.resources.ResourceKey.create(net.minecraft.core.registries.Registries.STRUCTURE, ResourceLocation.fromNamespaceAndPath("office_rooms", "abandoned_office_shrine")));
             BlockPos from = src.getLevel() == ow ? BlockPos.containing(src.getPosition()) : ow.getSharedSpawnPos();
             var found = holder.isEmpty() ? null : ow.getChunkSource().getGenerator().findNearestMapStructure(ow, net.minecraft.core.HolderSet.direct(holder.get()), from, 100, false);
             if (found == null) {
@@ -1062,7 +1062,7 @@ public final class OfficeRoomsCommands {
     /** Diagnose: erkannte Möbel-Mods und tatsächliche Belegung der OfficeCraft-Möbel je Ausrichtung. */
     private static int furniture(CommandContext<CommandSourceStack> ctx) {
         CommandSourceStack src = ctx.getSource();
-        say(src, "Office furniture: built in (0.44.0), Refurbished: " + net.minecraftforge.fml.ModList.get().isLoaded("refurbished_furniture"));
+        say(src, "Office furniture: built in (0.44.0), Refurbished: " + net.neoforged.fml.ModList.get().isLoaded("refurbished_furniture"));
         for (String id : new String[]{"office_desk", "cubicle_workstation", "cubicle_partitions", "chair_gray", "conference_large", "conference_medium",
                 "presentation_board", "water_cooler", "vending_machine", "printer", "coffee_machine"}) {
             StringBuilder sb = new StringBuilder(id);

@@ -19,10 +19,11 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.monster.Monster;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.event.entity.player.PlayerEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.tick.LevelTickEvent;
+import net.neoforged.neoforge.event.tick.ServerTickEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerEvent;
+import net.neoforged.bus.api.SubscribeEvent;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,7 +42,7 @@ public final class BlackoutEvents {
     }
 
     public static void register() {
-        MinecraftForge.EVENT_BUS.register(BlackoutEvents.class);
+        NeoForge.EVENT_BUS.register(BlackoutEvents.class);
     }
 
     public static BlackoutData data(MinecraftServer srv) {
@@ -71,8 +72,8 @@ public final class BlackoutEvents {
     }
 
     @SubscribeEvent
-    public static void onTick(TickEvent.ServerTickEvent e) {
-        if (e.phase != TickEvent.Phase.END || e.getServer().getTickCount() % 20 != 7 || !OfficeRoomsConfig.BLACKOUT_ENABLED.get()) {
+    public static void onTick(ServerTickEvent.Post e) {
+        if (e.getServer().getTickCount() % 20 != 7 || !OfficeRoomsConfig.BLACKOUT_ENABLED.get()) {
             return;
         }
         MinecraftServer srv = e.getServer();
@@ -223,8 +224,8 @@ public final class BlackoutEvents {
     }
 
     @SubscribeEvent
-    public static void onLevelTick(TickEvent.LevelTickEvent e) {
-        if (e.phase != TickEvent.Phase.END || !(e.level instanceof ServerLevel l) || l.dimension() != OfficeRoomsDimension.LEVEL_KEY
+    public static void onLevelTick(LevelTickEvent.Post e) {
+        if (!(e.getLevel() instanceof ServerLevel l) || l.dimension() != OfficeRoomsDimension.LEVEL_KEY
                 || l.getGameTime() % 5 != 2) {
             return;
         }

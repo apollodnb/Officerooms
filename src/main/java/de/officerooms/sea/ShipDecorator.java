@@ -131,7 +131,7 @@ public final class ShipDecorator {
         if (op.loot() != null) {
             BlockEntity be = level.getBlockEntity(m);
             if (be instanceof RandomizableContainerBlockEntity rc) {
-                rc.setLootTable(new ResourceLocation(OfficeRoomsIds.MOD_ID, "chests/" + op.loot()), Hashing.hash(s.seed, m.getX(), m.getY(), m.getZ()));
+                rc.setLootTable(ResourceLocation.fromNamespaceAndPath(OfficeRoomsIds.MOD_ID, "chests/" + op.loot()), Hashing.hash(s.seed, m.getX(), m.getY(), m.getZ()));
             }
         }
         if (op.extra() instanceof Stories.Book book) {
@@ -201,7 +201,7 @@ public final class ShipDecorator {
             add(new Op(lx, y, lz, fallback, null, null, id, front, null));
         }
 
-        void decor(int lx, int y, int lz, net.minecraftforge.registries.RegistryObject<Block> b, Direction front) {
+        void decor(int lx, int y, int lz, net.neoforged.neoforge.registries.DeferredHolder<Block> b, Direction front) {
             put(lx, y, lz, ShipBlocks.f(b, front));
         }
 

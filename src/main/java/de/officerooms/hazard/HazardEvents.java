@@ -39,10 +39,10 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.AABB;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.event.entity.player.PlayerEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.tick.ServerTickEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerEvent;
+import net.neoforged.bus.api.SubscribeEvent;
 
 /**
  * 0.17.0: HAZARD ZONE, a recurring world event. Every cycle (default 100 minutes) a toxic zone is announced on the
@@ -59,7 +59,7 @@ public final class HazardEvents {
     }
 
     public static void register() {
-        MinecraftForge.EVENT_BUS.register(HazardEvents.class);
+        NeoForge.EVENT_BUS.register(HazardEvents.class);
     }
 
     public static HazardData data(MinecraftServer srv) {
@@ -83,8 +83,8 @@ public final class HazardEvents {
     // --- schedule -----------------------------------------------------------------------------------------
 
     @SubscribeEvent
-    public static void onServerTick(TickEvent.ServerTickEvent e) {
-        if (e.phase != TickEvent.Phase.END || !OfficeRoomsConfig.HAZARD_ENABLED.get()) {
+    public static void onServerTick(ServerTickEvent.Post e) {
+        if (!OfficeRoomsConfig.HAZARD_ENABLED.get()) {
             return;
         }
         MinecraftServer srv = e.getServer();
@@ -393,7 +393,7 @@ public final class HazardEvents {
     }
 
     @SubscribeEvent
-    public static void onJoin(net.minecraftforge.event.entity.EntityJoinLevelEvent e) {
+    public static void onJoin(net.neoforged.neoforge.event.entity.EntityJoinLevelEvent e) {
         if (!e.getLevel().isClientSide && e.getEntity().getTags().contains(MOB_TAG) && e.getLevel().getServer() != null
                 && data(e.getLevel().getServer()).phase != HazardState.ACTIVE) {
             e.setCanceled(true);
@@ -441,7 +441,7 @@ public final class HazardEvents {
                 BlockPos q = new BlockPos(c[0], floors.get(office.getRandom().nextInt(floors.size())), c[1]);
                 office.setBlock(q, Blocks.CHEST.defaultBlockState().setValue(ChestBlock.FACING, Direction.Plane.HORIZONTAL.getRandomDirection(office.getRandom())), 3);
                 if (office.getBlockEntity(q) instanceof RandomizableContainerBlockEntity be) {
-                    be.setLootTable(new ResourceLocation(OfficeRoomsIds.MOD_ID, c[2] == 1 ? "chests/hazard_core" : "chests/hazard_cache"), office.getRandom().nextLong());
+                    be.setLootTable(ResourceLocation.fromNamespaceAndPath(OfficeRoomsIds.MOD_ID, c[2] == 1 ? "chests/hazard_core" : "chests/hazard_cache"), office.getRandom().nextLong());
                 }
                 d.placed.add(q.asLong());
             }

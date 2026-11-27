@@ -764,7 +764,7 @@ public final class SpecialDecorator {
         }
 
         void loot(int x, int y, int z, BlockState s, String table) {
-            ops.add(new Op(x, y, z, s, false, new ResourceLocation(OfficeRoomsIds.MOD_ID, "chests/" + table)));
+            ops.add(new Op(x, y, z, s, false, ResourceLocation.fromNamespaceAndPath(OfficeRoomsIds.MOD_ID, "chests/" + table)));
         }
 
         String wood(boolean camp) {
@@ -1208,7 +1208,7 @@ public final class SpecialDecorator {
                 Direction facing = DIR[(chest[2] + 2) % 4];
                 ops.add(new Op(g.wx(chest[0]), floorY, g.wz(chest[1]),
                         Blocks.CHEST.defaultBlockState().setValue(ChestBlock.FACING, facing), false,
-                        new ResourceLocation(OfficeRoomsIds.MOD_ID, "chests/sculk_special")));
+                        ResourceLocation.fromNamespaceAndPath(OfficeRoomsIds.MOD_ID, "chests/sculk_special")));
                 set(g.wx(chest[0]), floorY - 1, g.wz(chest[1]), sculkBlock);
             }
             // Genau ein Headless Warden: auf einem Feld mit freiem 3×3-Umfeld, Sculk darunter
@@ -1385,7 +1385,7 @@ public final class SpecialDecorator {
             if (chest != null && claim(new int[]{chest[0], chest[1]})) {
                 ops.add(new Op(g.wx(chest[0]), floorY, g.wz(chest[1]),
                         Blocks.CHEST.defaultBlockState().setValue(ChestBlock.FACING, DIR[(chest[2] + 2) % 4]), false,
-                        new ResourceLocation(OfficeRoomsIds.MOD_ID, "chests/lush_cave")));
+                        ResourceLocation.fromNamespaceAndPath(OfficeRoomsIds.MOD_ID, "chests/lush_cave")));
             }
             // Boden und Bodenbewuchs
             for (int[] t : tiles()) {
@@ -1674,7 +1674,7 @@ public final class SpecialDecorator {
                     case "cauldron" -> set(x, floorY, z, Blocks.WATER_CAULDRON.defaultBlockState()
                             .setValue(net.minecraft.world.level.block.LayeredCauldronBlock.LEVEL, 1 + rng.nextInt(3)));
                     default -> ops.add(new Op(x, floorY, z, Blocks.CHEST.defaultBlockState().setValue(ChestBlock.FACING, in), false,
-                            new ResourceLocation(OfficeRoomsIds.MOD_ID, abandoned ? "chests/abandoned_camp" : "chests/outpost")));
+                            ResourceLocation.fromNamespaceAndPath(OfficeRoomsIds.MOD_ID, abandoned ? "chests/abandoned_camp" : "chests/outpost")));
                 }
                 n++;
             }
@@ -2018,7 +2018,7 @@ public final class SpecialDecorator {
                     int[] c = {t[0] + DX[d], t[1] + DZ[d]};
                     if (claim(c)) {
                         ops.add(new Op(g.wx(c[0]), (floorY + 1), g.wz(c[1]), Blocks.CHEST.defaultBlockState().setValue(ChestBlock.FACING, DIR[d]),
-                                false, new ResourceLocation(OfficeRoomsIds.MOD_ID, "chests/oasis")));
+                                false, ResourceLocation.fromNamespaceAndPath(OfficeRoomsIds.MOD_ID, "chests/oasis")));
                         chests--;
                     }
                 }
@@ -2188,7 +2188,7 @@ public final class SpecialDecorator {
                         continue;
                     }
                     String color = colors[(placed + rng.nextInt(colors.length)) % colors.length];
-                    Block bed = net.minecraftforge.registries.ForgeRegistries.BLOCKS.getValue(new ResourceLocation("minecraft", color + "_bed"));
+                    Block bed = net.minecraftforge.registries.ForgeRegistries.BLOCKS.getValue(ResourceLocation.fromNamespaceAndPath("minecraft", color + "_bed"));
                     if (bed == null) {
                         bed = Blocks.WHITE_BED;
                     }

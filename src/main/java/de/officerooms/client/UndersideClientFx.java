@@ -3,11 +3,11 @@ package de.officerooms.client;
 import de.officerooms.core.OfficeRoomsIds;
 import de.officerooms.underside.UndersideClientState;
 import net.minecraft.client.Minecraft;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.client.event.ViewportEvent;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.neoforge.client.event.ViewportEvent;
+import net.neoforged.neoforge.client.event.ClientTickEvent;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.Mod;
 
 /** 0.19.0: camera shake for Underside quakes. */
 @Mod.EventBusSubscriber(modid = OfficeRoomsIds.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE, value = Dist.CLIENT)
@@ -17,8 +17,8 @@ public final class UndersideClientFx {
     }
 
     @SubscribeEvent
-    public static void onTick(TickEvent.ClientTickEvent e) {
-        if (e.phase == TickEvent.Phase.END && !Minecraft.getInstance().isPaused() && UndersideClientState.left > 0) {
+    public static void onTick(ClientTickEvent.Post e) {
+        if (!Minecraft.getInstance().isPaused() && UndersideClientState.left > 0) {
             UndersideClientState.left--;
         }
     }

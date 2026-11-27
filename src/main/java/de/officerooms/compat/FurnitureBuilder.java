@@ -21,7 +21,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.block.state.properties.SlabType;
-import net.minecraftforge.fml.ModList;
+import net.neoforged.fml.ModList;
 
 import java.util.HashSet;
 import java.util.List;
@@ -80,7 +80,7 @@ public final class FurnitureBuilder {
         if (!refurbishedAvailable()) {
             return null;
         }
-        Block b = BuiltInRegistries.BLOCK.get(new ResourceLocation(RF, id));
+        Block b = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath(RF, id));
         return b == Blocks.AIR ? null : b;
     }
 
@@ -271,7 +271,7 @@ public final class FurnitureBuilder {
         BlockEntity be = level.getBlockEntity(pos);
         if (be instanceof RandomizableContainerBlockEntity rc) {
             long seed = net.minecraft.util.Mth.getSeed(pos.getX(), pos.getY(), pos.getZ());
-            rc.setLootTable(new ResourceLocation(OfficeRoomsIds.MOD_ID, "chests/" + pl.loot()), seed);
+            rc.setLootTable(ResourceLocation.fromNamespaceAndPath(OfficeRoomsIds.MOD_ID, "chests/" + pl.loot()), seed);
         }
     }
 

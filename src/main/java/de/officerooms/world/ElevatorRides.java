@@ -39,8 +39,8 @@ import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.AABB;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.TickEvent;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.tick.ServerTickEvent;
 import net.minecraftforge.network.PacketDistributor;
 
 /**
@@ -70,7 +70,7 @@ public final class ElevatorRides {
     }
 
     public static void register() {
-        MinecraftForge.EVENT_BUS.addListener(ElevatorRides::onTick);
+        NeoForge.EVENT_BUS.addListener(ElevatorRides::onTick);
     }
 
     /** A generated shaft at a plate. */
@@ -189,8 +189,8 @@ public final class ElevatorRides {
         return -1;
     }
 
-    private static void onTick(TickEvent.ServerTickEvent e) {
-        if (e.phase != TickEvent.Phase.END || RIDES.isEmpty()) {
+    private static void onTick(ServerTickEvent.Post e) {
+        if (RIDES.isEmpty()) {
             return;
         }
         Iterator<Ride> it = RIDES.values().iterator();

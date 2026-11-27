@@ -29,7 +29,7 @@ import net.minecraft.world.level.Level;
  */
 public class Partygoer extends Monster implements software.bernie.geckolib.animatable.GeoEntity {
 
-    private final software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache geoCache =
+    private final software.bernie.geckolib.animatable.instance.AnimatableInstanceCache geoCache =
             software.bernie.geckolib.util.GeckoLibUtil.createInstanceCache(this);
     private static final double KEEP = 7.5;
     private static final double TRIGGER = 2.0;
@@ -54,12 +54,12 @@ public class Partygoer extends Monster implements software.bernie.geckolib.anima
     }
 
     @Override
-    public void registerControllers(software.bernie.geckolib.core.animation.AnimatableManager.ControllerRegistrar controllers) {
+    public void registerControllers(software.bernie.geckolib.animation.AnimatableManager.ControllerRegistrar controllers) {
         GeoAnims.register(this, controllers, 0.02, "wave", "attack");
     }
 
     @Override
-    public software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache getAnimatableInstanceCache() {
+    public software.bernie.geckolib.animatable.instance.AnimatableInstanceCache getAnimatableInstanceCache() {
         return geoCache;
     }
 

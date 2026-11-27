@@ -53,7 +53,7 @@ public class AraneaMembri extends Monster implements software.bernie.geckolib.an
 
     private static final EntityDataAccessor<Boolean> DATA_LURK = SynchedEntityData.defineId(AraneaMembri.class, EntityDataSerializers.BOOLEAN);
 
-    private final software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache geoCache =
+    private final software.bernie.geckolib.animatable.instance.AnimatableInstanceCache geoCache =
             software.bernie.geckolib.util.GeckoLibUtil.createInstanceCache(this);
 
     private boolean anchored;
@@ -103,12 +103,12 @@ public class AraneaMembri extends Monster implements software.bernie.geckolib.an
     }
 
     @Override
-    public void registerControllers(software.bernie.geckolib.core.animation.AnimatableManager.ControllerRegistrar controllers) {
+    public void registerControllers(software.bernie.geckolib.animation.AnimatableManager.ControllerRegistrar controllers) {
         GeoAnims.register(this, controllers, 0.03, "screech", "attack");
     }
 
     @Override
-    public software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache getAnimatableInstanceCache() {
+    public software.bernie.geckolib.animatable.instance.AnimatableInstanceCache getAnimatableInstanceCache() {
         return geoCache;
     }
 

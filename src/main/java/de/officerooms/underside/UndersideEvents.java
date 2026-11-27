@@ -31,11 +31,12 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.event.entity.living.LivingEvent;
-import net.minecraftforge.event.entity.player.PlayerEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.tick.PlayerTickEvent;
+import net.neoforged.neoforge.event.tick.ServerTickEvent;
+import net.neoforged.neoforge.event.entity.living.LivingEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerEvent;
+import net.neoforged.bus.api.SubscribeEvent;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -47,7 +48,7 @@ import java.util.UUID;
  */
 public final class UndersideEvents {
 
-    public static final ResourceKey<Level> LEVEL_KEY = ResourceKey.create(Registries.DIMENSION, new ResourceLocation(OfficeRoomsIds.MOD_ID, "underside"));
+    public static final ResourceKey<Level> LEVEL_KEY = ResourceKey.create(Registries.DIMENSION, ResourceLocation.fromNamespaceAndPath(OfficeRoomsIds.MOD_ID, "underside"));
     public static final String NOCLIP = "office_rooms_noclip_until";
     static final int WAIT = 400;      // 20 s in the Underside before it comes
     static final int QUAKE = 90;      // the last 4.5 s shake
@@ -62,7 +63,7 @@ public final class UndersideEvents {
     }
 
     public static void register() {
-        MinecraftForge.EVENT_BUS.register(UndersideEvents.class);
+        NeoForge.EVENT_BUS.register(UndersideEvents.class);
     }
 
     // --- getting there --------------------------------------------------------------------------------------
@@ -119,11 +120,11 @@ public final class UndersideEvents {
     }
 
     @SubscribeEvent
-    public static void onPlayerTick(TickEvent.PlayerTickEvent e) {
-        if (e.phase != TickEvent.Phase.END) {
+    public static void onPlayerTick(PlayerTickEvent.Post e) {
+        if (false) {
             return;
         }
-        Player p = e.player;
+        Player p = e.getEntity();
         long until = p.getPersistentData().getLong(NOCLIP);
         if (until != 0) {
             long left = until - p.level().getGameTime();
@@ -210,8 +211,8 @@ public final class UndersideEvents {
 
     // --- the boss -------------------------------------------------------------------------------------------
     @SubscribeEvent
-    public static void onServerTick(TickEvent.ServerTickEvent e) {
-        if (e.phase != TickEvent.Phase.END) {
+    public static void onServerTick(ServerTickEvent.Post e) {
+        if (false) {
             return;
         }
         MinecraftServer server = e.getServer();

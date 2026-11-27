@@ -11,7 +11,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.chunk.ChunkAccess;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.neoforge.registries.DeferredHolder;
 
 /** 0.16.0: block states of Level Fun and its decoration (gift chests). */
 public final class LevelFunBlocks {
@@ -19,7 +19,7 @@ public final class LevelFunBlocks {
     private LevelFunBlocks() {
     }
 
-    private static BlockState d(RegistryObject<Block> b, Direction f) {
+    private static BlockState d(DeferredHolder<Block, Block> b, Direction f) {
         return b.get().defaultBlockState().setValue(DecorBlock.FACING, f);
     }
 

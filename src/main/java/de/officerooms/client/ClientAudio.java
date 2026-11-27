@@ -13,8 +13,8 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.LightLayer;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.TickEvent;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.client.event.ClientTickEvent;
 
 /**
  * Zentrales Audiosystem der Dimension (nur Client), getrennt von der KI.
@@ -57,12 +57,12 @@ public final class ClientAudio {
     }
 
     public static void register() {
-        MinecraftForge.EVENT_BUS.addListener(ClientAudio::onClientTick);
-        MinecraftForge.EVENT_BUS.addListener(ClientAudio::onPlaySound);
+        NeoForge.EVENT_BUS.addListener(ClientAudio::onClientTick);
+        NeoForge.EVENT_BUS.addListener(ClientAudio::onPlaySound);
     }
 
     /** Protokolliert (Debug-Level) jeden gestarteten Office-Rooms-Sound – für Tests ohne Lautsprecher. */
-    private static void onPlaySound(net.minecraftforge.client.event.sound.PlaySoundEvent event) {
+    private static void onPlaySound(net.neoforged.neoforge.client.event.sound.PlaySoundEvent event) {
         SoundInstance s = event.getSound();
         if (s != null && s.getLocation().getNamespace().equals(de.officerooms.core.OfficeRoomsIds.MOD_ID)) {
             de.officerooms.OfficeRooms.LOGGER.debug("[Audio] {} ({}) at {} {} {}", s.getLocation(), s.getSource(),
@@ -75,8 +75,8 @@ public final class ClientAudio {
         return mc.level != null && mc.player != null && mc.level.dimension() == OfficeRoomsDimension.LEVEL_KEY;
     }
 
-    private static void onClientTick(TickEvent.ClientTickEvent event) {
-        if (event.phase != TickEvent.Phase.END) {
+    private static void onClientTick(ClientTickEvent.Post event) {
+        if (false) {
             return;
         }
         Minecraft mc = Minecraft.getInstance();

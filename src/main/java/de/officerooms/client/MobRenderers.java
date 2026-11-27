@@ -15,8 +15,8 @@ import net.minecraft.resources.ResourceLocation;
  */
 public final class MobRenderers {
 
-    public static final ModelLayerLocation DREAD_WOLFSPIDER_LAYER = new ModelLayerLocation(new ResourceLocation(OfficeRoomsIds.MOD_ID, "wolfspider_dread"), "main");
-    public static final ModelLayerLocation WOLFSPIDER_LAYER = new ModelLayerLocation(new ResourceLocation(OfficeRoomsIds.MOD_ID, "wolfspider"), "main");
+    public static final ModelLayerLocation DREAD_WOLFSPIDER_LAYER = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(OfficeRoomsIds.MOD_ID, "wolfspider_dread"), "main");
+    public static final ModelLayerLocation WOLFSPIDER_LAYER = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(OfficeRoomsIds.MOD_ID, "wolfspider"), "main");
 
     private MobRenderers() {
     }
@@ -24,8 +24,8 @@ public final class MobRenderers {
     /** Freundliche Wolfspider: schwarzer Körper, weiße, selbstleuchtende Augen. */
     public static final class FriendlyWolfspiderRenderer extends MobRenderer<de.officerooms.entity.FriendlyWolfspider,
             WolfspiderModel<de.officerooms.entity.FriendlyWolfspider>> {
-        private static final ResourceLocation TEXTURE = new ResourceLocation(OfficeRoomsIds.MOD_ID, "textures/entity/wolfspider_friendly.png");
-        private static final RenderType EYES = RenderType.eyes(new ResourceLocation(OfficeRoomsIds.MOD_ID, "textures/entity/wolfspider_friendly_eyes.png"));
+        private static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath(OfficeRoomsIds.MOD_ID, "textures/entity/wolfspider_friendly.png");
+        private static final RenderType EYES = RenderType.eyes(ResourceLocation.fromNamespaceAndPath(OfficeRoomsIds.MOD_ID, "textures/entity/wolfspider_friendly_eyes.png"));
 
         public FriendlyWolfspiderRenderer(EntityRendererProvider.Context ctx) {
             super(ctx, new WolfspiderModel<>(ctx.bakeLayer(WOLFSPIDER_LAYER)), 0.6F);
@@ -55,9 +55,9 @@ public final class MobRenderers {
 
     /** 0.26.0: the hostile Wolfspider uses its own gaunt model ({@link DreadWolfspiderModel}) with glowing eyes. */
     public static final class WolfspiderRenderer extends MobRenderer<Wolfspider, DreadWolfspiderModel> {
-        private static final ResourceLocation TEXTURE = new ResourceLocation(OfficeRoomsIds.MOD_ID, "textures/entity/wolfspider_dread.png");
+        private static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath(OfficeRoomsIds.MOD_ID, "textures/entity/wolfspider_dread.png");
         private static final net.minecraft.client.renderer.RenderType EYES =
-                net.minecraft.client.renderer.RenderType.eyes(new ResourceLocation(OfficeRoomsIds.MOD_ID, "textures/entity/wolfspider_dread_eyes.png"));
+                net.minecraft.client.renderer.RenderType.eyes(ResourceLocation.fromNamespaceAndPath(OfficeRoomsIds.MOD_ID, "textures/entity/wolfspider_dread_eyes.png"));
 
         public WolfspiderRenderer(EntityRendererProvider.Context ctx) {
             super(ctx, new DreadWolfspiderModel(ctx.bakeLayer(DREAD_WOLFSPIDER_LAYER)), 0.7F);

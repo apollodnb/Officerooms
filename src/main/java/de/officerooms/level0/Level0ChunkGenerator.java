@@ -39,7 +39,7 @@ public final class Level0ChunkGenerator extends ChunkGenerator {
     public static final Codec<Level0ChunkGenerator> CODEC = RecordCodecBuilder.create(i -> i.group(
             BiomeSource.CODEC.fieldOf("biome_source").forGetter(ChunkGenerator::getBiomeSource)
     ).apply(i, Level0ChunkGenerator::new));
-    private static final ResourceLocation MANILA_LOOT = new ResourceLocation("office_rooms", "chests/manila_room");
+    private static final ResourceLocation MANILA_LOOT = ResourceLocation.fromNamespaceAndPath("office_rooms", "chests/manila_room");
 
     public Level0ChunkGenerator(BiomeSource biomeSource) {
         super(biomeSource);
@@ -418,7 +418,7 @@ public final class Level0ChunkGenerator extends ChunkGenerator {
 
     /** A Refurbished Furniture block by id, turned to {@code facing}, or null if the mod or the block is missing. */
     static BlockState rf(String id, Direction facing) {
-        net.minecraft.world.level.block.Block b = net.minecraftforge.registries.ForgeRegistries.BLOCKS.getValue(new ResourceLocation(RF, id));
+        net.minecraft.world.level.block.Block b = net.minecraftforge.registries.ForgeRegistries.BLOCKS.getValue(ResourceLocation.fromNamespaceAndPath(RF, id));
         if (b == null || b == Blocks.AIR) {
             return null;
         }
@@ -486,7 +486,7 @@ public final class Level0ChunkGenerator extends ChunkGenerator {
     public void applyBiomeDecoration(WorldGenLevel level, ChunkAccess chunk, StructureManager sm) {
         long seed = level.getSeed();
         int x0 = chunk.getPos().getMinBlockX(), z0 = chunk.getPos().getMinBlockZ();
-        if (net.minecraftforge.fml.ModList.get().isLoaded(RF)) {
+        if (net.neoforged.fml.ModList.get().isLoaded(RF)) {
             refurbish(level, seed, x0, z0);
         }
         java.util.Set<Long> done = new java.util.HashSet<>();

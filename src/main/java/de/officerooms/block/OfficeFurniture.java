@@ -17,7 +17,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.material.MapColor;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.neoforge.registries.DeferredHolder;
 
 /**
  * 0.44.0: Office Rooms' own office furniture (own designs, drawn in {@code tools/gen_0440.py}). It replaces the optional
@@ -56,31 +56,31 @@ public final class OfficeFurniture {
         return Block.Properties.of().mapColor(c).strength(1.5F, 4F).sound(st).noOcclusion().lightLevel(s -> light);
     }
 
-    private static RegistryObject<Block> reg(String name, Supplier<Block> b) {
+    private static DeferredHolder<Block, Block> reg(String name, Supplier<Block> b) {
         NAMES.add(name);
-        RegistryObject<Block> r = ModBlocks.BLOCKS.register(name, b);
+        DeferredHolder<Block, Block> r = ModBlocks.BLOCKS.register(name, b);
         ModBlocks.DECOR_ITEMS.add(ModBlocks.ITEMS.register(name, () -> new BlockItem(r.get(), new Item.Properties())));
         return r;
     }
 
-    private static RegistryObject<Block> piece(String name, MapColor c, SoundType st, int light, double... box) {
+    private static DeferredHolder<Block, Block> piece(String name, MapColor c, SoundType st, int light, double... box) {
         return reg(name, () -> new Piece(props(c, st, light), box));
     }
 
-    public static final RegistryObject<Block> DESK = piece("office_desk", MapColor.COLOR_LIGHT_GRAY, SoundType.WOOD, 0, 0, 0, 0, 16, 16, 16);
-    public static final RegistryObject<Block> COMPUTER = piece("office_computer", MapColor.COLOR_BLACK, SoundType.METAL, 3, 2, 0, 3, 14, 11, 13);
-    public static final RegistryObject<Block> PHONE = piece("office_phone", MapColor.COLOR_GRAY, SoundType.METAL, 0, 5, 0, 5, 11, 3, 11);
-    public static final RegistryObject<Block> PAPERS = piece("office_papers", MapColor.SNOW, SoundType.WOOL, 0, 3, 0, 4, 13, 3, 12);
-    public static final RegistryObject<Block> MUG = piece("office_mug", MapColor.SNOW, SoundType.GLASS, 0, 6, 0, 6, 10, 5, 10);
-    public static final RegistryObject<Block> CHAIR_BLACK = piece("office_chair_black", MapColor.COLOR_BLACK, SoundType.WOOL, 0, 2, 0, 2, 14, 8, 14);
-    public static final RegistryObject<Block> CHAIR_GRAY = piece("office_chair_gray", MapColor.COLOR_GRAY, SoundType.WOOL, 0, 2, 0, 2, 14, 8, 14);
-    public static final RegistryObject<Block> CHAIR_BROWN = piece("office_chair_brown", MapColor.COLOR_BROWN, SoundType.WOOL, 0, 2, 0, 2, 14, 8, 14);
-    public static final RegistryObject<Block> PARTITION = piece("office_partition", MapColor.COLOR_BLUE, SoundType.WOOL, 0, 0, 0, 6, 16, 16, 10);
-    public static final RegistryObject<Block> CONFERENCE_TABLE = piece("office_conference_table", MapColor.COLOR_BROWN, SoundType.WOOD, 0, 0, 0, 0, 16, 16, 16);
-    public static final RegistryObject<Block> WHITEBOARD = piece("office_whiteboard", MapColor.SNOW, SoundType.METAL, 0, 0, 0, 6, 16, 16, 10);
-    public static final RegistryObject<Block> WATER_COOLER = piece("office_water_cooler", MapColor.SNOW, SoundType.METAL, 0, 3, 0, 3, 13, 16, 13);
-    public static final RegistryObject<Block> PRINTER = piece("office_printer", MapColor.COLOR_LIGHT_GRAY, SoundType.METAL, 0, 1, 0, 2, 15, 10, 14);
-    public static final RegistryObject<Block> COFFEE_MACHINE = piece("office_coffee_machine", MapColor.COLOR_BLACK, SoundType.METAL, 0, 3, 0, 4, 13, 12, 13);
+    public static final DeferredHolder<Block, Block> DESK = piece("office_desk", MapColor.COLOR_LIGHT_GRAY, SoundType.WOOD, 0, 0, 0, 0, 16, 16, 16);
+    public static final DeferredHolder<Block, Block> COMPUTER = piece("office_computer", MapColor.COLOR_BLACK, SoundType.METAL, 3, 2, 0, 3, 14, 11, 13);
+    public static final DeferredHolder<Block, Block> PHONE = piece("office_phone", MapColor.COLOR_GRAY, SoundType.METAL, 0, 5, 0, 5, 11, 3, 11);
+    public static final DeferredHolder<Block, Block> PAPERS = piece("office_papers", MapColor.SNOW, SoundType.WOOL, 0, 3, 0, 4, 13, 3, 12);
+    public static final DeferredHolder<Block, Block> MUG = piece("office_mug", MapColor.SNOW, SoundType.GLASS, 0, 6, 0, 6, 10, 5, 10);
+    public static final DeferredHolder<Block, Block> CHAIR_BLACK = piece("office_chair_black", MapColor.COLOR_BLACK, SoundType.WOOL, 0, 2, 0, 2, 14, 8, 14);
+    public static final DeferredHolder<Block, Block> CHAIR_GRAY = piece("office_chair_gray", MapColor.COLOR_GRAY, SoundType.WOOL, 0, 2, 0, 2, 14, 8, 14);
+    public static final DeferredHolder<Block, Block> CHAIR_BROWN = piece("office_chair_brown", MapColor.COLOR_BROWN, SoundType.WOOL, 0, 2, 0, 2, 14, 8, 14);
+    public static final DeferredHolder<Block, Block> PARTITION = piece("office_partition", MapColor.COLOR_BLUE, SoundType.WOOL, 0, 0, 0, 6, 16, 16, 10);
+    public static final DeferredHolder<Block, Block> CONFERENCE_TABLE = piece("office_conference_table", MapColor.COLOR_BROWN, SoundType.WOOD, 0, 0, 0, 0, 16, 16, 16);
+    public static final DeferredHolder<Block, Block> WHITEBOARD = piece("office_whiteboard", MapColor.SNOW, SoundType.METAL, 0, 0, 0, 6, 16, 16, 10);
+    public static final DeferredHolder<Block, Block> WATER_COOLER = piece("office_water_cooler", MapColor.SNOW, SoundType.METAL, 0, 3, 0, 3, 13, 16, 13);
+    public static final DeferredHolder<Block, Block> PRINTER = piece("office_printer", MapColor.COLOR_LIGHT_GRAY, SoundType.METAL, 0, 1, 0, 2, 15, 10, 14);
+    public static final DeferredHolder<Block, Block> COFFEE_MACHINE = piece("office_coffee_machine", MapColor.COLOR_BLACK, SoundType.METAL, 0, 3, 0, 4, 13, 12, 13);
 
     public static void init() {
     }
@@ -92,7 +92,7 @@ public final class OfficeFurniture {
         void put(BlockPos rel, BlockState state);
     }
 
-    static BlockState p(RegistryObject<Block> b, Direction f, int part) {
+    static BlockState p(DeferredHolder<Block, Block> b, Direction f, int part) {
         return b.get().defaultBlockState().setValue(DecorBlock.FACING, f).setValue(Piece.PART, part);
     }
 
@@ -164,7 +164,7 @@ public final class OfficeFurniture {
         return true;
     }
 
-    static RegistryObject<Block> chair(int h) {
+    static DeferredHolder<Block, Block> chair(int h) {
         return switch (h % 3) {
             case 0 -> CHAIR_BLACK;
             case 1 -> CHAIR_GRAY;

@@ -47,16 +47,16 @@ import java.util.EnumSet;
 public class HeadlessWarden extends Monster implements software.bernie.geckolib.animatable.GeoEntity {
 
     // --- 0.11.0: GeckoLib model and animations (assets from tools/gen_mobs_geo.py) --------------
-    private final software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache geoCache =
+    private final software.bernie.geckolib.animatable.instance.AnimatableInstanceCache geoCache =
             software.bernie.geckolib.util.GeckoLibUtil.createInstanceCache(this);
 
     @Override
-    public void registerControllers(software.bernie.geckolib.core.animation.AnimatableManager.ControllerRegistrar controllers) {
+    public void registerControllers(software.bernie.geckolib.animation.AnimatableManager.ControllerRegistrar controllers) {
         GeoAnims.register(this, controllers, 0.02, "attack", "scream");
     }
 
     @Override
-    public software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache getAnimatableInstanceCache() {
+    public software.bernie.geckolib.animatable.instance.AnimatableInstanceCache getAnimatableInstanceCache() {
         return geoCache;
     }
 

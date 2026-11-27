@@ -31,7 +31,7 @@ public final class OutpostBuilder {
 
     public enum Theme { LAB, ANCIENT, JUNGLE, CAVE, NETHER, SURFACE, OCEAN }   // 0.39.0: rare field station on flat land / drilling rig over deep ocean
 
-    private static final ResourceLocation LOOT = new ResourceLocation("office_rooms", "chests/research_outpost");
+    private static final ResourceLocation LOOT = ResourceLocation.fromNamespaceAndPath("office_rooms", "chests/research_outpost");
     private final ServerLevel l;
     private final BlockPos o;
     private final Direction f, r, back;

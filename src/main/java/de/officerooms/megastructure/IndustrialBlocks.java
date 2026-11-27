@@ -14,7 +14,7 @@ import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraft.world.level.chunk.ChunkAccess;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.neoforge.registries.DeferredHolder;
 
 /** 0.15.0: block states of the Industrial Complex and its decoration (chests, signs). */
 public final class IndustrialBlocks {
@@ -22,7 +22,7 @@ public final class IndustrialBlocks {
     private IndustrialBlocks() {
     }
 
-    private static BlockState d(RegistryObject<Block> b, Direction f) {
+    private static BlockState d(DeferredHolder<Block, Block> b, Direction f) {
         return b.get().defaultBlockState().setValue(DecorBlock.FACING, f);
     }
 

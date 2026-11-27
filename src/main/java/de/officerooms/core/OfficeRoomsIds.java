@@ -16,7 +16,7 @@ public final class OfficeRoomsIds {
 
     /** 0.40.0: the real version from the mod list (the old constant was never updated). */
     public static String version() {
-        return net.minecraftforge.fml.ModList.get().getModContainerById(MOD_ID).map(c -> c.getModInfo().getVersion().toString()).orElse("unknown");
+        return net.neoforged.fml.ModList.get().getModContainerById(MOD_ID).map(c -> c.getModInfo().getVersion().toString()).orElse("unknown");
     }
 
     private OfficeRoomsIds() {

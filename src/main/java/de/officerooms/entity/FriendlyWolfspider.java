@@ -119,7 +119,7 @@ public class FriendlyWolfspider extends TamableAnimal {
         }
         if (food) {
             eat(player, stack);
-            if (random.nextInt(3) == 0 && !net.minecraftforge.event.ForgeEventFactory.onAnimalTame(this, player)) {
+            if (random.nextInt(3) == 0 && !net.neoforged.neoforge.event.ForgeEventFactory.onAnimalTame(this, player)) {
                 tame(player);
                 navigation.stop();
                 setTarget(null);

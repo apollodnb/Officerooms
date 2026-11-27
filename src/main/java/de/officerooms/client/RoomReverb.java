@@ -14,11 +14,11 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
-import net.minecraftforge.client.event.sound.PlaySoundSourceEvent;
-import net.minecraftforge.client.event.sound.PlayStreamingSourceEvent;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.fml.util.ObfuscationReflectionHelper;
+import net.neoforged.neoforge.client.event.sound.PlaySoundSourceEvent;
+import net.neoforged.neoforge.client.event.sound.PlayStreamingSourceEvent;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.client.event.ClientTickEvent;
+import net.neoforged.fml.util.ObfuscationReflectionHelper;
 import org.lwjgl.openal.AL10;
 import org.lwjgl.openal.ALC10;
 import org.lwjgl.openal.EXTEfx;
@@ -80,15 +80,15 @@ public final class RoomReverb {
     }
 
     public static void register() {
-        MinecraftForge.EVENT_BUS.addListener(RoomReverb::onTick);
-        MinecraftForge.EVENT_BUS.addListener(RoomReverb::onPlay);
-        MinecraftForge.EVENT_BUS.addListener(RoomReverb::onStream);
+        NeoForge.EVENT_BUS.addListener(RoomReverb::onTick);
+        NeoForge.EVENT_BUS.addListener(RoomReverb::onPlay);
+        NeoForge.EVENT_BUS.addListener(RoomReverb::onStream);
     }
 
     // --- measuring (client thread) -------------------------------------------------------------------------------
 
-    private static void onTick(TickEvent.ClientTickEvent event) {
-        if (event.phase != TickEvent.Phase.END) {
+    private static void onTick(ClientTickEvent.Post event) {
+        if (false) {
             return;
         }
         Minecraft mc = Minecraft.getInstance();

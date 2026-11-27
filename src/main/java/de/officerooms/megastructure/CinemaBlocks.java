@@ -30,7 +30,7 @@ import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.neoforge.registries.DeferredHolder;
 
 /**
  * 0.31.0: blocks of the abandoned cinema (own designs, drawn in {@code tools/gen_0310.py}) and its decoration: marquee
@@ -137,64 +137,64 @@ public final class CinemaBlocks {
         return Block.Properties.of().mapColor(c).strength(1.5F, 6.0F).sound(st).lightLevel(s -> light);
     }
 
-    private static RegistryObject<Block> reg(String name, Supplier<Block> b) {
-        RegistryObject<Block> r = ModBlocks.BLOCKS.register(name, b);
+    private static DeferredHolder<Block, Block> reg(String name, Supplier<Block> b) {
+        DeferredHolder<Block, Block> r = ModBlocks.BLOCKS.register(name, b);
         ModBlocks.DECOR_ITEMS.add(ModBlocks.ITEMS.register(name, () -> new BlockItem(r.get(), new Item.Properties())));
         return r;
     }
 
-    private static RegistryObject<Block> full(String name, MapColor c, SoundType st, int light) {
+    private static DeferredHolder<Block, Block> full(String name, MapColor c, SoundType st, int light) {
         return reg(name, () -> new Block(props(c, st, light)));
     }
 
-    private static RegistryObject<Block> turned(String name, MapColor c, SoundType st, int light, double... b) {
+    private static DeferredHolder<Block, Block> turned(String name, MapColor c, SoundType st, int light, double... b) {
         return reg(name, () -> new Turned(props(c, st, light).noOcclusion(), b[0], b[1], b[2], b[3], b[4], b[5]));
     }
 
-    public static final RegistryObject<Block> WALL = full("cinema_wall", MapColor.COLOR_RED, SoundType.WOOL, 0);
-    public static final RegistryObject<Block> WALLPAPER = full("cinema_wallpaper", MapColor.TERRACOTTA_RED, SoundType.WOOD, 0);
-    public static final RegistryObject<Block> CARPET = full("cinema_carpet", MapColor.COLOR_PURPLE, SoundType.WOOL, 0);
-    public static final RegistryObject<Block> TILE = full("cinema_tile", MapColor.QUARTZ, SoundType.STONE, 0);
-    public static final RegistryObject<Block> CEILING = full("cinema_ceiling", MapColor.COLOR_BLACK, SoundType.STONE, 0);
-    public static final RegistryObject<Block> RISER = full("cinema_riser", MapColor.COLOR_PURPLE, SoundType.WOOL, 0);
-    public static final RegistryObject<Block> STAIRS = reg("cinema_riser_stairs",
+    public static final DeferredHolder<Block, Block> WALL = full("cinema_wall", MapColor.COLOR_RED, SoundType.WOOL, 0);
+    public static final DeferredHolder<Block, Block> WALLPAPER = full("cinema_wallpaper", MapColor.TERRACOTTA_RED, SoundType.WOOD, 0);
+    public static final DeferredHolder<Block, Block> CARPET = full("cinema_carpet", MapColor.COLOR_PURPLE, SoundType.WOOL, 0);
+    public static final DeferredHolder<Block, Block> TILE = full("cinema_tile", MapColor.QUARTZ, SoundType.STONE, 0);
+    public static final DeferredHolder<Block, Block> CEILING = full("cinema_ceiling", MapColor.COLOR_BLACK, SoundType.STONE, 0);
+    public static final DeferredHolder<Block, Block> RISER = full("cinema_riser", MapColor.COLOR_PURPLE, SoundType.WOOL, 0);
+    public static final DeferredHolder<Block, Block> STAIRS = reg("cinema_riser_stairs",
             () -> new StairBlock(() -> RISER.get().defaultBlockState(), props(MapColor.COLOR_PURPLE, SoundType.WOOL, 0)));
-    public static final RegistryObject<Block> SCREEN = full("cinema_screen", MapColor.SNOW, SoundType.WOOL, 6);
-    public static final RegistryObject<Block> SCREEN_STATIC = full("cinema_screen_static", MapColor.SNOW, SoundType.WOOL, 8);
-    public static final RegistryObject<Block> SCREEN_OFF = full("cinema_screen_off", MapColor.COLOR_BLACK, SoundType.WOOL, 0);
-    public static final RegistryObject<Block> SCREEN_TORN = full("cinema_screen_torn", MapColor.COLOR_GRAY, SoundType.WOOL, 2);
-    public static final RegistryObject<Block> FIGURE_LOWER = full("cinema_screen_figure_lower", MapColor.SNOW, SoundType.WOOL, 6);
-    public static final RegistryObject<Block> FIGURE_UPPER = full("cinema_screen_figure_upper", MapColor.SNOW, SoundType.WOOL, 6);
-    public static final RegistryObject<Block> SEAT = turned("cinema_seat", MapColor.COLOR_RED, SoundType.WOOL, 0, 1, 0, 2, 15, 16, 15);
-    public static final RegistryObject<Block> SEAT_BROKEN = turned("cinema_seat_broken", MapColor.COLOR_RED, SoundType.WOOL, 0, 1, 0, 2, 15, 12, 15);
-    public static final RegistryObject<Block> AISLE_LIGHT = turned("cinema_aisle_light", MapColor.COLOR_YELLOW, SoundType.METAL, 5, 5, 1, 14, 11, 4, 16);
-    public static final RegistryObject<Block> EXIT = turned("cinema_exit_sign", MapColor.COLOR_GREEN, SoundType.METAL, 7, 2, 4, 14, 14, 11, 16);
-    public static final RegistryObject<Block> PROJECTOR = reg("cinema_projector",
+    public static final DeferredHolder<Block, Block> SCREEN = full("cinema_screen", MapColor.SNOW, SoundType.WOOL, 6);
+    public static final DeferredHolder<Block, Block> SCREEN_STATIC = full("cinema_screen_static", MapColor.SNOW, SoundType.WOOL, 8);
+    public static final DeferredHolder<Block, Block> SCREEN_OFF = full("cinema_screen_off", MapColor.COLOR_BLACK, SoundType.WOOL, 0);
+    public static final DeferredHolder<Block, Block> SCREEN_TORN = full("cinema_screen_torn", MapColor.COLOR_GRAY, SoundType.WOOL, 2);
+    public static final DeferredHolder<Block, Block> FIGURE_LOWER = full("cinema_screen_figure_lower", MapColor.SNOW, SoundType.WOOL, 6);
+    public static final DeferredHolder<Block, Block> FIGURE_UPPER = full("cinema_screen_figure_upper", MapColor.SNOW, SoundType.WOOL, 6);
+    public static final DeferredHolder<Block, Block> SEAT = turned("cinema_seat", MapColor.COLOR_RED, SoundType.WOOL, 0, 1, 0, 2, 15, 16, 15);
+    public static final DeferredHolder<Block, Block> SEAT_BROKEN = turned("cinema_seat_broken", MapColor.COLOR_RED, SoundType.WOOL, 0, 1, 0, 2, 15, 12, 15);
+    public static final DeferredHolder<Block, Block> AISLE_LIGHT = turned("cinema_aisle_light", MapColor.COLOR_YELLOW, SoundType.METAL, 5, 5, 1, 14, 11, 4, 16);
+    public static final DeferredHolder<Block, Block> EXIT = turned("cinema_exit_sign", MapColor.COLOR_GREEN, SoundType.METAL, 7, 2, 4, 14, 14, 11, 16);
+    public static final DeferredHolder<Block, Block> PROJECTOR = reg("cinema_projector",
             () -> new Projector(props(MapColor.COLOR_GRAY, SoundType.METAL, 11).noOcclusion()));
-    public static final RegistryObject<Block> PROJECTOR_OFF = turned("cinema_projector_off", MapColor.COLOR_GRAY, SoundType.METAL, 0, 3, 3, 14, 13, 13, 16);
-    public static final RegistryObject<Block> COUNTER = turned("cinema_counter", MapColor.COLOR_RED, SoundType.WOOD, 0, 0, 0, 0, 16, 16, 16);
-    public static final RegistryObject<Block> TICKET_WINDOW = turned("cinema_ticket_window", MapColor.NONE, SoundType.GLASS, 0, 0, 0, 7, 16, 16, 9);
-    public static final RegistryObject<Block> POPCORN = turned("cinema_popcorn_machine", MapColor.COLOR_RED, SoundType.GLASS, 6, 2, 0, 2, 14, 16, 14);
-    public static final RegistryObject<Block> SODA = turned("cinema_soda_fountain", MapColor.COLOR_LIGHT_GRAY, SoundType.METAL, 0, 2, 0, 3, 14, 13, 15);
-    public static final RegistryObject<Block> CANDY = turned("cinema_candy_case", MapColor.COLOR_RED, SoundType.GLASS, 4, 0, 0, 0, 16, 16, 16);
-    public static final RegistryObject<Block> MENU = turned("cinema_menu_board", MapColor.COLOR_BLACK, SoundType.WOOD, 5, 0, 0, 15, 16, 16, 16);
-    public static final RegistryObject<Block> STANCHION = reg("cinema_stanchion",
+    public static final DeferredHolder<Block, Block> PROJECTOR_OFF = turned("cinema_projector_off", MapColor.COLOR_GRAY, SoundType.METAL, 0, 3, 3, 14, 13, 13, 16);
+    public static final DeferredHolder<Block, Block> COUNTER = turned("cinema_counter", MapColor.COLOR_RED, SoundType.WOOD, 0, 0, 0, 0, 16, 16, 16);
+    public static final DeferredHolder<Block, Block> TICKET_WINDOW = turned("cinema_ticket_window", MapColor.NONE, SoundType.GLASS, 0, 0, 0, 7, 16, 16, 9);
+    public static final DeferredHolder<Block, Block> POPCORN = turned("cinema_popcorn_machine", MapColor.COLOR_RED, SoundType.GLASS, 6, 2, 0, 2, 14, 16, 14);
+    public static final DeferredHolder<Block, Block> SODA = turned("cinema_soda_fountain", MapColor.COLOR_LIGHT_GRAY, SoundType.METAL, 0, 2, 0, 3, 14, 13, 15);
+    public static final DeferredHolder<Block, Block> CANDY = turned("cinema_candy_case", MapColor.COLOR_RED, SoundType.GLASS, 4, 0, 0, 0, 16, 16, 16);
+    public static final DeferredHolder<Block, Block> MENU = turned("cinema_menu_board", MapColor.COLOR_BLACK, SoundType.WOOD, 5, 0, 0, 15, 16, 16, 16);
+    public static final DeferredHolder<Block, Block> STANCHION = reg("cinema_stanchion",
             () -> new DecorBlock(props(MapColor.GOLD, SoundType.METAL, 0).noOcclusion(), Block.box(6, 0, 6, 10, 15, 10)));
-    public static final RegistryObject<Block> ROPE = reg("cinema_velvet_rope",
+    public static final DeferredHolder<Block, Block> ROPE = reg("cinema_velvet_rope",
             () -> new DecorBlock(props(MapColor.COLOR_RED, SoundType.WOOL, 0).noOcclusion(), Block.box(0, 9, 7, 16, 12, 9)));
-    public static final RegistryObject<Block> MARQUEE = full("cinema_marquee", MapColor.GOLD, SoundType.GLASS, 10);
-    public static final RegistryObject<Block> TRASH = turned("cinema_trash_bin", MapColor.COLOR_GRAY, SoundType.METAL, 0, 4, 0, 4, 12, 13, 12);
-    public static final RegistryObject<Block> SPILL = reg("cinema_spilled_popcorn",
+    public static final DeferredHolder<Block, Block> MARQUEE = full("cinema_marquee", MapColor.GOLD, SoundType.GLASS, 10);
+    public static final DeferredHolder<Block, Block> TRASH = turned("cinema_trash_bin", MapColor.COLOR_GRAY, SoundType.METAL, 0, 4, 0, 4, 12, 13, 12);
+    public static final DeferredHolder<Block, Block> SPILL = reg("cinema_spilled_popcorn",
             () -> new CarpetBlock(Block.Properties.of().mapColor(MapColor.COLOR_YELLOW).strength(0.1F).sound(SoundType.WOOL).noOcclusion()));
-    public static final RegistryObject<Block> LETTER = reg("cinema_letter", () -> new Letter(props(MapColor.COLOR_RED, SoundType.GLASS, 8).noOcclusion()));
-    public static final RegistryObject<Block> POSTER = reg("cinema_poster", () -> new Poster(props(MapColor.COLOR_BLACK, SoundType.WOOD, 0).noOcclusion()));
+    public static final DeferredHolder<Block, Block> LETTER = reg("cinema_letter", () -> new Letter(props(MapColor.COLOR_RED, SoundType.GLASS, 8).noOcclusion()));
+    public static final DeferredHolder<Block, Block> POSTER = reg("cinema_poster", () -> new Poster(props(MapColor.COLOR_BLACK, SoundType.WOOD, 0).noOcclusion()));
 
     public static void init() {
     }
 
     // --- states ------------------------------------------------------------------------------------------------------
 
-    private static BlockState f(RegistryObject<Block> b, Direction d) {
+    private static BlockState f(DeferredHolder<Block, Block> b, Direction d) {
         return b.get().defaultBlockState().setValue(DecorBlock.FACING, d);
     }
 

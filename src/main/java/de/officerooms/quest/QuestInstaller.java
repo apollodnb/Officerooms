@@ -3,8 +3,8 @@ package de.officerooms.quest;
 import de.officerooms.OfficeRooms;
 import de.officerooms.core.OfficeRoomsConfig;
 import de.officerooms.core.OfficeRoomsIds;
-import net.minecraftforge.fml.ModList;
-import net.minecraftforge.fml.loading.FMLPaths;
+import net.neoforged.fml.ModList;
+import net.neoforged.fml.loading.FMLPaths;
 
 import java.io.IOException;
 import java.io.InputStream;

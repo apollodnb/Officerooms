@@ -62,7 +62,7 @@ public final class OfficeChunkGenerator extends ChunkGenerator {
             GenSettingsCodec.CODEC.optionalFieldOf("settings", GenSettings.DEFAULT).forGetter(g -> g.settings)
     ).apply(i, i.stable(OfficeChunkGenerator::new)));
 
-    private static final ResourceLocation SEED_KEY = new ResourceLocation(OfficeRoomsIds.MOD_ID, "office_layout");
+    private static final ResourceLocation SEED_KEY = ResourceLocation.fromNamespaceAndPath(OfficeRoomsIds.MOD_ID, "office_layout");
 
     private static BlockState[] states;
 

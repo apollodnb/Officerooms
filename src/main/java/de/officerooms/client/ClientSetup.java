@@ -2,13 +2,13 @@ package de.officerooms.client;
 
 import de.officerooms.core.OfficeRoomsIds;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.client.event.EntityRenderersEvent;
-import net.minecraftforge.client.event.RegisterDimensionSpecialEffectsEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
+import net.neoforged.neoforge.client.event.RegisterDimensionSpecialEffectsEvent;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import de.officerooms.entity.ModEntities;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.Mod;
 
 /**
  * Nur Client: Dimensionseffekte {@code office_rooms:office_rooms}, Modelle und Renderer der Mobs
@@ -30,7 +30,7 @@ public final class ClientSetup {
 
     /** 0.24.0: Deathmoth wings over the screen. */
     @SubscribeEvent
-    static void onOverlays(net.minecraftforge.client.event.RegisterGuiOverlaysEvent event) {
+    static void onOverlays(net.neoforged.neoforge.client.event.RegisterGuiOverlaysEvent event) {
         event.registerAboveAll("deathmoth", (gui, g, pt, w, h) -> DeathmothRenderer.renderOverlay(g, pt, w, h));
     }
 
@@ -66,20 +66,20 @@ public final class ClientSetup {
 
     @SubscribeEvent
     static void onRegisterEffects(RegisterDimensionSpecialEffectsEvent event) {
-        event.register(new ResourceLocation(OfficeRoomsIds.MOD_ID, "office_rooms"), new OfficeRoomsSkyEffects());
-        event.register(new ResourceLocation(OfficeRoomsIds.MOD_ID, "the_sea"), new de.officerooms.sea.SeaClientFx.Effects());
+        event.register(ResourceLocation.fromNamespaceAndPath(OfficeRoomsIds.MOD_ID, "office_rooms"), new OfficeRoomsSkyEffects());
+        event.register(ResourceLocation.fromNamespaceAndPath(OfficeRoomsIds.MOD_ID, "the_sea"), new de.officerooms.sea.SeaClientFx.Effects());
     }
 
     /** 0.19.0: the upside-down grass is tinted like grass. */
     @SubscribeEvent
-    public static void onBlockColors(net.minecraftforge.client.event.RegisterColorHandlersEvent.Block event) {
+    public static void onBlockColors(net.neoforged.neoforge.client.event.RegisterColorHandlersEvent.Block event) {
         event.register((state, getter, pos, tint) -> getter != null && pos != null
                 ? net.minecraft.client.renderer.BiomeColors.getAverageGrassColor(getter, pos)
                 : net.minecraft.world.level.GrassColor.getDefaultColor(), de.officerooms.block.ModBlocks.UNDERSIDE_GRASS.get());
     }
 
     @SubscribeEvent
-    public static void onItemColors(net.minecraftforge.client.event.RegisterColorHandlersEvent.Item event) {
+    public static void onItemColors(net.neoforged.neoforge.client.event.RegisterColorHandlersEvent.Item event) {
         event.register((stack, tint) -> net.minecraft.world.level.GrassColor.getDefaultColor(), de.officerooms.block.ModBlocks.UNDERSIDE_GRASS.get());
     }
 }

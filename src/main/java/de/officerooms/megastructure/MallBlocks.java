@@ -27,7 +27,7 @@ import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.neoforge.registries.DeferredHolder;
 
 /** 0.43.0: blocks of the Dead Mall (own designs, drawn in {@code tools/gen_0430.py}). */
 public final class MallBlocks {
@@ -83,103 +83,103 @@ public final class MallBlocks {
         return Block.Properties.of().mapColor(c).strength(hard, hard * 4).sound(st).lightLevel(s -> light);
     }
 
-    private static RegistryObject<Block> reg(String name, Supplier<Block> b) {
+    private static DeferredHolder<Block, Block> reg(String name, Supplier<Block> b) {
         NAMES.add(name);
-        RegistryObject<Block> r = ModBlocks.BLOCKS.register(name, b);
+        DeferredHolder<Block, Block> r = ModBlocks.BLOCKS.register(name, b);
         ModBlocks.DECOR_ITEMS.add(ModBlocks.ITEMS.register(name, () -> new BlockItem(r.get(), new Item.Properties())));
         return r;
     }
 
-    private static RegistryObject<Block> full(String name, MapColor c, SoundType st, float hard, int light) {
+    private static DeferredHolder<Block, Block> full(String name, MapColor c, SoundType st, float hard, int light) {
         return reg(name, () -> new Block(props(c, st, hard, light)));
     }
 
-    private static RegistryObject<Block> turned(String name, MapColor c, SoundType st, int light, double... b) {
+    private static DeferredHolder<Block, Block> turned(String name, MapColor c, SoundType st, int light, double... b) {
         return reg(name, () -> new CinemaBlocks.Turned(props(c, st, 1.5F, light).noOcclusion(), b[0], b[1], b[2], b[3], b[4], b[5]));
     }
 
-    private static RegistryObject<Block> thin(String name, MapColor c, SoundType st, int light, double... b) {
+    private static DeferredHolder<Block, Block> thin(String name, MapColor c, SoundType st, int light, double... b) {
         return reg(name, () -> new ShipBlocks.Thin(props(c, st, 1.0F, light).noOcclusion(), b));
     }
 
-    private static RegistryObject<Block> lamp(String name, MapColor c, int light) {
+    private static DeferredHolder<Block, Block> lamp(String name, MapColor c, int light) {
         return reg(name, () -> new ShipBlocks.Lamp(props(c, SoundType.GLASS, 0.8F, 0).lightLevel(s -> s.getValue(ShipBlocks.Lamp.LIT) ? light : 0)));
     }
 
-    private static RegistryObject<Block> glass(String name, MapColor c) {
+    private static DeferredHolder<Block, Block> glass(String name, MapColor c) {
         return reg(name, () -> new ShipBlocks.Glass(props(c, SoundType.GLASS, 1.5F, 0).noOcclusion()
                 .isViewBlocking((s, l, p) -> false).isSuffocating((s, l, p) -> false)));
     }
 
     // floors, walls, ceilings
-    public static final RegistryObject<Block> TILE = full("mall_tile", MapColor.SAND, SoundType.STONE, 2F, 0);
-    public static final RegistryObject<Block> TILE_ACCENT = full("mall_tile_accent", MapColor.TERRACOTTA_ORANGE, SoundType.STONE, 2F, 0);
-    public static final RegistryObject<Block> TILE_CRACKED = full("mall_tile_cracked", MapColor.SAND, SoundType.STONE, 2F, 0);
-    public static final RegistryObject<Block> SHOP_FLOOR = full("mall_shop_floor", MapColor.QUARTZ, SoundType.STONE, 1.5F, 0);
-    public static final RegistryObject<Block> SHOP_CARPET = full("mall_shop_carpet", MapColor.COLOR_PURPLE, SoundType.WOOL, 1F, 0);
-    public static final RegistryObject<Block> DEPT_FLOOR = full("mall_dept_floor", MapColor.COLOR_GRAY, SoundType.WOOL, 1F, 0);
-    public static final RegistryObject<Block> SERVICE_FLOOR = full("mall_service_floor", MapColor.STONE, SoundType.STONE, 2F, 0);
-    public static final RegistryObject<Block> WALL = full("mall_wall", MapColor.SAND, SoundType.STONE, 2F, 0);
-    public static final RegistryObject<Block> DEPT_WALL = full("mall_dept_wall", MapColor.COLOR_LIGHT_GRAY, SoundType.STONE, 2F, 0);
-    public static final RegistryObject<Block> SERVICE_WALL = full("mall_service_wall", MapColor.STONE, SoundType.STONE, 3F, 0);
-    public static final RegistryObject<Block> CEILING = full("mall_ceiling", MapColor.SAND, SoundType.WOOD, 1.5F, 0);
-    public static final RegistryObject<Block> SERVICE_CEILING = full("mall_service_ceiling", MapColor.STONE, SoundType.STONE, 2F, 0);
-    public static final RegistryObject<Block> FACADE = full("mall_facade", MapColor.COLOR_BROWN, SoundType.METAL, 2F, 0);
-    public static final RegistryObject<Block> FRAME = full("mall_frame", MapColor.COLOR_BROWN, SoundType.METAL, 3F, 0);
-    public static final RegistryObject<Block> PILLAR = full("mall_pillar", MapColor.SAND, SoundType.STONE, 3F, 0);
-    public static final RegistryObject<Block> SKYLIGHT = full("mall_skylight", MapColor.COLOR_LIGHT_GRAY, SoundType.GLASS, 2F, 9);
-    public static final RegistryObject<Block> ROOF_BEAM = full("mall_roof_beam", MapColor.COLOR_GRAY, SoundType.METAL, 3F, 0);
-    public static final RegistryObject<Block> SHUTTER = full("mall_shutter", MapColor.COLOR_GRAY, SoundType.METAL, 4F, 0);
-    public static final RegistryObject<Block> PLANTER = full("mall_planter", MapColor.TERRACOTTA_BROWN, SoundType.STONE, 2F, 0);
-    public static final RegistryObject<Block> FOUNTAIN_BASIN = full("mall_fountain_basin", MapColor.COLOR_CYAN, SoundType.STONE, 2F, 0);
-    public static final RegistryObject<Block> FOUNTAIN_RIM = full("mall_fountain_rim", MapColor.SAND, SoundType.STONE, 2F, 0);
-    public static final RegistryObject<Block> FOUNTAIN_SPOUT = reg("mall_fountain_spout", () -> new Spout(props(MapColor.COLOR_LIGHT_GRAY, SoundType.METAL, 3F, 0)));
-    public static final RegistryObject<Block> ESCALATOR_SIDE = full("mall_escalator_side", MapColor.METAL, SoundType.METAL, 3F, 0);
-    public static final RegistryObject<Block> ESCALATOR = reg("mall_escalator",
+    public static final DeferredHolder<Block, Block> TILE = full("mall_tile", MapColor.SAND, SoundType.STONE, 2F, 0);
+    public static final DeferredHolder<Block, Block> TILE_ACCENT = full("mall_tile_accent", MapColor.TERRACOTTA_ORANGE, SoundType.STONE, 2F, 0);
+    public static final DeferredHolder<Block, Block> TILE_CRACKED = full("mall_tile_cracked", MapColor.SAND, SoundType.STONE, 2F, 0);
+    public static final DeferredHolder<Block, Block> SHOP_FLOOR = full("mall_shop_floor", MapColor.QUARTZ, SoundType.STONE, 1.5F, 0);
+    public static final DeferredHolder<Block, Block> SHOP_CARPET = full("mall_shop_carpet", MapColor.COLOR_PURPLE, SoundType.WOOL, 1F, 0);
+    public static final DeferredHolder<Block, Block> DEPT_FLOOR = full("mall_dept_floor", MapColor.COLOR_GRAY, SoundType.WOOL, 1F, 0);
+    public static final DeferredHolder<Block, Block> SERVICE_FLOOR = full("mall_service_floor", MapColor.STONE, SoundType.STONE, 2F, 0);
+    public static final DeferredHolder<Block, Block> WALL = full("mall_wall", MapColor.SAND, SoundType.STONE, 2F, 0);
+    public static final DeferredHolder<Block, Block> DEPT_WALL = full("mall_dept_wall", MapColor.COLOR_LIGHT_GRAY, SoundType.STONE, 2F, 0);
+    public static final DeferredHolder<Block, Block> SERVICE_WALL = full("mall_service_wall", MapColor.STONE, SoundType.STONE, 3F, 0);
+    public static final DeferredHolder<Block, Block> CEILING = full("mall_ceiling", MapColor.SAND, SoundType.WOOD, 1.5F, 0);
+    public static final DeferredHolder<Block, Block> SERVICE_CEILING = full("mall_service_ceiling", MapColor.STONE, SoundType.STONE, 2F, 0);
+    public static final DeferredHolder<Block, Block> FACADE = full("mall_facade", MapColor.COLOR_BROWN, SoundType.METAL, 2F, 0);
+    public static final DeferredHolder<Block, Block> FRAME = full("mall_frame", MapColor.COLOR_BROWN, SoundType.METAL, 3F, 0);
+    public static final DeferredHolder<Block, Block> PILLAR = full("mall_pillar", MapColor.SAND, SoundType.STONE, 3F, 0);
+    public static final DeferredHolder<Block, Block> SKYLIGHT = full("mall_skylight", MapColor.COLOR_LIGHT_GRAY, SoundType.GLASS, 2F, 9);
+    public static final DeferredHolder<Block, Block> ROOF_BEAM = full("mall_roof_beam", MapColor.COLOR_GRAY, SoundType.METAL, 3F, 0);
+    public static final DeferredHolder<Block, Block> SHUTTER = full("mall_shutter", MapColor.COLOR_GRAY, SoundType.METAL, 4F, 0);
+    public static final DeferredHolder<Block, Block> PLANTER = full("mall_planter", MapColor.TERRACOTTA_BROWN, SoundType.STONE, 2F, 0);
+    public static final DeferredHolder<Block, Block> FOUNTAIN_BASIN = full("mall_fountain_basin", MapColor.COLOR_CYAN, SoundType.STONE, 2F, 0);
+    public static final DeferredHolder<Block, Block> FOUNTAIN_RIM = full("mall_fountain_rim", MapColor.SAND, SoundType.STONE, 2F, 0);
+    public static final DeferredHolder<Block, Block> FOUNTAIN_SPOUT = reg("mall_fountain_spout", () -> new Spout(props(MapColor.COLOR_LIGHT_GRAY, SoundType.METAL, 3F, 0)));
+    public static final DeferredHolder<Block, Block> ESCALATOR_SIDE = full("mall_escalator_side", MapColor.METAL, SoundType.METAL, 3F, 0);
+    public static final DeferredHolder<Block, Block> ESCALATOR = reg("mall_escalator",
             () -> new StairBlock(() -> ESCALATOR_SIDE.get().defaultBlockState(), props(MapColor.METAL, SoundType.METAL, 3F, 0)));
-    public static final RegistryObject<Block> NIGHT_GLASS = full("mall_night_glass", MapColor.COLOR_BLACK, SoundType.GLASS, 3F, 0);
-    public static final RegistryObject<Block> STOREFRONT = glass("mall_storefront_glass", MapColor.NONE);
-    public static final RegistryObject<Block> LEASE_GLASS = glass("mall_lease_glass", MapColor.SNOW);
-    public static final RegistryObject<Block> RAIL = reg("mall_glass_rail", () -> new IronBarsBlock(props(MapColor.NONE, SoundType.GLASS, 1.5F, 0).noOcclusion()));
-    public static final RegistryObject<Block> LIGHT = lamp("mall_ceiling_light", MapColor.SNOW, 13);
-    public static final RegistryObject<Block> SERVICE_LIGHT = lamp("mall_service_light", MapColor.COLOR_YELLOW, 8);
+    public static final DeferredHolder<Block, Block> NIGHT_GLASS = full("mall_night_glass", MapColor.COLOR_BLACK, SoundType.GLASS, 3F, 0);
+    public static final DeferredHolder<Block, Block> STOREFRONT = glass("mall_storefront_glass", MapColor.NONE);
+    public static final DeferredHolder<Block, Block> LEASE_GLASS = glass("mall_lease_glass", MapColor.SNOW);
+    public static final DeferredHolder<Block, Block> RAIL = reg("mall_glass_rail", () -> new IronBarsBlock(props(MapColor.NONE, SoundType.GLASS, 1.5F, 0).noOcclusion()));
+    public static final DeferredHolder<Block, Block> LIGHT = lamp("mall_ceiling_light", MapColor.SNOW, 13);
+    public static final DeferredHolder<Block, Block> SERVICE_LIGHT = lamp("mall_service_light", MapColor.COLOR_YELLOW, 8);
 
     // fittings and furniture
-    public static final RegistryObject<Block> BENCH = turned("mall_bench", MapColor.WOOD, SoundType.WOOD, 0, 0, 0, 3, 16, 9, 15);
-    public static final RegistryObject<Block> PLANT = reg("mall_plant", () -> new ShipBlocks.Thin(props(MapColor.PLANT, SoundType.GRASS, 0.3F, 0).noOcclusion(),
+    public static final DeferredHolder<Block, Block> BENCH = turned("mall_bench", MapColor.WOOD, SoundType.WOOD, 0, 0, 0, 3, 16, 9, 15);
+    public static final DeferredHolder<Block, Block> PLANT = reg("mall_plant", () -> new ShipBlocks.Thin(props(MapColor.PLANT, SoundType.GRASS, 0.3F, 0).noOcclusion(),
             2, 0, 2, 14, 16, 14));
-    public static final RegistryObject<Block> DIRECTORY = turned("mall_directory", MapColor.COLOR_BROWN, SoundType.METAL, 2, 2, 0, 6, 14, 16, 10);
-    public static final RegistryObject<Block> DIRECTORY_TOP = turned("mall_directory_top", MapColor.COLOR_BROWN, SoundType.METAL, 4, 2, 0, 6, 14, 14, 10);
-    public static final RegistryObject<Block> WET_FLOOR = thin("mall_wet_floor_sign", MapColor.COLOR_YELLOW, SoundType.WOOD, 0, 4, 0, 5, 12, 13, 11);
-    public static final RegistryObject<Block> CART = turned("mall_cart", MapColor.METAL, SoundType.METAL, 0, 2, 0, 1, 14, 14, 15);
-    public static final RegistryObject<Block> KIDDIE_RIDE = turned("mall_kiddie_ride", MapColor.COLOR_RED, SoundType.METAL, 2, 2, 0, 1, 14, 16, 15);
-    public static final RegistryObject<Block> CLOTHES_RACK = turned("mall_clothes_rack", MapColor.COLOR_LIGHT_GRAY, SoundType.METAL, 0, 0, 0, 5, 16, 16, 11);
-    public static final RegistryObject<Block> SHELF = turned("mall_shelf", MapColor.COLOR_LIGHT_GRAY, SoundType.METAL, 0, 0, 0, 2, 16, 16, 16);
-    public static final RegistryObject<Block> SHOE_SHELF = turned("mall_shoe_shelf", MapColor.WOOD, SoundType.WOOD, 0, 0, 0, 6, 16, 16, 16);
-    public static final RegistryObject<Block> COUNTER = turned("mall_counter", MapColor.COLOR_BROWN, SoundType.WOOD, 0, 0, 0, 0, 16, 15, 16);
-    public static final RegistryObject<Block> REGISTER = turned("mall_register", MapColor.COLOR_GRAY, SoundType.METAL, 0, 3, 0, 3, 13, 8, 13);
-    public static final RegistryObject<Block> TV = turned("mall_tv", MapColor.COLOR_BLACK, SoundType.GLASS, 6, 1, 0, 3, 15, 13, 15);
-    public static final RegistryObject<Block> TV_OFF = turned("mall_tv_off", MapColor.COLOR_BLACK, SoundType.GLASS, 0, 1, 0, 3, 15, 13, 15);
-    public static final RegistryObject<Block> FOOD_COUNTER = turned("mall_food_counter", MapColor.COLOR_RED, SoundType.METAL, 0, 0, 0, 0, 16, 16, 16);
-    public static final RegistryObject<Block> FRYER = turned("mall_fryer", MapColor.METAL, SoundType.METAL, 0, 1, 0, 1, 15, 15, 15);
-    public static final RegistryObject<Block> MENU = turned("mall_menu_board", MapColor.COLOR_BLACK, SoundType.WOOD, 6, 0, 0, 14, 16, 16, 16);
-    public static final RegistryObject<Block> FOOD_TABLE = turned("mall_food_table", MapColor.COLOR_ORANGE, SoundType.METAL, 0, 1, 0, 1, 15, 14, 15);
-    public static final RegistryObject<Block> FOOD_CHAIR = turned("mall_food_chair", MapColor.COLOR_ORANGE, SoundType.METAL, 0, 3, 0, 3, 13, 16, 13);
-    public static final RegistryObject<Block> KIOSK = turned("mall_kiosk", MapColor.COLOR_GREEN, SoundType.WOOD, 3, 0, 0, 0, 16, 16, 16);
-    public static final RegistryObject<Block> OUT_OF_ORDER = thin("mall_out_of_order", MapColor.COLOR_RED, SoundType.METAL, 0, 6, 0, 6, 10, 16, 10);
-    public static final RegistryObject<Block> SPEAKER = reg("mall_speaker", () -> new Speaker(props(MapColor.SNOW, SoundType.METAL, 1F, 0).noOcclusion()));
-    public static final RegistryObject<Block> PET_TANK = turned("mall_pet_tank", MapColor.COLOR_CYAN, SoundType.GLASS, 3, 0, 0, 1, 16, 14, 15);
-    public static final RegistryObject<Block> SALON_CHAIR = turned("mall_salon_chair", MapColor.COLOR_BLACK, SoundType.METAL, 0, 2, 0, 2, 14, 16, 14);
-    public static final RegistryObject<Block> MIRROR = thin("mall_mirror", MapColor.SNOW, SoundType.GLASS, 0, 0, 0, 15, 16, 16, 16);
-    public static final RegistryObject<Block> SIGN_LEASE = thin("mall_for_lease_sign", MapColor.SNOW, SoundType.WOOD, 0, 1, 2, 15, 15, 14, 16);
-    public static final RegistryObject<Block> EMPLOYEES = thin("mall_employees_only", MapColor.COLOR_GRAY, SoundType.METAL, 0, 1, 4, 15, 15, 12, 16);
+    public static final DeferredHolder<Block, Block> DIRECTORY = turned("mall_directory", MapColor.COLOR_BROWN, SoundType.METAL, 2, 2, 0, 6, 14, 16, 10);
+    public static final DeferredHolder<Block, Block> DIRECTORY_TOP = turned("mall_directory_top", MapColor.COLOR_BROWN, SoundType.METAL, 4, 2, 0, 6, 14, 14, 10);
+    public static final DeferredHolder<Block, Block> WET_FLOOR = thin("mall_wet_floor_sign", MapColor.COLOR_YELLOW, SoundType.WOOD, 0, 4, 0, 5, 12, 13, 11);
+    public static final DeferredHolder<Block, Block> CART = turned("mall_cart", MapColor.METAL, SoundType.METAL, 0, 2, 0, 1, 14, 14, 15);
+    public static final DeferredHolder<Block, Block> KIDDIE_RIDE = turned("mall_kiddie_ride", MapColor.COLOR_RED, SoundType.METAL, 2, 2, 0, 1, 14, 16, 15);
+    public static final DeferredHolder<Block, Block> CLOTHES_RACK = turned("mall_clothes_rack", MapColor.COLOR_LIGHT_GRAY, SoundType.METAL, 0, 0, 0, 5, 16, 16, 11);
+    public static final DeferredHolder<Block, Block> SHELF = turned("mall_shelf", MapColor.COLOR_LIGHT_GRAY, SoundType.METAL, 0, 0, 0, 2, 16, 16, 16);
+    public static final DeferredHolder<Block, Block> SHOE_SHELF = turned("mall_shoe_shelf", MapColor.WOOD, SoundType.WOOD, 0, 0, 0, 6, 16, 16, 16);
+    public static final DeferredHolder<Block, Block> COUNTER = turned("mall_counter", MapColor.COLOR_BROWN, SoundType.WOOD, 0, 0, 0, 0, 16, 15, 16);
+    public static final DeferredHolder<Block, Block> REGISTER = turned("mall_register", MapColor.COLOR_GRAY, SoundType.METAL, 0, 3, 0, 3, 13, 8, 13);
+    public static final DeferredHolder<Block, Block> TV = turned("mall_tv", MapColor.COLOR_BLACK, SoundType.GLASS, 6, 1, 0, 3, 15, 13, 15);
+    public static final DeferredHolder<Block, Block> TV_OFF = turned("mall_tv_off", MapColor.COLOR_BLACK, SoundType.GLASS, 0, 1, 0, 3, 15, 13, 15);
+    public static final DeferredHolder<Block, Block> FOOD_COUNTER = turned("mall_food_counter", MapColor.COLOR_RED, SoundType.METAL, 0, 0, 0, 0, 16, 16, 16);
+    public static final DeferredHolder<Block, Block> FRYER = turned("mall_fryer", MapColor.METAL, SoundType.METAL, 0, 1, 0, 1, 15, 15, 15);
+    public static final DeferredHolder<Block, Block> MENU = turned("mall_menu_board", MapColor.COLOR_BLACK, SoundType.WOOD, 6, 0, 0, 14, 16, 16, 16);
+    public static final DeferredHolder<Block, Block> FOOD_TABLE = turned("mall_food_table", MapColor.COLOR_ORANGE, SoundType.METAL, 0, 1, 0, 1, 15, 14, 15);
+    public static final DeferredHolder<Block, Block> FOOD_CHAIR = turned("mall_food_chair", MapColor.COLOR_ORANGE, SoundType.METAL, 0, 3, 0, 3, 13, 16, 13);
+    public static final DeferredHolder<Block, Block> KIOSK = turned("mall_kiosk", MapColor.COLOR_GREEN, SoundType.WOOD, 3, 0, 0, 0, 16, 16, 16);
+    public static final DeferredHolder<Block, Block> OUT_OF_ORDER = thin("mall_out_of_order", MapColor.COLOR_RED, SoundType.METAL, 0, 6, 0, 6, 10, 16, 10);
+    public static final DeferredHolder<Block, Block> SPEAKER = reg("mall_speaker", () -> new Speaker(props(MapColor.SNOW, SoundType.METAL, 1F, 0).noOcclusion()));
+    public static final DeferredHolder<Block, Block> PET_TANK = turned("mall_pet_tank", MapColor.COLOR_CYAN, SoundType.GLASS, 3, 0, 0, 1, 16, 14, 15);
+    public static final DeferredHolder<Block, Block> SALON_CHAIR = turned("mall_salon_chair", MapColor.COLOR_BLACK, SoundType.METAL, 0, 2, 0, 2, 14, 16, 14);
+    public static final DeferredHolder<Block, Block> MIRROR = thin("mall_mirror", MapColor.SNOW, SoundType.GLASS, 0, 0, 0, 15, 16, 16, 16);
+    public static final DeferredHolder<Block, Block> SIGN_LEASE = thin("mall_for_lease_sign", MapColor.SNOW, SoundType.WOOD, 0, 1, 2, 15, 15, 14, 16);
+    public static final DeferredHolder<Block, Block> EMPLOYEES = thin("mall_employees_only", MapColor.COLOR_GRAY, SoundType.METAL, 0, 1, 4, 15, 15, 12, 16);
 
     public static void init() {
     }
 
     // --- states ------------------------------------------------------------------------------------------------------
 
-    public static BlockState f(RegistryObject<Block> b, Direction front) {
+    public static BlockState f(DeferredHolder<Block, Block> b, Direction front) {
         return b.get().defaultBlockState().setValue(DecorBlock.FACING, front);
     }
 

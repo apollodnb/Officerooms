@@ -13,7 +13,7 @@ import net.minecraft.world.entity.player.Inventory;
 /** 0.12.0: Research Table screen. */
 public class ResearchScreen extends AbstractContainerScreen<ResearchMenu> {
 
-    private static final ResourceLocation BG = new ResourceLocation(OfficeRoomsIds.MOD_ID, "textures/gui/research_table.png");
+    private static final ResourceLocation BG = ResourceLocation.fromNamespaceAndPath(OfficeRoomsIds.MOD_ID, "textures/gui/research_table.png");
     private static final String[] ROMAN = {"", "I", "II", "III"};
     private Button heart;
     private Button reforge;

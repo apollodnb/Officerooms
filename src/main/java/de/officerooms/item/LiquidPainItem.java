@@ -30,7 +30,7 @@ import java.util.List;
 public final class LiquidPainItem extends Item {
 
     public static final ResourceKey<DamageType> DAMAGE = ResourceKey.create(Registries.DAMAGE_TYPE,
-            new ResourceLocation("office_rooms", "liquid_pain"));
+            ResourceLocation.fromNamespaceAndPath("office_rooms", "liquid_pain"));
 
     public LiquidPainItem(Properties props) {
         super(props);

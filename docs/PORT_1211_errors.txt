@@ -1,0 +1,407 @@
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/loot/TierChance.java:9: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/loot/TierChance.java:30: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/research/ModMenus.java:8: error: package net.minecraftforge.registries does not exist
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/research/ModMenus.java:15: error: wrong number of type arguments; required 2
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/research/ResearchUpgrades.java:30: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/research/ResearchUpgrades.java:197: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/level0/Level0Events.java:36: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/level0/Level0Events.java:188: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/level0/Level0Events.java:254: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/world/OfficeSleep.java:14: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/world/OfficeSleep.java:15: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/world/OfficeSleep.java:40: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/world/OfficeSleep.java:46: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/world/ElevatorRides.java:44: error: package net.minecraftforge.network does not exist
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/world/SlideTravel.java:21: error: package net.minecraftforge.network does not exist
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/worldgen/shrine/ShrineStructures.java:21: error: wrong number of type arguments; required 2
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/worldgen/shrine/ShrineStructures.java:26: error: wrong number of type arguments; required 2
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/worldgen/shrine/ShrineStructures.java:33: error: wrong number of type arguments; required 2
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/worldgen/shrine/ShrineStructures.java:36: error: wrong number of type arguments; required 2
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/worldgen/shrine/ShrineStructures.java:38: error: wrong number of type arguments; required 2
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/worldgen/OfficeWorldgen.java:20: error: wrong number of type arguments; required 2
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/hazard/HazardNet.java:9: error: package net.minecraftforge.network does not exist
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/hazard/HazardNet.java:10: error: package net.minecraftforge.network does not exist
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/hazard/HazardNet.java:11: error: package net.minecraftforge.network does not exist
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/hazard/HazardNet.java:12: error: package net.minecraftforge.network does not exist
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/hazard/HazardNet.java:13: error: package net.minecraftforge.network.simple does not exist
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/hazard/HazardNet.java:74: error: package NetworkEvent does not exist
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/hazard/HazardNet.java:19: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/hazard/HazardNet.java:37: error: package NetworkEvent does not exist
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/hazard/HazardNet.java:54: error: package NetworkEvent does not exist
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/hazard/HazardNet.java:92: error: package NetworkEvent does not exist
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/hazard/HazardNet.java:110: error: package NetworkEvent does not exist
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/special/Hideouts.java:208: error: wrong number of type arguments; required 2
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/megastructure/MallDecorator.java:23: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/OfficeRooms.java:9: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/underside/UndersideEvents.java:111: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/block/ModBlocks.java:264: error: wrong number of type arguments; required 2
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/MultidimensionalTier.java:8: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/MultidimensionalTier.java:9: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/MultidimensionalTier.java:29: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/HazardHeadgear.java:95: error: interface expected here
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/MultidimensionalArmor.java:23: error: interface expected here
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/sea/ShipDecorator.java:204: error: wrong number of type arguments; required 2
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/sea/ShipShape.java:16: error: package net.minecraftforge.registries does not exist
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/sea/ShipShape.java:32: error: wrong number of type arguments; required 2
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/sea/SeaClientFx.java:13: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/sea/ShipBlocks.java:24: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/sea/ShipBlocks.java:151: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/sea/ShipBlocks.java:152: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/client/HazardClientFx.java:25: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/FriendlyWolfspider.java:13: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/FriendlyWolfspider.java:175: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/Wolfspider.java:16: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/Wolfspider.java:105: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/client/ClientSetup.java:17: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/client/ClientSetup.java:33: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/client/BlackoutClient.java:14: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/client/UndersideClientFx.java:13: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/TickThrottle.java:41: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/client/HazardClientFx.java:25: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/client/ClientSetup.java:17: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/client/BlackoutClient.java:14: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/client/UndersideClientFx.java:13: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/loot/ModLoot.java:17: error: incompatible types: JsonSerializer cannot be converted to MapCodec<? extends LootItemCondition>
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/loot/TierChance.java:31: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/loot/TierChance.java:37: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/research/ModMenus.java:13: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/research/ResearchUpgrades.java:82: error: no suitable method found for removeModifier(UUID)
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/research/ResearchUpgrades.java:85: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/research/ResearchUpgrades.java:127: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/research/ResearchUpgrades.java:127: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/research/ResearchUpgrades.java:131: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/research/ResearchUpgrades.java:158: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/research/ResearchUpgrades.java:163: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/quest/Milestones.java:35: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/quest/Milestones.java:36: error: incompatible types: Advancement cannot be converted to AdvancementHolder
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/quest/Milestones.java:37: error: incompatible types: Advancement cannot be converted to AdvancementHolder
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/level0/Level0ChunkGenerator.java:37: error: Level0ChunkGenerator is not abstract and does not override abstract method fillFromNoise(Blender,RandomState,StructureManager,ChunkAccess) in ChunkGenerator
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/level0/Level0ChunkGenerator.java:49: error: codec() in Level0ChunkGenerator cannot override codec() in ChunkGenerator
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/level0/Level0ChunkGenerator.java:48: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/level0/Level0ChunkGenerator.java:53: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/level0/Level0ChunkGenerator.java:421: error: package net.minecraftforge.registries.ForgeRegistries does not exist
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/level0/Level0ChunkGenerator.java:507: error: incompatible types: ResourceLocation cannot be converted to ResourceKey<LootTable>
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/level0/Level0Events.java:203: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/level0/Level0Blocks.java:50: error: incompatible types: BlockState is not a functional interface
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/level0/Level0Blocks.java:97: error: Outlet is not abstract and does not override abstract method codec() in HorizontalDirectionalBlock
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/level0/Level0Blocks.java:151: error: Exit is not abstract and does not override abstract method canPlaceLiquid(Player,BlockGetter,BlockPos,BlockState,Fluid) in LiquidBlockContainer
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/level0/Level0Blocks.java:156: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/world/OfficeSleep.java:42: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/world/ElevatorRides.java:123: error: package PacketDistributor does not exist
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/world/ElevatorRides.java:329: error: package PacketDistributor does not exist
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/world/ElevatorRides.java:407: error: package PacketDistributor does not exist
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/world/ElevatorRides.java:473: error: method finalizeSpawn in class Mob cannot be applied to given types;
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/world/ToolEffects.java:114: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/ThrowableToolItem.java:48: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/world/SlideTravel.java:59: error: package PacketDistributor does not exist
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/worldgen/OfficeChunkGenerator.java:58: error: OfficeChunkGenerator is not abstract and does not override abstract method fillFromNoise(Blender,RandomState,StructureManager,ChunkAccess) in ChunkGenerator
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/worldgen/OfficeChunkGenerator.java:145: error: codec() in OfficeChunkGenerator cannot override codec() in ChunkGenerator
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/worldgen/OfficeChunkGenerator.java:144: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/worldgen/OfficeChunkGenerator.java:149: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/special/SpecialDecorator.java:232: error: incompatible types: ResourceLocation cannot be converted to ResourceKey<LootTable>
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/special/SpecialDecorator.java:240: error: method saveWithoutMetadata in class BlockEntity cannot be applied to given types;
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/special/SpecialDecorator.java:242: error: incompatible types: CompoundTag cannot be converted to Provider
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/special/SpecialDecorator.java:248: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/special/SpecialDecorator.java:263: error: method saveWithoutMetadata in class BlockEntity cannot be applied to given types;
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/special/SpecialDecorator.java:269: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/special/SpecialDecorator.java:291: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/special/SpecialDecorator.java:298: error: method toJson in class Serializer cannot be applied to given types;
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/special/SpecialDecorator.java:314: error: method finalizeSpawn in class Villager cannot be applied to given types;
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/special/SpecialDecorator.java:338: error: method finalizeSpawn in class Mob cannot be applied to given types;
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/special/SpecialDecorator.java:1405: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/special/SpecialDecorator.java:1786: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/special/SpecialDecorator.java:1981: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/special/SpecialDecorator.java:2191: error: package net.minecraftforge.registries.ForgeRegistries does not exist
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/worldgen/shrine/ShrineStructures.java:34: error: incompatible types: cannot infer type-variable(s) I
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/worldgen/shrine/ShrineStructures.java:39: error: incompatible types: cannot infer type-variable(s) I
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/worldgen/shrine/ShrineStructures.java:42: error: incompatible types: bad return type in lambda expression
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/worldgen/shrine/ShrineStructure.java:21: error: incompatible types: no instance(s) of type variable(s) S exist so that MapCodec<S> conforms to Codec<ShrineStructure>
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/sea/ShipMarker.java:22: error: incompatible types: no instance(s) of type variable(s) S exist so that MapCodec<S> conforms to Codec<ShipMarker>
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/worldgen/shrine/ShrinePiece.java:193: error: incompatible types: ResourceLocation cannot be converted to ResourceKey<LootTable>
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/worldgen/shrine/ShrinePiece.java:229: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/worldgen/shrine/ShrinePiece.java:293: error: method saveWithoutMetadata in class BlockEntity cannot be applied to given types;
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/worldgen/shrine/ShrinePiece.java:296: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/worldgen/ContentVersion.java:49: error: method computeIfAbsent in class DimensionDataStorage cannot be applied to given types;
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/worldgen/ContentVersion.java:55: error: Data is not abstract and does not override abstract method save(CompoundTag,Provider) in SavedData
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/worldgen/ContentVersion.java:66: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/worldgen/FurnishedData.java:13: error: FurnishedData is not abstract and does not override abstract method save(CompoundTag,Provider) in SavedData
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/worldgen/FurnishedData.java:19: error: method computeIfAbsent in class DimensionDataStorage cannot be applied to given types;
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/worldgen/FurnishedData.java:48: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/worldgen/OfficeWorldgen.java:18: error: incompatible types: inference variable T has incompatible equality constraints Codec<? extends ChunkGenerator>,MapCodec<? extends ChunkGenerator>
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/hazard/HazardData.java:13: error: HazardData is not abstract and does not override abstract method save(CompoundTag,Provider) in SavedData
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/hazard/HazardData.java:47: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/hazard/BlackoutEvents.java:49: error: method computeIfAbsent in class DimensionDataStorage cannot be applied to given types;
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/hazard/BlackoutEvents.java:64: error: package net.minecraftforge.network.PacketDistributor does not exist
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/hazard/BlackoutEvents.java:70: error: package net.minecraftforge.network.PacketDistributor does not exist
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/hazard/BlackoutEvents.java:363: error: method finalizeSpawn in class Mob cannot be applied to given types;
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/hazard/BlackoutData.java:7: error: BlackoutData is not abstract and does not override abstract method save(CompoundTag,Provider) in SavedData
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/hazard/BlackoutData.java:45: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/hazard/HazardNet.java:19: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/hazard/HazardNet.java:93: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/hazard/HazardNet.java:120: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/hazard/HazardNet.java:122: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/hazard/HazardNet.java:124: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/hazard/HazardNet.java:126: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/hazard/HazardNet.java:128: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/hazard/HazardNet.java:133: error: package PacketDistributor does not exist
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/hazard/HazardNet.java:137: error: package PacketDistributor does not exist
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/hazard/HazardEvents.java:66: error: method computeIfAbsent in class DimensionDataStorage cannot be applied to given types;
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/hazard/HazardEvents.java:444: error: incompatible types: ResourceLocation cannot be converted to ResourceKey<LootTable>
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/hazard/HazardEvents.java:480: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/hazard/HazardEvents.java:488: error: method finalizeSpawn in class Mob cannot be applied to given types;
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/special/Hideouts.java:67: error: incompatible types: ResourceLocation cannot be converted to ResourceKey<LootTable>
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/megastructure/PoolBlocks.java:28: error: incompatible types: BlockState is not a functional interface
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/block/DecorBlock.java:15: error: DecorBlock is not abstract and does not override abstract method codec() in HorizontalDirectionalBlock
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/megastructure/CinemaBlocks.java:161: error: incompatible types: BlockState is not a functional interface
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/megastructure/HotelBlocks.java:219: error: incompatible types: ResourceLocation cannot be converted to ResourceKey<LootTable>
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/megastructure/MallDecorator.java:134: error: incompatible types: ResourceLocation cannot be converted to ResourceKey<LootTable>
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/megastructure/MallDecorator.java:147: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/megastructure/MegaDecorator.java:109: error: incompatible types: ResourceLocation cannot be converted to ResourceKey<LootTable>
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/megastructure/MegaDecorator.java:153: error: method finalizeSpawn in class Mob cannot be applied to given types;
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/megastructure/MegaDecorator.java:221: error: incompatible types: ResourceLocation cannot be converted to ResourceKey<LootTable>
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/megastructure/MegaDecorator.java:233: error: method saveWithoutMetadata in class BlockEntity cannot be applied to given types;
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/megastructure/MegaDecorator.java:235: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/megastructure/PoolroomsDecorator.java:48: error: incompatible types: ResourceLocation cannot be converted to ResourceKey<LootTable>
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/megastructure/MallBlocks.java:110: error: incompatible types: bad return type in lambda expression
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/megastructure/MallBlocks.java:139: error: incompatible types: BlockState is not a functional interface
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/OfficeRooms.java:27: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/OfficeRooms.java:71: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/OfficeRooms.java:73: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/underside/UnknownPart.java:12: error: UnknownPart is not abstract and does not override abstract method defineSynchedData(Builder) in Entity
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/underside/UnknownPart.java:24: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/underside/Unknown.java:457: error: method dropExperience in class LivingEntity cannot be applied to given types;
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/underside/UndersideChunkGenerator.java:28: error: UndersideChunkGenerator is not abstract and does not override abstract method fillFromNoise(Blender,RandomState,StructureManager,ChunkAccess) in ChunkGenerator
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/underside/UndersideChunkGenerator.java:39: error: codec() in UndersideChunkGenerator cannot override codec() in ChunkGenerator
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/underside/UndersideChunkGenerator.java:38: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/underside/UndersideChunkGenerator.java:43: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/underside/UndersideEvents.java:295: error: package net.minecraftforge.network.PacketDistributor does not exist
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/underside/UndersideTerrain.java:174: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/block/ElevatorPanelBlock.java:20: error: ElevatorPanelBlock is not abstract and does not override abstract method codec() in HorizontalDirectionalBlock
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/block/ElevatorPanelBlock.java:47: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/block/OfficePortalBlock.java:76: error: constructor ResourceLocation in class ResourceLocation cannot be applied to given types;
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/block/CuriosityBlocks.java:55: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/block/CuriosityBlocks.java:68: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/block/RoomDecorBlocks.java:95: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/block/SecurityDoorBlock.java:31: error: incompatible types: Properties cannot be converted to BlockSetType
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/block/SecurityDoorBlock.java:41: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/block/SecurityDoorBlock.java:55: error: incompatible types: EquipmentSlot is not a functional interface
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/block/ChalkMarkBlock.java:19: error: ChalkMarkBlock is not abstract and does not override abstract method codec() in HorizontalDirectionalBlock
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/block/ResearchTableBlock.java:23: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/block/FuseBoxBlock.java:31: error: FuseBoxBlock is not abstract and does not override abstract method codec() in HorizontalDirectionalBlock
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/block/FuseBoxBlock.java:61: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/block/FuseBoxBlock.java:91: error: ResourceLocation(String,String) has private access in ResourceLocation
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/block/FuseBoxBlock.java:91: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/block/ModBlocks.java:53: error: incompatible types: BlockState is not a functional interface
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/block/ModBlocks.java:101: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/block/ModBlocks.java:198: error: no suitable constructor found for BlockSetType(String,boolean,SoundType,SoundEvent,SoundEvent,SoundEvent,SoundEvent,SoundEvent,SoundEvent,SoundEvent,SoundEvent)
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/block/ModBlocks.java:231: error: incompatible types: Properties cannot be converted to BlockSetType
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/block/ModBlocks.java:258: error: package net.minecraftforge.registries does not exist
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/block/ModBlocks.java:296: error: no suitable method found for accept(DeferredHolder<Item,Item>)
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/block/ModBlocks.java:297: error: no suitable method found for accept(DeferredHolder<Item,Item>)
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/block/ModBlocks.java:298: error: no suitable method found for accept(DeferredHolder<Item,Item>)
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/block/ModBlocks.java:299: error: no suitable method found for accept(DeferredHolder<Item,Item>)
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/block/ModBlocks.java:302: error: no suitable method found for accept(DeferredHolder<Item,Item>)
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/block/ModBlocks.java:303: error: no suitable method found for accept(DeferredHolder<Item,Item>)
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/block/ElevatorBlock.java:26: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/compat/FurnitureBuilder.java:254: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/compat/FurnitureBuilder.java:274: error: incompatible types: ResourceLocation cannot be converted to ResourceKey<LootTable>
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/ResearchFileItem.java:19: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/MultidimensionalTier.java:29: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/MultidimensionalTier.java:37: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/ToolItems.java:45: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/ToolItems.java:76: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/ToolItems.java:120: error: incompatible types: EquipmentSlot is not a functional interface
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/ToolItems.java:126: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/ToolItems.java:139: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/ToolItems.java:139: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/ToolItems.java:147: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/ToolItems.java:150: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/ToolItems.java:151: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/ToolItems.java:166: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/ToolItems.java:234: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/ToolItems.java:247: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/TemporalWatchItem.java:61: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/ModItems.java:34: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/ModItems.java:55: error: incompatible types: bad return type in lambda expression
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/ModItems.java:58: error: incompatible types: bad return type in lambda expression
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/ModItems.java:61: error: incompatible types: bad return type in lambda expression
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/ModItems.java:144: error: incompatible types: MultidimensionalArmor cannot be converted to Holder<ArmorMaterial>
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/ModItems.java:146: error: incompatible types: MultidimensionalArmor cannot be converted to Holder<ArmorMaterial>
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/ModItems.java:148: error: incompatible types: MultidimensionalArmor cannot be converted to Holder<ArmorMaterial>
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/ModItems.java:150: error: incompatible types: MultidimensionalArmor cannot be converted to Holder<ArmorMaterial>
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/ModItems.java:153: error: ResourceLocation(String,String) has private access in ResourceLocation
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/ModItems.java:159: error: incompatible types: DeferredHolder<Item,? extends Item> cannot be converted to DeferredHolder<Item,Item>
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/LiquidPainItem.java:39: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/LiquidPainItem.java:74: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/EffectSwordItem.java:29: error: no suitable constructor found for SwordItem(Tier,int,float,Properties)
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/EffectSwordItem.java:39: error: incompatible types: MobEffect cannot be converted to Holder<MobEffect>
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/EffectSwordItem.java:44: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/HazardHeadgear.java:34: error: incompatible types: Material cannot be converted to Holder<ArmorMaterial>
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/HazardHeadgear.java:40: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/HazardHeadgear.java:40: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/HazardHeadgear.java:44: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/HazardHeadgear.java:48: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/HazardHeadgear.java:52: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/HazardHeadgear.java:52: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/HazardHeadgear.java:56: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/HazardHeadgear.java:60: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/HazardHeadgear.java:84: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/HazardHeadgear.java:96: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/HazardHeadgear.java:101: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/HazardHeadgear.java:106: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/HazardHeadgear.java:111: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/HazardHeadgear.java:113: error: incompatible types: Holder<SoundEvent> cannot be converted to SoundEvent
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/HazardHeadgear.java:116: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/HazardHeadgear.java:121: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/HazardHeadgear.java:126: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/HazardHeadgear.java:131: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/TotemOfMercyItem.java:90: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/TotemOfMercyItem.java:102: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/HazardItems.java:33: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/HazardItems.java:58: error: no suitable method found for playSound(<null>,BlockPos,Holder<SoundEvent>,SoundSource,float,float)
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/RelicTier.java:8: error: RelicTier is not abstract and does not override abstract method getIncorrectBlocksForDrops() in Tier
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/RelicTier.java:30: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/AccessCardItem.java:21: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/AnomalyDetectorItem.java:76: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/MultidimensionalArmor.java:30: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/MultidimensionalArmor.java:42: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/MultidimensionalArmor.java:52: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/MultidimensionalArmor.java:57: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/MultidimensionalArmor.java:59: error: incompatible types: Holder<SoundEvent> cannot be converted to SoundEvent
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/MultidimensionalArmor.java:62: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/MultidimensionalArmor.java:67: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/MultidimensionalArmor.java:72: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/MultidimensionalArmor.java:77: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/UndersideItems.java:71: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/UndersideItems.java:119: error: no suitable constructor found for SwordItem(Tiers,int,float,Properties)
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/item/UndersideItems.java:143: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/outpost/OutpostBuilder.java:203: error: incompatible types: ResourceLocation cannot be converted to ResourceKey<LootTable>
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/outpost/Controller.java:271: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/outpost/Controller.java:284: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/outpost/Controller.java:286: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/outpost/OutpostRegistry.java:13: error: OutpostRegistry is not abstract and does not override abstract method save(CompoundTag,Provider) in SavedData
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/outpost/OutpostRegistry.java:21: error: method computeIfAbsent in class DimensionDataStorage cannot be applied to given types;
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/outpost/OutpostRegistry.java:39: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/outpost/OutpostBlocks.java:62: error: incompatible types: no instance(s) of type variable(s) I exist so that DeferredHolder<Block,I> conforms to DeferredHolder<B,B>
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/outpost/OutpostBlocks.java:81: error: incompatible types: no instance(s) of type variable(s) I exist so that DeferredHolder<Block,I> conforms to DeferredHolder<Gateway,Gateway>
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/outpost/OutpostBlocks.java:109: error: PowerLever is not abstract and does not override abstract method codec() in HorizontalDirectionalBlock
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/outpost/OutpostBlocks.java:130: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/outpost/OutpostBlocks.java:173: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/outpost/OutpostBlocks.java:194: error: Console is not abstract and does not override abstract method codec() in HorizontalDirectionalBlock
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/outpost/OutpostBlocks.java:253: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/outpost/OutpostBlocks.java:259: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/outpost/OutpostBlocks.java:261: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/outpost/OutpostBlocks.java:266: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/outpost/OutpostBlocks.java:268: error: method saveWithoutMetadata in class BlockEntity cannot be applied to given types;
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/sea/ShipDecorator.java:134: error: incompatible types: ResourceLocation cannot be converted to ResourceKey<LootTable>
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/sea/Mascot.java:85: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/sea/Mascot.java:87: error: method defineSynchedData in class Mob cannot be applied to given types;
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/sea/Mascot.java:88: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/sea/Mascot.java:144: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/sea/Mascot.java:146: error: method finalizeSpawn in class Mob cannot be applied to given types;
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/sea/Mascot.java:234: error: package net.minecraftforge.network.PacketDistributor does not exist
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/sea/SeaChunkGenerator.java:36: error: SeaChunkGenerator is not abstract and does not override abstract method fillFromNoise(Blender,RandomState,StructureManager,ChunkAccess) in ChunkGenerator
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/sea/SeaChunkGenerator.java:49: error: codec() in SeaChunkGenerator cannot override codec() in ChunkGenerator
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/sea/SeaChunkGenerator.java:48: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/sea/SeaChunkGenerator.java:80: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/sea/SeaChunkGenerator.java:112: error: ResourceLocation(String,String) has private access in ResourceLocation
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/sea/ShipShape.java:38: error: package ForgeRegistries does not exist
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/sea/ShipBlocks.java:141: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/sea/ShipBlocks.java:206: error: incompatible types: bad return type in lambda expression
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/sea/ShipBlocks.java:208: error: incompatible types: bad return type in lambda expression
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/sea/ShipBlocks.java:231: error: incompatible types: BlockState is not a functional interface
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/sea/ShipBlocks.java:233: error: incompatible types: BlockState is not a functional interface
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/sea/ShipBlocks.java:238: error: incompatible types: bad return type in lambda expression
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/sea/ShipBlocks.java:241: error: incompatible types: BlockState is not a functional interface
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/sea/ShipBlocks.java:250: error: incompatible types: Properties cannot be converted to BlockSetType
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/sea/ShipBlocks.java:252: error: incompatible types: Properties cannot be converted to BlockSetType
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/sea/ShipBlocks.java:254: error: incompatible types: Properties cannot be converted to BlockSetType
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/Deathmoth.java:58: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/Deathmoth.java:60: error: method defineSynchedData in class Mob cannot be applied to given types;
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/Deathmoth.java:61: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/Deathmoth.java:62: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/Deathmoth.java:63: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/Deathmoth.java:64: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/Deathmoth.java:377: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/Deathmoth.java:395: error: method finalizeSpawn in class Mob cannot be applied to given types;
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/FriendlyWolfspider.java:68: error: constructor FollowOwnerGoal in class FollowOwnerGoal cannot be applied to given types;
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/FriendlyWolfspider.java:122: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/FriendlyWolfspider.java:148: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/FriendlyWolfspider.java:150: error: method setTame in class TamableAnimal cannot be applied to given types;
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/FriendlyWolfspider.java:174: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/FriendlyWolfspider.java:176: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/Wolfspider.java:65: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/Wolfspider.java:70: error: method finalizeSpawn in class Mob cannot be applied to given types;
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/Wolfspider.java:104: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/Wolfspider.java:106: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/client/ResearchScreen.java:83: error: method renderBackground in class AbstractContainerScreen<T> cannot be applied to given types;
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/client/ElevatorPanelScreen.java:94: error: method renderBackground in class Screen cannot be applied to given types;
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/client/GeoMobRenderer.java:37: error: method reRender in interface GeoRenderer<T#2> cannot be applied to given types;
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/Colony.java:60: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/Colony.java:87: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/Colony.java:89: error: method defineSynchedData in class Mob cannot be applied to given types;
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/Colony.java:90: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/Colony.java:91: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/Colony.java:102: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/Colony.java:107: error: method finalizeSpawn in class Mob cannot be applied to given types;
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/Colony.java:157: error: no suitable method found for removeModifier(UUID)
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/Colony.java:173: error: incompatible types: AttributeModifier cannot be converted to ResourceLocation
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/Gaunt.java:86: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/Gaunt.java:88: error: method defineSynchedData in class Mob cannot be applied to given types;
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/Gaunt.java:89: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/Gaunt.java:96: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/Gaunt.java:101: error: method finalizeSpawn in class Mob cannot be applied to given types;
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/Hunter.java:50: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/Hunter.java:126: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/MobSpawner.java:221: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/MobSpawner.java:236: error: method finalizeSpawn in class Mob cannot be applied to given types;
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/MobSpawner.java:295: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/MobSpawner.java:331: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/MobSpawner.java:342: error: method finalizeSpawn in class Mob cannot be applied to given types;
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/MobSpawner.java:530: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/MobSpawner.java:541: error: method finalizeSpawn in class Mob cannot be applied to given types;
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/Smiler.java:176: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/ModEntities.java:158: error: no suitable method found for accept(DeferredHolder<Item,Item>)
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/ModEntities.java:159: error: no suitable method found for accept(DeferredHolder<Item,Item>)
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/ModEntities.java:160: error: no suitable method found for accept(DeferredHolder<Item,Item>)
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/ModEntities.java:161: error: no suitable method found for accept(DeferredHolder<Item,Item>)
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/ModEntities.java:162: error: no suitable method found for accept(DeferredHolder<Item,Item>)
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/ModEntities.java:163: error: no suitable method found for accept(DeferredHolder<Item,Item>)
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/ModEntities.java:164: error: no suitable method found for accept(DeferredHolder<Item,Item>)
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/ModEntities.java:165: error: no suitable method found for accept(DeferredHolder<Item,Item>)
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/ModEntities.java:166: error: no suitable method found for accept(DeferredHolder<Item,Item>)
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/ModEntities.java:167: error: no suitable method found for accept(DeferredHolder<Item,Item>)
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/ModEntities.java:168: error: no suitable method found for accept(DeferredHolder<Item,Item>)
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/ModEntities.java:169: error: no suitable method found for accept(DeferredHolder<Item,Item>)
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/ModEntities.java:170: error: no suitable method found for accept(DeferredHolder<Item,Item>)
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/HeadlessWarden.java:70: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/HeadlessWarden.java:72: error: incompatible types: DamageSource cannot be converted to ServerLevel
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/HeadlessWarden.java:94: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/HeadlessWarden.java:113: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/HeadlessWarden.java:115: error: method defineSynchedData in class Mob cannot be applied to given types;
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/HeadlessWarden.java:116: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/HeadlessWarden.java:117: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/HeadlessWarden.java:120: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/HeadlessWarden.java:125: error: method finalizeSpawn in class Mob cannot be applied to given types;
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/Flayed.java:57: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/Flayed.java:59: error: method defineSynchedData in class Mob cannot be applied to given types;
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/Flayed.java:60: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/Flayed.java:73: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/Flayed.java:101: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/Flayed.java:106: error: method finalizeSpawn in class Mob cannot be applied to given types;
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/Flayed.java:130: error: no suitable method found for removeModifier(UUID)
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/Flayed.java:138: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/Flayed.java:151: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/Flayed.java:252: error: package net.minecraftforge.network.PacketDistributor does not exist
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/Hound.java:92: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/Hound.java:94: error: method defineSynchedData in class Mob cannot be applied to given types;
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/Hound.java:95: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/Hound.java:102: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/Hound.java:107: error: method finalizeSpawn in class Mob cannot be applied to given types;
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/Hound.java:153: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/AraneaMembri.java:85: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/AraneaMembri.java:87: error: method defineSynchedData in class Mob cannot be applied to given types;
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/AraneaMembri.java:88: error: cannot find symbol
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/AraneaMembri.java:115: error: method does not override or implement a method from a supertype
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/AraneaMembri.java:117: error: method finalizeSpawn in class Mob cannot be applied to given types;
+/home/claude/src0/OfficeRooms-1.21.1/src/main/java/de/officerooms/entity/AraneaMembri.java:252: error: package net.minecraftforge.network.PacketDistributor does not exist

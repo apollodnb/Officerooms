@@ -12,7 +12,7 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.phys.Vec3;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.neoforge.registries.DeferredHolder;
 
 /**
  * Sporadische Umgebungsgeräusche (Liminal-World-Update), nur Client.
@@ -30,7 +30,7 @@ import net.minecraftforge.registries.RegistryObject;
 public final class AmbientSounds {
 
     /** Gewichteter Eintrag eines Klangpools. */
-    private record Entry(RegistryObject<SoundEvent> sound, int weight, boolean behind) {
+    private record Entry(DeferredHolder<SoundEvent, SoundEvent> sound, int weight, boolean behind) {
     }
 
     private static final Entry[] OFFICE = {

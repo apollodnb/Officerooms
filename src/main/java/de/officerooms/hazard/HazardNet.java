@@ -16,7 +16,7 @@ import net.minecraftforge.network.simple.SimpleChannel;
 public final class HazardNet {
 
     private static final String VERSION = "2";
-    public static final SimpleChannel CHANNEL = NetworkRegistry.newSimpleChannel(new ResourceLocation(OfficeRoomsIds.MOD_ID, "main"),
+    public static final SimpleChannel CHANNEL = NetworkRegistry.newSimpleChannel(ResourceLocation.fromNamespaceAndPath(OfficeRoomsIds.MOD_ID, "main"),
             () -> VERSION, VERSION::equals, VERSION::equals);
 
     private HazardNet() {
@@ -90,7 +90,7 @@ public final class HazardNet {
         }
 
         void handle(Supplier<NetworkEvent.Context> ctx) {
-            net.minecraftforge.fml.DistExecutor.unsafeRunWhenOn(net.minecraftforge.api.distmarker.Dist.CLIENT,
+            net.neoforged.fml.DistExecutor.unsafeRunWhenOn(net.neoforged.api.distmarker.Dist.CLIENT,
                     () -> () -> de.officerooms.client.ElevatorPanelScreen.open(plate, storey, maxStorey));
             ctx.get().setPacketHandled(true);
         }

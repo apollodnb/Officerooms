@@ -24,13 +24,13 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ProjectileWeaponItem;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.TridentItem;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.ItemAttributeModifierEvent;
-import net.minecraftforge.event.entity.EntityJoinLevelEvent;
-import net.minecraftforge.event.entity.living.LivingHurtEvent;
-import net.minecraftforge.event.entity.player.ItemTooltipEvent;
-import net.minecraftforge.event.entity.player.PlayerEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.ItemAttributeModifierEvent;
+import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
+import net.neoforged.neoforge.event.entity.living.LivingHurtEvent;
+import net.neoforged.neoforge.event.entity.player.ItemTooltipEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerEvent;
+import net.neoforged.bus.api.SubscribeEvent;
 
 /**
  * 0.12.0: permanent progression. Heart Research is stored in the player's persisted data (survives death) and applied as
@@ -44,14 +44,14 @@ public final class ResearchUpgrades {
     private static final String HEARTS_KEY = "office_rooms_hearts";
     private static final UUID HEART_ID = UUID.fromString("5f0c1d2e-7a41-4c35-9a0e-0ff1ce000001");
     private static final UUID REFORGE_ID = UUID.fromString("5f0c1d2e-7a41-4c35-9a0e-0ff1ce000002");
-    public static final TagKey<Item> REFORGEABLE = ItemTags.create(new ResourceLocation(OfficeRoomsIds.MOD_ID, "reforgeable"));
+    public static final TagKey<Item> REFORGEABLE = ItemTags.create(ResourceLocation.fromNamespaceAndPath(OfficeRoomsIds.MOD_ID, "reforgeable"));
     private static final String[] ROMAN = {"", "I", "II", "III"};
 
     private ResearchUpgrades() {
     }
 
     public static void register() {
-        MinecraftForge.EVENT_BUS.register(ResearchUpgrades.class);
+        NeoForge.EVENT_BUS.register(ResearchUpgrades.class);
     }
 
     // --- hearts --------------------------------------------------------------------------------------

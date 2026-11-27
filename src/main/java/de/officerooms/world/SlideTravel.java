@@ -16,8 +16,8 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.phys.Vec3;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.TickEvent;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.tick.ServerTickEvent;
 import net.minecraftforge.network.PacketDistributor;
 
 /**
@@ -35,7 +35,7 @@ public final class SlideTravel {
     }
 
     public static void register() {
-        MinecraftForge.EVENT_BUS.addListener(SlideTravel::onTick);
+        NeoForge.EVENT_BUS.addListener(SlideTravel::onTick);
     }
 
     /** Called when a player uses a slide opening (server side). */
@@ -59,8 +59,8 @@ public final class SlideTravel {
         HazardNet.CHANNEL.send(PacketDistributor.PLAYER.with(() -> player), new HazardNet.Quake(RIDE, 0.55F));
     }
 
-    private static void onTick(TickEvent.ServerTickEvent e) {
-        if (e.phase != TickEvent.Phase.END || RIDING.isEmpty()) {
+    private static void onTick(ServerTickEvent.Post e) {
+        if (RIDING.isEmpty()) {
             return;
         }
         Iterator<Map.Entry<UUID, int[]>> it = RIDING.entrySet().iterator();

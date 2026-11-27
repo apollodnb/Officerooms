@@ -24,7 +24,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.player.Player;
-import net.minecraftforge.client.event.ViewportEvent;
+import net.neoforged.neoforge.client.event.ViewportEvent;
 
 /**
  * 0.24.0: Deathmoth. Model built in code: hairy thorax, head with feathered antennae, a two-part abdomen and four
@@ -32,9 +32,9 @@ import net.minecraftforge.client.event.ViewportEvent;
  */
 public class DeathmothRenderer extends EntityRenderer<Deathmoth> {
 
-    public static final ModelLayerLocation LAYER = new ModelLayerLocation(new ResourceLocation(OfficeRoomsIds.MOD_ID, "deathmoth"), "main");
-    private static final ResourceLocation TEX = new ResourceLocation(OfficeRoomsIds.MOD_ID, "textures/entity/deathmoth.png");
-    static final ResourceLocation OVERLAY = new ResourceLocation(OfficeRoomsIds.MOD_ID, "textures/gui/deathmoth_overlay.png");
+    public static final ModelLayerLocation LAYER = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(OfficeRoomsIds.MOD_ID, "deathmoth"), "main");
+    private static final ResourceLocation TEX = ResourceLocation.fromNamespaceAndPath(OfficeRoomsIds.MOD_ID, "textures/entity/deathmoth.png");
+    static final ResourceLocation OVERLAY = ResourceLocation.fromNamespaceAndPath(OfficeRoomsIds.MOD_ID, "textures/gui/deathmoth_overlay.png");
 
     private final ModelPart root, foreL, foreR, hindL, hindR, antL, antR, abdomen;
 

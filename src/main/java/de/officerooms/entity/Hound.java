@@ -46,16 +46,16 @@ import java.util.EnumSet;
 public class Hound extends Monster implements software.bernie.geckolib.animatable.GeoEntity {
 
     // --- 0.11.0: GeckoLib model and animations (assets from tools/gen_mobs_geo.py) --------------
-    private final software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache geoCache =
+    private final software.bernie.geckolib.animatable.instance.AnimatableInstanceCache geoCache =
             software.bernie.geckolib.util.GeckoLibUtil.createInstanceCache(this);
 
     @Override
-    public void registerControllers(software.bernie.geckolib.core.animation.AnimatableManager.ControllerRegistrar controllers) {
+    public void registerControllers(software.bernie.geckolib.animation.AnimatableManager.ControllerRegistrar controllers) {
         GeoAnims.register(this, controllers, 0.02, "bark", "attack");
     }
 
     @Override
-    public software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache getAnimatableInstanceCache() {
+    public software.bernie.geckolib.animatable.instance.AnimatableInstanceCache getAnimatableInstanceCache() {
         return geoCache;
     }
 
@@ -150,7 +150,7 @@ public class Hound extends Monster implements software.bernie.geckolib.animatabl
         super.aiStep();
         if (level().isClientSide) {
             if (isAngry()) {
-                net.minecraftforge.fml.DistExecutor.unsafeRunWhenOn(net.minecraftforge.api.distmarker.Dist.CLIENT, () -> () ->
+                net.neoforged.fml.DistExecutor.unsafeRunWhenOn(net.neoforged.api.distmarker.Dist.CLIENT, () -> () ->
                         de.officerooms.client.MobLoops.hunting(this, ModSounds.HOUND_HUNT_LOOP.get(), Hound::isAngry));
             }
             return;

@@ -9,9 +9,9 @@ import net.minecraft.tags.GameEventTags;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.VanillaGameEvent;
-import net.minecraftforge.event.entity.living.LivingEvent;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.VanillaGameEvent;
+import net.neoforged.neoforge.event.entity.living.LivingEvent;
 
 import java.util.IdentityHashMap;
 import java.util.Map;
@@ -37,40 +37,40 @@ public final class NoiseSystem {
     private static final Map<GameEvent, Double> RADIUS = new IdentityHashMap<>();
 
     static {
-        RADIUS.put(GameEvent.STEP, 10.0);              // Gehen (Rennen: siehe SPRINT_STEP)
-        RADIUS.put(GameEvent.HIT_GROUND, 14.0);        // Landen
-        RADIUS.put(GameEvent.SPLASH, 12.0);
-        RADIUS.put(GameEvent.SWIM, 10.0);
-        RADIUS.put(GameEvent.FLAP, 8.0);
-        RADIUS.put(GameEvent.ELYTRA_GLIDE, 10.0);
-        RADIUS.put(GameEvent.BLOCK_OPEN, 18.0);        // Türen, Falltüren, Zauntore
-        RADIUS.put(GameEvent.BLOCK_CLOSE, 18.0);
-        RADIUS.put(GameEvent.BLOCK_DESTROY, 20.0);     // Blöcke abbauen
-        RADIUS.put(GameEvent.BLOCK_PLACE, 14.0);       // Blöcke setzen
-        RADIUS.put(GameEvent.BLOCK_CHANGE, 10.0);
-        RADIUS.put(GameEvent.BLOCK_ACTIVATE, 12.0);
-        RADIUS.put(GameEvent.BLOCK_DEACTIVATE, 12.0);
-        RADIUS.put(GameEvent.BLOCK_ATTACH, 8.0);
-        RADIUS.put(GameEvent.BLOCK_DETACH, 8.0);
-        RADIUS.put(GameEvent.CONTAINER_OPEN, 14.0);    // Schubladen, Truhen
-        RADIUS.put(GameEvent.CONTAINER_CLOSE, 14.0);
-        RADIUS.put(GameEvent.ENTITY_DAMAGE, 16.0);     // Treffer
-        RADIUS.put(GameEvent.PROJECTILE_SHOOT, 22.0);
-        RADIUS.put(GameEvent.PROJECTILE_LAND, 12.0);
-        RADIUS.put(GameEvent.PRIME_FUSE, 20.0);
-        RADIUS.put(GameEvent.EXPLODE, 64.0);
-        RADIUS.put(GameEvent.EAT, 8.0);
-        RADIUS.put(GameEvent.DRINK, 8.0);
-        RADIUS.put(GameEvent.ITEM_INTERACT_FINISH, 8.0);
-        RADIUS.put(GameEvent.EQUIP, 6.0);
-        RADIUS.put(GameEvent.SHEAR, 10.0);
-        RADIUS.put(GameEvent.INSTRUMENT_PLAY, 48.0);
-        RADIUS.put(GameEvent.NOTE_BLOCK_PLAY, 32.0);
-        RADIUS.put(GameEvent.JUKEBOX_PLAY, 48.0);
-        RADIUS.put(GameEvent.ENTITY_PLACE, 10.0);
-        RADIUS.put(GameEvent.TELEPORT, 16.0);
-        RADIUS.put(GameEvent.FLUID_PLACE, 10.0);
-        RADIUS.put(GameEvent.FLUID_PICKUP, 10.0);
+        RADIUS.put(GameEvent.STEP.value(), 10.0);              // Gehen (Rennen: siehe SPRINT_STEP)
+        RADIUS.put(GameEvent.HIT_GROUND.value(), 14.0);        // Landen
+        RADIUS.put(GameEvent.SPLASH.value(), 12.0);
+        RADIUS.put(GameEvent.SWIM.value(), 10.0);
+        RADIUS.put(GameEvent.FLAP.value(), 8.0);
+        RADIUS.put(GameEvent.ELYTRA_GLIDE.value(), 10.0);
+        RADIUS.put(GameEvent.BLOCK_OPEN.value(), 18.0);        // Türen, Falltüren, Zauntore
+        RADIUS.put(GameEvent.BLOCK_CLOSE.value(), 18.0);
+        RADIUS.put(GameEvent.BLOCK_DESTROY.value(), 20.0);     // Blöcke abbauen
+        RADIUS.put(GameEvent.BLOCK_PLACE.value(), 14.0);       // Blöcke setzen
+        RADIUS.put(GameEvent.BLOCK_CHANGE.value(), 10.0);
+        RADIUS.put(GameEvent.BLOCK_ACTIVATE.value(), 12.0);
+        RADIUS.put(GameEvent.BLOCK_DEACTIVATE.value(), 12.0);
+        RADIUS.put(GameEvent.BLOCK_ATTACH.value(), 8.0);
+        RADIUS.put(GameEvent.BLOCK_DETACH.value(), 8.0);
+        RADIUS.put(GameEvent.CONTAINER_OPEN.value(), 14.0);    // Schubladen, Truhen
+        RADIUS.put(GameEvent.CONTAINER_CLOSE.value(), 14.0);
+        RADIUS.put(GameEvent.ENTITY_DAMAGE.value(), 16.0);     // Treffer
+        RADIUS.put(GameEvent.PROJECTILE_SHOOT.value(), 22.0);
+        RADIUS.put(GameEvent.PROJECTILE_LAND.value(), 12.0);
+        RADIUS.put(GameEvent.PRIME_FUSE.value(), 20.0);
+        RADIUS.put(GameEvent.EXPLODE.value(), 64.0);
+        RADIUS.put(GameEvent.EAT.value(), 8.0);
+        RADIUS.put(GameEvent.DRINK.value(), 8.0);
+        RADIUS.put(GameEvent.ITEM_INTERACT_FINISH.value(), 8.0);
+        RADIUS.put(GameEvent.EQUIP.value(), 6.0);
+        RADIUS.put(GameEvent.SHEAR.value(), 10.0);
+        RADIUS.put(GameEvent.INSTRUMENT_PLAY.value(), 48.0);
+        RADIUS.put(GameEvent.NOTE_BLOCK_PLAY.value(), 32.0);
+        RADIUS.put(GameEvent.JUKEBOX_PLAY.value(), 48.0);
+        RADIUS.put(GameEvent.ENTITY_PLACE.value(), 10.0);
+        RADIUS.put(GameEvent.TELEPORT.value(), 16.0);
+        RADIUS.put(GameEvent.FLUID_PLACE.value(), 10.0);
+        RADIUS.put(GameEvent.FLUID_PICKUP.value(), 10.0);
     }
 
     static final double SPRINT_STEP = 18.0;
@@ -80,8 +80,8 @@ public final class NoiseSystem {
     }
 
     public static void register() {
-        MinecraftForge.EVENT_BUS.addListener(NoiseSystem::onGameEvent);
-        MinecraftForge.EVENT_BUS.addListener(NoiseSystem::onJump);
+        NeoForge.EVENT_BUS.addListener(NoiseSystem::onGameEvent);
+        NeoForge.EVENT_BUS.addListener(NoiseSystem::onJump);
     }
 
     private static Player playerOf(Entity e) {
@@ -104,9 +104,10 @@ public final class NoiseSystem {
         if (player == null) {
             return;
         }
-        GameEvent ge = event.getVanillaEvent();
+        net.minecraft.core.Holder<GameEvent> geh = event.getVanillaEvent();
+        GameEvent ge = geh.value();
         // Wie Vanilla-Vibrationsempfänger: vorsichtiges Gehen (Schleichen) dämpft Schritte, Landen usw. vollständig.
-        if (player.isSteppingCarefully() && ge.is(GameEventTags.IGNORE_VIBRATIONS_SNEAKING)) {
+        if (player.isSteppingCarefully() && geh.is(GameEventTags.IGNORE_VIBRATIONS_SNEAKING)) {
             return;
         }
         Double radius = RADIUS.get(ge);
@@ -114,7 +115,7 @@ public final class NoiseSystem {
             return;
         }
         double r = radius;
-        if (ge == GameEvent.STEP && player.isSprinting()) {
+        if (ge == GameEvent.STEP.value() && player.isSprinting()) {
             r = SPRINT_STEP;
         }
         if (player.isCrouching()) {

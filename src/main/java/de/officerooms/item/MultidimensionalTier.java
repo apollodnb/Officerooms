@@ -5,8 +5,8 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.Tiers;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraftforge.common.ForgeTier;
-import net.minecraftforge.common.TierSortingRegistry;
+import net.neoforged.neoforge.common.ForgeTier;
+import net.neoforged.neoforge.common.TierSortingRegistry;
 
 import java.util.List;
 
@@ -27,14 +27,14 @@ import java.util.List;
 public final class MultidimensionalTier {
 
     public static final ForgeTier TIER = new ForgeTier(4, 2437, 10.8F, 4.6F, 18,
-            BlockTags.create(new ResourceLocation(OfficeRoomsIds.MOD_ID, "needs_multidimensional_tool")),
+            BlockTags.create(ResourceLocation.fromNamespaceAndPath(OfficeRoomsIds.MOD_ID, "needs_multidimensional_tool")),
             () -> Ingredient.of(ModItems.GLITCHED_INGOT.get()));
 
     private MultidimensionalTier() {
     }
 
     public static void register() {
-        TierSortingRegistry.registerTier(TIER, new ResourceLocation(OfficeRoomsIds.MOD_ID, "multidimensional"),
+        TierSortingRegistry.registerTier(TIER, ResourceLocation.fromNamespaceAndPath(OfficeRoomsIds.MOD_ID, "multidimensional"),
                 List.of(Tiers.NETHERITE), List.of());
     }
 }

@@ -1,8 +1,0 @@
-{
- "type": "minecraft:stonecutting",
- "ingredient": {
-  "item": "office_rooms:pool_floor_tile"
- },
- "result": "office_rooms:pool_tile",
- "count": 1
-}
