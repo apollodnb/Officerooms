@@ -112,6 +112,11 @@ public final class OfficeRoomsConfig {
     public static final ForgeConfigSpec.DoubleValue FLAYED_HEALTH;
     public static final ForgeConfigSpec.DoubleValue FLAYED_DAMAGE;
     public static final ForgeConfigSpec.DoubleValue ARANEA_HEALTH;
+    public static final ForgeConfigSpec.DoubleValue MASCOT_HEALTH;
+    public static final ForgeConfigSpec.DoubleValue MASCOT_DAMAGE;
+    public static final ForgeConfigSpec.DoubleValue MASCOT_CHANCE;
+    public static final ForgeConfigSpec.IntValue MASCOT_MAX;
+    public static final ForgeConfigSpec.DoubleValue GATE_CHANCE;
     public static final ForgeConfigSpec.DoubleValue ARANEA_DAMAGE;
     public static final ForgeConfigSpec.DoubleValue ARANEA_SPAWN_CHANCE;
     public static final ForgeConfigSpec.DoubleValue ARANEA_CINEMA_CHANCE;
@@ -140,6 +145,9 @@ public final class OfficeRoomsConfig {
             if (CURIO[k] != null) {
                 de.officerooms.special.SpecialRooms.CURIO[k] = CURIO[k].get();
             }
+        }
+        if (GATE_CHANCE != null) {
+            de.officerooms.special.SpecialRooms.GATE_CHANCE = GATE_CHANCE.get();
         }
     }
 
@@ -427,6 +435,15 @@ public final class OfficeRoomsConfig {
                 .defineInRange("spawnChance", 0.002, 0.0, 1.0);
         ARANEA_CINEMA_CHANCE = b.comment("Chance per spawn check while a player is inside an Abandoned Cinema (at most one per cinema floor)")
                 .defineInRange("cinemaChance", 0.12, 0.0, 1.0);
+        b.pop();
+
+        b.comment("0.42.0: the SS Fun =) and its Mascot. Departure gates are rare special rooms in new worlds.").push("ss_fun");
+        GATE_CHANCE = b.comment("Chance per suitable room for a departure gate. Changing it in an explored world can leave half rooms at the edge.")
+                .defineInRange("gateChance", 0.0025, 0.0, 0.2);
+        MASCOT_HEALTH = b.defineInRange("mascotHealth", 50.0, 1.0, 4096.0);
+        MASCOT_DAMAGE = b.comment("Damage of each squeeze while it hugs you (about every 0.6 seconds)").defineInRange("mascotHugDamage", 2.0, 0.0, 100.0);
+        MASCOT_CHANCE = b.comment("Chance per check (every 5 seconds, per player on a ship) that a Mascot shows up").defineInRange("mascotChance", 0.22, 0.0, 1.0);
+        MASCOT_MAX = b.comment("At most this many Mascots around one player").defineInRange("mascotMax", 2, 0, 16);
         b.pop();
 
         b.comment("0.40.0: FTB Quests support").push("quests");

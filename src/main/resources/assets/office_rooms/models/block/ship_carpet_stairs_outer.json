@@ -1,0 +1,8 @@
+{
+ "parent": "minecraft:block/outer_stairs",
+ "textures": {
+  "bottom": "office_rooms:block/ship_wood_panel",
+  "top": "office_rooms:block/ship_carpet",
+  "side": "office_rooms:block/ship_wood_panel"
+ }
+}

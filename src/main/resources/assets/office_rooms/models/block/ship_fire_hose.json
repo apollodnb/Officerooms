@@ -1,0 +1,42 @@
+{
+ "parent": "minecraft:block/block",
+ "textures": {
+  "f": "office_rooms:block/ship_cabinet_red",
+  "h": "office_rooms:block/ship_fire_hose",
+  "particle": "office_rooms:block/ship_cabinet_red"
+ },
+ "elements": [
+  {
+   "from": [
+    1,
+    0,
+    9
+   ],
+   "to": [
+    15,
+    14,
+    16
+   ],
+   "faces": {
+    "north": {
+     "texture": "#h"
+    },
+    "south": {
+     "texture": "#f"
+    },
+    "east": {
+     "texture": "#f"
+    },
+    "west": {
+     "texture": "#f"
+    },
+    "up": {
+     "texture": "#f"
+    },
+    "down": {
+     "texture": "#f"
+    }
+   }
+  }
+ ]
+}

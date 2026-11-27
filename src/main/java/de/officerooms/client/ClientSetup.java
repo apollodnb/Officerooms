@@ -58,6 +58,7 @@ public final class ClientSetup {
         event.registerEntityRenderer(ModEntities.OBSERVER.get(), ctx -> new GeoMobRenderer<>(ctx, "observer", 0.0F, 1.0F, false, false));
         event.registerEntityRenderer(ModEntities.HOUND.get(), ctx -> new GeoMobRenderer<>(ctx, "hound", 0.5F, 1.0F, false, false));
         event.registerEntityRenderer(ModEntities.ARANEA.get(), ctx -> new GeoMobRenderer<>(ctx, "aranea_membri", 1.2F, 1.0F, false, false));
+        event.registerEntityRenderer(ModEntities.MASCOT.get(), ctx -> new GeoMobRenderer<>(ctx, "mascot", 0.8F, 1.0F, false, false));
         event.registerEntityRenderer(ModEntities.SMILER.get(), ctx -> new GeoMobRenderer<>(ctx, "smiler", 0.0F, 1.0F, false, false));
         event.registerEntityRenderer(ModEntities.HUNTER.get(), ctx -> new GeoMobRenderer<>(ctx, "hunter", 0.0F, 1.0F, false, true));
         event.registerEntityRenderer(ModEntities.COLONY.get(), ctx -> new GeoMobRenderer<>(ctx, "colony", 1.3F, 1.4F, false, false));
@@ -68,6 +69,7 @@ public final class ClientSetup {
     @SubscribeEvent
     static void onRegisterEffects(RegisterDimensionSpecialEffectsEvent event) {
         event.register(new ResourceLocation(OfficeRoomsIds.MOD_ID, "office_rooms"), new OfficeRoomsSkyEffects());
+        event.register(new ResourceLocation(OfficeRoomsIds.MOD_ID, "the_sea"), new de.officerooms.sea.SeaClientFx.Effects());
     }
 
     /** 0.19.0: the upside-down grass is tinted like grass. */

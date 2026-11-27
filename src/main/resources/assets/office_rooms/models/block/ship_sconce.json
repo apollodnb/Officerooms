@@ -1,0 +1,78 @@
+{
+ "parent": "minecraft:block/block",
+ "textures": {
+  "b": "office_rooms:block/ship_cabinet_gold",
+  "l": "office_rooms:block/ship_sconce",
+  "particle": "office_rooms:block/ship_cabinet_gold"
+ },
+ "elements": [
+  {
+   "from": [
+    6,
+    4,
+    14
+   ],
+   "to": [
+    10,
+    12,
+    16
+   ],
+   "faces": {
+    "north": {
+     "texture": "#b"
+    },
+    "south": {
+     "texture": "#b"
+    },
+    "east": {
+     "texture": "#b"
+    },
+    "west": {
+     "texture": "#b"
+    },
+    "up": {
+     "texture": "#b"
+    },
+    "down": {
+     "texture": "#b"
+    }
+   }
+  },
+  {
+   "from": [
+    5,
+    8,
+    11
+   ],
+   "to": [
+    11,
+    13,
+    14
+   ],
+   "faces": {
+    "north": {
+     "texture": "#l"
+    },
+    "south": {
+     "texture": "#l"
+    },
+    "east": {
+     "texture": "#l"
+    },
+    "west": {
+     "texture": "#l"
+    },
+    "up": {
+     "texture": "#l"
+    },
+    "down": {
+     "texture": "#l"
+    }
+   },
+   "forge_data": {
+    "block_light": 13,
+    "sky_light": 13
+   }
+  }
+ ]
+}

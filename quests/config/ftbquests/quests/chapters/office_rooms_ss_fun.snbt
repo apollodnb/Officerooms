@@ -1,0 +1,230 @@
+{
+	images: [
+		{
+			x: 3.25d
+			y: 3.0d
+			width: 16.0d
+			height: 9.0d
+			rotation: 0.0d
+			image: "office_rooms:textures/gui/quests/atrium_2.png"
+			color: 16777215
+			alpha: 150
+			order: -1
+			hover: [ ]
+			click: ""
+			dev: false
+			corner: false
+		}
+	]
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "office_rooms_ss_fun"
+	group: "2B674EAFE9EE221B"
+	icon: "office_rooms:ship_lifeboat_release"
+	id: "5A0BAC48517E8C3F"
+	order_index: 10
+	quest_links: [ ]
+	quests: [
+		{
+			id: "614654AA13B3F856"
+			title: "Now Boarding"
+			subtitle: "Gate 26"
+			description: [
+				"Somewhere in the offices there is a departure lounge that should not be there: rows of seats, a board that says BOARDING, and fog in the windows."
+				"Departure gates are rare and only appear in worlds made with 0.42.0 or newer."
+				""
+				"&6How: &rExplore the Office Rooms: a departure gate looks like an ordinary room from the corridor. Walking in counts. Worlds made with 0.42.0+."
+			]
+			dependencies: [
+				"76BBE88AC96F5FE9"
+			]
+			shape: "hexagon"
+			optional: true
+			icon: "office_rooms:boarding_gate"
+			size: 1.5d
+			tasks: [
+				{
+					id: "59B77A342356A840"
+					type: "advancement"
+					advancement: "office_rooms:milestones/room_departure_gate"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "16E3B32688EF542C"
+					type: "xp"
+					xp: 80
+				}
+			]
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			id: "498735B8A2E2D2FA"
+			title: "All Aboard"
+			subtitle: "Welcome to the SS Fun =)"
+			description: [
+				"Right-click the gate. Endless corridors of cabins, a theatre, a casino, a kids' club. Nobody else is on board."
+				"At least, nobody you can see."
+				""
+				"&6How: &rRight-click the boarding gate (the door with the 26 above it) in a departure gate room."
+			]
+			dependencies: [
+				"614654AA13B3F856"
+			]
+			optional: true
+			icon: "office_rooms:ship_carpet"
+			tasks: [
+				{
+					id: "752AD59F4D30F2F1"
+					type: "dimension"
+					dimension: "office_rooms:the_sea"
+				}
+			]
+			rewards: [
+				{
+					id: "4D8ADD9EEFFC6D73"
+					type: "random"
+					table_id: 4103091957774285532L
+				}
+				{
+					id: "3F6D02E98CA08345"
+					type: "item"
+					item: "office_rooms:office_coin"
+					count: 4
+				}
+				{
+					id: "242C37B8C469C3F4"
+					type: "xp"
+					xp: 150
+				}
+			]
+			x: 2.5d
+			y: 3.0d
+		}
+		{
+			id: "0540E6DE44F78940"
+			title: "The Captain's Log"
+			subtitle: "Day ?"
+			description: [
+				"The captain kept a log. You will find it on a lectern: in the library or in the captain's cabin on deck 10."
+				""
+				"&6How: &rRead the Captain's Log on a lectern aboard (library on deck 8, captain's cabin on deck 10), then tick the box."
+			]
+			dependencies: [
+				"498735B8A2E2D2FA"
+			]
+			optional: true
+			icon: "minecraft:writable_book"
+			tasks: [
+				{
+					id: "29918AAFB68DD9A0"
+					type: "checkmark"
+				}
+			]
+			rewards: [
+				{
+					id: "602835D713C7853E"
+					type: "xp"
+					xp: 100
+				}
+			]
+			x: 4.5d
+			y: 1.5d
+		}
+		{
+			id: "5E07F24CCB643DB6"
+			title: "Hugs Are Free"
+			subtitle: "Do not take it with you"
+			description: [
+				"The kids' club mascot is still on board. It lives in the vents. It waves. It wants a hug."
+				"Hit it to make it let go."
+				""
+				"&6How: &rAboard the SS Fun =): it hides in the ceiling vents. Walk under a dripping vent, or stare down a corridor."
+			]
+			dependencies: [
+				"498735B8A2E2D2FA"
+			]
+			optional: true
+			icon: "office_rooms:ship_poster"
+			tasks: [
+				{
+					id: "2E6DFAB652780E7A"
+					type: "kill"
+					entity: "office_rooms:mascot"
+					value: 1L
+				}
+			]
+			rewards: [
+				{
+					id: "183E155369A71F23"
+					type: "item"
+					item: "office_rooms:research_file"
+				}
+				{
+					id: "553A3FCF8972C92E"
+					type: "random"
+					table_id: 4103091957774285532L
+				}
+				{
+					id: "499727C36D472269"
+					type: "xp"
+					xp: 300
+				}
+			]
+			x: 4.5d
+			y: 4.5d
+		}
+		{
+			id: "77E4C875DDB25DA7"
+			title: "Abandon Ship"
+			subtitle: "Pull the red handle"
+			description: [
+				"The lifeboats hang along the promenade on deck 10. Most staircases stop at deck 8. One does not."
+				"Pull the red handle beside a lifeboat and it drops into the fog."
+				""
+				"&6How: &rFind the one staircase that goes past deck 8, reach the promenade on deck 10 and right-click a red lifeboat handle."
+			]
+			dependencies: [
+				"498735B8A2E2D2FA"
+			]
+			shape: "diamond"
+			optional: true
+			icon: "office_rooms:ship_lifeboat"
+			size: 1.5d
+			tasks: [
+				{
+					id: "3C8471549F9C215C"
+					type: "advancement"
+					advancement: "office_rooms:milestones/ship_escaped"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "0DDC66621C5FC25F"
+					type: "item"
+					item: "office_rooms:research_file"
+					count: 2
+				}
+				{
+					id: "6AE331E271340996"
+					type: "item"
+					item: "office_rooms:glitched_ingot"
+				}
+				{
+					id: "2CA87756F37B5DCC"
+					type: "xp"
+					xp: 500
+				}
+			]
+			x: 6.5d
+			y: 3.0d
+		}
+	]
+	subtitle: [
+		"Now boarding at gate 26"
+	]
+	title: "XI. The SS Fun =) (optional)"
+}

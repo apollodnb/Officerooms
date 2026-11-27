@@ -8,6 +8,7 @@ chapters/office_rooms_megastructures.snbt
 chapters/office_rooms_outposts.snbt
 chapters/office_rooms_requisitions.snbt
 chapters/office_rooms_research.snbt
+chapters/office_rooms_ss_fun.snbt
 chapters/office_rooms_threshold.snbt
 chapters/office_rooms_underside.snbt
 data.snbt

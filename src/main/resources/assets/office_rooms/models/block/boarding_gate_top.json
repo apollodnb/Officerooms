@@ -1,0 +1,45 @@
+{
+ "parent": "minecraft:block/block",
+ "textures": {
+  "g": "office_rooms:block/boarding_gate_top",
+  "particle": "office_rooms:block/boarding_gate_top"
+ },
+ "elements": [
+  {
+   "from": [
+    0,
+    0,
+    13
+   ],
+   "to": [
+    16,
+    16,
+    16
+   ],
+   "faces": {
+    "north": {
+     "texture": "#g"
+    },
+    "south": {
+     "texture": "#g"
+    },
+    "east": {
+     "texture": "#g"
+    },
+    "west": {
+     "texture": "#g"
+    },
+    "up": {
+     "texture": "#g"
+    },
+    "down": {
+     "texture": "#g"
+    }
+   },
+   "forge_data": {
+    "block_light": 8,
+    "sky_light": 8
+   }
+  }
+ ]
+}

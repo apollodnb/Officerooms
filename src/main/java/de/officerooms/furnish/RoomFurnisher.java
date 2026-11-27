@@ -532,7 +532,7 @@ public final class RoomFurnisher {
     private Result specialRoom(de.officerooms.special.SpecialType special, boolean dark) {
         RoomType type = RoomType.of(special);
         String lighting = switch (special) {
-            case VILLAGER_OUTPOST, OASIS, CANTEEN -> "normal";
+            case VILLAGER_OUTPOST, OASIS, CANTEEN, DEPARTURE_GATE -> "normal";
             case COLD_STORAGE, MAIL_ROOM, RAIN_ROOM -> "dim";
             case LAST_MEETING -> "partial";
             case WATER_OFFICE -> "dim";

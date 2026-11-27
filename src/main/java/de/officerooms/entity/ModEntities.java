@@ -94,6 +94,13 @@ public final class ModEntities {
                     .build("aranea_membri"));
     public static final RegistryObject<Item> ARANEA_EGG = ITEMS.register("aranea_membri_spawn_egg",
             () -> new ForgeSpawnEggItem(ARANEA, 0x101012, 0xCFC4A6, new Item.Properties()));
+
+    /** 0.42.0: the Mascot of the SS Fun =). */
+    public static final RegistryObject<EntityType<de.officerooms.sea.Mascot>> MASCOT = ENTITIES.register("mascot",
+            () -> EntityType.Builder.of(de.officerooms.sea.Mascot::new, MobCategory.MONSTER).sized(0.9F, 2.1F).clientTrackingRange(10)
+                    .build("mascot"));
+    public static final RegistryObject<Item> MASCOT_EGG = ITEMS.register("mascot_spawn_egg",
+            () -> new ForgeSpawnEggItem(MASCOT, 0xC9B45A, 0x2A3A5C, new Item.Properties()));
     public static final RegistryObject<Item> HOUND_EGG = ITEMS.register("hound_spawn_egg",
             () -> new ForgeSpawnEggItem(HOUND, 0x2A1A14, 0x8A1010, new Item.Properties()));
     public static final RegistryObject<Item> SMILER_EGG = ITEMS.register("smiler_spawn_egg",
@@ -138,6 +145,7 @@ public final class ModEntities {
         event.put(PARTYGOER.get(), Partygoer.createAttributes().build());
         event.put(HOUND.get(), Hound.createAttributes().build());
         event.put(ARANEA.get(), AraneaMembri.createAttributes().build());
+        event.put(MASCOT.get(), de.officerooms.sea.Mascot.createAttributes().build());
         event.put(SMILER.get(), Smiler.createAttributes().build());
         event.put(COLONY.get(), Colony.createAttributes().build());
         event.put(HUNTER.get(), Hunter.createAttributes().build());
@@ -154,6 +162,7 @@ public final class ModEntities {
             event.accept(GAUNT_EGG);
             event.accept(HOUND_EGG);
             event.accept(ARANEA_EGG);
+            event.accept(MASCOT_EGG);
             event.accept(SMILER_EGG);
             event.accept(HUNTER_EGG);
             event.accept(COLONY_EGG);

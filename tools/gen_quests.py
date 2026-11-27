@@ -433,7 +433,30 @@ quest('vend', 'Exact Change', 'Feed the machine',
       ['Hand in five Old Coins. The vending machines in a canteen take them one at a time, too.'],
       [item('office_coin', 5, True)], [give('almond_water', 2), xp(40)], deps=['room_canteen'], x=4.5, y=4 * 1.5, optional=True)
 
-chapter('requisitions', 'XI. Requisitions', 'Facilities takes trades (repeatable)', O + 'electronic_component')
+# 0.42.0 --------------------------------------------------------------------------------------
+chapter('ss_fun', 'XI. The SS Fun =) (optional)', 'Now boarding at gate 26', O + 'ship_lifeboat_release')
+quest('ss_start', 'Now Boarding', 'Gate 26',
+      ['Somewhere in the offices there is a departure lounge that should not be there: rows of seats, a board that says BOARDING, and fog in the windows.',
+       'Departure gates are rare and only appear in worlds made with 0.42.0 or newer.'],
+      [adv('room_departure_gate')], [xp(80)], deps=['first_day_done'], x=0, y=3, shape='hexagon', size=1.5, optional=True, icon='boarding_gate')
+quest('ss_board', 'All Aboard', 'Welcome to the SS Fun =)',
+      ['Right-click the gate. Endless corridors of cabins, a theatre, a casino, a kids\' club. Nobody else is on board.',
+       'At least, nobody you can see.'],
+      [dim('the_sea')], [table('supplies'), give('office_coin', 4), xp(150)], deps=['ss_start'], x=2.5, y=3, optional=True, icon='ship_carpet')
+quest('ss_log', 'The Captain\'s Log', 'Day ?',
+      ['The captain kept a log. You will find it on a lectern: in the library or in the captain\'s cabin on deck 10.'],
+      [check()], [xp(100)], deps=['ss_board'], x=4.5, y=1.5, optional=True, icon='minecraft:writable_book')
+quest('ss_mascot', 'Hugs Are Free', 'Do not take it with you',
+      ['The kids\' club mascot is still on board. It lives in the vents. It waves. It wants a hug.',
+       'Hit it to make it let go.'],
+      [kill('mascot')], [give('research_file'), table('supplies'), xp(300)], deps=['ss_board'], x=4.5, y=4.5, optional=True, icon='ship_poster')
+quest('ss_escape', 'Abandon Ship', 'Pull the red handle',
+      ['The lifeboats hang along the promenade on deck 10. Most staircases stop at deck 8. One does not.',
+       'Pull the red handle beside a lifeboat and it drops into the fog.'],
+      [adv('ship_escaped')], [give('research_file', 2), give('glitched_ingot'), xp(500)], deps=['ss_board'], x=6.5, y=3, shape='diamond', size=1.5,
+      optional=True, icon='ship_lifeboat')
+
+chapter('requisitions', 'XII. Requisitions', 'Facilities takes trades (repeatable)', O + 'electronic_component')
 quest('req_start', 'Requisition Desk', 'It is always open',
       ['Facilities trades. Hand in what you have too much of.'],
       [check()], [], deps=['first_day_done'], x=0, y=0, shape='hexagon')
@@ -493,6 +516,11 @@ HOW = {
     'curio_start': 'Find an Old Coin: they are common in ordinary containers.',
     'room_': 'Explore the offices: these rooms look like any other room from the corridor. Walking in counts. Only in worlds made with 0.29.0+.',
     'vend': 'Hand in five Old Coins (they are taken).',
+    'ss_start': 'Explore the Office Rooms: a departure gate looks like an ordinary room from the corridor. Walking in counts. Worlds made with 0.42.0+.',
+    'ss_board': 'Right-click the boarding gate (the door with the 26 above it) in a departure gate room.',
+    'ss_log': 'Read the Captain\'s Log on a lectern aboard (library on deck 8, captain\'s cabin on deck 10), then tick the box.',
+    'ss_mascot': 'Aboard the SS Fun =): it hides in the ceiling vents. Walk under a dripping vent, or stare down a corridor.',
+    'ss_escape': 'Find the one staircase that goes past deck 8, reach the promenade on deck 10 and right-click a red lifeboat handle.',
     'cinema_top': 'Find an Abandoned Cinema and climb the stairs in its lobby atrium to the third floor (screens 25 to 36).',
     'hotel_top': 'Climb the staircases of an Abandoned Hotel up to its highest guest floor.',
     'slide': 'Find a round slide opening in an office wall (rare, worlds made with 0.35.0+) and right-click it.',

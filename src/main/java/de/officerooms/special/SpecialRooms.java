@@ -100,8 +100,18 @@ public final class SpecialRooms {
                 return SpecialType.EXIT_ROOM;
             }
         }
+        // 0.42.0: departure gates (content version 2), after everything else so no older pick changes
+        if (p.cfg.v2() && r.storeys == 1 && r.cells >= 12 && !darkStorey(p, r.bottom)) {
+            acc += GATE_CHANCE;
+            if (u < acc) {
+                return SpecialType.DEPARTURE_GATE;
+            }
+        }
         return SpecialType.NONE;
     }
+
+    /** 0.42.0: chance per suitable room for a departure gate to the SS Fun =) (config: [ss_fun] gateChance). */
+    public static double GATE_CHANCE = 0.0025;
 
     /**
      * 0.29.0: chance per suitable room for arcade, rain room, cold storage, mail room, canteen and last meeting (in

@@ -1,0 +1,42 @@
+{
+ "parent": "minecraft:block/block",
+ "textures": {
+  "r": "office_rooms:block/ship_life_ring",
+  "particle": "office_rooms:block/ship_life_ring"
+ },
+ "elements": [
+  {
+   "from": [
+    1,
+    1,
+    15
+   ],
+   "to": [
+    15,
+    15,
+    16
+   ],
+   "faces": {
+    "north": {
+     "texture": "#r"
+    },
+    "south": {
+     "texture": "#r"
+    },
+    "east": {
+     "texture": "#r"
+    },
+    "west": {
+     "texture": "#r"
+    },
+    "up": {
+     "texture": "#r"
+    },
+    "down": {
+     "texture": "#r"
+    }
+   }
+  }
+ ],
+ "render_type": "minecraft:cutout"
+}

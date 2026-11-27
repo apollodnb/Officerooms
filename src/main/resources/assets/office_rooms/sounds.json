@@ -1,1613 +1,1724 @@
 {
-  "music.office_rooms": {
-    "category": "music",
-    "sounds": [
-      {
-        "name": "office_rooms:music/office_rooms",
-        "stream": true,
-        "volume": 1.0
-      },
-      {
-        "name": "office_rooms:music/office_rooms2",
-        "stream": true,
-        "volume": 1.0
-      },
-      {
-        "name": "office_rooms:music/office_rooms3",
-        "stream": true,
-        "volume": 1.0
-      }
-    ]
-  },
-  "ambient.lamp_hum": {
-    "category": "ambient",
-    "subtitle": "subtitles.office_rooms.lamp_hum",
-    "sounds": [
-      {
-        "name": "office_rooms:ambient/lamp_hum",
-        "stream": false
-      }
-    ]
-  },
-  "entity.wolfspider.howl": {
-    "category": "hostile",
-    "subtitle": "subtitles.office_rooms.wolfspider.howl",
-    "sounds": [
-      {
-        "name": "office_rooms:entity/wolfspider/howl1",
-        "attenuation_distance": 24
-      },
-      {
-        "name": "office_rooms:entity/wolfspider/howl1",
-        "attenuation_distance": 24,
-        "pitch": 0.9
-      },
-      {
-        "name": "office_rooms:entity/wolfspider/howl2",
-        "attenuation_distance": 24
-      },
-      {
-        "name": "office_rooms:entity/wolfspider/howl2",
-        "attenuation_distance": 24,
-        "pitch": 0.9
-      },
-      {
-        "name": "office_rooms:entity/wolfspider/howl3",
-        "attenuation_distance": 24
-      },
-      {
-        "name": "office_rooms:entity/wolfspider/howl3",
-        "attenuation_distance": 24,
-        "pitch": 0.9
-      }
-    ]
-  },
-  "entity.wolfspider.hurt": {
-    "category": "hostile",
-    "subtitle": "subtitles.office_rooms.wolfspider.hurt",
-    "sounds": [
-      {
-        "name": "office_rooms:entity/wolfspider/hurt1",
-        "attenuation_distance": 16
-      },
-      {
-        "name": "office_rooms:entity/wolfspider/hurt2",
-        "attenuation_distance": 16
-      },
-      {
-        "name": "office_rooms:entity/wolfspider/hurt3",
-        "attenuation_distance": 16
-      }
-    ]
-  },
-  "entity.wolfspider.death": {
-    "category": "hostile",
-    "subtitle": "subtitles.office_rooms.wolfspider.death",
-    "sounds": [
-      {
-        "name": "office_rooms:entity/wolfspider/death",
-        "volume": 0.5
-      }
-    ]
-  },
-  "entity.headless_warden.scream": {
-    "category": "hostile",
-    "subtitle": "subtitles.office_rooms.headless_warden.scream",
-    "sounds": [
-      {
-        "name": "office_rooms:entity/headless_warden/scream1",
-        "attenuation_distance": 64
-      },
-      {
-        "name": "office_rooms:entity/headless_warden/scream2",
-        "attenuation_distance": 64
-      }
-    ]
-  },
-  "entity.headless_warden.heartbeat": {
-    "category": "hostile",
-    "subtitle": "subtitles.office_rooms.headless_warden.heartbeat",
-    "sounds": [
-      "office_rooms:entity/headless_warden/heartbeat"
-    ]
-  },
-  "entity.headless_warden.hurt": {
-    "category": "hostile",
-    "subtitle": "subtitles.office_rooms.headless_warden.hurt",
-    "sounds": [
-      {
-        "name": "office_rooms:entity/headless_warden/hurt1",
-        "attenuation_distance": 24
-      },
-      {
-        "name": "office_rooms:entity/headless_warden/hurt2",
-        "attenuation_distance": 24
-      }
-    ]
-  },
-  "entity.headless_warden.death": {
-    "category": "hostile",
-    "subtitle": "subtitles.office_rooms.headless_warden.death",
-    "sounds": [
-      "office_rooms:entity/headless_warden/death"
-    ]
-  },
-  "ambient.liminal.steps": {
-    "category": "ambient",
-    "subtitle": "subtitles.office_rooms.liminal.steps",
-    "sounds": [
-      {
-        "name": "office_rooms:ambient/liminal/steps1",
-        "attenuation_distance": 32
-      },
-      {
-        "name": "office_rooms:ambient/liminal/steps2",
-        "attenuation_distance": 32
-      }
-    ]
-  },
-  "ambient.liminal.knock": {
-    "category": "ambient",
-    "subtitle": "subtitles.office_rooms.liminal.knock",
-    "sounds": [
-      {
-        "name": "office_rooms:ambient/liminal/knock1",
-        "attenuation_distance": 32
-      },
-      {
-        "name": "office_rooms:ambient/liminal/knock2",
-        "attenuation_distance": 32
-      }
-    ]
-  },
-  "ambient.liminal.door": {
-    "category": "ambient",
-    "subtitle": "subtitles.office_rooms.liminal.door",
-    "sounds": [
-      {
-        "name": "office_rooms:ambient/liminal/door1",
-        "attenuation_distance": 32
-      },
-      {
-        "name": "office_rooms:ambient/liminal/door2",
-        "attenuation_distance": 32
-      }
-    ]
-  },
-  "ambient.liminal.neon": {
-    "category": "ambient",
-    "subtitle": "subtitles.office_rooms.liminal.neon",
-    "sounds": [
-      {
-        "name": "office_rooms:ambient/liminal/neon1",
-        "attenuation_distance": 32
-      },
-      {
-        "name": "office_rooms:ambient/liminal/neon2",
-        "attenuation_distance": 32
-      }
-    ]
-  },
-  "ambient.liminal.metal": {
-    "category": "ambient",
-    "subtitle": "subtitles.office_rooms.liminal.metal",
-    "sounds": [
-      {
-        "name": "office_rooms:ambient/liminal/metal1",
-        "attenuation_distance": 32
-      },
-      {
-        "name": "office_rooms:ambient/liminal/metal2",
-        "attenuation_distance": 32
-      }
-    ]
-  },
-  "ambient.liminal.creak": {
-    "category": "ambient",
-    "subtitle": "subtitles.office_rooms.liminal.creak",
-    "sounds": [
-      {
-        "name": "office_rooms:ambient/liminal/creak1",
-        "attenuation_distance": 32
-      },
-      {
-        "name": "office_rooms:ambient/liminal/creak2",
-        "attenuation_distance": 32
-      }
-    ]
-  },
-  "ambient.liminal.voices": {
-    "category": "ambient",
-    "subtitle": "subtitles.office_rooms.liminal.voices",
-    "sounds": [
-      {
-        "name": "office_rooms:ambient/liminal/voices1",
-        "attenuation_distance": 32
-      },
-      {
-        "name": "office_rooms:ambient/liminal/voices2",
-        "attenuation_distance": 32
-      }
-    ]
-  },
-  "ambient.liminal.whisper": {
-    "category": "ambient",
-    "subtitle": "subtitles.office_rooms.liminal.whisper",
-    "sounds": [
-      {
-        "name": "office_rooms:ambient/liminal/whisper1",
-        "attenuation_distance": 32
-      },
-      {
-        "name": "office_rooms:ambient/liminal/whisper2",
-        "attenuation_distance": 32
-      }
-    ]
-  },
-  "ambient.liminal.wind": {
-    "category": "ambient",
-    "subtitle": "subtitles.office_rooms.liminal.wind",
-    "sounds": [
-      {
-        "name": "office_rooms:ambient/liminal/wind1",
-        "attenuation_distance": 32
-      },
-      {
-        "name": "office_rooms:ambient/liminal/wind2",
-        "attenuation_distance": 32
-      }
-    ]
-  },
-  "ambient.liminal.behind": {
-    "category": "ambient",
-    "subtitle": "subtitles.office_rooms.liminal.behind",
-    "sounds": [
-      {
-        "name": "office_rooms:ambient/liminal/behind1",
-        "attenuation_distance": 32
-      },
-      {
-        "name": "office_rooms:ambient/liminal/behind2",
-        "attenuation_distance": 32
-      }
-    ]
-  },
-  "ambient.liminal.drip": {
-    "category": "ambient",
-    "subtitle": "subtitles.office_rooms.liminal.drip",
-    "sounds": [
-      {
-        "name": "office_rooms:ambient/liminal/drip1",
-        "attenuation_distance": 32
-      },
-      {
-        "name": "office_rooms:ambient/liminal/drip2",
-        "attenuation_distance": 32
-      }
-    ]
-  },
-  "ambient.liminal.rustle": {
-    "category": "ambient",
-    "subtitle": "subtitles.office_rooms.liminal.rustle",
-    "sounds": [
-      {
-        "name": "office_rooms:ambient/liminal/rustle1",
-        "attenuation_distance": 32
-      },
-      {
-        "name": "office_rooms:ambient/liminal/rustle2",
-        "attenuation_distance": 32
-      }
-    ]
-  },
-  "ambient.liminal.rumble": {
-    "category": "ambient",
-    "subtitle": "subtitles.office_rooms.liminal.rumble",
-    "sounds": [
-      {
-        "name": "office_rooms:ambient/liminal/rumble1",
-        "attenuation_distance": 32
-      },
-      {
-        "name": "office_rooms:ambient/liminal/rumble2",
-        "attenuation_distance": 32
-      }
-    ]
-  },
-  "entity.gaunt.scream": {
-    "category": "hostile",
-    "subtitle": "subtitles.office_rooms.gaunt.scream",
-    "sounds": [
-      {
-        "name": "office_rooms:entity/gaunt/scream1",
-        "attenuation_distance": 64
-      },
-      {
-        "name": "office_rooms:entity/gaunt/scream2",
-        "attenuation_distance": 64
-      },
-      {
-        "name": "office_rooms:entity/gaunt/scream3",
-        "attenuation_distance": 64
-      }
-    ]
-  },
-  "entity.gaunt.breath": {
-    "category": "hostile",
-    "subtitle": "subtitles.office_rooms.gaunt.breath",
-    "sounds": [
-      {
-        "name": "office_rooms:entity/gaunt/breath1",
-        "attenuation_distance": 20
-      },
-      {
-        "name": "office_rooms:entity/gaunt/breath1",
-        "attenuation_distance": 20,
-        "pitch": 0.9
-      },
-      {
-        "name": "office_rooms:entity/gaunt/breath2",
-        "attenuation_distance": 20
-      },
-      {
-        "name": "office_rooms:entity/gaunt/breath2",
-        "attenuation_distance": 20,
-        "pitch": 0.9
-      },
-      {
-        "name": "office_rooms:entity/gaunt/breath3",
-        "attenuation_distance": 20
-      },
-      {
-        "name": "office_rooms:entity/gaunt/breath3",
-        "attenuation_distance": 20,
-        "pitch": 0.9
-      }
-    ]
-  },
-  "entity.gaunt.hurt": {
-    "category": "hostile",
-    "subtitle": "subtitles.office_rooms.gaunt.hurt",
-    "sounds": [
-      {
-        "name": "office_rooms:entity/gaunt/hurt1",
-        "attenuation_distance": 16
-      },
-      {
-        "name": "office_rooms:entity/gaunt/hurt2",
-        "attenuation_distance": 16
-      }
-    ]
-  },
-  "entity.gaunt.death": {
-    "category": "hostile",
-    "subtitle": "subtitles.office_rooms.gaunt.death",
-    "sounds": [
-      "office_rooms:entity/gaunt/death"
-    ]
-  },
-  "entity.observer.vanish": {
-    "category": "hostile",
-    "sounds": [
-      {
-        "name": "office_rooms:entity/observer/vanish",
-        "volume": 0.5
-      }
-    ]
-  },
-  "ambient.pool.lap": {
-    "sounds": [
-      {
-        "name": "office_rooms:ambient/pool/lap1",
-        "volume": 0.8,
-        "attenuation_distance": 24,
-        "stream": false
-      },
-      {
-        "name": "office_rooms:ambient/pool/lap2",
-        "volume": 0.8,
-        "attenuation_distance": 24,
-        "stream": false
-      }
-    ],
-    "subtitle": "subtitles.office_rooms.pool.lap"
-  },
-  "ambient.pool.splash": {
-    "sounds": [
-      {
-        "name": "office_rooms:ambient/pool/splash1",
-        "volume": 0.8,
-        "attenuation_distance": 32
-      },
-      {
-        "name": "office_rooms:ambient/pool/splash2",
-        "volume": 0.8,
-        "attenuation_distance": 32
-      }
-    ],
-    "subtitle": "subtitles.office_rooms.pool.splash"
-  },
-  "ambient.pool.drip": {
-    "sounds": [
-      {
-        "name": "office_rooms:ambient/pool/drip1",
-        "volume": 0.8,
-        "attenuation_distance": 24
-      },
-      {
-        "name": "office_rooms:ambient/pool/drip2",
-        "volume": 0.8,
-        "attenuation_distance": 24
-      }
-    ],
-    "subtitle": "subtitles.office_rooms.pool.drip"
-  },
-  "ambient.pool.pump": {
-    "sounds": [
-      {
-        "name": "office_rooms:ambient/pool/pump",
-        "volume": 0.7,
-        "attenuation_distance": 24,
-        "stream": false
-      }
-    ],
-    "subtitle": "subtitles.office_rooms.pool.pump"
-  },
-  "ambient.pool.echo": {
-    "sounds": [
-      {
-        "name": "office_rooms:ambient/pool/echo",
-        "volume": 0.6,
-        "attenuation_distance": 40
-      }
-    ],
-    "subtitle": "subtitles.office_rooms.pool.echo"
-  },
-  "entity.hound.growl": {
-    "category": "hostile",
-    "subtitle": "subtitles.office_rooms.hound.growl",
-    "sounds": [
-      {
-        "name": "office_rooms:entity/hound/growl1",
-        "attenuation_distance": 24
-      },
-      {
-        "name": "office_rooms:entity/hound/growl1",
-        "attenuation_distance": 24,
-        "pitch": 0.9
-      },
-      {
-        "name": "office_rooms:entity/hound/growl2",
-        "attenuation_distance": 24
-      },
-      {
-        "name": "office_rooms:entity/hound/growl2",
-        "attenuation_distance": 24,
-        "pitch": 0.9
-      },
-      {
-        "name": "office_rooms:entity/hound/growl3",
-        "attenuation_distance": 24
-      },
-      {
-        "name": "office_rooms:entity/hound/growl3",
-        "attenuation_distance": 24,
-        "pitch": 0.9
-      }
-    ]
-  },
-  "entity.hound.bark": {
-    "category": "hostile",
-    "subtitle": "subtitles.office_rooms.hound.bark",
-    "sounds": [
-      {
-        "name": "office_rooms:entity/hound/bark1",
-        "attenuation_distance": 48
-      },
-      {
-        "name": "office_rooms:entity/hound/bark2",
-        "attenuation_distance": 48
-      },
-      {
-        "name": "office_rooms:entity/hound/bark3",
-        "attenuation_distance": 48
-      },
-      {
-        "name": "office_rooms:entity/hound/bark4",
-        "attenuation_distance": 48
-      }
-    ]
-  },
-  "entity.hound.hurt": {
-    "category": "hostile",
-    "subtitle": "subtitles.office_rooms.hound.hurt",
-    "sounds": [
-      {
-        "name": "office_rooms:entity/hound/hurt1",
-        "attenuation_distance": 16
-      },
-      {
-        "name": "office_rooms:entity/hound/hurt2",
-        "attenuation_distance": 16
-      },
-      {
-        "name": "office_rooms:entity/hound/hurt3",
-        "attenuation_distance": 16
-      }
-    ]
-  },
-  "entity.hound.death": {
-    "sounds": [
-      {
-        "name": "office_rooms:entity/hound/death",
-        "volume": 1.0
-      }
-    ],
-    "subtitle": "subtitles.office_rooms.hound.death"
-  },
-  "entity.hound.sniff": {
-    "category": "hostile",
-    "subtitle": "subtitles.office_rooms.hound.sniff",
-    "sounds": [
-      {
-        "name": "office_rooms:entity/hound/sniff1",
-        "attenuation_distance": 12
-      },
-      {
-        "name": "office_rooms:entity/hound/sniff2",
-        "attenuation_distance": 12
-      }
-    ]
-  },
-  "entity.smiler.giggle": {
-    "sounds": [
-      {
-        "name": "office_rooms:entity/smiler/giggle1",
-        "volume": 0.7,
-        "attenuation_distance": 20
-      },
-      {
-        "name": "office_rooms:entity/smiler/giggle2",
-        "volume": 0.7,
-        "attenuation_distance": 20
-      }
-    ],
-    "subtitle": "subtitles.office_rooms.smiler.giggle"
-  },
-  "entity.smiler.vanish": {
-    "sounds": [
-      {
-        "name": "office_rooms:entity/smiler/vanish",
-        "volume": 1.0
-      }
-    ],
-    "subtitle": "subtitles.office_rooms.smiler.vanish"
-  },
-  "entity.smiler.kill": {
-    "sounds": [
-      {
-        "name": "office_rooms:entity/smiler/kill",
-        "volume": 1.0
-      }
-    ],
-    "subtitle": "subtitles.office_rooms.smiler.kill"
-  },
-  "entity.smiler.breath": {
-    "sounds": [
-      {
-        "name": "office_rooms:entity/smiler/breath",
-        "volume": 0.5,
-        "attenuation_distance": 10
-      }
-    ],
-    "subtitle": "subtitles.office_rooms.smiler.breath"
-  },
-  "entity.colony.scream": {
-    "category": "hostile",
-    "subtitle": "subtitles.office_rooms.colony.scream",
-    "sounds": [
-      {
-        "name": "office_rooms:entity/colony/scream1",
-        "attenuation_distance": 96
-      },
-      {
-        "name": "office_rooms:entity/colony/scream2",
-        "attenuation_distance": 96
-      },
-      {
-        "name": "office_rooms:entity/colony/scream3",
-        "attenuation_distance": 96
-      },
-      {
-        "name": "office_rooms:entity/colony/scream4",
-        "attenuation_distance": 96
-      },
-      {
-        "name": "office_rooms:entity/colony/scream5",
-        "attenuation_distance": 96
-      },
-      {
-        "name": "office_rooms:entity/colony/scream6",
-        "attenuation_distance": 96
-      },
-      {
-        "name": "office_rooms:entity/colony/scream7",
-        "attenuation_distance": 96
-      }
-    ]
-  },
-  "entity.colony.chitter": {
-    "category": "hostile",
-    "subtitle": "subtitles.office_rooms.colony.chitter",
-    "sounds": [
-      {
-        "name": "office_rooms:entity/colony/chitter1",
-        "attenuation_distance": 32
-      },
-      {
-        "name": "office_rooms:entity/colony/chitter1",
-        "attenuation_distance": 32,
-        "pitch": 0.9
-      },
-      {
-        "name": "office_rooms:entity/colony/chitter2",
-        "attenuation_distance": 32
-      },
-      {
-        "name": "office_rooms:entity/colony/chitter2",
-        "attenuation_distance": 32,
-        "pitch": 0.9
-      },
-      {
-        "name": "office_rooms:entity/colony/chitter3",
-        "attenuation_distance": 32
-      },
-      {
-        "name": "office_rooms:entity/colony/chitter3",
-        "attenuation_distance": 32,
-        "pitch": 0.9
-      }
-    ]
-  },
-  "entity.colony.hurt": {
-    "category": "hostile",
-    "subtitle": "subtitles.office_rooms.colony.hurt",
-    "sounds": [
-      {
-        "name": "office_rooms:entity/colony/hurt1",
-        "attenuation_distance": 16
-      },
-      {
-        "name": "office_rooms:entity/colony/hurt2",
-        "attenuation_distance": 16
-      },
-      {
-        "name": "office_rooms:entity/colony/hurt3",
-        "attenuation_distance": 16
-      }
-    ]
-  },
-  "entity.colony.death": {
-    "sounds": [
-      {
-        "name": "office_rooms:entity/colony/death",
-        "volume": 1.0
-      }
-    ],
-    "subtitle": "subtitles.office_rooms.colony.death"
-  },
-  "entity.colony.step": {
-    "category": "hostile",
-    "subtitle": "subtitles.office_rooms.colony.step",
-    "sounds": [
-      {
-        "name": "office_rooms:entity/colony/step1",
-        "attenuation_distance": 16
-      },
-      {
-        "name": "office_rooms:entity/colony/step2",
-        "attenuation_distance": 16
-      }
-    ]
-  },
-  "entity.hunter.ambient": {
-    "category": "hostile",
-    "subtitle": "subtitles.office_rooms.hunter.ambient",
-    "sounds": [
-      {
-        "name": "office_rooms:entity/hunter/ambient1",
-        "attenuation_distance": 32
-      },
-      {
-        "name": "office_rooms:entity/hunter/ambient1",
-        "attenuation_distance": 32,
-        "pitch": 0.9
-      },
-      {
-        "name": "office_rooms:entity/hunter/ambient2",
-        "attenuation_distance": 32
-      },
-      {
-        "name": "office_rooms:entity/hunter/ambient2",
-        "attenuation_distance": 32,
-        "pitch": 0.9
-      }
-    ]
-  },
-  "entity.hunter.notice": {
-    "category": "hostile",
-    "subtitle": "subtitles.office_rooms.hunter.notice",
-    "sounds": [
-      {
-        "name": "office_rooms:entity/hunter/notice1",
-        "attenuation_distance": 64
-      },
-      {
-        "name": "office_rooms:entity/hunter/notice2",
-        "attenuation_distance": 64
-      }
-    ]
-  },
-  "entity.hunter.hurt": {
-    "category": "hostile",
-    "subtitle": "subtitles.office_rooms.hunter.hurt",
-    "sounds": [
-      {
-        "name": "office_rooms:entity/hunter/hurt1",
-        "attenuation_distance": 16
-      },
-      {
-        "name": "office_rooms:entity/hunter/hurt2",
-        "attenuation_distance": 16
-      }
-    ]
-  },
-  "entity.hunter.death": {
-    "subtitle": "subtitles.office_rooms.hunter.death",
-    "sounds": [
-      {
-        "name": "office_rooms:entity/hunter/death",
-        "attenuation_distance": 32
-      }
-    ]
-  },
-  "entity.flayed.scream": {
-    "category": "hostile",
-    "subtitle": "subtitles.office_rooms.flayed.scream",
-    "sounds": [
-      {
-        "name": "office_rooms:entity/flayed/scream1",
-        "attenuation_distance": 160
-      },
-      {
-        "name": "office_rooms:entity/flayed/scream2",
-        "attenuation_distance": 160
-      },
-      {
-        "name": "office_rooms:entity/flayed/scream3",
-        "attenuation_distance": 160
-      }
-    ]
-  },
-  "entity.flayed.ambient": {
-    "category": "hostile",
-    "subtitle": "subtitles.office_rooms.flayed.ambient",
-    "sounds": [
-      {
-        "name": "office_rooms:entity/flayed/ambient1",
-        "attenuation_distance": 24
-      },
-      {
-        "name": "office_rooms:entity/flayed/ambient1",
-        "attenuation_distance": 24,
-        "pitch": 0.9
-      },
-      {
-        "name": "office_rooms:entity/flayed/ambient2",
-        "attenuation_distance": 24
-      },
-      {
-        "name": "office_rooms:entity/flayed/ambient2",
-        "attenuation_distance": 24,
-        "pitch": 0.9
-      }
-    ]
-  },
-  "entity.flayed.hurt": {
-    "category": "hostile",
-    "subtitle": "subtitles.office_rooms.flayed.hurt",
-    "sounds": [
-      {
-        "name": "office_rooms:entity/flayed/hurt1",
-        "attenuation_distance": 24
-      },
-      {
-        "name": "office_rooms:entity/flayed/hurt2",
-        "attenuation_distance": 24
-      },
-      {
-        "name": "office_rooms:entity/flayed/hurt3",
-        "attenuation_distance": 24
-      }
-    ]
-  },
-  "entity.flayed.death": {
-    "category": "hostile",
-    "subtitle": "subtitles.office_rooms.flayed.death",
-    "sounds": [
-      {
-        "name": "office_rooms:entity/flayed/death",
-        "attenuation_distance": 32
-      }
-    ]
-  },
-  "entity.flayed.falter": {
-    "category": "hostile",
-    "subtitle": "subtitles.office_rooms.flayed.falter",
-    "sounds": [
-      {
-        "name": "office_rooms:entity/flayed/falter",
-        "attenuation_distance": 24
-      }
-    ]
-  },
-  "entity.flayed.step": {
-    "category": "hostile",
-    "subtitle": "subtitles.office_rooms.flayed.step",
-    "sounds": [
-      {
-        "name": "office_rooms:entity/flayed/step1",
-        "attenuation_distance": 16
-      },
-      {
-        "name": "office_rooms:entity/flayed/step2",
-        "attenuation_distance": 16
-      }
-    ]
-  },
-  "entity.partygoer.giggle": {
-    "category": "hostile",
-    "subtitle": "subtitles.office_rooms.partygoer.giggle",
-    "sounds": [
-      {
-        "name": "office_rooms:entity/partygoer/giggle1",
-        "attenuation_distance": 24
-      },
-      {
-        "name": "office_rooms:entity/partygoer/giggle2",
-        "attenuation_distance": 24
-      }
-    ]
-  },
-  "entity.partygoer.horn": {
-    "category": "hostile",
-    "subtitle": "subtitles.office_rooms.partygoer.horn",
-    "sounds": [
-      {
-        "name": "office_rooms:entity/partygoer/horn",
-        "attenuation_distance": 32
-      }
-    ]
-  },
-  "entity.partygoer.laugh": {
-    "category": "hostile",
-    "subtitle": "subtitles.office_rooms.partygoer.laugh",
-    "sounds": [
-      {
-        "name": "office_rooms:entity/partygoer/laugh",
-        "attenuation_distance": 32
-      }
-    ]
-  },
-  "entity.partygoer.hurt": {
-    "category": "hostile",
-    "subtitle": "subtitles.office_rooms.partygoer.hurt",
-    "sounds": [
-      {
-        "name": "office_rooms:entity/partygoer/hurt1",
-        "attenuation_distance": 16
-      },
-      {
-        "name": "office_rooms:entity/partygoer/hurt2",
-        "attenuation_distance": 16
-      }
-    ]
-  },
-  "entity.partygoer.death": {
-    "category": "hostile",
-    "subtitle": "subtitles.office_rooms.partygoer.death",
-    "sounds": [
-      {
-        "name": "office_rooms:entity/partygoer/death",
-        "attenuation_distance": 16
-      }
-    ]
-  },
-  "entity.wolfspider.step": {
-    "category": "hostile",
-    "subtitle": "subtitles.office_rooms.wolfspider.step",
-    "sounds": [
-      {
-        "name": "office_rooms:entity/wolfspider/step1",
-        "attenuation_distance": 10
-      },
-      {
-        "name": "office_rooms:entity/wolfspider/step2",
-        "attenuation_distance": 10
-      },
-      {
-        "name": "office_rooms:entity/wolfspider/step3",
-        "attenuation_distance": 10
-      }
-    ]
-  },
-  "entity.wolfspider.attack": {
-    "category": "hostile",
-    "subtitle": "subtitles.office_rooms.wolfspider.attack",
-    "sounds": [
-      {
-        "name": "office_rooms:entity/wolfspider/attack1",
-        "attenuation_distance": 16
-      },
-      {
-        "name": "office_rooms:entity/wolfspider/attack2",
-        "attenuation_distance": 16
-      }
-    ]
-  },
-  "entity.hunter.step": {
-    "category": "hostile",
-    "subtitle": "subtitles.office_rooms.hunter.step",
-    "sounds": [
-      {
-        "name": "office_rooms:entity/hunter/step1",
-        "attenuation_distance": 16
-      },
-      {
-        "name": "office_rooms:entity/hunter/step2",
-        "attenuation_distance": 16
-      }
-    ]
-  },
-  "entity.gaunt.step": {
-    "category": "hostile",
-    "subtitle": "subtitles.office_rooms.gaunt.step",
-    "sounds": [
-      {
-        "name": "office_rooms:entity/gaunt/step1",
-        "attenuation_distance": 10
-      },
-      {
-        "name": "office_rooms:entity/gaunt/step2",
-        "attenuation_distance": 10
-      }
-    ]
-  },
-  "entity.flayed.tear": {
-    "category": "hostile",
-    "subtitle": "subtitles.office_rooms.flayed.tear",
-    "sounds": [
-      {
-        "name": "office_rooms:entity/flayed/tear1",
-        "attenuation_distance": 24
-      },
-      {
-        "name": "office_rooms:entity/flayed/tear2",
-        "attenuation_distance": 24
-      }
-    ]
-  },
-  "ambient.liminal.buzz": {
-    "category": "ambient",
-    "subtitle": "subtitles.office_rooms.amb.liminal.buzz",
-    "sounds": [
-      {
-        "name": "office_rooms:ambient/liminal/buzz1",
-        "attenuation_distance": 16
-      },
-      {
-        "name": "office_rooms:ambient/liminal/buzz2",
-        "attenuation_distance": 16
-      },
-      {
-        "name": "office_rooms:ambient/liminal/buzz3",
-        "attenuation_distance": 16
-      }
-    ]
-  },
-  "ambient.liminal.vent": {
-    "category": "ambient",
-    "subtitle": "subtitles.office_rooms.amb.liminal.vent",
-    "sounds": [
-      {
-        "name": "office_rooms:ambient/liminal/vent1",
-        "attenuation_distance": 24
-      },
-      {
-        "name": "office_rooms:ambient/liminal/vent2",
-        "attenuation_distance": 24
-      }
-    ]
-  },
-  "ambient.liminal.pipe": {
-    "category": "ambient",
-    "subtitle": "subtitles.office_rooms.amb.liminal.pipe",
-    "sounds": [
-      {
-        "name": "office_rooms:ambient/liminal/pipe1",
-        "attenuation_distance": 32
-      },
-      {
-        "name": "office_rooms:ambient/liminal/pipe2",
-        "attenuation_distance": 32
-      },
-      {
-        "name": "office_rooms:ambient/liminal/pipe3",
-        "attenuation_distance": 32
-      }
-    ]
-  },
-  "ambient.liminal.distant": {
-    "category": "ambient",
-    "subtitle": "subtitles.office_rooms.amb.liminal.distant",
-    "sounds": [
-      {
-        "name": "office_rooms:ambient/liminal/distant1",
-        "attenuation_distance": 64
-      },
-      {
-        "name": "office_rooms:ambient/liminal/distant2",
-        "attenuation_distance": 64
-      },
-      {
-        "name": "office_rooms:ambient/liminal/distant3",
-        "attenuation_distance": 64
-      }
-    ]
-  },
-  "ambient.industrial.machine": {
-    "category": "ambient",
-    "subtitle": "subtitles.office_rooms.amb.industrial.machine",
-    "sounds": [
-      {
-        "name": "office_rooms:ambient/industrial/machine1",
-        "attenuation_distance": 28
-      },
-      {
-        "name": "office_rooms:ambient/industrial/machine2",
-        "attenuation_distance": 28
-      }
-    ]
-  },
-  "ambient.industrial.steam": {
-    "category": "ambient",
-    "subtitle": "subtitles.office_rooms.amb.industrial.steam",
-    "sounds": [
-      {
-        "name": "office_rooms:ambient/industrial/steam",
-        "attenuation_distance": 20
-      }
-    ]
-  },
-  "ambient.lab.hum": {
-    "category": "ambient",
-    "subtitle": "subtitles.office_rooms.amb.lab.hum",
-    "sounds": [
-      {
-        "name": "office_rooms:ambient/lab/hum1",
-        "attenuation_distance": 16
-      },
-      {
-        "name": "office_rooms:ambient/lab/hum2",
-        "attenuation_distance": 16
-      },
-      {
-        "name": "office_rooms:ambient/lab/hum3",
-        "attenuation_distance": 16
-      }
-    ]
-  },
-  "ambient.hotel.far": {
-    "category": "ambient",
-    "subtitle": "subtitles.office_rooms.amb.hotel.far",
-    "sounds": [
-      {
-        "name": "office_rooms:ambient/hotel/far1",
-        "attenuation_distance": 40
-      },
-      {
-        "name": "office_rooms:ambient/hotel/far2",
-        "attenuation_distance": 40
-      },
-      {
-        "name": "office_rooms:ambient/hotel/far3",
-        "attenuation_distance": 40
-      }
-    ]
-  },
-  "ambient.fun.party": {
-    "category": "ambient",
-    "subtitle": "subtitles.office_rooms.amb.fun.party",
-    "sounds": [
-      {
-        "name": "office_rooms:ambient/fun/party1",
-        "attenuation_distance": 40
-      },
-      {
-        "name": "office_rooms:ambient/fun/party2",
-        "attenuation_distance": 40
-      }
-    ]
-  },
-  "ambient.fun.musicbox": {
-    "category": "ambient",
-    "subtitle": "subtitles.office_rooms.amb.fun.musicbox",
-    "sounds": [
-      {
-        "name": "office_rooms:ambient/fun/musicbox",
-        "attenuation_distance": 24
-      }
-    ]
-  },
-  "ambient.pool.distant": {
-    "category": "ambient",
-    "subtitle": "subtitles.office_rooms.amb.pool.distant",
-    "sounds": [
-      {
-        "name": "office_rooms:ambient/pool/distant",
-        "attenuation_distance": 64
-      }
-    ]
-  },
-  "entity.unknown.roar": {
-    "sounds": [
-      {
-        "name": "office_rooms:entity/unknown/roar1",
-        "attenuation_distance": 96
-      },
-      {
-        "name": "office_rooms:entity/unknown/roar2",
-        "attenuation_distance": 96
-      },
-      {
-        "name": "office_rooms:entity/unknown/roar3",
-        "attenuation_distance": 96
-      }
-    ],
-    "subtitle": "subtitles.office_rooms.entity.unknown.roar"
-  },
-  "entity.unknown.hurt": {
-    "sounds": [
-      {
-        "name": "office_rooms:entity/unknown/hurt1",
-        "attenuation_distance": 48
-      },
-      {
-        "name": "office_rooms:entity/unknown/hurt2",
-        "attenuation_distance": 48
-      }
-    ],
-    "subtitle": "subtitles.office_rooms.entity.unknown.hurt"
-  },
-  "entity.unknown.death": {
-    "sounds": [
-      {
-        "name": "office_rooms:entity/unknown/death",
-        "attenuation_distance": 128
-      }
-    ],
-    "subtitle": "subtitles.office_rooms.entity.unknown.death"
-  },
-  "entity.unknown.burrow": {
-    "sounds": [
-      {
-        "name": "office_rooms:entity/unknown/burrow1",
-        "attenuation_distance": 40
-      },
-      {
-        "name": "office_rooms:entity/unknown/burrow2",
-        "attenuation_distance": 40
-      },
-      {
-        "name": "office_rooms:entity/unknown/burrow3",
-        "attenuation_distance": 40
-      }
-    ],
-    "subtitle": "subtitles.office_rooms.entity.unknown.burrow"
-  },
-  "entity.unknown.emerge": {
-    "sounds": [
-      {
-        "name": "office_rooms:entity/unknown/emerge1",
-        "attenuation_distance": 80
-      },
-      {
-        "name": "office_rooms:entity/unknown/emerge2",
-        "attenuation_distance": 80
-      }
-    ],
-    "subtitle": "subtitles.office_rooms.entity.unknown.emerge"
-  },
-  "ambient.underside.quake": {
-    "sounds": [
-      {
-        "name": "office_rooms:ambient/underside/quake1",
-        "attenuation_distance": 96
-      },
-      {
-        "name": "office_rooms:ambient/underside/quake2",
-        "attenuation_distance": 96
-      }
-    ],
-    "subtitle": "subtitles.office_rooms.ambient.underside.quake"
-  },
-  "ambient.underside.wind": {
-    "sounds": [
-      {
-        "name": "office_rooms:ambient/underside/wind",
-        "stream": true
-      }
-    ]
-  },
-  "item.underside_key.use": {
-    "sounds": [
-      {
-        "name": "office_rooms:item/underside_key_use",
-        "attenuation_distance": 48
-      }
-    ],
-    "subtitle": "subtitles.office_rooms.item.underside_key.use"
-  },
-  "item.noclip_sword.on": {
-    "sounds": [
-      {
-        "name": "office_rooms:item/noclip_on",
-        "attenuation_distance": 16
-      }
-    ],
-    "subtitle": "subtitles.office_rooms.item.noclip_sword.on"
-  },
-  "item.noclip_sword.off": {
-    "sounds": [
-      {
-        "name": "office_rooms:item/noclip_off",
-        "attenuation_distance": 16
-      }
-    ],
-    "subtitle": "subtitles.office_rooms.item.noclip_sword.off"
-  },
-  "block.outpost.lever": {
-    "sounds": [
-      {
-        "name": "office_rooms:block/outpost/lever",
-        "attenuation_distance": 24
-      }
-    ],
-    "subtitle": "subtitles.office_rooms.block.outpost.lever"
-  },
-  "block.outpost.power_on": {
-    "sounds": [
-      {
-        "name": "office_rooms:block/outpost/power_on",
-        "attenuation_distance": 48
-      }
-    ],
-    "subtitle": "subtitles.office_rooms.block.outpost.power_on"
-  },
-  "block.outpost.power_off": {
-    "sounds": [
-      {
-        "name": "office_rooms:block/outpost/power_off",
-        "attenuation_distance": 48
-      }
-    ],
-    "subtitle": "subtitles.office_rooms.block.outpost.power_off"
-  },
-  "block.outpost.alarm": {
-    "sounds": [
-      {
-        "name": "office_rooms:block/outpost/alarm",
-        "attenuation_distance": 64
-      }
-    ],
-    "subtitle": "subtitles.office_rooms.block.outpost.alarm"
-  },
-  "block.outpost.beep": {
-    "sounds": [
-      {
-        "name": "office_rooms:block/outpost/beep1",
-        "attenuation_distance": 16
-      },
-      {
-        "name": "office_rooms:block/outpost/beep2",
-        "attenuation_distance": 16
-      }
-    ],
-    "subtitle": "subtitles.office_rooms.block.outpost.beep"
-  },
-  "block.outpost.spark": {
-    "sounds": [
-      {
-        "name": "office_rooms:block/outpost/spark1",
-        "attenuation_distance": 24
-      },
-      {
-        "name": "office_rooms:block/outpost/spark2",
-        "attenuation_distance": 24
-      },
-      {
-        "name": "office_rooms:block/outpost/spark3",
-        "attenuation_distance": 24
-      }
-    ],
-    "subtitle": "subtitles.office_rooms.block.outpost.spark"
-  },
-  "block.outpost.button": {
-    "sounds": [
-      {
-        "name": "office_rooms:block/outpost/button",
-        "attenuation_distance": 16
-      }
-    ],
-    "subtitle": "subtitles.office_rooms.block.outpost.button"
-  },
-  "block.gateway.charge": {
-    "sounds": [
-      {
-        "name": "office_rooms:block/gateway/charge",
-        "attenuation_distance": 64
-      }
-    ],
-    "subtitle": "subtitles.office_rooms.block.gateway.charge"
-  },
-  "block.gateway.open": {
-    "sounds": [
-      {
-        "name": "office_rooms:block/gateway/open",
-        "attenuation_distance": 96
-      }
-    ],
-    "subtitle": "subtitles.office_rooms.block.gateway.open"
-  },
-  "block.gateway.hum": {
-    "sounds": [
-      {
-        "name": "office_rooms:block/gateway/hum",
-        "attenuation_distance": 24
-      }
-    ],
-    "subtitle": "subtitles.office_rooms.block.gateway.hum"
-  },
-  "entity.deathmoth.idle": {
-    "category": "hostile",
-    "sounds": [
-      {
-        "name": "office_rooms:entity/deathmoth/idle1",
-        "attenuation_distance": 8,
-        "volume": 0.6
-      },
-      {
-        "name": "office_rooms:entity/deathmoth/idle2",
-        "attenuation_distance": 8,
-        "volume": 0.6
-      },
-      {
-        "name": "office_rooms:entity/deathmoth/idle3",
-        "attenuation_distance": 8,
-        "volume": 0.6
-      }
-    ],
-    "subtitle": "subtitles.office_rooms.entity.deathmoth.idle"
-  },
-  "entity.deathmoth.trigger": {
-    "category": "hostile",
-    "sounds": [
-      {
-        "name": "office_rooms:entity/deathmoth/trigger",
-        "attenuation_distance": 24,
-        "volume": 1.0
-      }
-    ],
-    "subtitle": "subtitles.office_rooms.entity.deathmoth.trigger"
-  },
-  "entity.deathmoth.flap": {
-    "category": "hostile",
-    "sounds": [
-      {
-        "name": "office_rooms:entity/deathmoth/flap1",
-        "attenuation_distance": 16,
-        "volume": 0.8
-      },
-      {
-        "name": "office_rooms:entity/deathmoth/flap2",
-        "attenuation_distance": 16,
-        "volume": 0.8
-      }
-    ],
-    "subtitle": "subtitles.office_rooms.entity.deathmoth.flap"
-  },
-  "entity.deathmoth.attack": {
-    "category": "hostile",
-    "sounds": [
-      {
-        "name": "office_rooms:entity/deathmoth/attack1",
-        "attenuation_distance": 16,
-        "volume": 1.0
-      },
-      {
-        "name": "office_rooms:entity/deathmoth/attack2",
-        "attenuation_distance": 16,
-        "volume": 1.0
-      }
-    ],
-    "subtitle": "subtitles.office_rooms.entity.deathmoth.attack"
-  },
-  "entity.deathmoth.hurt": {
-    "category": "hostile",
-    "sounds": [
-      {
-        "name": "office_rooms:entity/deathmoth/hurt",
-        "attenuation_distance": 16,
-        "volume": 1.0
-      }
-    ],
-    "subtitle": "subtitles.office_rooms.entity.deathmoth.hurt"
-  },
-  "entity.deathmoth.death": {
-    "category": "hostile",
-    "sounds": [
-      {
-        "name": "office_rooms:entity/deathmoth/death",
-        "attenuation_distance": 16,
-        "volume": 1.0
-      }
-    ],
-    "subtitle": "subtitles.office_rooms.entity.deathmoth.death"
-  },
-  "music.level_fun": {
-    "category": "music",
-    "sounds": [
-      {
-        "name": "office_rooms:music/level_fun",
-        "stream": true,
-        "volume": 1.0
-      }
-    ]
-  },
-  "entity.flayed.hunt_loop": {
-    "category": "hostile",
-    "subtitle": "subtitles.office_rooms.flayed.scream",
-    "sounds": [
-      {
-        "name": "office_rooms:entity/flayed/hunt_loop",
-        "attenuation_distance": 96
-      }
-    ]
-  },
-  "entity.hound.hunt_loop": {
-    "category": "hostile",
-    "subtitle": "subtitles.office_rooms.hound.bark",
-    "sounds": [
-      {
-        "name": "office_rooms:entity/hound/hunt_loop",
-        "attenuation_distance": 48
-      }
-    ]
-  },
-  "block.cinema.projector": {
-    "category": "block",
-    "subtitle": "subtitles.office_rooms.cinema.projector",
-    "sounds": [
-      {
-        "name": "office_rooms:block/cinema/projector1",
-        "attenuation_distance": 24
-      },
-      {
-        "name": "office_rooms:block/cinema/projector2",
-        "attenuation_distance": 24
-      }
-    ]
-  },
-  "entity.aranea_membri.screech": {
-    "category": "hostile",
-    "subtitle": "subtitles.office_rooms.aranea_membri.screech",
-    "sounds": [
-      {
-        "name": "office_rooms:entity/aranea_membri/screech1",
-        "attenuation_distance": 64
-      },
-      {
-        "name": "office_rooms:entity/aranea_membri/screech2",
-        "attenuation_distance": 64
-      }
-    ]
-  },
-  "entity.aranea_membri.scratch": {
-    "category": "hostile",
-    "subtitle": "subtitles.office_rooms.aranea_membri.scratch",
-    "sounds": [
-      {
-        "name": "office_rooms:entity/aranea_membri/scratch1",
-        "attenuation_distance": 20
-      },
-      {
-        "name": "office_rooms:entity/aranea_membri/scratch2",
-        "attenuation_distance": 20
-      },
-      {
-        "name": "office_rooms:entity/aranea_membri/scratch3",
-        "attenuation_distance": 20
-      }
-    ]
-  },
-  "entity.aranea_membri.ambient": {
-    "category": "hostile",
-    "subtitle": "subtitles.office_rooms.aranea_membri.ambient",
-    "sounds": [
-      {
-        "name": "office_rooms:entity/aranea_membri/ambient1",
-        "attenuation_distance": 16
-      },
-      {
-        "name": "office_rooms:entity/aranea_membri/ambient2",
-        "attenuation_distance": 16
-      }
-    ]
-  },
-  "entity.aranea_membri.hurt": {
-    "category": "hostile",
-    "subtitle": "subtitles.office_rooms.aranea_membri.hurt",
-    "sounds": [
-      {
-        "name": "office_rooms:entity/aranea_membri/hurt1",
-        "attenuation_distance": 16
-      },
-      {
-        "name": "office_rooms:entity/aranea_membri/hurt2",
-        "attenuation_distance": 16
-      },
-      {
-        "name": "office_rooms:entity/aranea_membri/hurt3",
-        "attenuation_distance": 16
-      }
-    ]
-  },
-  "entity.aranea_membri.death": {
-    "category": "hostile",
-    "subtitle": "subtitles.office_rooms.aranea_membri.death",
-    "sounds": [
-      {
-        "name": "office_rooms:entity/aranea_membri/death",
-        "attenuation_distance": 32
-      }
-    ]
-  },
-  "entity.aranea_membri.step": {
-    "category": "hostile",
-    "subtitle": "subtitles.office_rooms.aranea_membri.step",
-    "sounds": [
-      {
-        "name": "office_rooms:entity/aranea_membri/step1",
-        "attenuation_distance": 16
-      },
-      {
-        "name": "office_rooms:entity/aranea_membri/step2",
-        "attenuation_distance": 16
-      }
-    ]
-  },
-  "block.slide.rush": {
-    "category": "player",
-    "subtitle": "subtitles.office_rooms.slide.rush",
-    "sounds": [
-      "office_rooms:block/slide/rush"
-    ]
-  },
-  "block.slide.splash": {
-    "category": "player",
-    "subtitle": "subtitles.office_rooms.slide.splash",
-    "sounds": [
-      "office_rooms:block/slide/splash"
-    ]
-  }
+ "music.office_rooms": {
+  "category": "music",
+  "sounds": [
+   {
+    "name": "office_rooms:music/office_rooms",
+    "stream": true,
+    "volume": 1.0
+   },
+   {
+    "name": "office_rooms:music/office_rooms2",
+    "stream": true,
+    "volume": 1.0
+   },
+   {
+    "name": "office_rooms:music/office_rooms3",
+    "stream": true,
+    "volume": 1.0
+   }
+  ]
+ },
+ "ambient.lamp_hum": {
+  "category": "ambient",
+  "subtitle": "subtitles.office_rooms.lamp_hum",
+  "sounds": [
+   {
+    "name": "office_rooms:ambient/lamp_hum",
+    "stream": false
+   }
+  ]
+ },
+ "entity.wolfspider.howl": {
+  "category": "hostile",
+  "subtitle": "subtitles.office_rooms.wolfspider.howl",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/wolfspider/howl1",
+    "attenuation_distance": 24
+   },
+   {
+    "name": "office_rooms:entity/wolfspider/howl1",
+    "attenuation_distance": 24,
+    "pitch": 0.9
+   },
+   {
+    "name": "office_rooms:entity/wolfspider/howl2",
+    "attenuation_distance": 24
+   },
+   {
+    "name": "office_rooms:entity/wolfspider/howl2",
+    "attenuation_distance": 24,
+    "pitch": 0.9
+   },
+   {
+    "name": "office_rooms:entity/wolfspider/howl3",
+    "attenuation_distance": 24
+   },
+   {
+    "name": "office_rooms:entity/wolfspider/howl3",
+    "attenuation_distance": 24,
+    "pitch": 0.9
+   }
+  ]
+ },
+ "entity.wolfspider.hurt": {
+  "category": "hostile",
+  "subtitle": "subtitles.office_rooms.wolfspider.hurt",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/wolfspider/hurt1",
+    "attenuation_distance": 16
+   },
+   {
+    "name": "office_rooms:entity/wolfspider/hurt2",
+    "attenuation_distance": 16
+   },
+   {
+    "name": "office_rooms:entity/wolfspider/hurt3",
+    "attenuation_distance": 16
+   }
+  ]
+ },
+ "entity.wolfspider.death": {
+  "category": "hostile",
+  "subtitle": "subtitles.office_rooms.wolfspider.death",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/wolfspider/death",
+    "volume": 0.5
+   }
+  ]
+ },
+ "entity.headless_warden.scream": {
+  "category": "hostile",
+  "subtitle": "subtitles.office_rooms.headless_warden.scream",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/headless_warden/scream1",
+    "attenuation_distance": 64
+   },
+   {
+    "name": "office_rooms:entity/headless_warden/scream2",
+    "attenuation_distance": 64
+   }
+  ]
+ },
+ "entity.headless_warden.heartbeat": {
+  "category": "hostile",
+  "subtitle": "subtitles.office_rooms.headless_warden.heartbeat",
+  "sounds": [
+   "office_rooms:entity/headless_warden/heartbeat"
+  ]
+ },
+ "entity.headless_warden.hurt": {
+  "category": "hostile",
+  "subtitle": "subtitles.office_rooms.headless_warden.hurt",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/headless_warden/hurt1",
+    "attenuation_distance": 24
+   },
+   {
+    "name": "office_rooms:entity/headless_warden/hurt2",
+    "attenuation_distance": 24
+   }
+  ]
+ },
+ "entity.headless_warden.death": {
+  "category": "hostile",
+  "subtitle": "subtitles.office_rooms.headless_warden.death",
+  "sounds": [
+   "office_rooms:entity/headless_warden/death"
+  ]
+ },
+ "ambient.liminal.steps": {
+  "category": "ambient",
+  "subtitle": "subtitles.office_rooms.liminal.steps",
+  "sounds": [
+   {
+    "name": "office_rooms:ambient/liminal/steps1",
+    "attenuation_distance": 32
+   },
+   {
+    "name": "office_rooms:ambient/liminal/steps2",
+    "attenuation_distance": 32
+   }
+  ]
+ },
+ "ambient.liminal.knock": {
+  "category": "ambient",
+  "subtitle": "subtitles.office_rooms.liminal.knock",
+  "sounds": [
+   {
+    "name": "office_rooms:ambient/liminal/knock1",
+    "attenuation_distance": 32
+   },
+   {
+    "name": "office_rooms:ambient/liminal/knock2",
+    "attenuation_distance": 32
+   }
+  ]
+ },
+ "ambient.liminal.door": {
+  "category": "ambient",
+  "subtitle": "subtitles.office_rooms.liminal.door",
+  "sounds": [
+   {
+    "name": "office_rooms:ambient/liminal/door1",
+    "attenuation_distance": 32
+   },
+   {
+    "name": "office_rooms:ambient/liminal/door2",
+    "attenuation_distance": 32
+   }
+  ]
+ },
+ "ambient.liminal.neon": {
+  "category": "ambient",
+  "subtitle": "subtitles.office_rooms.liminal.neon",
+  "sounds": [
+   {
+    "name": "office_rooms:ambient/liminal/neon1",
+    "attenuation_distance": 32
+   },
+   {
+    "name": "office_rooms:ambient/liminal/neon2",
+    "attenuation_distance": 32
+   }
+  ]
+ },
+ "ambient.liminal.metal": {
+  "category": "ambient",
+  "subtitle": "subtitles.office_rooms.liminal.metal",
+  "sounds": [
+   {
+    "name": "office_rooms:ambient/liminal/metal1",
+    "attenuation_distance": 32
+   },
+   {
+    "name": "office_rooms:ambient/liminal/metal2",
+    "attenuation_distance": 32
+   }
+  ]
+ },
+ "ambient.liminal.creak": {
+  "category": "ambient",
+  "subtitle": "subtitles.office_rooms.liminal.creak",
+  "sounds": [
+   {
+    "name": "office_rooms:ambient/liminal/creak1",
+    "attenuation_distance": 32
+   },
+   {
+    "name": "office_rooms:ambient/liminal/creak2",
+    "attenuation_distance": 32
+   }
+  ]
+ },
+ "ambient.liminal.voices": {
+  "category": "ambient",
+  "subtitle": "subtitles.office_rooms.liminal.voices",
+  "sounds": [
+   {
+    "name": "office_rooms:ambient/liminal/voices1",
+    "attenuation_distance": 32
+   },
+   {
+    "name": "office_rooms:ambient/liminal/voices2",
+    "attenuation_distance": 32
+   }
+  ]
+ },
+ "ambient.liminal.whisper": {
+  "category": "ambient",
+  "subtitle": "subtitles.office_rooms.liminal.whisper",
+  "sounds": [
+   {
+    "name": "office_rooms:ambient/liminal/whisper1",
+    "attenuation_distance": 32
+   },
+   {
+    "name": "office_rooms:ambient/liminal/whisper2",
+    "attenuation_distance": 32
+   }
+  ]
+ },
+ "ambient.liminal.wind": {
+  "category": "ambient",
+  "subtitle": "subtitles.office_rooms.liminal.wind",
+  "sounds": [
+   {
+    "name": "office_rooms:ambient/liminal/wind1",
+    "attenuation_distance": 32
+   },
+   {
+    "name": "office_rooms:ambient/liminal/wind2",
+    "attenuation_distance": 32
+   }
+  ]
+ },
+ "ambient.liminal.behind": {
+  "category": "ambient",
+  "subtitle": "subtitles.office_rooms.liminal.behind",
+  "sounds": [
+   {
+    "name": "office_rooms:ambient/liminal/behind1",
+    "attenuation_distance": 32
+   },
+   {
+    "name": "office_rooms:ambient/liminal/behind2",
+    "attenuation_distance": 32
+   }
+  ]
+ },
+ "ambient.liminal.drip": {
+  "category": "ambient",
+  "subtitle": "subtitles.office_rooms.liminal.drip",
+  "sounds": [
+   {
+    "name": "office_rooms:ambient/liminal/drip1",
+    "attenuation_distance": 32
+   },
+   {
+    "name": "office_rooms:ambient/liminal/drip2",
+    "attenuation_distance": 32
+   }
+  ]
+ },
+ "ambient.liminal.rustle": {
+  "category": "ambient",
+  "subtitle": "subtitles.office_rooms.liminal.rustle",
+  "sounds": [
+   {
+    "name": "office_rooms:ambient/liminal/rustle1",
+    "attenuation_distance": 32
+   },
+   {
+    "name": "office_rooms:ambient/liminal/rustle2",
+    "attenuation_distance": 32
+   }
+  ]
+ },
+ "ambient.liminal.rumble": {
+  "category": "ambient",
+  "subtitle": "subtitles.office_rooms.liminal.rumble",
+  "sounds": [
+   {
+    "name": "office_rooms:ambient/liminal/rumble1",
+    "attenuation_distance": 32
+   },
+   {
+    "name": "office_rooms:ambient/liminal/rumble2",
+    "attenuation_distance": 32
+   }
+  ]
+ },
+ "entity.gaunt.scream": {
+  "category": "hostile",
+  "subtitle": "subtitles.office_rooms.gaunt.scream",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/gaunt/scream1",
+    "attenuation_distance": 64
+   },
+   {
+    "name": "office_rooms:entity/gaunt/scream2",
+    "attenuation_distance": 64
+   },
+   {
+    "name": "office_rooms:entity/gaunt/scream3",
+    "attenuation_distance": 64
+   }
+  ]
+ },
+ "entity.gaunt.breath": {
+  "category": "hostile",
+  "subtitle": "subtitles.office_rooms.gaunt.breath",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/gaunt/breath1",
+    "attenuation_distance": 20
+   },
+   {
+    "name": "office_rooms:entity/gaunt/breath1",
+    "attenuation_distance": 20,
+    "pitch": 0.9
+   },
+   {
+    "name": "office_rooms:entity/gaunt/breath2",
+    "attenuation_distance": 20
+   },
+   {
+    "name": "office_rooms:entity/gaunt/breath2",
+    "attenuation_distance": 20,
+    "pitch": 0.9
+   },
+   {
+    "name": "office_rooms:entity/gaunt/breath3",
+    "attenuation_distance": 20
+   },
+   {
+    "name": "office_rooms:entity/gaunt/breath3",
+    "attenuation_distance": 20,
+    "pitch": 0.9
+   }
+  ]
+ },
+ "entity.gaunt.hurt": {
+  "category": "hostile",
+  "subtitle": "subtitles.office_rooms.gaunt.hurt",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/gaunt/hurt1",
+    "attenuation_distance": 16
+   },
+   {
+    "name": "office_rooms:entity/gaunt/hurt2",
+    "attenuation_distance": 16
+   }
+  ]
+ },
+ "entity.gaunt.death": {
+  "category": "hostile",
+  "subtitle": "subtitles.office_rooms.gaunt.death",
+  "sounds": [
+   "office_rooms:entity/gaunt/death"
+  ]
+ },
+ "entity.observer.vanish": {
+  "category": "hostile",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/observer/vanish",
+    "volume": 0.5
+   }
+  ]
+ },
+ "ambient.pool.lap": {
+  "sounds": [
+   {
+    "name": "office_rooms:ambient/pool/lap1",
+    "volume": 0.8,
+    "attenuation_distance": 24,
+    "stream": false
+   },
+   {
+    "name": "office_rooms:ambient/pool/lap2",
+    "volume": 0.8,
+    "attenuation_distance": 24,
+    "stream": false
+   }
+  ],
+  "subtitle": "subtitles.office_rooms.pool.lap"
+ },
+ "ambient.pool.splash": {
+  "sounds": [
+   {
+    "name": "office_rooms:ambient/pool/splash1",
+    "volume": 0.8,
+    "attenuation_distance": 32
+   },
+   {
+    "name": "office_rooms:ambient/pool/splash2",
+    "volume": 0.8,
+    "attenuation_distance": 32
+   }
+  ],
+  "subtitle": "subtitles.office_rooms.pool.splash"
+ },
+ "ambient.pool.drip": {
+  "sounds": [
+   {
+    "name": "office_rooms:ambient/pool/drip1",
+    "volume": 0.8,
+    "attenuation_distance": 24
+   },
+   {
+    "name": "office_rooms:ambient/pool/drip2",
+    "volume": 0.8,
+    "attenuation_distance": 24
+   }
+  ],
+  "subtitle": "subtitles.office_rooms.pool.drip"
+ },
+ "ambient.pool.pump": {
+  "sounds": [
+   {
+    "name": "office_rooms:ambient/pool/pump",
+    "volume": 0.7,
+    "attenuation_distance": 24,
+    "stream": false
+   }
+  ],
+  "subtitle": "subtitles.office_rooms.pool.pump"
+ },
+ "ambient.pool.echo": {
+  "sounds": [
+   {
+    "name": "office_rooms:ambient/pool/echo",
+    "volume": 0.6,
+    "attenuation_distance": 40
+   }
+  ],
+  "subtitle": "subtitles.office_rooms.pool.echo"
+ },
+ "entity.hound.growl": {
+  "category": "hostile",
+  "subtitle": "subtitles.office_rooms.hound.growl",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/hound/growl1",
+    "attenuation_distance": 24
+   },
+   {
+    "name": "office_rooms:entity/hound/growl1",
+    "attenuation_distance": 24,
+    "pitch": 0.9
+   },
+   {
+    "name": "office_rooms:entity/hound/growl2",
+    "attenuation_distance": 24
+   },
+   {
+    "name": "office_rooms:entity/hound/growl2",
+    "attenuation_distance": 24,
+    "pitch": 0.9
+   },
+   {
+    "name": "office_rooms:entity/hound/growl3",
+    "attenuation_distance": 24
+   },
+   {
+    "name": "office_rooms:entity/hound/growl3",
+    "attenuation_distance": 24,
+    "pitch": 0.9
+   }
+  ]
+ },
+ "entity.hound.bark": {
+  "category": "hostile",
+  "subtitle": "subtitles.office_rooms.hound.bark",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/hound/bark1",
+    "attenuation_distance": 48
+   },
+   {
+    "name": "office_rooms:entity/hound/bark2",
+    "attenuation_distance": 48
+   },
+   {
+    "name": "office_rooms:entity/hound/bark3",
+    "attenuation_distance": 48
+   },
+   {
+    "name": "office_rooms:entity/hound/bark4",
+    "attenuation_distance": 48
+   }
+  ]
+ },
+ "entity.hound.hurt": {
+  "category": "hostile",
+  "subtitle": "subtitles.office_rooms.hound.hurt",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/hound/hurt1",
+    "attenuation_distance": 16
+   },
+   {
+    "name": "office_rooms:entity/hound/hurt2",
+    "attenuation_distance": 16
+   },
+   {
+    "name": "office_rooms:entity/hound/hurt3",
+    "attenuation_distance": 16
+   }
+  ]
+ },
+ "entity.hound.death": {
+  "sounds": [
+   {
+    "name": "office_rooms:entity/hound/death",
+    "volume": 1.0
+   }
+  ],
+  "subtitle": "subtitles.office_rooms.hound.death"
+ },
+ "entity.hound.sniff": {
+  "category": "hostile",
+  "subtitle": "subtitles.office_rooms.hound.sniff",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/hound/sniff1",
+    "attenuation_distance": 12
+   },
+   {
+    "name": "office_rooms:entity/hound/sniff2",
+    "attenuation_distance": 12
+   }
+  ]
+ },
+ "entity.smiler.giggle": {
+  "sounds": [
+   {
+    "name": "office_rooms:entity/smiler/giggle1",
+    "volume": 0.7,
+    "attenuation_distance": 20
+   },
+   {
+    "name": "office_rooms:entity/smiler/giggle2",
+    "volume": 0.7,
+    "attenuation_distance": 20
+   }
+  ],
+  "subtitle": "subtitles.office_rooms.smiler.giggle"
+ },
+ "entity.smiler.vanish": {
+  "sounds": [
+   {
+    "name": "office_rooms:entity/smiler/vanish",
+    "volume": 1.0
+   }
+  ],
+  "subtitle": "subtitles.office_rooms.smiler.vanish"
+ },
+ "entity.smiler.kill": {
+  "sounds": [
+   {
+    "name": "office_rooms:entity/smiler/kill",
+    "volume": 1.0
+   }
+  ],
+  "subtitle": "subtitles.office_rooms.smiler.kill"
+ },
+ "entity.smiler.breath": {
+  "sounds": [
+   {
+    "name": "office_rooms:entity/smiler/breath",
+    "volume": 0.5,
+    "attenuation_distance": 10
+   }
+  ],
+  "subtitle": "subtitles.office_rooms.smiler.breath"
+ },
+ "entity.colony.scream": {
+  "category": "hostile",
+  "subtitle": "subtitles.office_rooms.colony.scream",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/colony/scream1",
+    "attenuation_distance": 96
+   },
+   {
+    "name": "office_rooms:entity/colony/scream2",
+    "attenuation_distance": 96
+   },
+   {
+    "name": "office_rooms:entity/colony/scream3",
+    "attenuation_distance": 96
+   },
+   {
+    "name": "office_rooms:entity/colony/scream4",
+    "attenuation_distance": 96
+   },
+   {
+    "name": "office_rooms:entity/colony/scream5",
+    "attenuation_distance": 96
+   },
+   {
+    "name": "office_rooms:entity/colony/scream6",
+    "attenuation_distance": 96
+   },
+   {
+    "name": "office_rooms:entity/colony/scream7",
+    "attenuation_distance": 96
+   }
+  ]
+ },
+ "entity.colony.chitter": {
+  "category": "hostile",
+  "subtitle": "subtitles.office_rooms.colony.chitter",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/colony/chitter1",
+    "attenuation_distance": 32
+   },
+   {
+    "name": "office_rooms:entity/colony/chitter1",
+    "attenuation_distance": 32,
+    "pitch": 0.9
+   },
+   {
+    "name": "office_rooms:entity/colony/chitter2",
+    "attenuation_distance": 32
+   },
+   {
+    "name": "office_rooms:entity/colony/chitter2",
+    "attenuation_distance": 32,
+    "pitch": 0.9
+   },
+   {
+    "name": "office_rooms:entity/colony/chitter3",
+    "attenuation_distance": 32
+   },
+   {
+    "name": "office_rooms:entity/colony/chitter3",
+    "attenuation_distance": 32,
+    "pitch": 0.9
+   }
+  ]
+ },
+ "entity.colony.hurt": {
+  "category": "hostile",
+  "subtitle": "subtitles.office_rooms.colony.hurt",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/colony/hurt1",
+    "attenuation_distance": 16
+   },
+   {
+    "name": "office_rooms:entity/colony/hurt2",
+    "attenuation_distance": 16
+   },
+   {
+    "name": "office_rooms:entity/colony/hurt3",
+    "attenuation_distance": 16
+   }
+  ]
+ },
+ "entity.colony.death": {
+  "sounds": [
+   {
+    "name": "office_rooms:entity/colony/death",
+    "volume": 1.0
+   }
+  ],
+  "subtitle": "subtitles.office_rooms.colony.death"
+ },
+ "entity.colony.step": {
+  "category": "hostile",
+  "subtitle": "subtitles.office_rooms.colony.step",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/colony/step1",
+    "attenuation_distance": 16
+   },
+   {
+    "name": "office_rooms:entity/colony/step2",
+    "attenuation_distance": 16
+   }
+  ]
+ },
+ "entity.hunter.ambient": {
+  "category": "hostile",
+  "subtitle": "subtitles.office_rooms.hunter.ambient",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/hunter/ambient1",
+    "attenuation_distance": 32
+   },
+   {
+    "name": "office_rooms:entity/hunter/ambient1",
+    "attenuation_distance": 32,
+    "pitch": 0.9
+   },
+   {
+    "name": "office_rooms:entity/hunter/ambient2",
+    "attenuation_distance": 32
+   },
+   {
+    "name": "office_rooms:entity/hunter/ambient2",
+    "attenuation_distance": 32,
+    "pitch": 0.9
+   }
+  ]
+ },
+ "entity.hunter.notice": {
+  "category": "hostile",
+  "subtitle": "subtitles.office_rooms.hunter.notice",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/hunter/notice1",
+    "attenuation_distance": 64
+   },
+   {
+    "name": "office_rooms:entity/hunter/notice2",
+    "attenuation_distance": 64
+   }
+  ]
+ },
+ "entity.hunter.hurt": {
+  "category": "hostile",
+  "subtitle": "subtitles.office_rooms.hunter.hurt",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/hunter/hurt1",
+    "attenuation_distance": 16
+   },
+   {
+    "name": "office_rooms:entity/hunter/hurt2",
+    "attenuation_distance": 16
+   }
+  ]
+ },
+ "entity.hunter.death": {
+  "subtitle": "subtitles.office_rooms.hunter.death",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/hunter/death",
+    "attenuation_distance": 32
+   }
+  ]
+ },
+ "entity.flayed.scream": {
+  "category": "hostile",
+  "subtitle": "subtitles.office_rooms.flayed.scream",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/flayed/scream1",
+    "attenuation_distance": 160
+   },
+   {
+    "name": "office_rooms:entity/flayed/scream2",
+    "attenuation_distance": 160
+   },
+   {
+    "name": "office_rooms:entity/flayed/scream3",
+    "attenuation_distance": 160
+   }
+  ]
+ },
+ "entity.flayed.ambient": {
+  "category": "hostile",
+  "subtitle": "subtitles.office_rooms.flayed.ambient",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/flayed/ambient1",
+    "attenuation_distance": 24
+   },
+   {
+    "name": "office_rooms:entity/flayed/ambient1",
+    "attenuation_distance": 24,
+    "pitch": 0.9
+   },
+   {
+    "name": "office_rooms:entity/flayed/ambient2",
+    "attenuation_distance": 24
+   },
+   {
+    "name": "office_rooms:entity/flayed/ambient2",
+    "attenuation_distance": 24,
+    "pitch": 0.9
+   }
+  ]
+ },
+ "entity.flayed.hurt": {
+  "category": "hostile",
+  "subtitle": "subtitles.office_rooms.flayed.hurt",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/flayed/hurt1",
+    "attenuation_distance": 24
+   },
+   {
+    "name": "office_rooms:entity/flayed/hurt2",
+    "attenuation_distance": 24
+   },
+   {
+    "name": "office_rooms:entity/flayed/hurt3",
+    "attenuation_distance": 24
+   }
+  ]
+ },
+ "entity.flayed.death": {
+  "category": "hostile",
+  "subtitle": "subtitles.office_rooms.flayed.death",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/flayed/death",
+    "attenuation_distance": 32
+   }
+  ]
+ },
+ "entity.flayed.falter": {
+  "category": "hostile",
+  "subtitle": "subtitles.office_rooms.flayed.falter",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/flayed/falter",
+    "attenuation_distance": 24
+   }
+  ]
+ },
+ "entity.flayed.step": {
+  "category": "hostile",
+  "subtitle": "subtitles.office_rooms.flayed.step",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/flayed/step1",
+    "attenuation_distance": 16
+   },
+   {
+    "name": "office_rooms:entity/flayed/step2",
+    "attenuation_distance": 16
+   }
+  ]
+ },
+ "entity.partygoer.giggle": {
+  "category": "hostile",
+  "subtitle": "subtitles.office_rooms.partygoer.giggle",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/partygoer/giggle1",
+    "attenuation_distance": 24
+   },
+   {
+    "name": "office_rooms:entity/partygoer/giggle2",
+    "attenuation_distance": 24
+   }
+  ]
+ },
+ "entity.partygoer.horn": {
+  "category": "hostile",
+  "subtitle": "subtitles.office_rooms.partygoer.horn",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/partygoer/horn",
+    "attenuation_distance": 32
+   }
+  ]
+ },
+ "entity.partygoer.laugh": {
+  "category": "hostile",
+  "subtitle": "subtitles.office_rooms.partygoer.laugh",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/partygoer/laugh",
+    "attenuation_distance": 32
+   }
+  ]
+ },
+ "entity.partygoer.hurt": {
+  "category": "hostile",
+  "subtitle": "subtitles.office_rooms.partygoer.hurt",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/partygoer/hurt1",
+    "attenuation_distance": 16
+   },
+   {
+    "name": "office_rooms:entity/partygoer/hurt2",
+    "attenuation_distance": 16
+   }
+  ]
+ },
+ "entity.partygoer.death": {
+  "category": "hostile",
+  "subtitle": "subtitles.office_rooms.partygoer.death",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/partygoer/death",
+    "attenuation_distance": 16
+   }
+  ]
+ },
+ "entity.wolfspider.step": {
+  "category": "hostile",
+  "subtitle": "subtitles.office_rooms.wolfspider.step",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/wolfspider/step1",
+    "attenuation_distance": 10
+   },
+   {
+    "name": "office_rooms:entity/wolfspider/step2",
+    "attenuation_distance": 10
+   },
+   {
+    "name": "office_rooms:entity/wolfspider/step3",
+    "attenuation_distance": 10
+   }
+  ]
+ },
+ "entity.wolfspider.attack": {
+  "category": "hostile",
+  "subtitle": "subtitles.office_rooms.wolfspider.attack",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/wolfspider/attack1",
+    "attenuation_distance": 16
+   },
+   {
+    "name": "office_rooms:entity/wolfspider/attack2",
+    "attenuation_distance": 16
+   }
+  ]
+ },
+ "entity.hunter.step": {
+  "category": "hostile",
+  "subtitle": "subtitles.office_rooms.hunter.step",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/hunter/step1",
+    "attenuation_distance": 16
+   },
+   {
+    "name": "office_rooms:entity/hunter/step2",
+    "attenuation_distance": 16
+   }
+  ]
+ },
+ "entity.gaunt.step": {
+  "category": "hostile",
+  "subtitle": "subtitles.office_rooms.gaunt.step",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/gaunt/step1",
+    "attenuation_distance": 10
+   },
+   {
+    "name": "office_rooms:entity/gaunt/step2",
+    "attenuation_distance": 10
+   }
+  ]
+ },
+ "entity.flayed.tear": {
+  "category": "hostile",
+  "subtitle": "subtitles.office_rooms.flayed.tear",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/flayed/tear1",
+    "attenuation_distance": 24
+   },
+   {
+    "name": "office_rooms:entity/flayed/tear2",
+    "attenuation_distance": 24
+   }
+  ]
+ },
+ "ambient.liminal.buzz": {
+  "category": "ambient",
+  "subtitle": "subtitles.office_rooms.amb.liminal.buzz",
+  "sounds": [
+   {
+    "name": "office_rooms:ambient/liminal/buzz1",
+    "attenuation_distance": 16
+   },
+   {
+    "name": "office_rooms:ambient/liminal/buzz2",
+    "attenuation_distance": 16
+   },
+   {
+    "name": "office_rooms:ambient/liminal/buzz3",
+    "attenuation_distance": 16
+   }
+  ]
+ },
+ "ambient.liminal.vent": {
+  "category": "ambient",
+  "subtitle": "subtitles.office_rooms.amb.liminal.vent",
+  "sounds": [
+   {
+    "name": "office_rooms:ambient/liminal/vent1",
+    "attenuation_distance": 24
+   },
+   {
+    "name": "office_rooms:ambient/liminal/vent2",
+    "attenuation_distance": 24
+   }
+  ]
+ },
+ "ambient.liminal.pipe": {
+  "category": "ambient",
+  "subtitle": "subtitles.office_rooms.amb.liminal.pipe",
+  "sounds": [
+   {
+    "name": "office_rooms:ambient/liminal/pipe1",
+    "attenuation_distance": 32
+   },
+   {
+    "name": "office_rooms:ambient/liminal/pipe2",
+    "attenuation_distance": 32
+   },
+   {
+    "name": "office_rooms:ambient/liminal/pipe3",
+    "attenuation_distance": 32
+   }
+  ]
+ },
+ "ambient.liminal.distant": {
+  "category": "ambient",
+  "subtitle": "subtitles.office_rooms.amb.liminal.distant",
+  "sounds": [
+   {
+    "name": "office_rooms:ambient/liminal/distant1",
+    "attenuation_distance": 64
+   },
+   {
+    "name": "office_rooms:ambient/liminal/distant2",
+    "attenuation_distance": 64
+   },
+   {
+    "name": "office_rooms:ambient/liminal/distant3",
+    "attenuation_distance": 64
+   }
+  ]
+ },
+ "ambient.industrial.machine": {
+  "category": "ambient",
+  "subtitle": "subtitles.office_rooms.amb.industrial.machine",
+  "sounds": [
+   {
+    "name": "office_rooms:ambient/industrial/machine1",
+    "attenuation_distance": 28
+   },
+   {
+    "name": "office_rooms:ambient/industrial/machine2",
+    "attenuation_distance": 28
+   }
+  ]
+ },
+ "ambient.industrial.steam": {
+  "category": "ambient",
+  "subtitle": "subtitles.office_rooms.amb.industrial.steam",
+  "sounds": [
+   {
+    "name": "office_rooms:ambient/industrial/steam",
+    "attenuation_distance": 20
+   }
+  ]
+ },
+ "ambient.lab.hum": {
+  "category": "ambient",
+  "subtitle": "subtitles.office_rooms.amb.lab.hum",
+  "sounds": [
+   {
+    "name": "office_rooms:ambient/lab/hum1",
+    "attenuation_distance": 16
+   },
+   {
+    "name": "office_rooms:ambient/lab/hum2",
+    "attenuation_distance": 16
+   },
+   {
+    "name": "office_rooms:ambient/lab/hum3",
+    "attenuation_distance": 16
+   }
+  ]
+ },
+ "ambient.hotel.far": {
+  "category": "ambient",
+  "subtitle": "subtitles.office_rooms.amb.hotel.far",
+  "sounds": [
+   {
+    "name": "office_rooms:ambient/hotel/far1",
+    "attenuation_distance": 40
+   },
+   {
+    "name": "office_rooms:ambient/hotel/far2",
+    "attenuation_distance": 40
+   },
+   {
+    "name": "office_rooms:ambient/hotel/far3",
+    "attenuation_distance": 40
+   }
+  ]
+ },
+ "ambient.fun.party": {
+  "category": "ambient",
+  "subtitle": "subtitles.office_rooms.amb.fun.party",
+  "sounds": [
+   {
+    "name": "office_rooms:ambient/fun/party1",
+    "attenuation_distance": 40
+   },
+   {
+    "name": "office_rooms:ambient/fun/party2",
+    "attenuation_distance": 40
+   }
+  ]
+ },
+ "ambient.fun.musicbox": {
+  "category": "ambient",
+  "subtitle": "subtitles.office_rooms.amb.fun.musicbox",
+  "sounds": [
+   {
+    "name": "office_rooms:ambient/fun/musicbox",
+    "attenuation_distance": 24
+   }
+  ]
+ },
+ "ambient.pool.distant": {
+  "category": "ambient",
+  "subtitle": "subtitles.office_rooms.amb.pool.distant",
+  "sounds": [
+   {
+    "name": "office_rooms:ambient/pool/distant",
+    "attenuation_distance": 64
+   }
+  ]
+ },
+ "entity.unknown.roar": {
+  "sounds": [
+   {
+    "name": "office_rooms:entity/unknown/roar1",
+    "attenuation_distance": 96
+   },
+   {
+    "name": "office_rooms:entity/unknown/roar2",
+    "attenuation_distance": 96
+   },
+   {
+    "name": "office_rooms:entity/unknown/roar3",
+    "attenuation_distance": 96
+   }
+  ],
+  "subtitle": "subtitles.office_rooms.entity.unknown.roar"
+ },
+ "entity.unknown.hurt": {
+  "sounds": [
+   {
+    "name": "office_rooms:entity/unknown/hurt1",
+    "attenuation_distance": 48
+   },
+   {
+    "name": "office_rooms:entity/unknown/hurt2",
+    "attenuation_distance": 48
+   }
+  ],
+  "subtitle": "subtitles.office_rooms.entity.unknown.hurt"
+ },
+ "entity.unknown.death": {
+  "sounds": [
+   {
+    "name": "office_rooms:entity/unknown/death",
+    "attenuation_distance": 128
+   }
+  ],
+  "subtitle": "subtitles.office_rooms.entity.unknown.death"
+ },
+ "entity.unknown.burrow": {
+  "sounds": [
+   {
+    "name": "office_rooms:entity/unknown/burrow1",
+    "attenuation_distance": 40
+   },
+   {
+    "name": "office_rooms:entity/unknown/burrow2",
+    "attenuation_distance": 40
+   },
+   {
+    "name": "office_rooms:entity/unknown/burrow3",
+    "attenuation_distance": 40
+   }
+  ],
+  "subtitle": "subtitles.office_rooms.entity.unknown.burrow"
+ },
+ "entity.unknown.emerge": {
+  "sounds": [
+   {
+    "name": "office_rooms:entity/unknown/emerge1",
+    "attenuation_distance": 80
+   },
+   {
+    "name": "office_rooms:entity/unknown/emerge2",
+    "attenuation_distance": 80
+   }
+  ],
+  "subtitle": "subtitles.office_rooms.entity.unknown.emerge"
+ },
+ "ambient.underside.quake": {
+  "sounds": [
+   {
+    "name": "office_rooms:ambient/underside/quake1",
+    "attenuation_distance": 96
+   },
+   {
+    "name": "office_rooms:ambient/underside/quake2",
+    "attenuation_distance": 96
+   }
+  ],
+  "subtitle": "subtitles.office_rooms.ambient.underside.quake"
+ },
+ "ambient.underside.wind": {
+  "sounds": [
+   {
+    "name": "office_rooms:ambient/underside/wind",
+    "stream": true
+   }
+  ]
+ },
+ "item.underside_key.use": {
+  "sounds": [
+   {
+    "name": "office_rooms:item/underside_key_use",
+    "attenuation_distance": 48
+   }
+  ],
+  "subtitle": "subtitles.office_rooms.item.underside_key.use"
+ },
+ "item.noclip_sword.on": {
+  "sounds": [
+   {
+    "name": "office_rooms:item/noclip_on",
+    "attenuation_distance": 16
+   }
+  ],
+  "subtitle": "subtitles.office_rooms.item.noclip_sword.on"
+ },
+ "item.noclip_sword.off": {
+  "sounds": [
+   {
+    "name": "office_rooms:item/noclip_off",
+    "attenuation_distance": 16
+   }
+  ],
+  "subtitle": "subtitles.office_rooms.item.noclip_sword.off"
+ },
+ "block.outpost.lever": {
+  "sounds": [
+   {
+    "name": "office_rooms:block/outpost/lever",
+    "attenuation_distance": 24
+   }
+  ],
+  "subtitle": "subtitles.office_rooms.block.outpost.lever"
+ },
+ "block.outpost.power_on": {
+  "sounds": [
+   {
+    "name": "office_rooms:block/outpost/power_on",
+    "attenuation_distance": 48
+   }
+  ],
+  "subtitle": "subtitles.office_rooms.block.outpost.power_on"
+ },
+ "block.outpost.power_off": {
+  "sounds": [
+   {
+    "name": "office_rooms:block/outpost/power_off",
+    "attenuation_distance": 48
+   }
+  ],
+  "subtitle": "subtitles.office_rooms.block.outpost.power_off"
+ },
+ "block.outpost.alarm": {
+  "sounds": [
+   {
+    "name": "office_rooms:block/outpost/alarm",
+    "attenuation_distance": 64
+   }
+  ],
+  "subtitle": "subtitles.office_rooms.block.outpost.alarm"
+ },
+ "block.outpost.beep": {
+  "sounds": [
+   {
+    "name": "office_rooms:block/outpost/beep1",
+    "attenuation_distance": 16
+   },
+   {
+    "name": "office_rooms:block/outpost/beep2",
+    "attenuation_distance": 16
+   }
+  ],
+  "subtitle": "subtitles.office_rooms.block.outpost.beep"
+ },
+ "block.outpost.spark": {
+  "sounds": [
+   {
+    "name": "office_rooms:block/outpost/spark1",
+    "attenuation_distance": 24
+   },
+   {
+    "name": "office_rooms:block/outpost/spark2",
+    "attenuation_distance": 24
+   },
+   {
+    "name": "office_rooms:block/outpost/spark3",
+    "attenuation_distance": 24
+   }
+  ],
+  "subtitle": "subtitles.office_rooms.block.outpost.spark"
+ },
+ "block.outpost.button": {
+  "sounds": [
+   {
+    "name": "office_rooms:block/outpost/button",
+    "attenuation_distance": 16
+   }
+  ],
+  "subtitle": "subtitles.office_rooms.block.outpost.button"
+ },
+ "block.gateway.charge": {
+  "sounds": [
+   {
+    "name": "office_rooms:block/gateway/charge",
+    "attenuation_distance": 64
+   }
+  ],
+  "subtitle": "subtitles.office_rooms.block.gateway.charge"
+ },
+ "block.gateway.open": {
+  "sounds": [
+   {
+    "name": "office_rooms:block/gateway/open",
+    "attenuation_distance": 96
+   }
+  ],
+  "subtitle": "subtitles.office_rooms.block.gateway.open"
+ },
+ "block.gateway.hum": {
+  "sounds": [
+   {
+    "name": "office_rooms:block/gateway/hum",
+    "attenuation_distance": 24
+   }
+  ],
+  "subtitle": "subtitles.office_rooms.block.gateway.hum"
+ },
+ "entity.deathmoth.idle": {
+  "category": "hostile",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/deathmoth/idle1",
+    "attenuation_distance": 8,
+    "volume": 0.6
+   },
+   {
+    "name": "office_rooms:entity/deathmoth/idle2",
+    "attenuation_distance": 8,
+    "volume": 0.6
+   },
+   {
+    "name": "office_rooms:entity/deathmoth/idle3",
+    "attenuation_distance": 8,
+    "volume": 0.6
+   }
+  ],
+  "subtitle": "subtitles.office_rooms.entity.deathmoth.idle"
+ },
+ "entity.deathmoth.trigger": {
+  "category": "hostile",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/deathmoth/trigger",
+    "attenuation_distance": 24,
+    "volume": 1.0
+   }
+  ],
+  "subtitle": "subtitles.office_rooms.entity.deathmoth.trigger"
+ },
+ "entity.deathmoth.flap": {
+  "category": "hostile",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/deathmoth/flap1",
+    "attenuation_distance": 16,
+    "volume": 0.8
+   },
+   {
+    "name": "office_rooms:entity/deathmoth/flap2",
+    "attenuation_distance": 16,
+    "volume": 0.8
+   }
+  ],
+  "subtitle": "subtitles.office_rooms.entity.deathmoth.flap"
+ },
+ "entity.deathmoth.attack": {
+  "category": "hostile",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/deathmoth/attack1",
+    "attenuation_distance": 16,
+    "volume": 1.0
+   },
+   {
+    "name": "office_rooms:entity/deathmoth/attack2",
+    "attenuation_distance": 16,
+    "volume": 1.0
+   }
+  ],
+  "subtitle": "subtitles.office_rooms.entity.deathmoth.attack"
+ },
+ "entity.deathmoth.hurt": {
+  "category": "hostile",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/deathmoth/hurt",
+    "attenuation_distance": 16,
+    "volume": 1.0
+   }
+  ],
+  "subtitle": "subtitles.office_rooms.entity.deathmoth.hurt"
+ },
+ "entity.deathmoth.death": {
+  "category": "hostile",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/deathmoth/death",
+    "attenuation_distance": 16,
+    "volume": 1.0
+   }
+  ],
+  "subtitle": "subtitles.office_rooms.entity.deathmoth.death"
+ },
+ "music.level_fun": {
+  "category": "music",
+  "sounds": [
+   {
+    "name": "office_rooms:music/level_fun",
+    "stream": true,
+    "volume": 1.0
+   }
+  ]
+ },
+ "entity.flayed.hunt_loop": {
+  "category": "hostile",
+  "subtitle": "subtitles.office_rooms.flayed.scream",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/flayed/hunt_loop",
+    "attenuation_distance": 96
+   }
+  ]
+ },
+ "entity.hound.hunt_loop": {
+  "category": "hostile",
+  "subtitle": "subtitles.office_rooms.hound.bark",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/hound/hunt_loop",
+    "attenuation_distance": 48
+   }
+  ]
+ },
+ "block.cinema.projector": {
+  "category": "block",
+  "subtitle": "subtitles.office_rooms.cinema.projector",
+  "sounds": [
+   {
+    "name": "office_rooms:block/cinema/projector1",
+    "attenuation_distance": 24
+   },
+   {
+    "name": "office_rooms:block/cinema/projector2",
+    "attenuation_distance": 24
+   }
+  ]
+ },
+ "entity.aranea_membri.screech": {
+  "category": "hostile",
+  "subtitle": "subtitles.office_rooms.aranea_membri.screech",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/aranea_membri/screech1",
+    "attenuation_distance": 64
+   },
+   {
+    "name": "office_rooms:entity/aranea_membri/screech2",
+    "attenuation_distance": 64
+   }
+  ]
+ },
+ "entity.aranea_membri.scratch": {
+  "category": "hostile",
+  "subtitle": "subtitles.office_rooms.aranea_membri.scratch",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/aranea_membri/scratch1",
+    "attenuation_distance": 20
+   },
+   {
+    "name": "office_rooms:entity/aranea_membri/scratch2",
+    "attenuation_distance": 20
+   },
+   {
+    "name": "office_rooms:entity/aranea_membri/scratch3",
+    "attenuation_distance": 20
+   }
+  ]
+ },
+ "entity.aranea_membri.ambient": {
+  "category": "hostile",
+  "subtitle": "subtitles.office_rooms.aranea_membri.ambient",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/aranea_membri/ambient1",
+    "attenuation_distance": 16
+   },
+   {
+    "name": "office_rooms:entity/aranea_membri/ambient2",
+    "attenuation_distance": 16
+   }
+  ]
+ },
+ "entity.aranea_membri.hurt": {
+  "category": "hostile",
+  "subtitle": "subtitles.office_rooms.aranea_membri.hurt",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/aranea_membri/hurt1",
+    "attenuation_distance": 16
+   },
+   {
+    "name": "office_rooms:entity/aranea_membri/hurt2",
+    "attenuation_distance": 16
+   },
+   {
+    "name": "office_rooms:entity/aranea_membri/hurt3",
+    "attenuation_distance": 16
+   }
+  ]
+ },
+ "entity.aranea_membri.death": {
+  "category": "hostile",
+  "subtitle": "subtitles.office_rooms.aranea_membri.death",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/aranea_membri/death",
+    "attenuation_distance": 32
+   }
+  ]
+ },
+ "entity.aranea_membri.step": {
+  "category": "hostile",
+  "subtitle": "subtitles.office_rooms.aranea_membri.step",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/aranea_membri/step1",
+    "attenuation_distance": 16
+   },
+   {
+    "name": "office_rooms:entity/aranea_membri/step2",
+    "attenuation_distance": 16
+   }
+  ]
+ },
+ "block.slide.rush": {
+  "category": "player",
+  "subtitle": "subtitles.office_rooms.slide.rush",
+  "sounds": [
+   "office_rooms:block/slide/rush"
+  ]
+ },
+ "block.slide.splash": {
+  "category": "player",
+  "subtitle": "subtitles.office_rooms.slide.splash",
+  "sounds": [
+   "office_rooms:block/slide/splash"
+  ]
+ },
+ "entity.mascot.squeak": {
+  "category": "hostile",
+  "subtitle": "subtitles.office_rooms.mascot.squeak",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/mascot/squeak1",
+    "attenuation_distance": 20
+   },
+   {
+    "name": "office_rooms:entity/mascot/squeak2",
+    "attenuation_distance": 20
+   },
+   {
+    "name": "office_rooms:entity/mascot/squeak3",
+    "attenuation_distance": 20
+   }
+  ]
+ },
+ "entity.mascot.giggle": {
+  "category": "hostile",
+  "subtitle": "subtitles.office_rooms.mascot.giggle",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/mascot/giggle1",
+    "attenuation_distance": 32
+   },
+   {
+    "name": "office_rooms:entity/mascot/giggle2",
+    "attenuation_distance": 32
+   }
+  ]
+ },
+ "entity.mascot.honk": {
+  "category": "hostile",
+  "subtitle": "subtitles.office_rooms.mascot.honk",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/mascot/honk",
+    "attenuation_distance": 48
+   }
+  ]
+ },
+ "entity.mascot.hurt": {
+  "category": "hostile",
+  "subtitle": "subtitles.office_rooms.mascot.hurt",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/mascot/hurt1",
+    "attenuation_distance": 16
+   },
+   {
+    "name": "office_rooms:entity/mascot/hurt2",
+    "attenuation_distance": 16
+   }
+  ]
+ },
+ "entity.mascot.death": {
+  "category": "hostile",
+  "subtitle": "subtitles.office_rooms.mascot.death",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/mascot/death",
+    "attenuation_distance": 24
+   }
+  ]
+ },
+ "entity.mascot.step": {
+  "category": "hostile",
+  "subtitle": "subtitles.office_rooms.mascot.step",
+  "sounds": [
+   {
+    "name": "office_rooms:entity/mascot/step1",
+    "attenuation_distance": 12
+   },
+   {
+    "name": "office_rooms:entity/mascot/step2",
+    "attenuation_distance": 12
+   }
+  ]
+ },
+ "ambient.ship.horn": {
+  "category": "ambient",
+  "subtitle": "subtitles.office_rooms.ship.horn",
+  "sounds": [
+   {
+    "name": "office_rooms:ambient/ship/horn",
+    "attenuation_distance": 96
+   }
+  ]
+ },
+ "ambient.ship.hull": {
+  "category": "ambient",
+  "subtitle": "subtitles.office_rooms.ship.hull",
+  "sounds": [
+   {
+    "name": "office_rooms:ambient/ship/hull",
+    "attenuation_distance": 16,
+    "stream": true
+   }
+  ]
+ },
+ "block.ship_lifeboat.drop": {
+  "category": "blocks",
+  "subtitle": "subtitles.office_rooms.ship_lifeboat.drop",
+  "sounds": [
+   {
+    "name": "office_rooms:block/ship/lifeboat",
+    "attenuation_distance": 32
+   }
+  ]
+ }
 }

@@ -54,7 +54,7 @@ public final class Milestones {
                     int uz = Math.floorDiv(p.getBlockZ() - rz * pl.regionBlocks, pl.unit);
                     de.officerooms.special.SpecialType t = de.officerooms.special.SpecialRooms.at(pl, rx, rz, pl.storeyOf(p.getBlockY()), ux, uz);
                     switch (t) {
-                        case COLD_STORAGE, LAST_MEETING, MAIL_ROOM, RAIN_ROOM, CANTEEN, ARCADE -> grant(p, "room_" + t.id);
+                        case COLD_STORAGE, LAST_MEETING, MAIL_ROOM, RAIN_ROOM, CANTEEN, ARCADE, DEPARTURE_GATE -> grant(p, "room_" + t.id);
                         default -> {
                         }
                     }

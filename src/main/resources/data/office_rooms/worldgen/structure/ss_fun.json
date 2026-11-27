@@ -1,0 +1,7 @@
+{
+ "type": "office_rooms:ss_fun",
+ "biomes": "#office_rooms:has_structure/ss_fun",
+ "step": "surface_structures",
+ "spawn_overrides": {},
+ "terrain_adaptation": "none"
+}

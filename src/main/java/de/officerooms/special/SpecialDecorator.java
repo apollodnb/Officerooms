@@ -421,6 +421,7 @@ public final class SpecialDecorator {
                 case RAIN_ROOM -> rainRoom();
                 case CANTEEN -> canteen();
                 case ARCADE -> arcade();
+                case DEPARTURE_GATE -> gate();
                 default -> {
                 }
             }
@@ -638,6 +639,75 @@ public final class SpecialDecorator {
             for (int[] w : shuffledWalls()) {
                 if (claim(w)) {
                     loot(g.wx(w[0]), floorY, g.wz(w[1]), facing(Blocks.CHEST, into(w[2])), "canteen");
+                    break;
+                }
+            }
+        }
+
+        /**
+         * 0.42.0: departure gate. Terminal carpet, rows of seats, a desk, a board that says the ship is boarding, a window
+         * full of fog and the gate itself (right-click to board).
+         */
+        void gate() {
+            for (int[] t : tiles()) {
+                set(g.wx(t[0]), floorY - 1, g.wz(t[1]), de.officerooms.sea.ShipBlocks.TERMINAL_CARPET.get().defaultBlockState());
+            }
+            wallPairs(1, f -> de.officerooms.sea.ShipBlocks.f(de.officerooms.sea.ShipBlocks.BOARDING_GATE, f),
+                    f -> de.officerooms.sea.ShipBlocks.f(de.officerooms.sea.ShipBlocks.BOARDING_GATE_TOP, f));
+            // the departure board: three panels side by side on one wall
+            boolean board = false;
+            for (int[] w : shuffledWalls()) {
+                if (board) {
+                    break;
+                }
+                for (int[] step : new int[][]{{1, 0}, {0, 1}}) {
+                    int[] w2 = {w[0] + step[0], w[1] + step[1], w[2]}, w3 = {w[0] + 2 * step[0], w[1] + 2 * step[1], w[2]};
+                    if (wallSide(w2[0], w2[1]) == w[2] && wallSide(w3[0], w3[1]) == w[2] && claim(w, w2, w3)) {
+                        Direction f = into(w[2]);
+                        int[][] ws = {w, w2, w3};
+                        // panel 0 is on the viewer's left
+                        boolean leftFirst = f == Direction.SOUTH || f == Direction.WEST ? step[0] + step[1] > 0 == (f == Direction.WEST) : step[0] + step[1] < 0;
+                        for (int k = 0; k < 3; k++) {
+                            int part = (f == Direction.NORTH || f == Direction.EAST) ? 2 - k : k;
+                            setTile(ws[k][0], floorY + 1, ws[k][1], de.officerooms.sea.ShipBlocks.DEPARTURE_BOARD.get().defaultBlockState()
+                                    .setValue(de.officerooms.block.DecorBlock.FACING, f).setValue(de.officerooms.sea.ShipBlocks.Board.PART, part));
+                        }
+                        setTile(w2[0], floorY, w2[1], de.officerooms.sea.ShipBlocks.f(de.officerooms.sea.ShipBlocks.GATE_DESK, f));
+                        board = true;
+                        break;
+                    }
+                }
+            }
+            // fog in the windows: set into the wall itself, along the longest straight run
+            int windows = 0;
+            for (int[] w : shuffledWalls()) {
+                if (windows >= Math.max(4, g.gw() + g.gd())) {
+                    break;
+                }
+                if (wallSideCount(w[0], w[1]) > 1) {
+                    continue;
+                }
+                Direction out = into(w[2]).getOpposite();
+                int x = g.wx(w[0]) + out.getStepX(), z = g.wz(w[1]) + out.getStepZ();
+                if ((w[2] % 2) != 0) {
+                    continue;                                   // only the walls on one axis: a long window band
+                }
+                for (int k = 0; k < 2; k++) {
+                    set(x, floorY + k, z, de.officerooms.sea.ShipBlocks.TERMINAL_WINDOW.get().defaultBlockState());
+                }
+                windows++;
+            }
+            // rows of seats, back to back
+            for (int[] t : tiles()) {
+                if (free(t[0], t[1]) && t[0] >= 2 && t[0] < g.gw() - 2 && t[1] >= 2 && t[1] < g.gd() - 2 && t[1] % 3 != 0
+                        && t[0] != g.gw() / 2 && rng.chance(0.85)) {
+                    setTile(t[0], floorY, t[1], de.officerooms.sea.ShipBlocks.f(de.officerooms.sea.ShipBlocks.GATE_SEATS,
+                            t[1] % 3 == 1 ? Direction.NORTH : Direction.SOUTH));
+                }
+            }
+            for (int[] w : shuffledWalls()) {
+                if (claim(w)) {
+                    loot(g.wx(w[0]), floorY, g.wz(w[1]), facing(Blocks.CHEST, into(w[2])), "departure_gate");
                     break;
                 }
             }

@@ -6,7 +6,7 @@
 			width: 21.33d
 			height: 12.0d
 			rotation: 0.0d
-			image: "office_rooms:textures/gui/quests/atrium_2.png"
+			image: "office_rooms:textures/gui/quests/atrium_3.png"
 			color: 16777215
 			alpha: 150
 			order: -1
@@ -22,7 +22,7 @@
 	group: "2B674EAFE9EE221B"
 	icon: "office_rooms:electronic_component"
 	id: "6D12FD2157786EE4"
-	order_index: 10
+	order_index: 11
 	quest_links: [ ]
 	quests: [
 		{
@@ -273,5 +273,5 @@
 	subtitle: [
 		"Facilities takes trades (repeatable)"
 	]
-	title: "XI. Requisitions"
+	title: "XII. Requisitions"
 }

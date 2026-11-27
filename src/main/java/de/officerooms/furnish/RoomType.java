@@ -28,7 +28,8 @@ public enum RoomType {
     MAIL_ROOM("mail_room"),
     RAIN_ROOM("rain_room"),
     CANTEEN("canteen"),
-    ARCADE("arcade");
+    ARCADE("arcade"),
+    DEPARTURE_GATE("departure_gate");
 
     public final String id;
 
@@ -52,6 +53,7 @@ public enum RoomType {
             case RAIN_ROOM -> RAIN_ROOM;
             case CANTEEN -> CANTEEN;
             case ARCADE -> ARCADE;
+            case DEPARTURE_GATE -> DEPARTURE_GATE;
             default -> EMPTY;
         };
     }

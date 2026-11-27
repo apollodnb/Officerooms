@@ -201,8 +201,45 @@ public final class OfficeRoomsCommands {
                                 .suggests((c, b) -> net.minecraft.commands.SharedSuggestionProvider.suggest(
                                         java.util.stream.Stream.concat(java.util.Arrays.stream(de.officerooms.furnish.RoomType.values()).map(t -> t.id),
                                                 java.util.stream.Stream.concat(java.util.stream.Stream.of("poolrooms", "poolrooms_maze", "neighbourhood", "maze", "maze_vault", "hotel", "hotel_vault", "industrial", "level_fun", "cinema", "hideout", "elevator", "secure_storage",
-                                                        "fuse_box", "hazard_zone", "outpost", "shrine"), java.util.Arrays.stream(HIDEOUT_IDS))), b))
+                                                        "fuse_box", "hazard_zone", "outpost", "shrine", "ship"), java.util.Arrays.stream(HIDEOUT_IDS))), b))
                                 .executes(ctx -> gotoType(ctx, com.mojang.brigadier.arguments.StringArgumentType.getString(ctx, "type")))))
+                .then(Commands.literal("ship")                       // 0.42.0: SS Fun =)
+                        .then(Commands.literal("board").executes(ctx -> {
+                            ServerPlayer pl = ctx.getSource().getPlayerOrException();
+                            pl.setPortalCooldown(0);
+                            de.officerooms.sea.SeaEvents.board(pl, pl.blockPosition());
+                            return 1;
+                        }))
+                        .then(Commands.literal("lifeboat").executes(ctx -> {
+                            ServerPlayer pl = ctx.getSource().getPlayerOrException();
+                            pl.setPortalCooldown(0);
+                            de.officerooms.sea.SeaEvents.launch(pl, pl.blockPosition());
+                            return 1;
+                        }))
+                        .then(Commands.literal("info").executes(ctx -> {
+                            ServerPlayer pl = ctx.getSource().getPlayerOrException();
+                            long seed = de.officerooms.sea.SeaChunkGenerator.seedOf(pl.serverLevel());
+                            de.officerooms.sea.Ship sh = de.officerooms.sea.Ship.at(seed, pl.getBlockX(), pl.getBlockZ());
+                            if (sh == null) {
+                                return fail(ctx.getSource(), "Not on a ship.");
+                            }
+                            int dk = (pl.getBlockY() - de.officerooms.sea.Ship.fy(0)) / de.officerooms.sea.Ship.DH;
+                            int lx = sh.lx(pl.getBlockX()), lz = sh.lz(pl.getBlockZ());
+                            de.officerooms.sea.Ship.Room rm = sh.room(dk, lx, lz);
+                            say(ctx.getSource(), "ship cell " + sh.gx + " " + sh.gz + " origin " + sh.ox + " " + sh.oz + " flip " + sh.flip + " openCore " + sh.openCore
+                                    + " | deck " + dk + " lx " + lx + " lz " + lz + " code " + sh.code(dk, lx, lz) + (rm == null ? "" : " room " + rm.kind));
+                            return 1;
+                        }))
+                        .then(Commands.literal("mascot").executes(ctx -> {
+                            ServerPlayer pl = ctx.getSource().getPlayerOrException();
+                            int dk = (pl.getBlockY() - de.officerooms.sea.Ship.fy(0)) / de.officerooms.sea.Ship.DH;
+                            boolean ok = pl.serverLevel().dimension() == de.officerooms.sea.SeaEvents.LEVEL_KEY
+                                    && de.officerooms.sea.SeaEvents.spawnMascotNear(pl.serverLevel(), pl, dk);
+                            if (ok) {
+                                say(ctx.getSource(), "Something squeaks in the ceiling.");
+                            }
+                            return ok ? 1 : fail(ctx.getSource(), "No vent nearby (only on a ship).");
+                        })))
                 .then(Commands.literal("verify")
                         .executes(ctx -> verify(ctx, 1))
                         .then(Commands.argument("radius", IntegerArgumentType.integer(0, 6))
@@ -458,6 +495,24 @@ public final class OfficeRoomsCommands {
         if (java.util.List.of("fuse_box", "hazard_zone", "outpost", "shrine").contains(typeId)) {
             return gotoSpecial(ctx, typeId);
         }
+        if ("ship".equals(typeId)) {                          // 0.42.0: nearest SS Fun =) (from here when at sea)
+            CommandSourceStack src = ctx.getSource();
+            ServerPlayer player = src.getPlayerOrException();
+            ServerLevel sea = src.getServer().getLevel(de.officerooms.sea.SeaEvents.LEVEL_KEY);
+            if (sea == null) {
+                return fail(src, "The sea dimension is missing.");
+            }
+            long seed = de.officerooms.sea.SeaChunkGenerator.seedOf(sea);
+            de.officerooms.sea.Ship sh = player.level() == sea ? de.officerooms.sea.Ship.nearest(seed, player.getBlockX(), player.getBlockZ(), 2)
+                    : de.officerooms.sea.SeaEvents.shipFor(seed, player.getBlockX(), player.getBlockZ());
+            if (sh == null) {
+                return fail(src, "No ship nearby.");
+            }
+            int[] e = sh.embark();
+            player.teleportTo(sea, e[0] + 0.5, e[1], e[2] + 0.5, player.getYRot(), player.getXRot());
+            say(src, "SS Fun =) embarkation lobby at " + e[0] + " " + e[1] + " " + e[2]);
+            return 1;
+        }
         if ("atrium".equals(typeId)) {
             return window(ctx, 0); // Atrien: über ein Fenster ansteuern (die Raumsuche schließt sie aus)
         }
@@ -641,13 +696,40 @@ public final class OfficeRoomsCommands {
     private static final java.util.List<String> LOCATE_TYPES = java.util.List.of("all", "poolrooms", "neighbourhood", "maze",
             "maze_vault", "hotel", "hotel_vault", "industrial", "level_fun", "cinema", "elevator", "secure_storage", "hideout", "villager_outpost", "lush_cave", "water_office", "sculk_office", "abandoned_camp", "oasis", "exit_room",
             "maintenance_room", "supply_closet", "forgotten_break_room", "security_office", "research_lab", "concealed_room",
-            "cold_storage", "last_meeting", "mail_room", "rain_room", "canteen", "arcade", "outpost", "shrine");
+            "cold_storage", "last_meeting", "mail_room", "rain_room", "canteen", "arcade", "departure_gate", "outpost", "shrine", "ship");
 
     private record Hit(String what, int x, int y, int z, int storey, double dist) {
     }
 
     private static int locate(CommandContext<CommandSourceStack> ctx, String typeId) {
         CommandSourceStack src = ctx.getSource();
+        if (typeId.equals("ship")) {                  // 0.42.0: the nearest ships of the sea dimension
+            ServerLevel sea = src.getServer().getLevel(de.officerooms.sea.SeaEvents.LEVEL_KEY);
+            if (sea == null) {
+                return fail(src, "The sea dimension is missing.");
+            }
+            long seed = de.officerooms.sea.SeaChunkGenerator.seedOf(sea);
+            BlockPos from = src.getLevel() == sea ? BlockPos.containing(src.getPosition()) : BlockPos.ZERO;
+            int n = 0;
+            for (int dx = -2; dx <= 2; dx++) {
+                for (int dz = -2; dz <= 2; dz++) {
+                    de.officerooms.sea.Ship sh = de.officerooms.sea.Ship.of(seed, Math.floorDiv(from.getX(), de.officerooms.sea.Ship.CELL) + dx,
+                            Math.floorDiv(from.getZ(), de.officerooms.sea.Ship.CELL) + dz);
+                    if (sh != null) {
+                        int[] e = sh.embark();
+                        if (n++ < 8) {
+                            say(src, "  SS Fun =): " + e[0] + " " + e[1] + " " + e[2] + "  (" + Math.round(Math.hypot(e[0] - from.getX(), e[2] - from.getZ()))
+                                    + " blocks, in office_rooms:the_sea)");
+                        }
+                    }
+                }
+            }
+            if (n == 0) {
+                return fail(src, "No ship in the 5 x 5 cells around you.");
+            }
+            say(src, "Board one through a departure gate in the Office Rooms, or with /officerooms goto ship.");
+            return n;
+        }
         if (typeId.equals("outpost")) {               // 0.41.0: research outposts generated so far (all dimensions)
             java.util.List<String> lines = new java.util.ArrayList<>();
             java.util.List<Double> dist = new java.util.ArrayList<>();
@@ -697,7 +779,7 @@ public final class OfficeRoomsCommands {
         OfficePlanner p = s.planner();
         BlockPos from = src.getLevel() == level ? BlockPos.containing(src.getPosition()) : BlockPos.ZERO;
         boolean all = typeId.equals("all");
-        java.util.List<String> types = all ? LOCATE_TYPES.subList(1, LOCATE_TYPES.size() - 2) : java.util.List.of(typeId);
+        java.util.List<String> types = all ? LOCATE_TYPES.subList(1, LOCATE_TYPES.size() - 3) : java.util.List.of(typeId);
         say(src, "Office Rooms locate (from " + from.getX() + " " + from.getY() + " " + from.getZ() + "):");
         int total = 0;
         for (String t : types) {

@@ -1,0 +1,10 @@
+{
+ "type": "office_rooms:the_sea",
+ "generator": {
+  "type": "office_rooms:the_sea",
+  "biome_source": {
+   "type": "minecraft:fixed",
+   "biome": "office_rooms:the_sea"
+  }
+ }
+}

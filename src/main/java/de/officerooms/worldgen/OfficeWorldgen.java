@@ -22,6 +22,7 @@ public final class OfficeWorldgen {
     static {
         CHUNK_GENERATORS.register("underside", () -> de.officerooms.underside.UndersideChunkGenerator.CODEC);
         CHUNK_GENERATORS.register("level_0", () -> de.officerooms.level0.Level0ChunkGenerator.CODEC);
+        CHUNK_GENERATORS.register("the_sea", () -> de.officerooms.sea.SeaChunkGenerator.CODEC);
     }
 
     private OfficeWorldgen() {

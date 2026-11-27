@@ -1,0 +1,94 @@
+{
+ "type": "minecraft:chest",
+ "pools": [
+  {
+   "rolls": {
+    "type": "minecraft:uniform",
+    "min": 3,
+    "max": 6
+   },
+   "entries": [
+    {
+     "type": "minecraft:item",
+     "name": "office_rooms:office_coin",
+     "weight": 5,
+     "functions": [
+      {
+       "function": "minecraft:set_count",
+       "count": {
+        "type": "minecraft:uniform",
+        "min": 2,
+        "max": 6
+       }
+      }
+     ]
+    },
+    {
+     "type": "minecraft:item",
+     "name": "office_rooms:research_file",
+     "weight": 3
+    },
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:gold_ingot",
+     "weight": 3,
+     "functions": [
+      {
+       "function": "minecraft:set_count",
+       "count": {
+        "type": "minecraft:uniform",
+        "min": 1,
+        "max": 3
+       }
+      }
+     ]
+    },
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:diamond",
+     "weight": 1
+    },
+    {
+     "type": "minecraft:item",
+     "name": "office_rooms:almond_water",
+     "weight": 3,
+     "functions": [
+      {
+       "function": "minecraft:set_count",
+       "count": {
+        "type": "minecraft:uniform",
+        "min": 1,
+        "max": 2
+       }
+      }
+     ]
+    },
+    {
+     "type": "minecraft:item",
+     "name": "office_rooms:bandage",
+     "weight": 3
+    },
+    {
+     "type": "minecraft:item",
+     "name": "office_rooms:master_key",
+     "weight": 1
+    },
+    {
+     "type": "minecraft:item",
+     "name": "office_rooms:portable_battery",
+     "weight": 2
+    },
+    {
+     "type": "minecraft:item",
+     "name": "office_rooms:industrial_flashlight",
+     "weight": 1
+    },
+    {
+     "type": "minecraft:item",
+     "name": "office_rooms:totem_of_mercy",
+     "weight": 1
+    }
+   ]
+  }
+ ]
+}

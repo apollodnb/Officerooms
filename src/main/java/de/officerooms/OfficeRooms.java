@@ -38,6 +38,7 @@ public final class OfficeRooms {
         de.officerooms.megastructure.PoolBlocks.init();
         de.officerooms.block.RoomDecorBlocks.init();
         de.officerooms.block.CuriosityBlocks.init();
+        de.officerooms.sea.ShipBlocks.init();
         de.officerooms.item.ModItems.register(modEventBus);
         de.officerooms.research.ModMenus.register(modEventBus);
         de.officerooms.research.ResearchUpgrades.register();
@@ -57,6 +58,7 @@ public final class OfficeRooms {
         de.officerooms.world.Elevators.register();
         de.officerooms.world.ElevatorRides.register();
         de.officerooms.world.SlideTravel.register();
+        de.officerooms.sea.SeaEvents.register();
         de.officerooms.world.OfficeSleep.register();
         de.officerooms.world.ToolEffects.register();
         de.officerooms.item.TotemOfMercyItem.register();

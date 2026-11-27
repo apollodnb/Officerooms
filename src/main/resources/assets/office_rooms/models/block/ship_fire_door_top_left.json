@@ -1,0 +1,8 @@
+{
+ "parent": "minecraft:block/door_top_left",
+ "textures": {
+  "bottom": "office_rooms:block/ship_fire_door_bottom",
+  "top": "office_rooms:block/ship_fire_door_top"
+ },
+ "render_type": "minecraft:cutout"
+}

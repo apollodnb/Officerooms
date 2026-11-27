@@ -1,0 +1,48 @@
+{
+ "multipart": [
+  {
+   "apply": {
+    "model": "office_rooms:block/ship_railing_post"
+   }
+  },
+  {
+   "when": {
+    "north": "true"
+   },
+   "apply": {
+    "model": "office_rooms:block/ship_railing_side",
+    "uvlock": true
+   }
+  },
+  {
+   "when": {
+    "east": "true"
+   },
+   "apply": {
+    "model": "office_rooms:block/ship_railing_side",
+    "uvlock": true,
+    "y": 90
+   }
+  },
+  {
+   "when": {
+    "south": "true"
+   },
+   "apply": {
+    "model": "office_rooms:block/ship_railing_side",
+    "uvlock": true,
+    "y": 180
+   }
+  },
+  {
+   "when": {
+    "west": "true"
+   },
+   "apply": {
+    "model": "office_rooms:block/ship_railing_side",
+    "uvlock": true,
+    "y": 270
+   }
+  }
+ ]
+}

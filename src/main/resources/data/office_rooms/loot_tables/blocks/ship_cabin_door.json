@@ -1,0 +1,28 @@
+{
+ "type": "minecraft:block",
+ "pools": [
+  {
+   "rolls": 1,
+   "entries": [
+    {
+     "type": "minecraft:item",
+     "name": "office_rooms:ship_cabin_door",
+     "conditions": [
+      {
+       "condition": "minecraft:block_state_property",
+       "block": "office_rooms:ship_cabin_door",
+       "properties": {
+        "half": "lower"
+       }
+      }
+     ]
+    }
+   ],
+   "conditions": [
+    {
+     "condition": "minecraft:survives_explosion"
+    }
+   ]
+  }
+ ]
+}

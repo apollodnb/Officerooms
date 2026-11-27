@@ -30,6 +30,15 @@ public final class ModSounds {
     public static final RegistryObject<SoundEvent> ARANEA_HURT = reg("entity.aranea_membri.hurt");
     public static final RegistryObject<SoundEvent> ARANEA_DEATH = reg("entity.aranea_membri.death");
     public static final RegistryObject<SoundEvent> ARANEA_STEP = reg("entity.aranea_membri.step");
+    public static final RegistryObject<SoundEvent> MASCOT_SQUEAK = reg("entity.mascot.squeak");
+    public static final RegistryObject<SoundEvent> MASCOT_GIGGLE = reg("entity.mascot.giggle");
+    public static final RegistryObject<SoundEvent> MASCOT_HONK = reg("entity.mascot.honk");
+    public static final RegistryObject<SoundEvent> MASCOT_HURT = reg("entity.mascot.hurt");
+    public static final RegistryObject<SoundEvent> MASCOT_DEATH = reg("entity.mascot.death");
+    public static final RegistryObject<SoundEvent> MASCOT_STEP = reg("entity.mascot.step");
+    public static final RegistryObject<SoundEvent> SHIP_HORN = reg("ambient.ship.horn");
+    public static final RegistryObject<SoundEvent> SHIP_AMBIENT = reg("ambient.ship.hull");
+    public static final RegistryObject<SoundEvent> LIFEBOAT_DROP = reg("block.ship_lifeboat.drop");
     public static final RegistryObject<SoundEvent> LAMP_HUM = reg("ambient.lamp_hum");
     public static final RegistryObject<SoundEvent> WOLFSPIDER_HOWL = reg("entity.wolfspider.howl");
     public static final RegistryObject<SoundEvent> WOLFSPIDER_HURT = reg("entity.wolfspider.hurt");

@@ -1,0 +1,16 @@
+{
+ "variants": {
+  "variant=0": {
+   "model": "office_rooms:block/ship_smile_0"
+  },
+  "variant=1": {
+   "model": "office_rooms:block/ship_smile_1"
+  },
+  "variant=2": {
+   "model": "office_rooms:block/ship_smile_2"
+  },
+  "variant=3": {
+   "model": "office_rooms:block/ship_smile_3"
+  }
+ }
+}

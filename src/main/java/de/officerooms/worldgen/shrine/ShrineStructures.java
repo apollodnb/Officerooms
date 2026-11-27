@@ -32,6 +32,11 @@ public final class ShrineStructures {
             DeferredRegister.create(Registries.STRUCTURE_PLACEMENT, OfficeRoomsIds.MOD_ID);
     public static final RegistryObject<net.minecraft.world.level.levelgen.structure.placement.StructurePlacementType<de.officerooms.worldgen.mega.RegionCentrePlacement>> REGION_CENTRE =
             PLACEMENTS.register("region_centre", () -> () -> de.officerooms.worldgen.mega.RegionCentrePlacement.CODEC);
+    /** 0.42.0: the ships of the sea dimension. */
+    public static final RegistryObject<StructureType<de.officerooms.sea.ShipMarker>> SHIP = TYPES.register("ss_fun",
+            () -> explicit(de.officerooms.sea.ShipMarker.CODEC));
+    public static final RegistryObject<net.minecraft.world.level.levelgen.structure.placement.StructurePlacementType<de.officerooms.sea.ShipMarker.Placement>> SHIP_PLACEMENT =
+            PLACEMENTS.register("ship_cell", () -> () -> de.officerooms.sea.ShipMarker.Placement.CODEC);
 
     private static <S extends net.minecraft.world.level.levelgen.structure.Structure> StructureType<S> explicit(Codec<S> codec) {
         return () -> codec;

@@ -790,6 +790,119 @@ def aranea():
     return r
 
 
+def mascot():
+    """0.42.0: the Mascot of the SS Fun =): a soaked, swollen kids' club costume with a face that is only =)."""
+    g = Geo('mascot', density=2, seed=4242)
+
+    from geo_lib import _shade
+
+    def fur(base, wet=(70, 66, 40)):
+        def paint(g, r, face, alpha):
+            u, v, pw, ph = r
+            rng = g.rng
+            for j in range(ph):
+                for i in range(pw):
+                    t = j / max(1, ph - 1)
+                    s = _shade(face, j, ph) // 2 + rng.randint(-10, 10)
+                    c = [b + s for b in base]
+                    soak = max(0.0, t - 0.35) * 1.3 if face not in ('up',) else 0.0
+                    c = [c[k] * (1 - soak) + wet[k] * soak for k in range(3)]      # soaked from below
+                    if (i + j * 3) % 5 == 0 and rng.random() < 0.5:
+                        c = [x - 18 for x in c]                                    # matted tufts
+                    if rng.random() < 0.012:
+                        c = [20, 14, 14]                                           # holes in the fabric
+                    g.px(u + i, v + j, c + [alpha])
+            for _ in range(max(1, pw * ph // 160)):                                # torn seams, dark inside
+                x, y = u + rng.randrange(pw), v + rng.randrange(ph)
+                for k in range(rng.randint(3, 7)):
+                    g.px(x + k, y + (k % 2), [40, 18, 20, alpha])
+        return paint
+
+    FUR = fur((196, 170, 88))
+    PALE = fur((232, 216, 168), wet=(120, 110, 80))
+    NAVY = solid((34, 44, 86))
+    WHITE = solid((226, 224, 214))
+    SHOE = solid((150, 36, 34))
+
+    def face(g, r):
+        u, v, w, h = r
+        for y0 in (h // 3, h // 3 + 4):                                            # "=": two black slits
+            for i in range(w // 6, w // 6 + w // 3):
+                for k in range(2):
+                    g.px(u + i, v + y0 + k, (12, 10, 12))
+        cx, cy = u + w * 0.30, v + h * 0.52                                        # ")": stitched smile
+        for a in range(-55, 56, 3):
+            t = math.radians(a)
+            for rr in (w * 0.52, w * 0.52 + 1):
+                g.px(int(cx + rr * math.cos(t)), int(cy + rr * math.sin(t)), (12, 10, 12))
+        for a in range(-45, 46, 15):
+            t = math.radians(a)
+            for rr in (w * 0.45, w * 0.62):
+                g.px(int(cx + rr * math.cos(t)), int(cy + rr * math.sin(t)), (60, 40, 36))
+        for k in range(4):                                                         # water running from the eyes
+            g.px(u + w // 6 + 2, v + h // 3 + 6 + k, (90, 96, 92))
+
+    g.bone('root', None, [0, 0, 0])
+    g.bone('body', 'root', [0, 10, 0])
+    g.cube('body', [-6.5, 9, -4.5], [13, 9, 9], FUR, inflate=0.3)                 # swollen, sagging belly
+    g.cube('body', [-5.5, 7.5, -3.5], [11, 2, 7], FUR)
+    g.cube('body', [-3.5, 11, -4.9], [7, 5, 1], PALE)                              # belly patch
+    g.bone('chest', 'body', [0, 18, 0])
+    g.cube('chest', [-5.5, 18, -4], [11, 7, 8], FUR)
+    g.cube('chest', [-6, 23.5, -4.5], [12, 2, 9], NAVY)                            # sailor collar
+    g.cube('chest', [-5, 22.5, -4.7], [10, 1, 1], WHITE)
+    g.bone('head', 'chest', [0, 25, 0], [6, 0, 4])                                 # it never holds its head straight
+    g.cube('head', [-7, 25, -6.5], [14, 12, 13], FUR, inflate=0.4)                 # far too big
+    g.cube('head', [-5, 26, -7.2], [10, 8, 1], PALE, face=face)                    # the face: =)
+    g.cube('head', [-6.5, 36.5, -2.5], [4, 4, 3], FUR, rot=[0, 0, 18], pivot=[-4.5, 37, -1])   # ear
+    g.cube('head', [3.5, 33, -2.5], [3, 4, 3], FUR, rot=[0, 0, -70], pivot=[5, 36, -1])        # the torn ear, hanging
+    g.cube('head', [-3.5, 37.2, -3.5], [7, 2, 7], WHITE, rot=[-8, 0, -12], pivot=[0, 37, 0])   # sailor hat
+    g.cube('head', [-3.6, 37.0, -3.6], [7.2, 0.8, 7.2], NAVY, rot=[-8, 0, -12], pivot=[0, 37, 0])
+    for name, sx in (('arm_l', 1), ('arm_r', -1)):
+        g.bone(name, 'chest', [sx * 6, 24, 0])
+        g.cube(name, [sx * 6 - 1.6, 14, -1.6], [3.2, 10, 3.2], FUR)                 # too long
+        g.bone(name + '_lo', name, [sx * 6, 14.5, 0])
+        g.cube(name + '_lo', [sx * 6 - 1.5, 3.5, -1.5], [3, 11, 3], FUR)
+        g.cube(name + '_lo', [sx * 6 - 2.2, 0.5, -2.5], [4.4, 3.5, 5], PALE)        # mittens nearly on the floor
+    for name, sx in (('leg_l', 1), ('leg_r', -1)):
+        g.bone(name, 'root', [sx * 3, 9, 0])
+        g.cube(name, [sx * 3 - 2.2, 1.5, -2.2], [4.4, 8, 4.4], FUR)
+        g.cube(name, [sx * 3 - 2.6, 0, -4.2], [5.2, 2, 7], SHOE)                     # big clown shoes
+
+    A = {}
+    A["idle"] = {"loop": True, "animation_length": 5.0, "bones": {
+        "body": {"rotation": wave(5.0, [2, 0, 3], 0, n=10)},
+        "head": {"rotation": snaps(5.0, [(1.2, 1.1, [0, 0, 24]), (3.6, 0.4, [-14, 30, -10])], dur=0.06)},
+        "arm_l": {"rotation": wave(5.0, [6, 0, 3], 0.6, n=10)},
+        "arm_r": {"rotation": wave(5.0, [6, 0, -3], 2.2, n=10)}}}
+    def walk(L, a):
+        return {"leg_l": {"rotation": wave(L, [a, 0, 0], 0)}, "leg_r": {"rotation": wave(L, [a, 0, 0], math.pi)},
+                "arm_l": {"rotation": wave(L, [a * 0.7, 0, 4], math.pi)}, "arm_r": {"rotation": wave(L, [a * 0.7, 0, -4], 0)},
+                "body": {"position": wave(L, [0, 0.7, 0], 0, n=12), "rotation": wave(L, [0, 0, 4], 0.5, n=12)},
+                "head": {"rotation": snaps(L, [(L * 0.4, L * 0.2, [10, 0, 18])], dur=0.05)}}
+    A["walk"] = {"loop": True, "animation_length": 1.2, "bones": walk(1.2, 24)}
+    run = {"body": {"rotation": keys([(0, [62, 0, 0]), (0.5, [62, 0, 0])]), "position": wave(0.5, [0, 1.2, 0], 0, n=8, base=(0, -3, 0))},
+           "head": {"rotation": keys([(0, [-58, 0, 12]), (0.5, [-58, 0, 12])])},
+           "arm_l": {"rotation": wave(0.5, [50, 0, 0], 0, base=(-70, 0, 0))}, "arm_r": {"rotation": wave(0.5, [50, 0, 0], math.pi, base=(-70, 0, 0))},
+           "leg_l": {"rotation": wave(0.5, [45, 0, 0], math.pi)}, "leg_r": {"rotation": wave(0.5, [45, 0, 0], 0)}}
+    A["run"] = {"loop": True, "animation_length": 0.5, "bones": run}
+    A["wave"] = {"loop": True, "animation_length": 2.4, "bones": {
+        "arm_r": {"rotation": wave(2.4, [0, 0, 22], 0, n=8, base=(0, 0, -150))},
+        "arm_r_lo": {"rotation": wave(2.4, [0, 0, 16], 1.0, n=8)},
+        "head": {"rotation": wave(2.4, [0, 0, 14], 0.4, n=8, base=(0, 0, 16))},
+        "body": {"rotation": wave(2.4, [0, 0, 2], 0, n=8)}}}
+    A["hug"] = {"loop": True, "animation_length": 0.8, "bones": {
+        "arm_l": {"rotation": wave(0.8, [0, 14, 0], 0, n=8, base=(-90, 30, 0))},
+        "arm_r": {"rotation": wave(0.8, [0, -14, 0], 0, n=8, base=(-90, -30, 0))},
+        "head": {"rotation": snaps(0.8, [(0.2, 0.15, [16, 0, 26])], dur=0.04)},
+        "body": {"rotation": wave(0.8, [6, 0, 0], 0, n=8, base=(10, 0, 0))}}}
+    A["drop"] = {"loop": False, "animation_length": 0.8, "bones": {
+        "body": {"position": ramp([(0, [0, 14, 0]), (0.15, [0, -4, 0]), (0.4, [0, -1, 0]), (0.8, [0, 0, 0])]),
+                 "rotation": ramp([(0, [0, 0, 180]), (0.15, [30, 0, 10]), (0.8, [0, 0, 0])])},
+        "head": {"rotation": snaps(0.8, [(0.35, 0.2, [0, 0, 40])], dur=0.04)}}}
+    return g.save(A)
+
+
 if __name__ == '__main__':
     for f in (gaunt, warden, hound, smiler, colony, hunter, observer, aranea):
         g = f()

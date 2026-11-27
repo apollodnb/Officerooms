@@ -30,7 +30,9 @@ public enum SpecialType {
     CANTEEN("canteen"),
     ARCADE("arcade"),
     /** 0.31.0: room lies in the band of the abandoned cinema. */
-    CINEMA("cinema");
+    CINEMA("cinema"),
+    /** 0.42.0: departure gate to the SS Fun =) (content version 2). */
+    DEPARTURE_GATE("departure_gate");
 
     public final String id;
 

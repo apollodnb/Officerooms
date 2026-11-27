@@ -1,0 +1,7 @@
+{
+ "parent": "minecraft:block/fence_side",
+ "textures": {
+  "texture": "office_rooms:block/ship_rail_white",
+  "particle": "office_rooms:block/ship_rail_white"
+ }
+}

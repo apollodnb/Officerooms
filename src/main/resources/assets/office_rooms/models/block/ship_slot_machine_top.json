@@ -1,0 +1,111 @@
+{
+ "parent": "minecraft:block/block",
+ "textures": {
+  "c": "office_rooms:block/ship_cabinet_red",
+  "s": "office_rooms:block/ship_slot_screen",
+  "g": "office_rooms:block/ship_cabinet_gold",
+  "particle": "office_rooms:block/ship_cabinet_red"
+ },
+ "elements": [
+  {
+   "from": [
+    1,
+    0,
+    3
+   ],
+   "to": [
+    15,
+    12,
+    15
+   ],
+   "faces": {
+    "north": {
+     "texture": "#s"
+    },
+    "south": {
+     "texture": "#c"
+    },
+    "east": {
+     "texture": "#c"
+    },
+    "west": {
+     "texture": "#c"
+    },
+    "up": {
+     "texture": "#c"
+    },
+    "down": {
+     "texture": "#c"
+    }
+   }
+  },
+  {
+   "from": [
+    2,
+    2,
+    2.9
+   ],
+   "to": [
+    14,
+    11,
+    3
+   ],
+   "faces": {
+    "north": {
+     "texture": "#s"
+    },
+    "south": {
+     "texture": "#s"
+    },
+    "east": {
+     "texture": "#s"
+    },
+    "west": {
+     "texture": "#s"
+    },
+    "up": {
+     "texture": "#s"
+    },
+    "down": {
+     "texture": "#s"
+    }
+   },
+   "forge_data": {
+    "block_light": 12,
+    "sky_light": 12
+   }
+  },
+  {
+   "from": [
+    12,
+    6,
+    0
+   ],
+   "to": [
+    13,
+    12,
+    3
+   ],
+   "faces": {
+    "north": {
+     "texture": "#g"
+    },
+    "south": {
+     "texture": "#g"
+    },
+    "east": {
+     "texture": "#g"
+    },
+    "west": {
+     "texture": "#g"
+    },
+    "up": {
+     "texture": "#g"
+    },
+    "down": {
+     "texture": "#g"
+    }
+   }
+  }
+ ]
+}

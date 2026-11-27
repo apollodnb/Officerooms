@@ -320,7 +320,7 @@
         "light_spacing": 7,
         "dim_light_spacing": 11
       },
-      "content_version": 1,
+      "content_version": 2,
       "special_rooms": {
         "outpost_chance": 0.012,
         "hideout_attempts": 12,

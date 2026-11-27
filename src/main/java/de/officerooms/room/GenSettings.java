@@ -35,6 +35,11 @@ public record GenSettings(
         return contentVersion >= 1;
     }
 
+    /** 0.42.0: content version 2: departure gates to the SS Fun =) (and later the mall). */
+    public boolean v2() {
+        return contentVersion >= 2;
+    }
+
     /**
      * Raster.
      *

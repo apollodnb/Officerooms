@@ -1,0 +1,7 @@
+{
+ "parent": "minecraft:block/fence_inventory",
+ "textures": {
+  "texture": "office_rooms:block/ship_rail_brass",
+  "particle": "office_rooms:block/ship_rail_brass"
+ }
+}
